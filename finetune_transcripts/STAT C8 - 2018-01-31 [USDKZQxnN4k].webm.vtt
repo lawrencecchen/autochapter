@@ -1,0 +1,2351 @@
+WEBVTT
+
+00:00.000 --> 00:03.000
+.
+
+00:03.000 --> 00:08.000
+.
+
+00:08.000 --> 00:13.000
+.
+
+00:13.000 --> 00:18.000
+..
+
+00:18.000 --> 00:23.000
+..
+
+00:23.000 --> 00:26.000
+..
+
+00:26.000 --> 00:29.000
+..
+
+00:29.000 --> 00:32.000
+..
+
+00:32.000 --> 00:35.000
+..
+
+00:35.000 --> 00:38.000
+..
+
+00:38.000 --> 00:41.000
+..
+
+00:41.000 --> 00:44.000
+..
+
+00:44.000 --> 00:47.000
+..
+
+00:47.000 --> 00:52.000
+..
+
+00:52.000 --> 00:55.000
+..
+
+00:55.000 --> 00:58.000
+..
+
+00:58.000 --> 01:01.000
+..
+
+01:01.000 --> 01:04.000
+..
+
+01:04.000 --> 01:07.000
+..
+
+01:07.000 --> 01:10.000
+..
+
+01:10.000 --> 01:13.000
+..
+
+01:13.000 --> 01:16.000
+..
+
+01:16.000 --> 01:21.000
+..
+
+01:21.000 --> 01:24.000
+..
+
+01:24.000 --> 01:27.000
+..
+
+01:27.000 --> 01:32.000
+..
+
+01:32.000 --> 01:35.000
+..
+
+01:35.000 --> 01:38.000
+..
+
+01:38.000 --> 01:41.000
+..
+
+01:41.000 --> 01:44.000
+..
+
+01:44.000 --> 01:47.000
+..
+
+01:47.000 --> 01:52.000
+..
+
+01:52.000 --> 01:55.000
+..
+
+01:55.000 --> 01:56.000
+..
+
+01:56.000 --> 02:01.000
+..
+
+02:01.000 --> 02:04.000
+..
+
+02:04.000 --> 02:07.000
+..
+
+02:07.000 --> 02:10.000
+..
+
+02:10.000 --> 02:13.000
+..
+
+02:13.000 --> 02:16.000
+..
+
+02:16.000 --> 02:21.000
+..
+
+02:21.000 --> 02:24.000
+..
+
+02:24.000 --> 02:29.000
+..
+
+02:29.000 --> 02:34.000
+..
+
+02:34.000 --> 02:39.000
+..
+
+02:39.000 --> 02:44.000
+..
+
+02:44.000 --> 02:49.000
+..
+
+02:49.000 --> 02:52.000
+..
+
+02:52.000 --> 02:57.000
+..
+
+02:57.000 --> 03:02.000
+..
+
+03:02.000 --> 03:07.000
+..
+
+03:07.000 --> 03:12.000
+..
+
+03:12.000 --> 03:17.000
+..
+
+03:17.000 --> 03:20.000
+..
+
+03:20.000 --> 03:27.000
+..
+
+03:27.000 --> 03:30.000
+..
+
+03:30.000 --> 03:33.000
+..
+
+03:33.000 --> 03:36.000
+..
+
+03:36.000 --> 03:39.000
+..
+
+03:39.000 --> 03:42.000
+..
+
+03:42.000 --> 03:45.000
+..
+
+03:45.000 --> 03:48.000
+..
+
+03:48.000 --> 03:50.000
+..
+
+03:50.000 --> 03:51.700
+..
+
+03:51.700 --> 03:52.600
+..
+
+03:52.600 --> 03:53.600
+..
+
+03:53.600 --> 03:57.700
+..
+
+03:57.700 --> 03:58.700
+..
+
+03:58.700 --> 03:59.700
+..
+
+03:59.700 --> 04:00.000
+..
+
+04:00.000 --> 04:01.000
+.
+
+04:01.000 --> 04:02.000
+..
+
+04:02.000 --> 04:03.000
+..
+
+04:03.000 --> 04:07.000
+..
+
+04:07.000 --> 04:09.000
+..
+
+04:10.000 --> 04:13.600
+.
+
+04:13.600 --> 04:21.360
+All right, we're going to do some visualizations today.
+
+04:21.360 --> 04:22.800
+Let's have some here.
+
+04:22.800 --> 04:24.000
+I see a couple there.
+
+04:39.120 --> 04:40.680
+All right, tell them please.
+
+04:40.680 --> 04:43.080
+Announcements, same as last time.
+
+04:43.080 --> 04:47.040
+Thank you for all those people who are keeping their hands up.
+
+04:47.040 --> 04:50.600
+But please take advantage of all that seats.
+
+04:50.600 --> 04:50.960
+Thank you.
+
+04:54.800 --> 04:57.440
+Same as last time, homework is you tomorrow.
+
+04:57.440 --> 04:59.760
+You get an extra point for turning it in today.
+
+04:59.760 --> 05:02.040
+The routine is the same every week.
+
+05:02.040 --> 05:04.920
+Small group tutoring sessions have been announced on Piazza.
+
+05:04.920 --> 05:09.120
+If you feel that it might help you, then please take advantage of it.
+
+05:09.120 --> 05:09.920
+They're filling up.
+
+05:09.920 --> 05:18.240
+OK, I want to pick up where we left off last time.
+
+05:18.240 --> 05:25.680
+What we had done last time was we had gone through a series of table operations on columns
+
+05:25.680 --> 05:26.440
+and rows.
+
+05:26.440 --> 05:30.920
+And then we had taken a dataset from the census.
+
+05:30.920 --> 05:37.480
+And we were just about to start looking at the data and interpreting it when time was up.
+
+05:37.480 --> 05:40.160
+So let's review where we were.
+
+05:42.960 --> 05:48.280
+As we said last time, the census is a every 10 year thing.
+
+05:48.280 --> 05:52.960
+Every 10 years, the US government counts.
+
+05:52.960 --> 05:55.840
+The number of people in the United States.
+
+05:55.840 --> 05:57.680
+And it's not citizens or anything.
+
+05:57.680 --> 06:01.160
+It's just how many people are in the United States.
+
+06:01.160 --> 06:05.360
+And the reason for doing that is the Constitution says that there are
+
+06:05.360 --> 06:10.120
+a portionment, representation, and federal funds and so on
+
+06:10.120 --> 06:14.320
+are connected with the number of people in each state.
+
+06:14.320 --> 06:16.040
+This is a massive undertaking.
+
+06:16.040 --> 06:18.120
+It's quite difficult.
+
+06:18.120 --> 06:23.160
+But it's done every 10 years and also in between those 10-year periods.
+
+06:23.160 --> 06:25.360
+There are estimates made every year.
+
+06:25.360 --> 06:29.600
+So that people are prepared for what might come up in the next census.
+
+06:29.600 --> 06:34.360
+And governments and so on can make policy based on more current data than
+
+06:34.360 --> 06:36.480
+data from 10 years ago.
+
+06:40.000 --> 06:43.800
+We saw a dataset that we had loaded from the census.
+
+06:43.800 --> 06:50.360
+And there was a sex column, which had some codes.
+
+06:50.360 --> 06:53.000
+And then there was an age column with age and years.
+
+06:53.000 --> 06:54.800
+And I'll just go over.
+
+06:54.800 --> 06:59.720
+The sex column had a numerical code for male female.
+
+06:59.720 --> 07:04.480
+And the estimates were done at a particular time.
+
+07:04.480 --> 07:08.840
+The population estimates were done at a particular time of the year.
+
+07:08.840 --> 07:12.840
+The columns also had some aggregated data.
+
+07:12.840 --> 07:19.400
+So the sex column, when you see a code of zero, it was everybody.
+
+07:19.400 --> 07:25.680
+And the remarkable age of 99 years is actually not 99 years at all.
+
+07:25.680 --> 07:30.040
+It was everybody of all ages.
+
+07:30.040 --> 07:36.400
+So instead of writing male and female, or everyone,
+
+07:36.400 --> 07:37.680
+they were using numeric codes.
+
+07:37.680 --> 07:40.520
+This is for storage efficiency.
+
+07:40.520 --> 07:44.640
+And also, because you don't want to be typing words all the time.
+
+07:44.640 --> 07:47.840
+Often, very often, numerical codes are used.
+
+07:47.840 --> 07:49.800
+That doesn't mean they're actually numbers.
+
+07:49.800 --> 07:52.960
+I'll come to that later.
+
+07:52.960 --> 07:55.120
+So values in a column have the same type.
+
+07:55.120 --> 07:57.040
+You know that they're arrays.
+
+07:57.040 --> 08:01.320
+The point that we're trying to make here at the end is age 12 is actually 12 years old.
+
+08:01.320 --> 08:01.880
+That's a kid.
+
+08:01.880 --> 08:05.280
+You can imagine that age 9.99 is not an age.
+
+08:05.280 --> 08:09.600
+It's a number here, as far as a computer is concerned, but it's not an age.
+
+08:09.600 --> 08:13.680
+And when we interpret data in tables, we have to keep things like that in mind.
+
+08:13.680 --> 08:18.760
+And where do you know what's going on, like what these codes mean?
+
+08:18.760 --> 08:22.000
+You have to read the documentation provided by the people who made the table.
+
+08:22.000 --> 08:28.000
+And so there's a link to that at the bottom there.
+
+08:28.000 --> 08:34.000
+So what I'd like to do is I'd like to get started by reviewing where we were.
+
+08:34.000 --> 08:38.000
+So there was a census data.
+
+08:38.000 --> 08:41.000
+The census provides data in this file right here.
+
+08:41.000 --> 08:44.000
+And we read it into a table called full.
+
+08:44.000 --> 08:50.000
+And that has a sex column and age column and various population columns,
+
+08:50.000 --> 08:56.000
+from which we selected four columns into a partial table,
+
+08:56.000 --> 08:58.000
+which we called partial.
+
+08:58.000 --> 09:06.000
+This thing had a 306 rows, and it had sex age.
+
+09:06.000 --> 09:12.000
+The estimate in 2010 and the estimate in 2014 of the total population.
+
+09:12.000 --> 09:19.000
+And it's broken down by each group and each label for sex.
+
+09:19.000 --> 09:25.000
+We did not like these long column labels, and so we did some relabeling.
+
+09:25.000 --> 09:29.000
+We relabeled that long pop estimate 2010 to be just 2010,
+
+09:29.000 --> 09:33.000
+and then we were too lazy to even type in pop estimate 2014.
+
+09:33.000 --> 09:35.000
+So we just used the column index there.
+
+09:35.000 --> 09:43.000
+We relabeled column three to be column 2014, and we took a look at that.
+
+09:43.000 --> 09:51.000
+And now you have a table that is a little easier to comprehend and work with,
+
+09:51.000 --> 09:56.000
+and so that's what we're going to start doing.
+
+09:56.000 --> 10:01.000
+I think last time we had also decided that we didn't like looking at large numbers
+
+10:01.000 --> 10:04.000
+and not knowing how big they were, so we used number four matter.
+
+10:04.000 --> 10:12.000
+And now you can see that you have essentially four million people in each of those cells.
+
+10:12.000 --> 10:18.000
+Every age group, four million people, and these are the little tiny ones,
+
+10:18.000 --> 10:22.000
+age zero through nine that you can see.
+
+10:22.000 --> 10:28.000
+But then the table continues.
+
+10:28.000 --> 10:35.000
+We took a look at the age labels, and there was 9.99.
+
+10:35.000 --> 10:44.000
+So we've seen everybody put together, everybody of all ages, put together there.
+
+10:44.000 --> 10:51.000
+Sex was one male, two females, zero, everybody, and so what we're going to do now
+
+10:51.000 --> 10:56.000
+is because it is extremely disconcerting to work with ages of 999.
+
+10:56.000 --> 11:00.000
+We're going to do some further reduction of this table.
+
+11:00.000 --> 11:07.000
+I'd like you to look at age 100.
+
+11:07.000 --> 11:12.000
+Age 100 there isn't exactly 100 years, it's 100 plus.
+
+11:12.000 --> 11:17.000
+Everybody, 100 plus was lumped in there, and that's where the numbers are bigger.
+
+11:17.000 --> 11:19.000
+And we'll look at them again.
+
+11:19.000 --> 11:24.000
+But so even 100 isn't 100 years old, it's 100 plus, 999 is everybody.
+
+11:24.000 --> 11:30.000
+So now, I will take one short pause for questions.
+
+11:30.000 --> 11:37.000
+This is exactly where we were, I think, last time.
+
+11:37.000 --> 11:44.000
+So the first thing we'll do is we will get rid of the 999.
+
+11:44.000 --> 11:52.000
+So I'll create a table called no 999, where you take this table and you take the rows where the age,
+
+11:52.000 --> 11:57.000
+column index one, are below 999.
+
+11:57.000 --> 12:02.000
+And I do that, and I don't see anything because that's an assignment statement.
+
+12:02.000 --> 12:10.000
+That's fine.
+
+12:10.000 --> 12:12.000
+I'm not going to run the same thing twice.
+
+12:12.000 --> 12:19.000
+What I'm going to do is I'm going to extract a table for everybody.
+
+12:19.000 --> 12:30.000
+So from this, every row where sex is equal to zero, and then we'll make a table for the guys.
+
+12:30.000 --> 12:47.000
+And for the girls and the women, and so we create those three tables.
+
+12:47.000 --> 12:52.000
+And we take a look at table called females.
+
+12:52.000 --> 13:06.000
+And so that's, okay, at every age zero through 100, you have the number of females in the years 2010 and the year 2014.
+
+13:06.000 --> 13:07.000
+And I look at that sex column.
+
+13:07.000 --> 13:09.000
+Well, this is the table of females.
+
+13:09.000 --> 13:11.000
+Every single one of them is going to be a two.
+
+13:11.000 --> 13:12.000
+That's rather boring.
+
+13:12.000 --> 13:15.000
+So we should not be carrying around a column that just has all two's in it.
+
+13:15.000 --> 13:17.000
+So how about we go back?
+
+13:17.000 --> 13:25.000
+We haven't messed with no 99, so we're just going to drop column zero here for all of them.
+
+13:25.000 --> 13:34.000
+Okay.
+
+13:34.000 --> 13:40.000
+Now, actually, we have some data there that are interesting to look at.
+
+13:40.000 --> 13:48.000
+So we have the females, and we have the males as well, and I have a question for you.
+
+13:48.000 --> 13:55.000
+So you can see that there's slight differences in how many females there are at each age group.
+
+13:55.000 --> 14:01.000
+For example, there are more of more nine-year-olds than tiny, tiny, tiny infants.
+
+14:01.000 --> 14:02.000
+You see that?
+
+14:02.000 --> 14:03.000
+Yeah?
+
+14:03.000 --> 14:10.000
+So among the females, which age do you think is the most populous?
+
+14:10.000 --> 14:12.000
+Talk to your friends and neighbors.
+
+14:12.000 --> 14:14.000
+You can't tell that from here.
+
+14:14.000 --> 14:17.000
+You just have to guess based on what you know.
+
+14:17.000 --> 14:46.000
+All right.
+
+14:46.000 --> 14:53.000
+Since everybody is guessing, everybody is guessing somebody call out a guess.
+
+14:53.000 --> 14:54.000
+Sorry?
+
+14:54.000 --> 14:56.000
+Five zero?
+
+14:56.000 --> 14:57.000
+Six zero.
+
+14:57.000 --> 14:58.000
+Six.
+
+14:58.000 --> 15:00.000
+Somebody guess a 60 roughly why?
+
+15:00.000 --> 15:01.000
+Baby boom.
+
+15:01.000 --> 15:02.000
+All right.
+
+15:02.000 --> 15:03.000
+That's a good guess.
+
+15:03.000 --> 15:04.000
+Others.
+
+15:04.000 --> 15:05.000
+Other candidates?
+
+15:05.000 --> 15:06.000
+Yes?
+
+15:06.000 --> 15:07.000
+Above 100.
+
+15:07.000 --> 15:08.000
+Above 100.
+
+15:08.000 --> 15:09.000
+All right.
+
+15:09.000 --> 15:13.000
+Because there's lots of ages in there.
+
+15:13.000 --> 15:16.000
+More.
+
+15:16.000 --> 15:19.000
+37, because.
+
+15:19.000 --> 15:26.000
+Because there's lots of ages in there.
+
+15:26.000 --> 15:27.000
+Close it up.
+
+15:27.000 --> 15:28.000
+Baby boom.
+
+15:28.000 --> 15:29.000
+They haven't died yet.
+
+15:29.000 --> 15:30.000
+Okay.
+
+15:30.000 --> 15:31.000
+Great.
+
+15:31.000 --> 15:34.000
+So then more of it, as it might seem, that is exactly the kind of thing you have to think
+
+15:34.000 --> 15:35.000
+about, yes.
+
+15:35.000 --> 15:36.000
+About 20?
+
+15:36.000 --> 15:37.000
+About 20, why?
+
+15:37.000 --> 15:43.000
+Because that would be about when the generation above the liners are stopping being the major
+
+15:43.000 --> 15:46.000
+segment of producing kids since millennials are notoriously not producing kids.
+
+15:46.000 --> 15:47.000
+Oh, wow.
+
+15:47.000 --> 15:48.000
+So now we're looking at millennials.
+
+15:48.000 --> 15:51.000
+There's a lot of them, but they don't have a lot of kids.
+
+15:51.000 --> 15:54.000
+And so maybe their kids are all over 20.
+
+15:54.000 --> 15:57.000
+So now maybe let's look at the 20-year-olds and there's a lot of them.
+
+15:57.000 --> 15:58.000
+So shall we actually look?
+
+15:58.000 --> 16:03.000
+Let's actually look.
+
+16:03.000 --> 16:19.000
+What?
+
+16:19.000 --> 16:20.000
+No.
+
+16:20.000 --> 16:21.000
+No.
+
+16:21.000 --> 16:22.000
+No.
+
+16:22.000 --> 16:24.000
+I already know that 100 is bigger than 99.
+
+16:24.000 --> 16:25.000
+This is silly.
+
+16:25.000 --> 16:26.000
+Okay.
+
+16:26.000 --> 16:32.000
+So I'm just going to look at the 2014 population.
+
+16:32.000 --> 16:34.000
+So who said 60?
+
+16:34.000 --> 16:35.000
+Yeah.
+
+16:35.000 --> 16:37.000
+I think you're the closest.
+
+16:37.000 --> 16:38.000
+Yes?
+
+16:38.000 --> 16:40.000
+All right.
+
+16:40.000 --> 16:42.000
+So there's more in 2014.
+
+16:42.000 --> 16:47.000
+There were more 54 or 53-year-old women than anything else.
+
+16:47.000 --> 16:50.000
+20, somebody said 20s.
+
+16:50.000 --> 16:52.000
+You had 20s.
+
+16:52.000 --> 16:54.000
+Somebody else had 20s?
+
+16:54.000 --> 16:55.000
+Yeah.
+
+16:55.000 --> 16:59.000
+So you guys weren't doing so badly.
+
+16:59.000 --> 17:06.000
+But you can see they're all sort of in the 50s and in the 20s.
+
+17:06.000 --> 17:08.000
+Which is interesting.
+
+17:08.000 --> 17:11.000
+It's quite interesting to see whether the picture is the same for
+
+17:11.000 --> 17:24.000
+the men.
+
+17:24.000 --> 17:27.000
+No.
+
+17:27.000 --> 17:31.000
+Not the same for the men.
+
+17:31.000 --> 17:33.000
+Most common for men is 23.
+
+17:33.000 --> 17:35.000
+There is a 54.
+
+17:35.000 --> 17:37.000
+You can see what is way down.
+
+17:37.000 --> 17:38.000
+All right.
+
+17:38.000 --> 17:41.000
+And so these very dry numbers are telling a story.
+
+17:41.000 --> 17:45.000
+They're telling a story that guys' lives are genuinely different from
+
+17:45.000 --> 17:46.000
+women's lives.
+
+17:46.000 --> 17:48.000
+And also their biology are different.
+
+17:48.000 --> 17:51.000
+So what we're going to do now is we're going to take a look a
+
+17:51.000 --> 18:05.000
+little more carefully at these data and maybe what we can do is
+
+18:05.000 --> 18:09.000
+create one table with both genders.
+
+18:09.000 --> 18:13.000
+So let's just call it population 2014.
+
+18:13.000 --> 18:18.000
+So I'm just going to look at the year 2014 and you can change
+
+18:18.000 --> 18:30.000
+it later.
+
+18:30.000 --> 18:45.000
+So for age I can pick any one of these first columns.
+
+18:45.000 --> 19:10.000
+So I'm going to take a look at the picture.
+
+19:10.000 --> 19:16.000
+Okay.
+
+19:16.000 --> 19:20.000
+So look at the number of males compared to the number of females at
+
+19:20.000 --> 19:21.000
+these different age groups.
+
+19:21.000 --> 19:24.000
+Do you notice something?
+
+19:24.000 --> 19:31.000
+Consistently fewer little girls than boys of the same age.
+
+19:31.000 --> 19:32.000
+Look at age zero.
+
+19:32.000 --> 19:34.000
+Those are the kids just born.
+
+19:34.000 --> 19:36.000
+The proportion of females is not 50%.
+
+19:36.000 --> 19:40.000
+This has long been the case and there's some biology that I
+
+19:40.000 --> 19:42.000
+does not clear to me is completely well understood.
+
+19:42.000 --> 19:47.000
+The proportion, a baby born is slightly less likely to be a
+
+19:47.000 --> 19:50.000
+female than male.
+
+19:50.000 --> 19:55.000
+And at all of these ages, the proportion of females is
+
+19:55.000 --> 19:58.000
+slightly less.
+
+19:58.000 --> 20:01.000
+Why don't we just work out what the proportion is and then
+
+20:01.000 --> 20:04.000
+we'll take a look at what that looks like across all the
+
+20:04.000 --> 20:06.000
+ages that we can't see.
+
+20:06.000 --> 20:14.000
+So we'll create an array called percent females.
+
+20:14.000 --> 20:15.000
+Okay.
+
+20:15.000 --> 20:21.000
+So we will convert these numbers to a percent of the total.
+
+20:21.000 --> 20:22.000
+Yep.
+
+20:22.000 --> 20:23.000
+How do I find the total?
+
+20:23.000 --> 20:25.000
+Well, it's a sum of these two.
+
+20:25.000 --> 20:38.000
+So we will take white dot column and not select because it's
+
+20:38.000 --> 20:39.000
+an array.
+
+20:39.000 --> 20:40.000
+I want to do arithmetic with it.
+
+20:40.000 --> 20:42.000
+I don't want to just visualize on the table.
+
+20:42.000 --> 20:43.000
+I want to do some arithmetic.
+
+20:43.000 --> 20:44.000
+Okay.
+
+20:44.000 --> 20:59.000
+I've got to take it and add it.
+
+20:59.000 --> 21:01.000
+And if I do that, I will get a fraction.
+
+21:01.000 --> 21:04.000
+So why don't I convert that into a percent by multiplying by
+
+21:04.000 --> 21:08.000
+100.
+
+21:08.000 --> 21:14.000
+And then we create a new table called counts and
+
+21:14.000 --> 21:23.000
+percent, which is our old table pop 2014.
+
+21:23.000 --> 21:46.000
+Okay.
+
+21:46.000 --> 22:04.000
+So just about 49% female throughout in these age groups.
+
+22:04.000 --> 22:05.000
+Okay.
+
+22:05.000 --> 22:07.000
+So now what does this look like for all the other age groups?
+
+22:07.000 --> 22:11.000
+Of course, we could turn the table over and sort by age in
+
+22:11.000 --> 22:12.000
+descending order and take a look.
+
+22:12.000 --> 22:14.000
+But it's a good idea to draw a picture.
+
+22:14.000 --> 22:16.000
+It's just crying out for us to draw a picture.
+
+22:16.000 --> 22:19.000
+And so what we will do is we will now draw some
+
+22:19.000 --> 22:20.000
+line graphs.
+
+22:20.000 --> 22:24.000
+These are plots.
+
+22:24.000 --> 22:36.000
+And so I will take the table dot plot produces a line graph.
+
+22:36.000 --> 22:40.000
+And we will plot the age on the horizontal axis.
+
+22:40.000 --> 22:45.000
+So the columns are age, and we will plot a percent female on
+
+22:45.000 --> 22:55.000
+the vertical.
+
+22:55.000 --> 22:57.000
+That is interesting.
+
+22:57.000 --> 23:04.000
+You start out proportion female is just below 50% by about 40
+
+23:04.000 --> 23:08.000
+males and females in equal proportions and what happens to
+
+23:08.000 --> 23:11.000
+the senior citizens.
+
+23:11.000 --> 23:15.000
+At the higher ages, you're seeing quite substantially more
+
+23:15.000 --> 23:19.000
+females than males.
+
+23:19.000 --> 23:21.000
+So that is an interesting observation from this graph.
+
+23:21.000 --> 23:23.000
+And we look at it a little more carefully.
+
+23:23.000 --> 23:25.000
+I just want to go over the call.
+
+23:25.000 --> 23:28.000
+So if you want, you have a table of data and you want to draw
+
+23:28.000 --> 23:33.000
+a line plot of one column versus another, then table dot
+
+23:33.000 --> 23:38.000
+plot to you can use two arguments.
+
+23:38.000 --> 23:41.000
+The first one will represent the horizontal axis and the
+
+23:41.000 --> 23:50.000
+second one will represent the vertical.
+
+23:50.000 --> 23:55.000
+All right.
+
+23:55.000 --> 23:59.000
+So what would be nice is to look at the males and
+
+23:59.000 --> 24:03.000
+females separately and possibly on the same graph if possible.
+
+24:03.000 --> 24:09.000
+So let's take a look at pop 2014 again.
+
+24:09.000 --> 24:11.000
+These are accounts, not percents.
+
+24:11.000 --> 24:17.000
+What we're going to do is we're going to take two plots on
+
+24:17.000 --> 24:18.000
+the same graph.
+
+24:18.000 --> 24:20.000
+These are called overlaid plots.
+
+24:20.000 --> 24:23.000
+And so I'm going to plot the males versus age and the
+
+24:23.000 --> 24:24.000
+females versus age.
+
+24:24.000 --> 24:28.000
+And to do that, I just have to specify which is the x-axis.
+
+24:28.000 --> 24:32.000
+Then every single other column will be plotted as the y-axis.
+
+24:32.000 --> 24:35.000
+So there will be a separate graph for every single other column.
+
+24:35.000 --> 24:47.000
+So these accounts.
+
+24:47.000 --> 24:52.000
+Number of people in each age group and the blue graph represents
+
+24:52.000 --> 24:57.000
+the males and the gold graph represents the females.
+
+24:57.000 --> 25:02.000
+So this is another way of visualizing what we just did before
+
+25:02.000 --> 25:03.000
+I do that.
+
+25:03.000 --> 25:06.000
+Any questions about the call?
+
+25:06.000 --> 25:10.000
+If your data set, so our data set had everything numerical,
+
+25:10.000 --> 25:13.000
+there was a column of ages and then there were numbers.
+
+25:13.000 --> 25:17.000
+If you had a column of names as well, then plot would be
+
+25:17.000 --> 25:18.000
+unhappy.
+
+25:18.000 --> 25:21.000
+So select the things that you want to plot and then work
+
+25:21.000 --> 25:22.000
+with table like that.
+
+25:22.000 --> 25:23.000
+All right.
+
+25:23.000 --> 25:25.000
+So you can see what we saw before.
+
+25:25.000 --> 25:27.000
+That is up to the age of about 40.
+
+25:27.000 --> 25:30.000
+There are fewer females than males.
+
+25:30.000 --> 25:32.000
+Around 40, it overlaps.
+
+25:32.000 --> 25:41.000
+And then by the end, there are more females than males.
+
+25:41.000 --> 25:42.000
+And there's some fluctuation.
+
+25:42.000 --> 25:44.000
+The numbers aren't always the same.
+
+25:44.000 --> 25:56.000
+It's going to move all about, except there's a plummet here.
+
+25:56.000 --> 25:57.000
+That's unusual.
+
+25:57.000 --> 25:59.000
+Just a very sharp drop.
+
+25:59.000 --> 26:01.000
+And so what we're going to do is we're going to see what was
+
+26:01.000 --> 26:02.000
+happening at those ages.
+
+26:02.000 --> 26:04.000
+And these ages are right about here.
+
+26:04.000 --> 26:28.000
+So why don't we look at, OK.
+
+26:28.000 --> 26:35.000
+Take a look at those numbers.
+
+26:35.000 --> 26:43.000
+See what you spot.
+
+26:43.000 --> 26:49.000
+Do you see the plummet?
+
+26:49.000 --> 26:57.000
+The very sharp drop, one age to the next.
+
+26:57.000 --> 26:59.000
+Where is it?
+
+26:59.000 --> 27:01.000
+Which age?
+
+27:01.000 --> 27:02.000
+67.
+
+27:02.000 --> 27:03.000
+Right.
+
+27:03.000 --> 27:09.000
+If you look from 67 to 68, you have it's 1.8 million versus
+
+27:09.000 --> 27:10.000
+1.3 million.
+
+27:10.000 --> 27:12.000
+Something happened there.
+
+27:12.000 --> 27:13.000
+Right.
+
+27:13.000 --> 27:15.000
+And there's something else going on.
+
+27:15.000 --> 27:17.000
+71 to 72.
+
+27:17.000 --> 27:20.000
+There's something noticeable going on there.
+
+27:20.000 --> 27:24.000
+And so what would be very nice to see is who are those people.
+
+27:24.000 --> 27:26.000
+And so what we're going to do is we're going to figure out
+
+27:26.000 --> 27:27.000
+the bonds.
+
+27:27.000 --> 27:28.000
+Right.
+
+27:28.000 --> 27:33.000
+So if somebody is 67 in the year 2014, these are only from 2014,
+
+27:33.000 --> 27:36.000
+then you can figure out when they were born by subtracting their age
+
+27:36.000 --> 27:38.000
+from 2014.
+
+27:38.000 --> 27:42.000
+And so we are going to do 2014 minus.
+
+27:42.000 --> 27:45.000
+We don't need to do all of them.
+
+27:45.000 --> 27:49.000
+I don't think how about we do 67.
+
+27:49.000 --> 27:50.000
+OK.
+
+27:50.000 --> 27:51.000
+Somebody, before we run, there's somebody
+
+27:51.000 --> 27:53.000
+explained to me what's going to happen.
+
+27:53.000 --> 27:57.000
+2040 is a number, I'm subtracting off what type of object.
+
+27:57.000 --> 27:59.000
+It's an array.
+
+27:59.000 --> 28:03.000
+And so what is that operation going to do?
+
+28:03.000 --> 28:07.000
+Element-wise, one element at a time, right?
+
+28:07.000 --> 28:09.000
+So it is going to return what?
+
+28:09.000 --> 28:12.000
+It's going to evaluate to what?
+
+28:12.000 --> 28:14.000
+An array.
+
+28:14.000 --> 28:17.000
+And the first element of that array is going to be 2014 minus 67.
+
+28:17.000 --> 28:22.000
+The second element of the array is going to be 2014 minus 68 and so on.
+
+28:22.000 --> 28:24.000
+And what's the purpose of doing this?
+
+28:24.000 --> 28:31.000
+It's to find out what these people were born in.
+
+28:31.000 --> 28:33.000
+So take a look at that.
+
+28:33.000 --> 28:36.000
+1942 to about 1947.
+
+28:36.000 --> 28:40.000
+What was going on in the United States in those years?
+
+28:40.000 --> 28:41.000
+War.
+
+28:41.000 --> 28:42.000
+Right?
+
+28:42.000 --> 28:48.000
+So Pearl Harbor was in 1941.
+
+28:48.000 --> 28:54.000
+And so if you look at the oldest people, the 72-year-olds,
+
+28:54.000 --> 28:56.000
+that's what you're seeing there.
+
+28:56.000 --> 28:58.000
+And then there's some number of bits.
+
+28:58.000 --> 29:04.000
+And so the war ends around here.
+
+29:04.000 --> 29:06.000
+Everybody gets home.
+
+29:06.000 --> 29:08.000
+It takes a while to have a baby.
+
+29:08.000 --> 29:13.000
+And then in 1947, suddenly there's a lot of babies.
+
+29:13.000 --> 29:16.000
+And that's pretty much what you're seeing here.
+
+29:16.000 --> 29:22.000
+So the point of this is not just to show you the method calls,
+
+29:22.000 --> 29:26.000
+but to notice that something as,
+
+29:26.000 --> 29:33.000
+suddenly, prosaic as census data can tell stories if you look at them
+
+29:33.000 --> 29:35.000
+and ask questions.
+
+29:35.000 --> 29:39.000
+And so we encourage you when you look at any data set to ask why
+
+29:39.000 --> 29:43.000
+to notice unusual blips and to ask why they are.
+
+29:43.000 --> 29:47.000
+And sometimes you learn something quite interesting.
+
+29:47.000 --> 29:50.000
+OK.
+
+29:50.000 --> 29:57.000
+We had one data set that had everybody in it.
+
+29:57.000 --> 29:59.000
+What we're going to look.
+
+29:59.000 --> 30:03.000
+This is now looking at the change from 2010 to 2014.
+
+30:03.000 --> 30:19.000
+So.
+
+30:19.000 --> 30:48.000
+Is somebody watching YouTube?
+
+30:48.000 --> 31:01.000
+And if you insist on doing that, it's called earbuds.
+
+31:01.000 --> 31:04.000
+Thank you.
+
+31:04.000 --> 31:05.000
+All right.
+
+31:05.000 --> 31:11.000
+So this column represents the change in population between 2010 and 2014.
+
+31:11.000 --> 31:36.000
+And no surprise there, the biggest change was at 67 years old
+
+31:36.000 --> 31:50.000
+because the 67 years old in 2014, those are not the same people.
+
+31:50.000 --> 31:54.000
+How old were they in 2010?
+
+31:54.000 --> 31:56.000
+Sorry?
+
+31:56.000 --> 31:58.000
+63.
+
+31:58.000 --> 32:00.000
+You have a jump there.
+
+32:00.000 --> 32:04.000
+And so what I'd like you to do is I'm not going to dwell on this particular column now.
+
+32:04.000 --> 32:09.000
+What you're noticing is that what I'd like you to do as an exercise at home
+
+32:09.000 --> 32:13.000
+is to see how you can reconcile this with what we just said.
+
+32:13.000 --> 32:16.000
+The 67-year-olds, there was a jump there.
+
+32:16.000 --> 32:23.000
+This is another way of looking at the same element.
+
+32:23.000 --> 32:28.000
+What I'd like to do is actually I would like to look at growth rates because I have heard from
+
+32:28.000 --> 32:34.000
+core staff that people are unhappy about growth rates.
+
+32:34.000 --> 32:39.000
+Instead of looking just at absolute change, I would like to look at rate of change here.
+
+32:39.000 --> 32:47.000
+And before I do that, I'd like to ask your patients, I want to take you through a little discussion of what growth
+
+32:47.000 --> 32:50.000
+rates are and how that calculation comes about.
+
+32:50.000 --> 32:51.000
+And then we're going to use it.
+
+32:51.000 --> 32:56.000
+I've heard from numerous staff that growth rates caused unhappiness.
+
+32:56.000 --> 33:02.000
+So, okay, let's see if we can be a little less unhappy.
+
+33:02.000 --> 33:08.000
+So, a rate you can think of as a percent or a proportion.
+
+33:08.000 --> 33:09.000
+So, there's some growth rate.
+
+33:09.000 --> 33:10.000
+Don't worry about the letters.
+
+33:10.000 --> 33:16.000
+Just think of it as 3%.
+
+33:16.000 --> 33:22.000
+If a population you start at a certain point, you have some initial value.
+
+33:22.000 --> 33:30.000
+And you end up at a certain point after a specified period of time, then you have grown.
+
+33:30.000 --> 33:33.000
+And you have grown, we say, at a certain rate.
+
+33:33.000 --> 33:37.000
+And what we're going to do is figure out what that means.
+
+33:37.000 --> 33:42.000
+Okay, so after one time period, just assume that you start with something that we're calling x.
+
+33:42.000 --> 33:45.000
+You can take it to be 100 if you wish.
+
+33:45.000 --> 33:50.000
+After one time period, you have your x plus you have 3% of x.
+
+33:50.000 --> 33:54.000
+Okay, so that's the total population that you have.
+
+33:54.000 --> 34:00.000
+And a little bit of pulling out the x says that after one period you have,
+
+34:00.000 --> 34:07.000
+what you started with initially times one plus the growth.
+
+34:07.000 --> 34:11.000
+So, what I'd like to do is just fix the growth rate to be 3% in our heads.
+
+34:11.000 --> 34:16.000
+For an example, if I start out with a thousand people,
+
+34:16.000 --> 34:27.000
+then what I have at the end of one period is 1,000 people times 1.03.
+
+34:27.000 --> 34:29.000
+Right?
+
+34:29.000 --> 34:32.000
+And that is the base of the calculation.
+
+34:32.000 --> 34:35.000
+At every period, you see, what am I starting with now?
+
+34:35.000 --> 34:39.000
+And then you multiply that by one plus the rate.
+
+34:39.000 --> 34:45.000
+And so therefore, you agree?
+
+34:45.000 --> 34:51.000
+At the second period, you are starting out with where you were at the end of the first period.
+
+34:51.000 --> 34:54.000
+And so you were at x times 1 plus g.
+
+34:54.000 --> 34:57.000
+So 1,000 times 1.03.
+
+34:57.000 --> 35:01.000
+So you take that number and you multiply that again by 1.03.
+
+35:01.000 --> 35:03.000
+Questions about this line?
+
+35:03.000 --> 35:05.000
+This is the crucial line and everything else is just okay,
+
+35:05.000 --> 35:08.000
+so now we're going to do it for a bunch of periods.
+
+35:11.000 --> 35:14.000
+So for the third period, I'm going to take this as my starting point
+
+35:14.000 --> 35:18.000
+because that's how many people I have now and I'm going to multiply it by another 1 plus g.
+
+35:18.000 --> 35:22.000
+And so I'll get a 1 plus g cubed and so on.
+
+35:22.000 --> 35:25.000
+And so if you have t, this is t for time period,
+
+35:25.000 --> 35:29.000
+if you have t periods, then at the end of t period,
+
+35:29.000 --> 35:33.000
+you'll have your initial initial starting point, which is x,
+
+35:33.000 --> 35:37.000
+and then your 1 plus your growth rate, 1.03,
+
+35:37.000 --> 35:40.000
+to the power of your time periods.
+
+35:40.000 --> 35:47.000
+And so what does this do? This says, if you know your initial point,
+
+35:47.000 --> 35:50.000
+that is how many people you had at the start, that's x.
+
+35:50.000 --> 35:54.000
+And you know the growth rate, right?
+
+35:54.000 --> 35:57.000
+You know that you're going to be increasing at 3% a year.
+
+35:57.000 --> 36:00.000
+Then this is what helps you figure out where you're going to end up.
+
+36:00.000 --> 36:04.000
+This is what helps you figure out what your ending point is going to be.
+
+36:04.000 --> 36:10.000
+So this is what I call the forwards direction calculation.
+
+36:10.000 --> 36:13.000
+I know where I'm starting, I know what the rate's going to be,
+
+36:13.000 --> 36:15.000
+I figure out where I'm going to end up.
+
+36:15.000 --> 36:20.000
+Very often, we know where we're starting, we know where we ended up,
+
+36:20.000 --> 36:27.000
+and the question that comes up is, what did the rate have to be to make this possible?
+
+36:27.000 --> 36:30.000
+That is what I call the backwards calculation.
+
+36:30.000 --> 36:33.000
+I know the start, I know the end, I don't know the rate,
+
+36:33.000 --> 36:39.000
+but maybe I can figure out what did the rate have to be to get from this particular start to this particular end.
+
+36:39.000 --> 36:44.000
+And so for that, what you have to do is you basically have to solve for G in this equation.
+
+36:44.000 --> 36:49.000
+And so the next thing that I'm going to write down, if you don't like solving for stuff, just tune out.
+
+36:49.000 --> 36:54.000
+But if you do like solving for stuff, then you can see that this is just, I'm just going backwards.
+
+36:54.000 --> 36:59.000
+You will never have to do this in this class.
+
+36:59.000 --> 37:04.000
+I'm just, there are some people in the room who find it more reassuring if they know where stuff came from,
+
+37:04.000 --> 37:06.000
+so I'm just telling you where it comes from.
+
+37:06.000 --> 37:15.000
+And so this back calculation is what leads to the formula that you have been using in your labs for growth rate,
+
+37:15.000 --> 37:23.000
+which is to figure out what rate could have got you from initial x to ending y.
+
+37:23.000 --> 37:29.000
+You take ending divided by initial, raise it to this funny power, which is one over the time periods,
+
+37:29.000 --> 37:32.000
+and take the whole thing and subtract off one.
+
+37:32.000 --> 37:38.000
+That's where that thing comes from.
+
+37:38.000 --> 37:44.000
+If we ask you to do growth rates in exams, we will provide you with the formula.
+
+37:44.000 --> 37:46.000
+You don't have to worry about it, right?
+
+37:46.000 --> 37:49.000
+But I want you, you should have some sense of where these things come from,
+
+37:49.000 --> 37:59.000
+and this is a little description of where it comes from, say, two minutes for questions.
+
+37:59.000 --> 38:01.000
+Yeah.
+
+38:01.000 --> 38:04.000
+Did that give you a little growth rate from the beginning,
+
+38:04.000 --> 38:07.000
+not just the growth rate from the period?
+
+38:07.000 --> 38:12.000
+This is the annual, so I just think of periods as years.
+
+38:12.000 --> 38:16.000
+This is the annual growth rate that would, if you were compounded,
+
+38:16.000 --> 38:20.000
+would have led you from x to y in T periods.
+
+38:20.000 --> 38:26.000
+It is a per year rate.
+
+38:26.000 --> 38:29.000
+Okay, so we're just going to apply this thing.
+
+38:29.000 --> 38:39.000
+You've done it before in lab, I just want to make sure that we're okay with doing this.
+
+38:39.000 --> 39:06.000
+Okay, so here, so we're going from 2010 to 2014,
+
+39:06.000 --> 39:21.000
+so it's going to be everyone.
+
+39:21.000 --> 39:26.000
+Why did I do that?
+
+39:26.000 --> 39:33.000
+Tell column two divided by dot column one, why did I do that?
+
+39:33.000 --> 39:38.000
+I'm not done yet, but why did I do this?
+
+39:38.000 --> 39:44.000
+That's taking the end value dividing by the initial value that we said we had to do,
+
+39:44.000 --> 39:46.000
+and then what we have to do to this?
+
+39:46.000 --> 39:48.000
+We have to raise it to a power.
+
+39:48.000 --> 39:49.000
+Yep.
+
+39:49.000 --> 39:51.000
+One over how many time periods were there.
+
+39:51.000 --> 39:54.000
+If we're looking for an annual growth rate, how many time periods were there?
+
+39:54.000 --> 39:56.000
+Excuse me, now you can see.
+
+39:56.000 --> 40:00.000
+Four, there were four time periods.
+
+40:00.000 --> 40:05.000
+After having done all that, we have to subtract off one from this,
+
+40:05.000 --> 40:34.000
+and what we're going to do is we're going to look at sort.
+
+40:34.000 --> 40:57.000
+Okay, I'm going to shut up, look at that.
+
+40:57.000 --> 41:03.000
+See what needs to change, see what that's telling you.
+
+41:03.000 --> 41:28.000
+There's something a little alarming about that.
+
+41:28.000 --> 41:41.000
+Okay, why have we done here that isn't working out correctly?
+
+41:41.000 --> 41:47.000
+You know, I'm not happy about this at all.
+
+41:47.000 --> 41:57.000
+Where did I make everyone?
+
+41:57.000 --> 42:14.000
+Yeah, just a moment, let me just come back to where I was.
+
+42:14.000 --> 42:17.000
+Yes, yes, yes, there's a parenthesis issue.
+
+42:17.000 --> 42:26.000
+I'm just trying to recompute the, it's this.
+
+42:26.000 --> 42:31.000
+Okay, so we were all unhappy because of why?
+
+42:31.000 --> 42:33.000
+Because the minus signs.
+
+42:33.000 --> 42:36.000
+Yes, the populations are increasing, you can't have minuses.
+
+42:36.000 --> 42:38.000
+Something was wrong in that calculation.
+
+42:38.000 --> 42:42.000
+And because of the, this thing doesn't fix itself going back up,
+
+42:42.000 --> 42:45.000
+I had to recalculate the entire table and come back down,
+
+42:45.000 --> 42:48.000
+and I didn't want to do run all above.
+
+42:48.000 --> 42:53.000
+So, okay, let's try this.
+
+42:53.000 --> 42:57.000
+It's much better.
+
+42:57.000 --> 42:59.000
+Much better.
+
+42:59.000 --> 43:02.000
+Positive growth rate because you can see from 2010 to 2014,
+
+43:02.000 --> 43:04.000
+the numbers are higher.
+
+43:04.000 --> 43:11.000
+Yep, okay, all of these are around 0.07, 0.06.
+
+43:11.000 --> 43:13.000
+Where's the highest rate of growth?
+
+43:13.000 --> 43:17.000
+The very, very, very, very senior people.
+
+43:17.000 --> 43:21.000
+And if you compare to, like the 1960s,
+
+43:21.000 --> 43:24.000
+the people in those age groups, like 9900,
+
+43:24.000 --> 43:26.000
+and the people who are 100 and up,
+
+43:26.000 --> 43:28.000
+they have grown by almost 75%.
+
+43:28.000 --> 43:34.000
+There's a very significant growth in that age group.
+
+43:34.000 --> 43:40.000
+And this is, you know, a very vivid picture of the grain of America.
+
+43:40.000 --> 43:47.000
+Okay, so what I'd like to do today is we've had a lot of discussion of
+
+43:47.000 --> 43:53.000
+wars, people getting old, and so on and so forth,
+
+43:53.000 --> 43:56.000
+and at your age group, it's a little depressing.
+
+43:56.000 --> 44:00.000
+So, I want to look at something a little more and light,
+
+44:00.000 --> 44:01.000
+but yes.
+
+44:01.000 --> 44:20.000
+No, we're looking at annual growth rate.
+
+44:20.000 --> 44:21.000
+For you.
+
+44:21.000 --> 44:22.000
+For you.
+
+44:22.000 --> 44:23.000
+For you.
+
+44:23.000 --> 44:24.000
+Rate for you.
+
+44:24.000 --> 44:28.000
+Annual rate.
+
+44:28.000 --> 44:33.000
+Okay, let's quickly summarize, actually not summarize.
+
+44:33.000 --> 44:35.000
+There are, there's language that we just use.
+
+44:35.000 --> 44:42.000
+I want it on slides, so that you know.
+
+44:42.000 --> 44:44.000
+That is actually statistical terminology,
+
+44:44.000 --> 44:47.000
+and not just some terms that we're making up here.
+
+44:47.000 --> 44:48.000
+Types of data.
+
+44:48.000 --> 44:52.000
+You know that everything in the column should have the same type,
+
+44:52.000 --> 44:54.000
+and be comparable in some way.
+
+44:54.000 --> 44:58.000
+We are now bringing that in because you've had ages of 23 and 54,
+
+44:58.000 --> 45:02.000
+and a so-called age of 999, and you shouldn't be working with that
+
+45:02.000 --> 45:06.000
+999 at the same time as the 23 and 54.
+
+45:06.000 --> 45:08.000
+Okay, numerical.
+
+45:08.000 --> 45:09.000
+Numerical measurements.
+
+45:09.000 --> 45:11.000
+They're on the real line necessarily.
+
+45:11.000 --> 45:12.000
+They're ordered.
+
+45:12.000 --> 45:14.000
+53 is bigger than 21.
+
+45:14.000 --> 45:16.000
+Differences matter, right?
+
+45:16.000 --> 45:20.000
+There is a, it's a length or a time period difference.
+
+45:20.000 --> 45:24.000
+Categorical is like if you are looking at favorite colors,
+
+45:24.000 --> 45:29.000
+so categories, red, blue, green.
+
+45:29.000 --> 45:32.000
+Each value is from a fixed inventory.
+
+45:32.000 --> 45:36.000
+It just means that there are, you know, there are, you have a total set of five colors,
+
+45:36.000 --> 45:40.000
+and each person will give you one of those five colors.
+
+45:40.000 --> 45:42.000
+May or may not have an ordering.
+
+45:42.000 --> 45:44.000
+So here's some categorical data.
+
+45:44.000 --> 45:48.000
+You do a little rating of something, and you are not satisfied.
+
+45:48.000 --> 45:51.000
+Some what's satisfied, very satisfied.
+
+45:51.000 --> 45:54.000
+Those are categories, but they have a natural ordering.
+
+45:54.000 --> 46:00.000
+And so some categories may be ordered, but red, blue, green is not necessarily ordered.
+
+46:00.000 --> 46:02.000
+Categories are the same or different.
+
+46:02.000 --> 46:04.000
+Well, so are numbers.
+
+46:04.000 --> 46:08.000
+But the point is you can't have fractional differences in between, right?
+
+46:08.000 --> 46:14.000
+You're either in this category or you're in that, and we will choose a category
+
+46:14.000 --> 46:18.000
+so that we don't have a collapse.
+
+46:18.000 --> 46:21.000
+Okay, so this is now so-called numerical data.
+
+46:21.000 --> 46:25.000
+Just because the data on numbers doesn't mean the variable is numerical,
+
+46:25.000 --> 46:31.000
+so your sex code had number 0, 1, 2, but you can't subtract and take averages
+
+46:31.000 --> 46:33.000
+of those numbers. It doesn't make sense.
+
+46:33.000 --> 46:40.000
+They're just labels, and you could just as well have called them red, blue, and green.
+
+46:40.000 --> 46:45.000
+And so one of the things that happens is there's a big discussion as to whether
+
+46:45.000 --> 46:49.000
+course evaluations of teachers, how they should be summarized.
+
+46:49.000 --> 46:52.000
+So at the end of the term, you have to do a course evaluation.
+
+46:52.000 --> 46:55.000
+And there's a, you know, would you rate the effectiveness of this course,
+
+46:55.000 --> 46:57.000
+and there's like a one through five scale?
+
+46:57.000 --> 46:58.000
+Yep.
+
+46:58.000 --> 47:04.000
+So you're giving back a number, and it sure looks like a number, but it's a category, right?
+
+47:04.000 --> 47:06.000
+It's your rating of that person.
+
+47:06.000 --> 47:08.000
+I use somewhat satisfied, very satisfied.
+
+47:08.000 --> 47:12.000
+Basically, it's a category. And then what we get back are averages of those numbers,
+
+47:12.000 --> 47:17.000
+and we're looking at that going, I'm not really very sure what this average means.
+
+47:17.000 --> 47:20.000
+Because after all, one person's four, and somebody else's four,
+
+47:20.000 --> 47:22.000
+might mean quite different things, right?
+
+47:22.000 --> 47:25.000
+And in any case, those numbers don't make any sense.
+
+47:25.000 --> 47:28.000
+So there are, it just keeps us in mind.
+
+47:28.000 --> 47:34.000
+And so the variable sex is still categorical, even though the numbers were used for categories.
+
+47:34.000 --> 47:38.000
+Okay, so we know how to do line plots.
+
+47:38.000 --> 47:42.000
+We're now going to quickly see another kind of plot, and I hope to get you something interesting.
+
+47:42.000 --> 47:46.000
+We have just about enough time. Okay.
+
+47:46.000 --> 47:54.000
+So you will have noticed, you will have noticed that I'm really bad at typing,
+
+47:54.000 --> 47:59.000
+like really bad at typing, especially in a lecture in front of 700 people.
+
+47:59.000 --> 48:01.000
+It just doesn't work.
+
+48:01.000 --> 48:07.000
+So when the function calls are simple, and there's really not much new going on,
+
+48:07.000 --> 48:10.000
+you will often find that I've already populated the notebook.
+
+48:10.000 --> 48:13.000
+I will take you through what is typed there, and then we'll hit return.
+
+48:13.000 --> 48:18.000
+So that you don't have to go through me going back and correcting my own mistakes over and over again.
+
+48:18.000 --> 48:21.000
+Okay.
+
+48:21.000 --> 48:25.000
+Okay, so what we're going to do is we're going to, there's a table called Actors.
+
+48:25.000 --> 48:29.000
+We are going to take a look at these people.
+
+48:29.000 --> 48:35.000
+There are 50 actors in this table, and about 2015, they were the people that had.
+
+48:35.000 --> 48:40.000
+Okay, so now let me explain what the columns are.
+
+48:40.000 --> 48:42.000
+So there's a name of the actor.
+
+48:42.000 --> 48:43.000
+Total gross.
+
+48:43.000 --> 48:46.000
+That's not the amount of money that the actor makes.
+
+48:46.000 --> 48:53.000
+That's the total amount made by the movies that the actor was in.
+
+48:53.000 --> 48:57.000
+And that is in millions of dollars.
+
+48:57.000 --> 49:00.000
+Then there's a number of movies that actor has been in.
+
+49:00.000 --> 49:09.000
+The average per movie is among that actor's movies, what was the average amount made by the movies?
+
+49:09.000 --> 49:13.000
+And the number one movie is this actor was in a bunch of movies.
+
+49:13.000 --> 49:18.000
+One of them had the highest gross amount, which one was that, and that's there.
+
+49:18.000 --> 49:23.000
+And then I think it's, I think what did that one gross?
+
+49:23.000 --> 49:25.000
+They're highest grossing movie.
+
+49:25.000 --> 49:26.000
+What did that one gross?
+
+49:26.000 --> 49:31.000
+And so there were, there's a table with the 50 highest ones in about 2015.
+
+49:31.000 --> 49:33.000
+And you can see most of them are guys.
+
+49:33.000 --> 49:37.000
+There's a few women as well on the list.
+
+49:37.000 --> 49:38.000
+Okay.
+
+49:38.000 --> 49:43.000
+So what I would like to do is I would like to draw a scatter diagram.
+
+49:43.000 --> 49:49.000
+What I'm going to look at is, well, we're going to take a look at this diagram.
+
+49:49.000 --> 49:52.000
+And then we're going to see exactly what it's doing.
+
+49:52.000 --> 49:57.000
+This is called a scatter. It is not a line plot on the horizontal axis.
+
+49:57.000 --> 49:59.000
+We're going to have number of movies.
+
+49:59.000 --> 50:10.000
+And on the vertical axis, we're going to have the total amount grossed by the movie.
+
+50:10.000 --> 50:14.000
+This is a scatter of points like a cloud.
+
+50:14.000 --> 50:16.000
+It's often called a cloud.
+
+50:16.000 --> 50:19.000
+Each point represents one actor.
+
+50:19.000 --> 50:23.000
+And it's basically like plotting points on an XY grid on the horizontal axis.
+
+50:23.000 --> 50:24.000
+You have number of movies.
+
+50:24.000 --> 50:27.000
+And on the vertical, you have the total amount grossed.
+
+50:27.000 --> 50:28.000
+Okay. So who was the top here?
+
+50:28.000 --> 50:30.000
+It was Harrison Ford.
+
+50:30.000 --> 50:31.000
+41 movies.
+
+50:31.000 --> 50:33.000
+Top grossing was about there.
+
+50:33.000 --> 50:36.000
+So can we find Harrison Ford here?
+
+50:36.000 --> 50:39.000
+41 top gross in this one.
+
+50:39.000 --> 50:41.000
+Agreed.
+
+50:41.000 --> 50:42.000
+Okay.
+
+50:42.000 --> 50:44.000
+I'd like you to take a look at that scatter.
+
+50:44.000 --> 50:48.000
+What that is showing is called positive association.
+
+50:48.000 --> 50:53.000
+The more movies, in general, the more total amount of money.
+
+50:53.000 --> 50:56.000
+Right? You can see that there is a trend.
+
+50:56.000 --> 50:58.000
+The two variables are associated.
+
+50:58.000 --> 50:59.000
+There is some relation between them.
+
+50:59.000 --> 51:03.000
+Association was the word that we had in our second lecture when we started out.
+
+51:03.000 --> 51:05.000
+This is positive association.
+
+51:05.000 --> 51:06.000
+No surprise.
+
+51:06.000 --> 51:09.000
+The more movies, the more total amount made.
+
+51:09.000 --> 51:15.000
+So what we're going to do now is we are going to look at a different scatter diagram.
+
+51:15.000 --> 51:19.000
+Number of movies versus the average amount made per movie.
+
+51:19.000 --> 51:24.000
+Again, every point is going to be an actor.
+
+51:24.000 --> 51:27.000
+Ooh, very different.
+
+51:27.000 --> 51:28.000
+Very different.
+
+51:28.000 --> 51:30.000
+Negative association.
+
+51:30.000 --> 51:32.000
+So there's a point for every actor.
+
+51:32.000 --> 51:38.000
+And what you're seeing in this is that the more movies those actors made,
+
+51:38.000 --> 51:41.000
+on average the less those movies made.
+
+51:41.000 --> 51:43.000
+So you can see the negative association.
+
+51:43.000 --> 51:46.000
+And there is one point that is just screaming at you.
+
+51:46.000 --> 51:47.000
+Yes?
+
+51:47.000 --> 51:49.000
+You see this?
+
+51:49.000 --> 51:50.000
+Screaming at you.
+
+51:50.000 --> 51:52.000
+Shall we find out who that is?
+
+51:52.000 --> 51:56.000
+Because this person is the boss of this diagram.
+
+51:56.000 --> 52:01.000
+Small number of movies and through the roof, average gross.
+
+52:01.000 --> 52:02.000
+Okay.
+
+52:02.000 --> 52:05.000
+So tell me if that, you think that is a good call.
+
+52:05.000 --> 52:09.000
+Actors are where the average per movie above 400.
+
+52:09.000 --> 52:18.000
+Look good? Yes? All right.
+
+52:18.000 --> 52:20.000
+Anthony Daniels.
+
+52:20.000 --> 52:22.000
+Anthony Daniels.
+
+52:22.000 --> 52:25.000
+Don't look at me like who's Anthony Daniels.
+
+52:25.000 --> 52:26.000
+What do you mean?
+
+52:26.000 --> 52:29.000
+Anthony Daniels is the boss of this diagram.
+
+52:29.000 --> 52:31.000
+Small number of movies.
+
+52:31.000 --> 52:34.000
+A ton of money per movie.
+
+52:34.000 --> 52:40.000
+All right.
+
+52:40.000 --> 52:43.000
+What is, whoa.
+
+52:43.000 --> 52:46.000
+What is the data science lesson?
+
+52:46.000 --> 52:49.000
+Pay attention to what's being measured.
+
+52:49.000 --> 52:51.000
+You're not measuring what the actor makes.
+
+52:51.000 --> 52:54.000
+You're measuring what the movies make.
+
+52:54.000 --> 52:57.000
+This actor is only in the Star Wars franchise.
+
+52:57.000 --> 52:59.000
+Every single one is a blockbuster.
+
+52:59.000 --> 53:01.000
+On average through the roof.
+
+53:01.000 --> 53:03.000
+Okay.
+
+53:03.000 --> 53:08.000
+Guys, I want to say something about Friday.
+
+53:08.000 --> 53:12.000
+Friday people go through the following calculation.
+
+53:12.000 --> 53:14.000
+I've done my lab.
+
+53:14.000 --> 53:15.000
+It's Friday.
+
+53:15.000 --> 53:17.000
+I got other stuff.
+
+53:17.000 --> 53:19.000
+I don't need to come.
+
+53:19.000 --> 53:21.000
+Here's what I'm going to say.
+
+53:21.000 --> 53:24.000
+This particular Friday is on histograms.
+
+53:24.000 --> 53:26.000
+People make this calculation every term.
+
+53:26.000 --> 53:29.000
+And they look at it and go, that's a bar graph, I understand.
+
+53:29.000 --> 53:34.000
+We have found that this topic causes trouble on homeworks, labs,
+
+53:34.000 --> 53:36.000
+and especially the midterm.
+
+53:36.000 --> 54:03.000
+Please show up.
+
+54:36.000 --> 54:38.000
+All right.
+
+54:38.000 --> 54:40.000
+Thank you.
+
+54:40.000 --> 54:42.000
+All right.
+
+54:42.000 --> 54:44.000
+Thank you.
+
+54:44.000 --> 54:46.000
+Thank you.
+
+54:46.000 --> 54:48.000
+Thank you.
+
+54:48.000 --> 54:52.000
+All right.
+
+54:52.000 --> 54:54.000
+All right.
+
+54:54.000 --> 55:14.000
+All right.
+

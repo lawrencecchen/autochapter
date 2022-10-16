@@ -1,0 +1,783 @@
+.
+.
+.
+..
+..
+..
+..
+..
+..
+..
+..
+..
+..
+..
+..
+..
+..
+..
+..
+..
+..
+..
+..
+..
+..
+..
+..
+..
+..
+..
+..
+..
+..
+..
+..
+..
+..
+..
+..
+..
+..
+..
+..
+..
+..
+..
+..
+..
+..
+..
+..
+..
+..
+..
+..
+..
+..
+..
+..
+..
+..
+..
+..
+..
+..
+..
+..
+..
+..
+..
+.
+..
+..
+..
+..
+.
+All right, we're going to do some visualizations today.
+Let's have some here.
+I see a couple there.
+All right, tell them please.
+Announcements, same as last time.
+Thank you for all those people who are keeping their hands up.
+But please take advantage of all that seats.
+Thank you.
+Same as last time, homework is you tomorrow.
+You get an extra point for turning it in today.
+The routine is the same every week.
+Small group tutoring sessions have been announced on Piazza.
+If you feel that it might help you, then please take advantage of it.
+They're filling up.
+OK, I want to pick up where we left off last time.
+What we had done last time was we had gone through a series of table operations on columns
+and rows.
+And then we had taken a dataset from the census.
+And we were just about to start looking at the data and interpreting it when time was up.
+So let's review where we were.
+As we said last time, the census is a every 10 year thing.
+Every 10 years, the US government counts.
+The number of people in the United States.
+And it's not citizens or anything.
+It's just how many people are in the United States.
+And the reason for doing that is the Constitution says that there are
+a portionment, representation, and federal funds and so on
+are connected with the number of people in each state.
+This is a massive undertaking.
+It's quite difficult.
+But it's done every 10 years and also in between those 10-year periods.
+There are estimates made every year.
+So that people are prepared for what might come up in the next census.
+And governments and so on can make policy based on more current data than
+data from 10 years ago.
+We saw a dataset that we had loaded from the census.
+And there was a sex column, which had some codes.
+And then there was an age column with age and years.
+And I'll just go over.
+The sex column had a numerical code for male female.
+And the estimates were done at a particular time.
+The population estimates were done at a particular time of the year.
+The columns also had some aggregated data.
+So the sex column, when you see a code of zero, it was everybody.
+And the remarkable age of 99 years is actually not 99 years at all.
+It was everybody of all ages.
+So instead of writing male and female, or everyone,
+they were using numeric codes.
+This is for storage efficiency.
+And also, because you don't want to be typing words all the time.
+Often, very often, numerical codes are used.
+That doesn't mean they're actually numbers.
+I'll come to that later.
+So values in a column have the same type.
+You know that they're arrays.
+The point that we're trying to make here at the end is age 12 is actually 12 years old.
+That's a kid.
+You can imagine that age 9.99 is not an age.
+It's a number here, as far as a computer is concerned, but it's not an age.
+And when we interpret data in tables, we have to keep things like that in mind.
+And where do you know what's going on, like what these codes mean?
+You have to read the documentation provided by the people who made the table.
+And so there's a link to that at the bottom there.
+So what I'd like to do is I'd like to get started by reviewing where we were.
+So there was a census data.
+The census provides data in this file right here.
+And we read it into a table called full.
+And that has a sex column and age column and various population columns,
+from which we selected four columns into a partial table,
+which we called partial.
+This thing had a 306 rows, and it had sex age.
+The estimate in 2010 and the estimate in 2014 of the total population.
+And it's broken down by each group and each label for sex.
+We did not like these long column labels, and so we did some relabeling.
+We relabeled that long pop estimate 2010 to be just 2010,
+and then we were too lazy to even type in pop estimate 2014.
+So we just used the column index there.
+We relabeled column three to be column 2014, and we took a look at that.
+And now you have a table that is a little easier to comprehend and work with,
+and so that's what we're going to start doing.
+I think last time we had also decided that we didn't like looking at large numbers
+and not knowing how big they were, so we used number four matter.
+And now you can see that you have essentially four million people in each of those cells.
+Every age group, four million people, and these are the little tiny ones,
+age zero through nine that you can see.
+But then the table continues.
+We took a look at the age labels, and there was 9.99.
+So we've seen everybody put together, everybody of all ages, put together there.
+Sex was one male, two females, zero, everybody, and so what we're going to do now
+is because it is extremely disconcerting to work with ages of 999.
+We're going to do some further reduction of this table.
+I'd like you to look at age 100.
+Age 100 there isn't exactly 100 years, it's 100 plus.
+Everybody, 100 plus was lumped in there, and that's where the numbers are bigger.
+And we'll look at them again.
+But so even 100 isn't 100 years old, it's 100 plus, 999 is everybody.
+So now, I will take one short pause for questions.
+This is exactly where we were, I think, last time.
+So the first thing we'll do is we will get rid of the 999.
+So I'll create a table called no 999, where you take this table and you take the rows where the age,
+column index one, are below 999.
+And I do that, and I don't see anything because that's an assignment statement.
+That's fine.
+I'm not going to run the same thing twice.
+What I'm going to do is I'm going to extract a table for everybody.
+So from this, every row where sex is equal to zero, and then we'll make a table for the guys.
+And for the girls and the women, and so we create those three tables.
+And we take a look at table called females.
+And so that's, okay, at every age zero through 100, you have the number of females in the years 2010 and the year 2014.
+And I look at that sex column.
+Well, this is the table of females.
+Every single one of them is going to be a two.
+That's rather boring.
+So we should not be carrying around a column that just has all two's in it.
+So how about we go back?
+We haven't messed with no 99, so we're just going to drop column zero here for all of them.
+Okay.
+Now, actually, we have some data there that are interesting to look at.
+So we have the females, and we have the males as well, and I have a question for you.
+So you can see that there's slight differences in how many females there are at each age group.
+For example, there are more of more nine-year-olds than tiny, tiny, tiny infants.
+You see that?
+Yeah?
+So among the females, which age do you think is the most populous?
+Talk to your friends and neighbors.
+You can't tell that from here.
+You just have to guess based on what you know.
+All right.
+Since everybody is guessing, everybody is guessing somebody call out a guess.
+Sorry?
+Five zero?
+Six zero.
+Six.
+Somebody guess a 60 roughly why?
+Baby boom.
+All right.
+That's a good guess.
+Others.
+Other candidates?
+Yes?
+Above 100.
+Above 100.
+All right.
+Because there's lots of ages in there.
+More.
+37, because.
+Because there's lots of ages in there.
+Close it up.
+Baby boom.
+They haven't died yet.
+Okay.
+Great.
+So then more of it, as it might seem, that is exactly the kind of thing you have to think
+about, yes.
+About 20?
+About 20, why?
+Because that would be about when the generation above the liners are stopping being the major
+segment of producing kids since millennials are notoriously not producing kids.
+Oh, wow.
+So now we're looking at millennials.
+There's a lot of them, but they don't have a lot of kids.
+And so maybe their kids are all over 20.
+So now maybe let's look at the 20-year-olds and there's a lot of them.
+So shall we actually look?
+Let's actually look.
+What?
+No.
+No.
+No.
+I already know that 100 is bigger than 99.
+This is silly.
+Okay.
+So I'm just going to look at the 2014 population.
+So who said 60?
+Yeah.
+I think you're the closest.
+Yes?
+All right.
+So there's more in 2014.
+There were more 54 or 53-year-old women than anything else.
+20, somebody said 20s.
+You had 20s.
+Somebody else had 20s?
+Yeah.
+So you guys weren't doing so badly.
+But you can see they're all sort of in the 50s and in the 20s.
+Which is interesting.
+It's quite interesting to see whether the picture is the same for
+the men.
+No.
+Not the same for the men.
+Most common for men is 23.
+There is a 54.
+You can see what is way down.
+All right.
+And so these very dry numbers are telling a story.
+They're telling a story that guys' lives are genuinely different from
+women's lives.
+And also their biology are different.
+So what we're going to do now is we're going to take a look a
+little more carefully at these data and maybe what we can do is
+create one table with both genders.
+So let's just call it population 2014.
+So I'm just going to look at the year 2014 and you can change
+it later.
+So for age I can pick any one of these first columns.
+So I'm going to take a look at the picture.
+Okay.
+So look at the number of males compared to the number of females at
+these different age groups.
+Do you notice something?
+Consistently fewer little girls than boys of the same age.
+Look at age zero.
+Those are the kids just born.
+The proportion of females is not 50%.
+This has long been the case and there's some biology that I
+does not clear to me is completely well understood.
+The proportion, a baby born is slightly less likely to be a
+female than male.
+And at all of these ages, the proportion of females is
+slightly less.
+Why don't we just work out what the proportion is and then
+we'll take a look at what that looks like across all the
+ages that we can't see.
+So we'll create an array called percent females.
+Okay.
+So we will convert these numbers to a percent of the total.
+Yep.
+How do I find the total?
+Well, it's a sum of these two.
+So we will take white dot column and not select because it's
+an array.
+I want to do arithmetic with it.
+I don't want to just visualize on the table.
+I want to do some arithmetic.
+Okay.
+I've got to take it and add it.
+And if I do that, I will get a fraction.
+So why don't I convert that into a percent by multiplying by
+100.
+And then we create a new table called counts and
+percent, which is our old table pop 2014.
+Okay.
+So just about 49% female throughout in these age groups.
+Okay.
+So now what does this look like for all the other age groups?
+Of course, we could turn the table over and sort by age in
+descending order and take a look.
+But it's a good idea to draw a picture.
+It's just crying out for us to draw a picture.
+And so what we will do is we will now draw some
+line graphs.
+These are plots.
+And so I will take the table dot plot produces a line graph.
+And we will plot the age on the horizontal axis.
+So the columns are age, and we will plot a percent female on
+the vertical.
+That is interesting.
+You start out proportion female is just below 50% by about 40
+males and females in equal proportions and what happens to
+the senior citizens.
+At the higher ages, you're seeing quite substantially more
+females than males.
+So that is an interesting observation from this graph.
+And we look at it a little more carefully.
+I just want to go over the call.
+So if you want, you have a table of data and you want to draw
+a line plot of one column versus another, then table dot
+plot to you can use two arguments.
+The first one will represent the horizontal axis and the
+second one will represent the vertical.
+All right.
+So what would be nice is to look at the males and
+females separately and possibly on the same graph if possible.
+So let's take a look at pop 2014 again.
+These are accounts, not percents.
+What we're going to do is we're going to take two plots on
+the same graph.
+These are called overlaid plots.
+And so I'm going to plot the males versus age and the
+females versus age.
+And to do that, I just have to specify which is the x-axis.
+Then every single other column will be plotted as the y-axis.
+So there will be a separate graph for every single other column.
+So these accounts.
+Number of people in each age group and the blue graph represents
+the males and the gold graph represents the females.
+So this is another way of visualizing what we just did before
+I do that.
+Any questions about the call?
+If your data set, so our data set had everything numerical,
+there was a column of ages and then there were numbers.
+If you had a column of names as well, then plot would be
+unhappy.
+So select the things that you want to plot and then work
+with table like that.
+All right.
+So you can see what we saw before.
+That is up to the age of about 40.
+There are fewer females than males.
+Around 40, it overlaps.
+And then by the end, there are more females than males.
+And there's some fluctuation.
+The numbers aren't always the same.
+It's going to move all about, except there's a plummet here.
+That's unusual.
+Just a very sharp drop.
+And so what we're going to do is we're going to see what was
+happening at those ages.
+And these ages are right about here.
+So why don't we look at, OK.
+Take a look at those numbers.
+See what you spot.
+Do you see the plummet?
+The very sharp drop, one age to the next.
+Where is it?
+Which age?
+67.
+Right.
+If you look from 67 to 68, you have it's 1.8 million versus
+1.3 million.
+Something happened there.
+Right.
+And there's something else going on.
+71 to 72.
+There's something noticeable going on there.
+And so what would be very nice to see is who are those people.
+And so what we're going to do is we're going to figure out
+the bonds.
+Right.
+So if somebody is 67 in the year 2014, these are only from 2014,
+then you can figure out when they were born by subtracting their age
+from 2014.
+And so we are going to do 2014 minus.
+We don't need to do all of them.
+I don't think how about we do 67.
+OK.
+Somebody, before we run, there's somebody
+explained to me what's going to happen.
+2040 is a number, I'm subtracting off what type of object.
+It's an array.
+And so what is that operation going to do?
+Element-wise, one element at a time, right?
+So it is going to return what?
+It's going to evaluate to what?
+An array.
+And the first element of that array is going to be 2014 minus 67.
+The second element of the array is going to be 2014 minus 68 and so on.
+And what's the purpose of doing this?
+It's to find out what these people were born in.
+So take a look at that.
+1942 to about 1947.
+What was going on in the United States in those years?
+War.
+Right?
+So Pearl Harbor was in 1941.
+And so if you look at the oldest people, the 72-year-olds,
+that's what you're seeing there.
+And then there's some number of bits.
+And so the war ends around here.
+Everybody gets home.
+It takes a while to have a baby.
+And then in 1947, suddenly there's a lot of babies.
+And that's pretty much what you're seeing here.
+So the point of this is not just to show you the method calls,
+but to notice that something as,
+suddenly, prosaic as census data can tell stories if you look at them
+and ask questions.
+And so we encourage you when you look at any data set to ask why
+to notice unusual blips and to ask why they are.
+And sometimes you learn something quite interesting.
+OK.
+We had one data set that had everybody in it.
+What we're going to look.
+This is now looking at the change from 2010 to 2014.
+So.
+Is somebody watching YouTube?
+And if you insist on doing that, it's called earbuds.
+Thank you.
+All right.
+So this column represents the change in population between 2010 and 2014.
+And no surprise there, the biggest change was at 67 years old
+because the 67 years old in 2014, those are not the same people.
+How old were they in 2010?
+Sorry?
+63.
+You have a jump there.
+And so what I'd like you to do is I'm not going to dwell on this particular column now.
+What you're noticing is that what I'd like you to do as an exercise at home
+is to see how you can reconcile this with what we just said.
+The 67-year-olds, there was a jump there.
+This is another way of looking at the same element.
+What I'd like to do is actually I would like to look at growth rates because I have heard from
+core staff that people are unhappy about growth rates.
+Instead of looking just at absolute change, I would like to look at rate of change here.
+And before I do that, I'd like to ask your patients, I want to take you through a little discussion of what growth
+rates are and how that calculation comes about.
+And then we're going to use it.
+I've heard from numerous staff that growth rates caused unhappiness.
+So, okay, let's see if we can be a little less unhappy.
+So, a rate you can think of as a percent or a proportion.
+So, there's some growth rate.
+Don't worry about the letters.
+Just think of it as 3%.
+If a population you start at a certain point, you have some initial value.
+And you end up at a certain point after a specified period of time, then you have grown.
+And you have grown, we say, at a certain rate.
+And what we're going to do is figure out what that means.
+Okay, so after one time period, just assume that you start with something that we're calling x.
+You can take it to be 100 if you wish.
+After one time period, you have your x plus you have 3% of x.
+Okay, so that's the total population that you have.
+And a little bit of pulling out the x says that after one period you have,
+what you started with initially times one plus the growth.
+So, what I'd like to do is just fix the growth rate to be 3% in our heads.
+For an example, if I start out with a thousand people,
+then what I have at the end of one period is 1,000 people times 1.03.
+Right?
+And that is the base of the calculation.
+At every period, you see, what am I starting with now?
+And then you multiply that by one plus the rate.
+And so therefore, you agree?
+At the second period, you are starting out with where you were at the end of the first period.
+And so you were at x times 1 plus g.
+So 1,000 times 1.03.
+So you take that number and you multiply that again by 1.03.
+Questions about this line?
+This is the crucial line and everything else is just okay,
+so now we're going to do it for a bunch of periods.
+So for the third period, I'm going to take this as my starting point
+because that's how many people I have now and I'm going to multiply it by another 1 plus g.
+And so I'll get a 1 plus g cubed and so on.
+And so if you have t, this is t for time period,
+if you have t periods, then at the end of t period,
+you'll have your initial initial starting point, which is x,
+and then your 1 plus your growth rate, 1.03,
+to the power of your time periods.
+And so what does this do? This says, if you know your initial point,
+that is how many people you had at the start, that's x.
+And you know the growth rate, right?
+You know that you're going to be increasing at 3% a year.
+Then this is what helps you figure out where you're going to end up.
+This is what helps you figure out what your ending point is going to be.
+So this is what I call the forwards direction calculation.
+I know where I'm starting, I know what the rate's going to be,
+I figure out where I'm going to end up.
+Very often, we know where we're starting, we know where we ended up,
+and the question that comes up is, what did the rate have to be to make this possible?
+That is what I call the backwards calculation.
+I know the start, I know the end, I don't know the rate,
+but maybe I can figure out what did the rate have to be to get from this particular start to this particular end.
+And so for that, what you have to do is you basically have to solve for G in this equation.
+And so the next thing that I'm going to write down, if you don't like solving for stuff, just tune out.
+But if you do like solving for stuff, then you can see that this is just, I'm just going backwards.
+You will never have to do this in this class.
+I'm just, there are some people in the room who find it more reassuring if they know where stuff came from,
+so I'm just telling you where it comes from.
+And so this back calculation is what leads to the formula that you have been using in your labs for growth rate,
+which is to figure out what rate could have got you from initial x to ending y.
+You take ending divided by initial, raise it to this funny power, which is one over the time periods,
+and take the whole thing and subtract off one.
+That's where that thing comes from.
+If we ask you to do growth rates in exams, we will provide you with the formula.
+You don't have to worry about it, right?
+But I want you, you should have some sense of where these things come from,
+and this is a little description of where it comes from, say, two minutes for questions.
+Yeah.
+Did that give you a little growth rate from the beginning,
+not just the growth rate from the period?
+This is the annual, so I just think of periods as years.
+This is the annual growth rate that would, if you were compounded,
+would have led you from x to y in T periods.
+It is a per year rate.
+Okay, so we're just going to apply this thing.
+You've done it before in lab, I just want to make sure that we're okay with doing this.
+Okay, so here, so we're going from 2010 to 2014,
+so it's going to be everyone.
+Why did I do that?
+Tell column two divided by dot column one, why did I do that?
+I'm not done yet, but why did I do this?
+That's taking the end value dividing by the initial value that we said we had to do,
+and then what we have to do to this?
+We have to raise it to a power.
+Yep.
+One over how many time periods were there.
+If we're looking for an annual growth rate, how many time periods were there?
+Excuse me, now you can see.
+Four, there were four time periods.
+After having done all that, we have to subtract off one from this,
+and what we're going to do is we're going to look at sort.
+Okay, I'm going to shut up, look at that.
+See what needs to change, see what that's telling you.
+There's something a little alarming about that.
+Okay, why have we done here that isn't working out correctly?
+You know, I'm not happy about this at all.
+Where did I make everyone?
+Yeah, just a moment, let me just come back to where I was.
+Yes, yes, yes, there's a parenthesis issue.
+I'm just trying to recompute the, it's this.
+Okay, so we were all unhappy because of why?
+Because the minus signs.
+Yes, the populations are increasing, you can't have minuses.
+Something was wrong in that calculation.
+And because of the, this thing doesn't fix itself going back up,
+I had to recalculate the entire table and come back down,
+and I didn't want to do run all above.
+So, okay, let's try this.
+It's much better.
+Much better.
+Positive growth rate because you can see from 2010 to 2014,
+the numbers are higher.
+Yep, okay, all of these are around 0.07, 0.06.
+Where's the highest rate of growth?
+The very, very, very, very senior people.
+And if you compare to, like the 1960s,
+the people in those age groups, like 9900,
+and the people who are 100 and up,
+they have grown by almost 75%.
+There's a very significant growth in that age group.
+And this is, you know, a very vivid picture of the grain of America.
+Okay, so what I'd like to do today is we've had a lot of discussion of
+wars, people getting old, and so on and so forth,
+and at your age group, it's a little depressing.
+So, I want to look at something a little more and light,
+but yes.
+No, we're looking at annual growth rate.
+For you.
+For you.
+For you.
+Rate for you.
+Annual rate.
+Okay, let's quickly summarize, actually not summarize.
+There are, there's language that we just use.
+I want it on slides, so that you know.
+That is actually statistical terminology,
+and not just some terms that we're making up here.
+Types of data.
+You know that everything in the column should have the same type,
+and be comparable in some way.
+We are now bringing that in because you've had ages of 23 and 54,
+and a so-called age of 999, and you shouldn't be working with that
+999 at the same time as the 23 and 54.
+Okay, numerical.
+Numerical measurements.
+They're on the real line necessarily.
+They're ordered.
+53 is bigger than 21.
+Differences matter, right?
+There is a, it's a length or a time period difference.
+Categorical is like if you are looking at favorite colors,
+so categories, red, blue, green.
+Each value is from a fixed inventory.
+It just means that there are, you know, there are, you have a total set of five colors,
+and each person will give you one of those five colors.
+May or may not have an ordering.
+So here's some categorical data.
+You do a little rating of something, and you are not satisfied.
+Some what's satisfied, very satisfied.
+Those are categories, but they have a natural ordering.
+And so some categories may be ordered, but red, blue, green is not necessarily ordered.
+Categories are the same or different.
+Well, so are numbers.
+But the point is you can't have fractional differences in between, right?
+You're either in this category or you're in that, and we will choose a category
+so that we don't have a collapse.
+Okay, so this is now so-called numerical data.
+Just because the data on numbers doesn't mean the variable is numerical,
+so your sex code had number 0, 1, 2, but you can't subtract and take averages
+of those numbers. It doesn't make sense.
+They're just labels, and you could just as well have called them red, blue, and green.
+And so one of the things that happens is there's a big discussion as to whether
+course evaluations of teachers, how they should be summarized.
+So at the end of the term, you have to do a course evaluation.
+And there's a, you know, would you rate the effectiveness of this course,
+and there's like a one through five scale?
+Yep.
+So you're giving back a number, and it sure looks like a number, but it's a category, right?
+It's your rating of that person.
+I use somewhat satisfied, very satisfied.
+Basically, it's a category. And then what we get back are averages of those numbers,
+and we're looking at that going, I'm not really very sure what this average means.
+Because after all, one person's four, and somebody else's four,
+might mean quite different things, right?
+And in any case, those numbers don't make any sense.
+So there are, it just keeps us in mind.
+And so the variable sex is still categorical, even though the numbers were used for categories.
+Okay, so we know how to do line plots.
+We're now going to quickly see another kind of plot, and I hope to get you something interesting.
+We have just about enough time. Okay.
+So you will have noticed, you will have noticed that I'm really bad at typing,
+like really bad at typing, especially in a lecture in front of 700 people.
+It just doesn't work.
+So when the function calls are simple, and there's really not much new going on,
+you will often find that I've already populated the notebook.
+I will take you through what is typed there, and then we'll hit return.
+So that you don't have to go through me going back and correcting my own mistakes over and over again.
+Okay.
+Okay, so what we're going to do is we're going to, there's a table called Actors.
+We are going to take a look at these people.
+There are 50 actors in this table, and about 2015, they were the people that had.
+Okay, so now let me explain what the columns are.
+So there's a name of the actor.
+Total gross.
+That's not the amount of money that the actor makes.
+That's the total amount made by the movies that the actor was in.
+And that is in millions of dollars.
+Then there's a number of movies that actor has been in.
+The average per movie is among that actor's movies, what was the average amount made by the movies?
+And the number one movie is this actor was in a bunch of movies.
+One of them had the highest gross amount, which one was that, and that's there.
+And then I think it's, I think what did that one gross?
+They're highest grossing movie.
+What did that one gross?
+And so there were, there's a table with the 50 highest ones in about 2015.
+And you can see most of them are guys.
+There's a few women as well on the list.
+Okay.
+So what I would like to do is I would like to draw a scatter diagram.
+What I'm going to look at is, well, we're going to take a look at this diagram.
+And then we're going to see exactly what it's doing.
+This is called a scatter. It is not a line plot on the horizontal axis.
+We're going to have number of movies.
+And on the vertical axis, we're going to have the total amount grossed by the movie.
+This is a scatter of points like a cloud.
+It's often called a cloud.
+Each point represents one actor.
+And it's basically like plotting points on an XY grid on the horizontal axis.
+You have number of movies.
+And on the vertical, you have the total amount grossed.
+Okay. So who was the top here?
+It was Harrison Ford.
+41 movies.
+Top grossing was about there.
+So can we find Harrison Ford here?
+41 top gross in this one.
+Agreed.
+Okay.
+I'd like you to take a look at that scatter.
+What that is showing is called positive association.
+The more movies, in general, the more total amount of money.
+Right? You can see that there is a trend.
+The two variables are associated.
+There is some relation between them.
+Association was the word that we had in our second lecture when we started out.
+This is positive association.
+No surprise.
+The more movies, the more total amount made.
+So what we're going to do now is we are going to look at a different scatter diagram.
+Number of movies versus the average amount made per movie.
+Again, every point is going to be an actor.
+Ooh, very different.
+Very different.
+Negative association.
+So there's a point for every actor.
+And what you're seeing in this is that the more movies those actors made,
+on average the less those movies made.
+So you can see the negative association.
+And there is one point that is just screaming at you.
+Yes?
+You see this?
+Screaming at you.
+Shall we find out who that is?
+Because this person is the boss of this diagram.
+Small number of movies and through the roof, average gross.
+Okay.
+So tell me if that, you think that is a good call.
+Actors are where the average per movie above 400.
+Look good? Yes? All right.
+Anthony Daniels.
+Anthony Daniels.
+Don't look at me like who's Anthony Daniels.
+What do you mean?
+Anthony Daniels is the boss of this diagram.
+Small number of movies.
+A ton of money per movie.
+All right.
+What is, whoa.
+What is the data science lesson?
+Pay attention to what's being measured.
+You're not measuring what the actor makes.
+You're measuring what the movies make.
+This actor is only in the Star Wars franchise.
+Every single one is a blockbuster.
+On average through the roof.
+Okay.
+Guys, I want to say something about Friday.
+Friday people go through the following calculation.
+I've done my lab.
+It's Friday.
+I got other stuff.
+I don't need to come.
+Here's what I'm going to say.
+This particular Friday is on histograms.
+People make this calculation every term.
+And they look at it and go, that's a bar graph, I understand.
+We have found that this topic causes trouble on homeworks, labs,
+and especially the midterm.
+Please show up.
+All right.
+Thank you.
+All right.
+Thank you.
+Thank you.
+Thank you.
+All right.
+All right.
+All right.
