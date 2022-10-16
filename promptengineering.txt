@@ -1,0 +1,17 @@
+Your task is to summarize each passage into a short description. Always use a 3rd person, dispassioned tone. Do NOT use first or second person.
+
+Begin.
+
+Passage: So today we're going to be doing a software engineering lecture. This is a somewhat of an experiment. So I'm going to give you some backscore and why it's happening. So interesting note that in 2003, Yish and earlier, 61A had two days a week, Monday, Wednesdays of technical topics. And then Friday was always something else. Now sometimes that was some social implications thing where we talked about the impact of computing. I mean, as we were before, I was like, you're age at the time. So they would talk about alternate topics, whatever it may be.
+
+TLDR: Introduction
+--
+Passage: Now poverty is one of those things that is surprisingly hard to quantify which is the first real issue for governments that are trying to address this issue. Incomes are the most used metric, and almost every statistic you have likely heard on the issue will say something like these people live on less than 2 dollars a day, and for what it’s worth we have done exactly the same thing already in this video. But there are two problems with this, the first is that some people can be extremely comfortable with not much income. Some retirees would be a good example of this. They might own their own home fully paid off and have a nice pile of cash savings so they are very comfortable, but with interest rates as low as they are they might technically have an income below the internationally accepted poverty line.
+
+TLDR: Measuring poverty
+--
+Passage: {passage}
+
+TLDR:
+
+

@@ -1,12 +1,13 @@
 from autochapter.vid2timestamps import get_diffs, get_timestamps
+import os
 from autochapter.timestamps2summaries import get_pre_summarized_segments, summarize_segments, transcribe_video 
 
 async def vid2summaries(video_url: str):
   print("Getting timestamps")
-  diffs = get_diffs(video_url)
-  timestamps = get_timestamps(diffs=diffs, threshold=0.3e8, min_segment_length=50)
+  diffs = get_diffs(os.path.join(os.getcwd(), "diffs", video_url.split("/")[-1].split(".")[0] + ".json"))
+  timestamps = get_timestamps(diffs=diffs, threshold=0.3e8, min_segment_length=15*30)
   print("Transcribing video")
-  transcribed_video = transcribe_video(video_url)
+  transcribed_video = transcribe_video(os.path.join(os.getcwd(), "transcribed", video_url.split("/")[-1].split(".")[0] + ".json"))
   segments = get_pre_summarized_segments(transcribed_video, timestamps)
   print("Summarizing segments (cohere)")
   summarized_segments = await summarize_segments(segments)
@@ -23,10 +24,9 @@ async def vid2summaries(video_url: str):
 
 if __name__ == "__main__":
   import asyncio
-  import os
   import json
 
-  video_url = "videos/cs61a_lec1.mkv"
+  video_url = os.path.join(os.getcwd(), "videos/cs61a_lec1.mkv")
   out_dir = "tsummaries"
   summarized_segments = asyncio.run(vid2summaries(video_url))
   out_path = os.path.join(out_dir, video_url.split("/")[-1] + ".json")

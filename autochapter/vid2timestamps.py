@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[2]:
+# In[9]:
 
 
 import cv2
@@ -11,11 +11,12 @@ import json
 import numpy as np
 
 
-# In[3]:
+# In[29]:
 
 
 def get_diffs(video_url: str):
-  diffs_path = os.path.join("diffs",  video_url.split("/")[-1].split(".")[0] + ".json")
+  # diffs_path = os.path.join(os.getcwd(), "diffs", video_url.split("/")[-1].split(".")[0] + ".json")
+  diffs_path = video_url
   if os.path.exists(diffs_path):
     with open(diffs_path) as f:
       return json.load(f)
@@ -26,31 +27,30 @@ def get_diffs(video_url: str):
   while True:
     ret, frame = cap.read()
     if not ret:
-        print("Can't receive frame (stream end?). Exiting ...")
         break
-    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+    # gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     if prev_frame is not None:
-      diff = cv2.absdiff(prev_frame, gray).sum()
+      diff = cv2.absdiff(prev_frame, frame).sum()
       diffs.append(diff)
     count += 30
     cap.set(cv2.CAP_PROP_POS_FRAMES, count)
-    prev_frame = gray
+    prev_frame = frame
     if cv2.waitKey(1) == ord('q'):
         break
   cap.release()
-  diffs = diffs.tolist()
+  diffs = diffs.tolist() if isinstance(diffs, np.ndarray) else diffs
   with open(diffs_path, "w") as f:
     json.dump(diffs, f)
   return diff
 
 
-# In[4]:
+# In[30]:
 
 
 # diffs = get_diffs("videos/cs61a_lec1.mkv")
 
 
-# In[5]:
+# In[12]:
 
 
 # median = np.median(diffs)
@@ -59,17 +59,23 @@ def get_diffs(video_url: str):
 # len(jumps)
 
 
-# In[6]:
+# In[13]:
 
 
 # peaks = [diff for diff in diffs if diff >= .2e8]
 # len(peaks)
 
 
-# In[7]:
+# In[14]:
 
 
 # plt.plot(diffs)
+
+
+# In[ ]:
+
+
+
 
 
 # In[19]:
@@ -93,13 +99,13 @@ def get_timestamps(diffs, threshold=0.2e8, min_segment_length=20):
 # r, len(r)
 
 
-# In[9]:
+# In[16]:
 
 
 # plt.scatter(range(len(diffs)), diffs)
 
 
-# In[10]:
+# In[17]:
 
 
 # percentile_5 = np.percentile(diffs, 5)

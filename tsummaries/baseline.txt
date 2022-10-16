@@ -1,0 +1,138 @@
+Passage: So today we're going to be doing a software engineering lecture. This is a somewhat of an experiment. So I'm going to give you some backscore and why it's happening. So interesting note that in 2003, Yish and earlier, 61A had two days a week, Monday, Wednesdays of technical topics. And then Friday was always something else. Now sometimes that was some social implications thing where we talked about the impact of computing. I mean, as we were before, I was like, you're age at the time. So they would talk about alternate topics, whatever it may be.
+
+TLDR: Software engineering and the impact of computing.
+--
+Passage: Now poverty is one of those things that is surprisingly hard to quantify which is the first real issue for governments that are trying to address this issue. Incomes are the most used metric, and almost every statistic you have likely heard on the issue will say something like these people live on less than 2 dollars a day, and for what it’s worth we have done exactly the same thing already in this video. But there are two problems with this, the first is that some people can be extremely comfortable with not much income. Some retirees would be a good example of this. They might own their own home fully paid off and have a nice pile of cash savings so they are very comfortable, but with interest rates as low as they are they might technically have an income below the internationally accepted poverty line.
+
+TLDR: Finding metrics and statistics on those with income below the poverty line.
+--
+Passage: Well, Osterhote defines it as follows. He says complexity is anything related to the structure of a software system that makes it hard to understand and modify the system. So it's a human-centric definition. It's saying, however hard it is for a human to deal with the system, to interact with it, to modify it, that's what matters. We don't really care necessarily how complicated it is just sitting on the shelf. But if we ever need to change it again, then that's we're going to run into trouble. So complexity takes on a lot of forms. So for example, understanding how the code works. If you need to modify a piece of code, you have to be able to look at it and know what it's doing. It takes into account, for example, the amount of time you need to make small improvements.
+
+TLDR: Complexiy is how hard it is to modify the system.
+--
+Passage: I now need to go through every piece of code and swap that everywhere, and it's going to be really hard for me to keep track of it. Maybe by the time I get eight lines then, I'm like, oh, wait, should I have changed this one because it's a slightly different case than they want above. So this code is very hard to modify if you find there's any bugs, or if you decide to make it better in some way. So for example, the pruning rule, in this case, it was basically just a line, and my kd tree solution looks almost like this, where it really is just an if statement, somewhere that changes the behavior. Here, trying to get rid of the pruning rule is so complicated. The pruning rule, it's like roots all grown through it. This is like a weed, if you've ever dug them up in a garden where it's all grabbing your actual plants. You know, God, what am I going to do?
+
+TLDR: It is very hard to modify code when you need to swap and keep track everywhere
+--
+Passage: That if I'm using the debugger,
+now I have to need to think about this check left
+and check right variable.
+And it could have maybe just been called something
+like check other, or I don't know what,
+but probably downstream that becomes complicated.
+Interesting thought.
+Other thoughts?
+Yeah.
+Yeah, so many cases, so many statements
+that have become hard to reason about.
+And indeed, yes, that's a, and that's sort of redundant
+with an observation that's redundant,
+but I think it's a great observation.
+Yeah.
+Yeah, trying to understand the intent of the author
+is really hard.
+They came at this cold.
+
+TLDR: Understanding the intent of the author is really hard.
+--
+Passage: e saw that already creeping in early, early, early
+in our class when we were building SLists.
+So we hit a case where there was a problem where our code
+crashed, and we tried to do add back.
+And we could add an if statement that candles the null root,
+or a null front node case.
+Instead, we could also create a Sentinel node.
+It's another approach.
+Another is encapsulation into modules.
+These are the two ways that he says you keep your code
+under control.
+So one is make it simple and obvious.
+And the other is encapsulate things.
+Put them in modules where you can hide information.
+So that the creator of one module, let's say bear maps,
+can use other modules like kdtree or a star solver
+or whatever else.
+
+TLDR: Make it simple and obvious, or encapsulate things.
+--
+Passage: So some motivation for today is that if you think
+about your education at Berkeley so far,
+doing programming, we've misled you a little bit.
+In 61A, a lot of the projects and homework
+were filled in the function, where there's already a function.
+You just have to write the code to make it do the thing.
+And that's great for learning how programming works.
+And even for finding and identifying sub-problems,
+but it's not quite real world coding practice, sometimes.
+Now in 61B, we've zoomed out a little bit.
+And we said, we'd like you to build a class,
+say, an extrinsic min pq or whatever.
+And you're supposed to do it according to our spec.
+We kind of kicked off the training wheels
+and the projects as we went, taking away our autograder
+and so forth, occasionally.
+But I think it's fair to say that everything we've done,
+even project 2C, is all at a small scale.
+
+TLDR: So far your education at Berkeley is not quite real world coding practice. It is all at a small scale.
+--
+Passage: This will be a chance for you to actually design something
+totally from scratch.
+And you will feel the pain of the complexity
+as you realize that you're boxing yourself
+in the corner with short-sided decisions.
+So I hope that these lectures help you, at least,
+in some vague way.
+But this is one of the very hardest topics
+to teach you computer science.
+169 is another place where you can get a taste of this,
+or if you go and do internships.
+So we'll see how it goes.
+Now I should note that these lectures would not be possible
+or they wouldn't be nearly as good if I did not
+have this book.
+So I had a former TA K. Osterhout who
+was a grad student here.
+And her dad is a computer science professor as it happens.
+And he wrote this book.
+So if you want to check it out, I think it's pretty good.
+It's very high level, though.
+It's a high level description of where you run into trouble.
+And so I'm borrowing heavily from this book.
+I want to give credit where credit is due.
+And it's cheatbook.
+All right.
+So let's try it out.
+
+TLDR: Designing something from scratch is one of the hardest topics to teach in computer science.
+--
+Passage: So you've heard me say before that complexity
+is your opponent, your enemy, and computer science.
+And so I'm going to try and define complexity.
+And I'm going to use John's definitions,
+because I think they're pretty good.
+Now, funny story.
+Part of the activity here ever heard of the text editor
+project that existed in 61B, some of you.
+So let's bring 2016.
+We did a text editor project where I had you guys
+as the big, open, and did project build a GUI-based text
+editor like Sublime Text, but much smaller.
+And it's, again, these challenges,
+the ones where we have you build something from scratch
+are all about you hitting the black city
+and feeling a little bad about it.
+Now, that project was particularly tricky.
+And since K was my TA at the time,
+she told her dad, who teaches software engineering,
+about this project.
+And so he ran it not in an intro course,
+but in an upper division software engineering course,
+and he found it very interesting to see the mistakes
+and strange errors and design decisions
+that people made in building their text editor.
+And in fact, indirectly, if you read in here,
+there's some talk about that text editor project, which
+is a descendant of our own.
+
+TLDR: You will feel the pain of the complexity when you realize you are boxing yourself in the corner with short-sided decisions.

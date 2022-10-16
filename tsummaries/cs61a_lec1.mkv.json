@@ -1,155 +1,98 @@
 [
-  { "start_time": 0, "summary": "John Osterhout defined complexity.\n--" },
-  { "start_time": 40, "summary": "I really don't know anything.\n--" },
-  {
-    "start_time": 193,
-    "summary": "It\u2019s important to have tools that help you manage complexity.\n--"
-  },
+  { "start_time": 0, "summary": "Defining complexity" },
+  { "start_time": 40, "summary": "Engineering software" },
+  { "start_time": 193, "summary": "Understanding complexity" },
   {
     "start_time": 196,
-    "summary": "The United States Food and Drug Administration has approved the first over-the-counter COVID-19 test in a move it hopes will help protect the population from the novel coronavirus. The FDA approval of the home test comes after the New York State Department of"
+    "summary": "Software developers are often stereotyped as not having enough respect for their work. The stereotype is this: software developer, looks at code, says \"I did this\" and then they leave. \nThe Solution: \n\nWhen I first came"
   },
-  {
-    "start_time": 198,
-    "summary": "Facebook is currently testing a new News Feed search tool which allows you to find certain types of content --"
-  },
+  { "start_time": 198, "summary": "Introduction" },
   {
     "start_time": 204,
-    "summary": "Engineers, developers, and tech executives love complexity.\n--"
+    "summary": "Testing, code reviews, and architectural decisions\n\nMore Information:\n\nThe following is the outline of the lectures.\n\nLecture 1: introductions, overview, and the future of the course\n\nLecture 2: avoiding"
   },
-  {
-    "start_time": 211,
-    "summary": "John's book is all about how he makes his life.\n--"
-  },
-  {
-    "start_time": 359,
-    "summary": "Osterhoet's definition of complexity is that it's anything related to the structure of a software system that makes it difficult to understand and modify.\n--"
-  },
-  {
-    "start_time": 362,
-    "summary": "A name is a name, but it can still be alluring. \u201cI feel great,\u201d says Courtney Carver, author of the recently-released Carver Method. \u201cI can\u2019t stress enough how life-changing the change has"
-  },
-  { "start_time": 391, "summary": "Big improvements require less effort.\n--" },
+  { "start_time": 211, "summary": "Special cases" },
+  { "start_time": 359, "summary": "Definition of complexity" },
+  { "start_time": 362, "summary": "Starting a business: Passage 2/2" },
+  { "start_time": 391, "summary": "KD Tree" },
   {
     "start_time": 1498,
-    "summary": "Apple is now worth more than half a trillion dollars.\n\nPassage:\n\nTLDR: 17 states have legalized recreational marijuana in some form.\n\nPassage: \nTLDR: Apple now has over 600 million devices in"
+    "summary": "Passage: \n\nTLDR: \n\nPassage: \n\nTLDR: \n\nPassage: \n\nTLDR: \n\nPassage: \n\nTLDR: \n\nPassage: \n\nTLDR:"
   },
   {
     "start_time": 1500,
-    "summary": "Passage: The Pokemon Company has sold $1 billion worth of its Pocket Monsters-branded merchandise. The information is thanks to data from the NPD Group. Nintendo itself is not saying how the company has generated revenue from the Pokemon franchise,"
+    "summary": "What makes you happy?\n\nBegin.\n\nPassage: So what makes you happy? According to psychology, there are a bunch of factors. There is not just one thing that makes you happy. There are lots of components. So there"
   },
   {
     "start_time": 1540,
-    "summary": "ArtificialIvan has raised $190 million in Series C funding.\n--"
+    "summary": "Introduction\n\nPassage: And so on this day, we're going to be talking about something called 'memory'. So you may have heard about 'memory' before in terms of long-term storage. It's something that you cannot access right"
   },
-  {
-    "start_time": 1561,
-    "summary": "The US economy might be starting to slow down.\n\n--"
-  },
-  {
-    "start_time": 1570,
-    "summary": "The year 2018 is somehow even more relevant to Cryptokitties, the crypto-animated collectibles game that has been phenomenally successful. The year 2018 is now officially the year of Cryptokitties. It is the year that the game"
-  },
-  {
-    "start_time": 1582,
-    "summary": "Facebook has a new programming language, Justice, that is designed to make it easier for users to write code that does things with images.\n--"
-  },
-  {
-    "start_time": 2672,
-    "summary": "The BRC is imploring the retail industry to step up and recognize the unique challenges the sector faces amid the ongoing coronavirus pandemic and the government\u2019s subsequent lockdown measures. The British Retail Consortium (BRC) has written to the Chancellor of the Ex"
-  },
-  {
-    "start_time": 2960,
-    "summary": "Big news in the cryptocurrencies space today, as early investor and Bitcoin billionaire Roger Ver officially announced that he is going back into the Bitcoin business with the launch of a new project. Ver is kicking off a new Bitcoin Cash (BCH) mining operation,"
-  },
-  {
-    "start_time": 2974,
-    "summary": "In a preliminary report to the US Department of Justice, Apple says it is cooperating with the FBI in an effort to break into the iPhone 5c used by Syed Farook. Apple will also help the FBI gain access to an iPhone 5c"
-  },
+  { "start_time": 1561, "summary": "Measuring affluence" },
+  { "start_time": 1570, "summary": "Measuring affluence" },
+  { "start_time": 1582, "summary": "Introduction" },
+  { "start_time": 2672, "summary": "Standards" },
+  { "start_time": 2960, "summary": "Introduction" },
+  { "start_time": 2974, "summary": "Poverty" },
   {
     "start_time": 2991,
-    "summary": "The acqui-hire has been officially completed as Square confirmed the acquisition of a mobile payment apps company called Wallet by Business Insider.\n--"
+    "summary": "Attempt at a summary of what we talk about in class"
   },
   {
     "start_time": 3068,
-    "summary": "In the new year, we plan to spend more time sharing more Passage tips, tricks, and other helpful information through our blog and through social channels.\n\nA lot of people have been asking about how to get into economic forecasting, and I"
+    "summary": "source: https://blog.sitepoint.com/how-to-make-a-100-word-blog-post-that-is-readable-and-in-depth-179807"
   },
   {
     "start_time": 3086,
-    "summary": "Big news in the cryptocurrencies space today, as early investor and Bitcoin billionaire Roger Ver officially announced that he is going back into the Bitcoin business with the launch of a new project. Ver is kicking off a new Bitcoin Cash (BCH) mining operation,"
+    "summary": "I don't know, I just thought it'd be really funny and ironic to say something like a libertarian should be able to drive my car. And I also don't want to vandalize my own car."
   },
-  {
-    "start_time": 3306,
-    "summary": "Irish musician Roy Yeats was being sued by Olympia Entertainment for copyright infringement, after it was discovered that one of his songs, \u201cWhiskey in the Jar\u201d, was used in a Hamilton video produced by the company. The suit alleges that Ye"
-  },
+  { "start_time": 3306, "summary": "Passage:" },
   {
     "start_time": 3309,
-    "summary": "The company formerly known as Uber is now called Uber Technologies. The company was founded in 2009 by Travis Kalanick and Garrett Camp in San Francisco. It was originally named \"UberCab\" but later changed as the company's scope broadened to"
+    "summary": "Poverty\n\nI: How do you determine who is poor?\n\nP: We use the international poverty line.\n\nI: Is it based on income?\n\nP: No. We use three different methods to determine relative poverty."
   },
   {
     "start_time": 3312,
-    "summary": "This is likely intended to be a legitimate link, but it appears to be spam.\n--"
+    "summary": "Poverty\n\nI: How do you determine who is poor?\n\nP: We use the international poverty line.\n\nI: Is it based on income?\n\nP: No. We use three different methods to determine relative poverty."
   },
-  {
-    "start_time": 3316,
-    "summary": "Passage: \n\nTLDR: \n\nPassage: \n\nTLDR: \n\nPassage: \n\nTLDR: \n\nPassage: \n\nTLDR:\n--"
-  },
+  { "start_time": 3316, "summary": "Introduction" },
   {
     "start_time": 3346,
-    "summary": "Passage: \n\nTLDR: \n\nPassage: \n\nTLDR: \n\nPassage: \n\nTLDR: \n\nPassage: \n\nTLDR:\n--"
+    "summary": "Now the first part that is good to attack here is the first sentence. The first sentence is a bit of a bait and switch. I mean, \"income\" versus \"money\". I am very comfortable, and I have a \"nice"
   },
-  {
-    "start_time": 3353,
-    "summary": "Who wants to be a millionaire and Millionaire Game Show has been touched by a cheating scandal. \n\n--"
-  },
-  {
-    "start_time": 3367,
-    "summary": "Google is eliminating the \u201copt-in\u201d requirement for users to deliver location data in order to \u201cclean up\u201d its system.\n--"
-  },
-  {
-    "start_time": 3612,
-    "summary": "Since 2013, the U.S. market value of Uber has increased more than 300%. \n--"
-  },
+  { "start_time": 3353, "summary": "" },
+  { "start_time": 3367, "summary": "Scope of life, long-term" },
+  { "start_time": 3612, "summary": "" },
   {
     "start_time": 3615,
-    "summary": "Who wants to be a millionaire and Millionaire Game Show has been touched by a cheating scandal. \n\n--"
+    "summary": "Compression algorithms are very interesting. Most compression algorithms are not actually that much better than just having a file not compressed and just storing that. There's a lot of qualitative ways to look at the compression ratios, but like it says in the back,"
   },
-  {
-    "start_time": 3629,
-    "summary": "Since 2013, the U.S. market value of Uber has increased more than 300%. \n--"
-  },
-  {
-    "start_time": 3683,
-    "summary": "The new system for measuring growth in the US going forward will be focused on labor productivity. However, economists think this metric is problematic in many ways.\n\n\nTLDR: The government has been updating the way it assesses the strength of the"
-  },
-  {
-    "start_time": 3721,
-    "summary": "The NYT has published an article about Apple Maps running into an issue \u2013 a note on a bus stop in Hilo, Hawaii, showing a route that doesn\u2019t exist anymore.\n--"
-  },
+  { "start_time": 3629, "summary": "Measurement of poverty" },
+  { "start_time": 3683, "summary": "Measuring Poverty" },
+  { "start_time": 3721, "summary": "Rationing" },
   {
     "start_time": 3725,
-    "summary": "\u201cTo recreate the past is not to create a new reality. It is to visit a place you've never been.\u201d\n--"
+    "summary": "Here is my definition of a city: \n\nPassage: \nTLDR: \n\nPassage: \nTLDR: \nPassage: \nTLDR: \n\nPassage: \n\nTLDR:"
   },
   {
     "start_time": 3728,
-    "summary": "\u201cTo recreate the past is not to create a new reality. It is to visit a place you've never been.\u201d\n--"
+    "summary": "Passage: So the average person today spends around three hours a day on social media. This is up to around 2 hours a day over the past couple of years, but even with this increase the number of active users on Facebook is around"
   },
   {
     "start_time": 3815,
-    "summary": "1. A security vulnerability in a piece of software has been discovered.\n2. An operating system vendor has patched the vulnerability.\n3. A patch was released by the operating system vendor.\n4. The security vulnerability was patched by"
+    "summary": "In the 1960s, American sociologist, a high school friend of mine who lived in the 1960s, says to me, he says, \"Well actually, we don't. And you know, you should ask your question.\" And it's"
   },
+  { "start_time": 3836, "summary": "Introduction" },
   {
-    "start_time": 3836,
-    "summary": "1. A security vulnerability in a piece of software has been discovered.\n2. An operating system vendor has patched the vulnerability.\n3. A patch was released by the operating system vendor.\n4. The security vulnerability was patched by"
+    "start_time": 3849,
+    "summary": "Measuring poverty\n\nIf you'd like an extended version of this transcript, please email me at  \ntranscript@jeffrey.co with your name in the subject line.\n\nTo get the most out of the transcript,"
   },
-  { "start_time": 3849, "summary": "--" },
-  { "start_time": 3851, "summary": "--" },
+  { "start_time": 3851, "summary": "Interactive diagrams" },
   {
     "start_time": 3859,
-    "summary": "Thanks to a new tool, you no longer need to input your license plate to get information about that car. The company, SpotHero, has rolled out a free, mobile app that allows you to search for parking spots near your location. The startup"
+    "summary": "Global poverty\n\nNow the next type of poverty is a little bit harder to quantify. And this is because you have to look at the standard of living. So things like access to healthcare, access to education, access to basic infrastructure, access to"
   },
   {
     "start_time": 3862,
-    "summary": "Thanks to a new tool, you no longer need to input your license plate to get information about that car. The company, SpotHero, has rolled out a free, mobile app that allows you to search for parking spots near your location. The startup"
+    "summary": "Measuring poverty\n\nStart of main body passage\n\nPassage: The second problem with income is that it doesn't reflect a lot of the other pieces that are pretty important. It doesn't account for the fact that people often live in a"
   }
 ]

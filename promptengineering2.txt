@@ -1,0 +1,571 @@
+Your task is to split a video's transcript into sections and summarize each section with a short description. Always use a 3rd person, dispassioned tone. Do NOT use first or second person.
+
+Begin.
+
+Transcript:
+0:00
+I just upgraded my home gaming setup
+0:02
+to LG's 42-inch C2 and something about it.
+0:06
+It finally went well, what the hell?
+0:09
+I have it set to one minute, this is what I'm talking about.
+0:11
+I just upgraded my home gaming setup to LG's 42-inch C2
+0:16
+and some things about it are great.
+0:18
+Basically, zero motion blur in key OLED blacks
+0:22
+and the size is perfect.
+0:24
+But, using a TV as your monitor is less perfect.
+0:28
+Thankfully, ASUS ROG who sponsored this video
+0:32
+has the solution.
+0:33
+This PG42UQ they sent over has all the same benefits
+0:36
+of my existing display,
+0:38
+but none of the drawbacks of using a TV.
+0:41
+It's got display port 1.4 alongside its HDMI 2.1 connection.
+0:45
+I no longer need a companion app.
+0:47
+So my display will go to sleep
+0:48
+and wake up alongside my system.
+0:50
+And best of all,
+0:52
+I can disable that accursed auto dimming function
+0:56
+for a much more consistent experience.
+0:59
+To say, I can't wait, would be an understatement.
+1:01
+On paper, it's basically the perfect gaming display,
+1:05
+but just 'cause it's sponsored,
+1:06
+doesn't mean I'm not gonna tell you guys
+1:07
+if I don't run into any problems.
+1:09
+(upbeat electro music)
+1:18
+Right out of the gate, massive shout-out
+1:20
+the developer of LGTV companion
+1:22
+because it's a lot better than not having it,
+1:25
+but this was set to sleep after a minute.
+1:28
+It has been like five minutes and it's not asleep.
+1:32
+Also, there's no way to minimize it.
+1:34
+So you just,
+1:36
+I can just tuck it away.
+1:38
+Also, you guys notice, right when I moved that box,
+1:40
+the brightness changed dramatically.
+1:42
+You can adjust that behavior
+1:44
+with a special service remote in the hidden menu,
+1:46
+but you can't disable it entirely.
+1:49
+Probably the thing that's annoyed me the most though,
+1:51
+aside from coming back to the office right
+1:55
+after setting this one up
+1:56
+and seeing the better solution sitting in our warehouse,
+1:58
+is that I have been stuck at 60 hertz
+2:02
+because my computer is so far away
+2:04
+that I need an active optical cable
+2:06
+in order to get a signal to it.
+2:08
+And while there are HDMI 2.1 active cables available, woo.
+2:14
+In my case, the cable is so costly,
+2:16
+that since I already own a long display port anyway,
+2:20
+even if the monitor version is a little more expensive,
+2:23
+it's a better bet.
+2:24
+ASUS sent over not one but three of these,
+2:27
+which means that with some help from these little doodads,
+2:29
+which let you extend a USB connection
+2:32
+over standard ethernet cabling,
+2:34
+I will be able to show you guys the final form
+2:36
+of my centralized gaming system.
+2:39
+Where it shouldn't matter,
+2:41
+if I sit down at it here, sit down at it downstairs,
+2:44
+the experience should be identical, no additional latency.
+2:48
+[Plouffe] I can help you lift it when it gets to that-
+2:49
+I know it's super basic.
+2:50
+Yeah, why do I need to follow the instructions?
+2:52
+Geoff just told me that we've gotta do this alright?
+2:56
+And it's sponsored, so I'm trying to make sure we do it.
+2:59
+No, I open boxes how I please.
+3:00
+[Plouffe] Oh my God. Oh my God.
+3:03
+All right, there's a stand.
+3:04
+[Plouffe] Yep. Nice.
+3:06
+Ooh, accessory pouch.
+3:07
+[Plouffe] Yeah, I actually really like that.
+3:08
+Complete with color calibration report.
+3:10
+Oh my goodness.
+3:11
+Their calibration report comes in a little sleeve.
+3:14
+Ooh.
+3:16
+Power.
+3:18
+Display port.
+3:19
+HDMI.
+3:20
+USB.
+3:22
+[David] It's really weird.
+3:23
+The instructions said specifically throw cables over your
+3:25
+left shoulder.
+3:25
+[Plouffe] Yeah.
+3:26
+Did they really?
+3:27
+[Plouffe] Yeah.
+3:28
+Did they?
+3:29
+(laughing)
+3:31
+[Linus] Remote.
+3:32
+This is pretty handy.
+3:33
+I mean, it's nice to be able to turn it off
+3:35
+and on remotely, change sources,
+3:36
+all that kind of good stuff.
+3:38
+What else we got going here?
+3:39
+Okay Plouffe, do you wanna grab an edge?
+3:40
+[Plouffe] Okay, I'll grab the other side.
+3:41
+Okay, according to the instructions.
+3:43
+Okay, David frame them out.
+3:45
+[David] You're not here, you're not here!
+3:48
+Okay. Okay. With a helper.
+3:49
+Place it down like that.
+3:51
+That helper that definitely exists.
+3:52
+There's a lot going on here.
+3:54
+We've got vent holes up at the top. Is this a cooling fan?
+3:58
+No.
+3:59
+ASUS does advertise that it can be over clocked.
+4:02
+So instead of just 4K120, it'll apparently do 4K138 hertz.
+4:08
+But the cooling required to achieve that is all passive.
+4:11
+So you don't have to worry about any additional noise.
+4:13
+They also advertise 0.1 millisecond,
+4:15
+greater gray pixel response times, out of box calibration,
+4:18
+which I showed you already, as well as a whopping 98%
+4:23
+coverage of the DCI-P3 color space.
+4:25
+Pretty freaking impressive.
+4:27
+Just like our screw driver,
+4:28
+which is now available for order on lttstore.com,
+4:31
+which happens to include the hex bit.
+4:32
+We need to tighten up our monitor stand here.
+4:34
+So you use the knurling for speed.
+4:36
+Eh, then the handle for tightness.
+4:39
+Love it!
+4:39
+I could totally lift this myself, but ASUS insisted I have a
+4:42
+helper, so I've got Plouffe here taking the other end.
+4:44
+Thanks, Plouffe, that's really good.
+4:47
+All right, oh, that's super handy.
+4:49
+It's got a USB three port up at the top,
+4:52
+along with one of these little threaded majigs so that you
+4:55
+can put your camera or your webcam or anything else that has
+4:59
+one of these.
+4:59
+What are these 1/4 inch?
+5:00
+Is that the one?
+5:01
+[David] Yeah, 1/4 inch.
+5:02
+1/4 inch threaded posts on it.
+5:03
+Love it.
+5:04
+Oh, that's nice.
+5:05
+I was leaning this. So David could get a B roll shot here.
+5:07
+And it's actually got a little bit of tilt,
+5:09
+which is something you won't normally find on a TV.
+5:12
+In terms of IO, we've got, oh really?
+5:14
+It's got the full compliment of HDMI ports,
+5:17
+four of them, along with display port.
+5:20
+And this is a pretty robust built in USB hub.
+5:22
+It's got USB-3 in here and then 1, 2, 3.
+5:26
+I thought I saw another one somewhere, I guess three is,
+5:29
+oh yeah, there's another one down here.
+5:30
+Four USB-3 ports.
+5:32
+There's your headphone jack, power is here, Kensington here.
+5:35
+And I'm assuming this is our GB.
+5:37
+I guess we should plug it in and see it light up.
+5:38
+One thing that's conspicuously absent is E Ark.
+5:41
+So you're either gonna be using the onboard speakers or
+5:44
+speakers that are hooked up through
+5:46
+an AV receiver or similar.
+5:47
+Now this is curious.
+5:49
+There are a couple more threaded mounting holes here.
+5:52
+Plouffe, do you have any idea what these are for?
+5:54
+[Plouffe] No, it does vesa 300 by 300.
+5:56
+Well, yeah, that's here.
+5:57
+That's standard based amounting.
+5:59
+Yeah, I'm actually not sure.
+6:00
+I never saw anything in any of the documentations.
+6:02
+Yeah, they're just labeled mounting port.
+6:05
+Oh, that's cool though.
+6:06
+[Plouffe] Yeah.
+6:07
+If you didn't happen to have an LTT screw driver,
+6:08
+it does include a little allen key for the stand.
+6:10
+So that's neat.
+6:11
+It uses a little center mounted nubbin nipple thing
+6:14
+for control, so I think I just turned it on.
+6:16
+The RGB is not on by default.
+6:20
+[Plouffe] I don't know.
+6:20
+ASUS ROG, who are you?
+6:22
+It's got to be RGB.
+6:24
+This is interesting.
+6:25
+The HDMI one and two,
+6:27
+are HDMI 2.1, three and four are 2.0.
+6:30
+So that's good to know.
+6:31
+Oh no, the power button is just to the right of
+6:33
+the control nipple.
+6:35
+Okay, got it.
+6:37
+So did I turn it on this time?
+6:39
+If I'm gonna fall off this desk?
+6:41
+I think we all wanna see it on camera.
+6:43
+[David] Watch your back pocket cause you're with the side
+6:45
+of the screwdriver.
+6:45
+[Plouffe] Oh my God. Yes.
+6:46
+Yeah. Yeah. Don't worry. I'm good.
+6:47
+I'm good. I'm good.
+6:48
+[David] Do you wanna hand that to Plouffe?
+6:49
+Yeah, Plouffe.
+6:50
+Okay, yeah, there we go.
+6:51
+Yeah, yeah.
+6:52
+[David] Why are you doing it like this?
+6:53
+So heavy.
+6:53
+Oh wow.
+6:55
+There we go, yeah.
+
+Sections:
+0:00 Intro
+1:49 What annoyed me the most
+2:47 "Following Instructions"
+4:40 Plouffe is helping
+--
+Transcript:
+0:00
+Whenever we see china in the news it’s normally for some impressive statistic about building
+0:04
+stuff, or how it is now home to the most millionaires in the world, or maybe it’s even an article
+0:09
+about whatever geopolitical tomfoolery they are trying to pull this week.
+0:12
+But what is often forgotten about this is that behind the somewhat intimidating outward
+0:17
+appearance of economic might and glistening skyscrapers, china is an extremely poor country.
+0:24
+This almost sounds a bit paradoxical given the wealth that is so evident from the outside.
+0:29
+Never the less average incomes in China are still less than $15,000 USD’s per year,
+0:34
+and that’s average, so in a nation that reports a Gini coefficient of 0.47 with some
+0:40
+independent research noting this could be as high as 0.73 that mean’s there are a
+0:45
+lot of poor people at home in this economic miracle.
+0:48
+In plain English, this means upwards of half a billion people in China are living on less
+0:53
+than $10 per day, primarily made up of those still living in rural areas.
+0:58
+Now this fact is not lost on the Chinese government, who know that a growing wealth divide in their
+1:04
+worker’s paradise is not a great look, especially if that divide is between the cities fueling
+1:08
+growth and the farmers feeding them.
+1:10
+That is why in just the last 5 years the government has poured the equivalent of over 800 billion
+1:16
+dollars into aid in area’s where extreme poverty is still commonplace. This is to say
+1:22
+nothing on state-owned enterprises which easily bring this running total to over a trillion
+1:26
+dollars in the same time period.
+1:28
+A trillion dollars in 5 years, that’s more than the entire GDP of 3 quarters of the world’s
+1:34
+countries, on one single welfare project.
+1:37
+Even for a government as wealthy as China’s, this is ultimately not sustainable.
+1:42
+So a new solution was needed to make these systems more efficient at solving core issues
+1:47
+rather than alleviating the symptoms with handfuls of cash.
+1:51
+And there might be a lot to take away from what they have done so as always we need to
+1:55
+understand a few things.
+1:58
+How much poverty is there actually left in china?
+2:01
+Why is this so difficult to measure?
+2:03
+Why does China care so much?
+2:06
+And how might cows be the solution to this whole problem?
+2:12
+Intro Add
+2:20
+Now poverty is one of those things that is surprisingly
+2:30
+hard to quantify which is the first real issue for governments that are trying to address
+2:34
+this issue.
+2:36
+Incomes are the most used metric, and almost every statistic you have likely heard on the
+2:39
+issue will say something like these people live on less than 2 dollars a day, and for
+2:44
+what it’s worth we have done exactly the same thing already in this video.
+2:48
+But there are two problems with this, the first is that some people can be extremely
+2:53
+comfortable with not much income.
+2:55
+Some retirees would be a good example of this. They might own their own home fully paid off
+3:00
+and have a nice pile of cash savings so they are very comfortable, but with interest rates
+3:04
+as low as they are they might technically have an income below the internationally accepted
+3:08
+poverty line.
+3:09
+An asset means test can address this situation but then what if they own nothing live with
+3:14
+affluent children as is commonplace in China.
+3:17
+It’s not impossible to work around but it is difficult, meaning more money is going
+3:22
+to go to auditors and government middlemen rather than the people who really need it,
+3:26
+especially when we are talking about a population as large as china’s, with let’s be honest
+3:31
+a pinch of corruption.
+3:32
+The second problem is purchasing power parity, or PPP.
+3:36
+$20 per day in rural China or most countries in Southeast Asia and Africa would afford
+3:42
+you a pretty comfortable lifestyle, but $20 per day in San Fransisco, Sydney or London
+3:49
+would pretty much make you destitute.
+3:50
+It’s for this reason that measures are put in place to address the relative purchasing
+3:55
+power of a dollar in a region.
+3:57
+For example, a week’s worth of groceries might cost $5 in rural farming villages because
+4:03
+the grocer’s overheads are lower due to lower staff salaries, lower rent or cost to
+4:07
+own a premises, and lower transport costs on account of them being in and amongst where
+4:11
+the food is made.
+4:12
+If we compare that to one of our ritzy global cities where even a similarly modest grocery
+4:17
+trip would cost $50, you can see that a dollar in rural china has 10 times the purchasing
+4:23
+power so even if someone was to earn 1/10th as much money they could live a similar lifestyle
+4:28
+right?
+4:29
+Well that’s the theory, but unfortunately it is a wildly outdated way of thinking
+4:35
+And here’s why
+4:37
+ADD
+4:38
+While it’s true that purchasing power parity can afford similar lifestyles in two totally
+4:43
+isolate economic systems with two totally isolated sets of inputs and outputs this is
+4:48
+just not how the real world works in the age of globalization.
+4:52
+Take something like a phone. These devices have changed how we have lived our lives and
+4:57
+are incredible tools for communicating and having access to information wherever it is
+
+Sections:
+0:00 Poverty in China
+2:28 Measuring poverty
+--
+Transcript:
+00:00
+So today we're going to be doing a software engineering lecture.
+00:02
+This is a somewhat of an experiment.
+00:04
+So I'm going to give you some backscorian why it's happening.
+00:06
+So an interesting note that in 2003-ish and earlier,
+00:12
+61A had two days a week, Monday,
+00:15
+Wednesdays of technical topics,
+00:17
+and then Friday was always something else.
+
+Sections:

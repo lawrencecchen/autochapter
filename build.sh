@@ -1,0 +1,1 @@
+jupyter nbconvert autochapter/*.ipynb --to python
