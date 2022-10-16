@@ -1,0 +1,1489 @@
+All right, okay, is this projecting at all?
+Can everyone hear me?
+Give me the back.
+We get, awesome.
+All right, so welcome everyone to the first lecture
+of CS61A.
+Yeah!
+APPLAUSE
+Wow, I'm so glad that got a response.
+So this is, I'm super glad to see this lecture in so full.
+So let's just go ahead and jump in to the first lecture.
+Before we talk about anything relating to computer science,
+first we're going to talk about 6.1A as a class,
+starting with the 6.1A community.
+So first of all, hi, my name's Chris.
+I'm going to be one of your instructors.
+My pronouns are they, them.
+And I've been teaching 6.1A for a while.
+I've been a TA for five semesters involved a bit before that.
+And this is my first time as an instructor for this course.
+So I'm really excited.
+Some might interest within computer science
+our computational biology and programming languages.
+So if you want to talk about that or really anything
+in the course, you can feel free to reach out.
+I'm going to go ahead and pass around this mic.
+There's going to be a little bit of like,
+some noise is going on.
+Let's see.
+Let's see.
+Yeah.
+My name's Debbie.
+This is, I'll be one of your other lecturers in the summer.
+This is my eight time teaching the course.
+So my first time lecture, in terms of computer science,
+my interest in computer security
+and a demo some research in agritorial and out.
+So if you find yourself interested in that later
+on the course, which we'll try to talk to me,
+also this is a really difficult course.
+So we're all here to talk to you about anything
+if you've ever needed.
+So free email on us, I think that's it.
+I'll be one of the other three instructors.
+My research interests are kind of probably
+language design, as well as the applications
+to CS education in particular.
+This is also taught it for a fair amount.
+Excited to be.
+Cool.
+All right, so I'll take this back.
+So if you ever want to contact us,
+you should email us at CS61A plus SU19 at Berkeley.edu.
+If you email us there, you'll be able to,
+all three of us will see that.
+So that's the best way to contact us.
+You can also reach out to us individually
+if you have something pertaining to one of us
+as individuals, but this is the email you should be
+looking at for the most part.
+So we're here in Struck.
+We're also here coming in.
+There's a lot of seats on this side.
+So it's so pretty to go in on the other entry.
+And those are like seats in experts.
+So maybe if you're in the middle area,
+we could like switch together a little bit,
+really just coming in.
+Yeah, there's a seat next to you,
+and you can move to the center.
+Let's do that so people coming in can do that.
+Awesome.
+I'll give like a minute for the noise to settle here.
+All right, so you've met us.
+We're going to be your instructors,
+but there's just three of us,
+and there's like 400 plus a view in this room.
+So there's no way we can do all this by ourselves,
+which is why we have a wonderful team of TAs,
+as well as tutors.
+So TAs are responsible for running lab and discussion sections.
+You'll see them in office hours.
+Tutors are responsible for running smaller group tutoring
+sections, which we'll talk about a little bit later.
+But both TAs and tutors are going to be the people you're
+going to be interacting with most often throughout the course.
+So with that in mind, we have a bunch of them
+up here on stage, so I'm going to go ahead
+and try to pass down the mic when you get it.
+If you can just give your name, your role.
+Oh, yeah, yeah, yeah, if you can come down here
+and pass it down, yeah.
+So I have like two cables tethering me down.
+It's a lot of fun.
+OK, I want to make TAs an Albert.
+I want to be part of the new grading,
+so I'll give you why as TAs, and then I'll also be doing
+a little bit of the T, that music's on the side,
+so maybe this is not a whole domain of TAs,
+but I've got to give you some money on my music,
+so it's an opportunity to talk about that,
+to give you the objective.
+Hello, I'm Richard.
+I took six to make last summer.
+I'm going to be a TAs this summer.
+I'm really excited to be teaching about it, so.
+And while I'm running on one of the other materials,
+and I do content for the projects.
+Hello, my name is Jason.
+I'm going to be TAs this summer,
+and you can feel free to come here in one second.
+Hi, I'm Olivia, I'm a TAs, and I think
+we're just a little bit more in.
+I'm also TAs, and I'm going to be working
+on the online content itself.
+Welcome.
+Hi, I'm Edo, and I'm a TAs.
+Hi, I'm Michelle, and welcome with Olivia,
+and I'm a little bit of just six.
+Hi, I'm Edo, and I'm TAs, and I'm TAs, and I'm TAs.
+Hi, I'm Jenny, first, and I'm from the classical century.
+Woo!
+Woo!
+Thank you.
+Thank you.
+Thank you.
+All right, y'all can feel free to add back a little bit.
+All right, okay, so again, these tutors and TAs
+are going to be the people you're going to be
+interacting with the most throughout the semester.
+So once you start going to lab and discussion,
+these are the people that you should be sure to get to know,
+and they'll be the best people to handle
+most of your questions and concerns in this course.
+In addition to TAs and tutors, we also have a very, very
+large group of academic interns.
+Academic interns are students who usually recently
+took the class, and they'll be helping out in your lab
+and office hour sections to give you some help with the assignments.
+This is like a very small subset of the people we'll have
+helping out as AI's over the summer, so you'll
+be seeing a lot of those as well.
+And then, in addition to TAs, tutors, instructors,
+and academic interns, we have the most important people
+in this course, all of you.
+Yeah.
+APPLAUSE
+Very much not used to all this applause, but I don't know.
+Yeah, it comes with a job, I guess.
+So yeah, over the summer, this is by far the largest group
+of students we've ever had for summer course,
+across the in-person 61A and online 6.1A sections.
+We have over 650 people enrolled in this course.
+And all of us are really, really excited
+to be able to work with all of you and put on a great class
+semester.
+Really excited to be able to talk to you and work
+with you through all of this.
+So with that, let's start talking about 6.1A in particular.
+So 6.1A is a class in the computer science department.
+For many of you, it might be your first computer science class.
+So what is computer science?
+Computer science is a very broad field.
+But in general, computer science is the study
+of different problems that can be solved using computation.
+So all computation means is that you do some series of steps.
+Maybe you're doing some math or just following some instructions
+to be able to get some result.
+This doesn't even need to be done with computers.
+In fact, in the early days, if you just
+had someone write a bunch of math,
+you might even call them computers.
+But more specifically, computer science
+is how do you take these problems and solve the different approaches
+for being able to solve these problems?
+So there are a bunch of different ways
+you can approach different problems.
+A bunch of different ways you can solve them with computation.
+And computer science talks about some
+of those different approaches.
+In particular, we are interested in the techniques
+that lead to the most effective solutions.
+So of course, some solutions will take more time or require
+more resources than others.
+So we're interested in the solutions
+that are going to be the most effective.
+One other thing to note is that not all problems
+can be solved effectively through computation.
+For example, a lot of problems out there
+will require you to actually, I don't know, interact with people.
+And those tasks aren't very easily solved
+by just a list of steps you can blindly follow.
+So it's important to note that computer science
+doesn't tell you how to solve every problem.
+But there's a great variety of problems
+that it can solve.
+And we're interested in effective solutions
+for those problems.
+So what are some of these different problems that you can solve?
+So there's systems like operating systems,
+compilers, artificial intelligence, graphics,
+so on and so forth.
+There's a big long list.
+These are just a subset of the interests
+that people at Berkeley have as their research interests.
+But just about any of these topics,
+if you're interested in, you can ultimately
+take a class in at Berkeley or elsewhere.
+By the way, if you're sitting in the back,
+we still do have quite a few seats on this side of the room
+if you want to move over and not clog up the rows.
+So, are these ways probably exiting
+and then going through the other entry?
+There's another door on this side,
+so if you exit the ground.
+Of course.
+So that's computer science.
+What is 61A in particular about?
+Well, it's about managing complexity.
+So a lot of these problems can have really
+complicated and large solutions.
+And one important skill to be able to have
+is how to take these solutions and express them
+in a really simple and effective way.
+One of the ways we teach this in this course
+is through mastering abstraction.
+So what abstraction means is for most things you run across,
+you don't need to know exactly how they work.
+You can take some of the complicated details
+and, well, abstract them away.
+So for example, when you're interacting with other people,
+when you see human being, you don't see them
+as a collection of cells or a bunch of chemical processes
+happening, you interact with them as humans.
+So you abstract away all those chemical and biological
+processes and view them as a human.
+With programs, instead of looking at the very minute details
+of what's going on, we'll see different ways
+to group them and abstract them.
+One of those ways is by exposing you to different programming
+paradigms.
+So programming paradigms are just different ways
+to approach writing programs.
+And a lot of these have very general abstract differences.
+So across this course, we'll be exposing you
+to imperative, declarative, functional,
+several different types of programming.
+And these are different ways that you can organize your program
+and help manage its complexity.
+Of course, 61A, again, is many of your first computer science
+classes, so we also hope for it to serve
+as an introduction to program.
+So we'll hope that we can give you
+a pretty full understanding of Python fundamentals.
+After you go through this course, you
+should be able to do a lot in Python.
+We also take a lot of smaller ideas
+that will teach in lecture and discussion in lab
+and combine those into larger projects, which
+is an important skill to be able to have
+when you're in the real world, because most of what you're
+going to be doing is large projects.
+And finally, we'll talk a little bit
+about how computers interpret programming languages.
+So when you write code, how does your computer actually
+take that code and how is it able to run it?
+In the beginning of the course, we'll
+talk about this more mechanically.
+So we'll have you actually do some of the interpretation
+yourself.
+But later in the course, we'll talk about how computers
+can interpret programming languages automatically.
+And finally, this is a challenging course
+that will demand a lot for me.
+The pace of this course is very fast.
+There's going to be a lot of assignments.
+However, if you do choose to stick with this class,
+we have a lot of resources available,
+and we do really want you to succeed.
+So please don't understand the pace and difficulty
+of this class, but also understand
+that there's a lot of things available for you
+if you want to stick with this class.
+That being said, this class isn't the right first programming
+or computer science class for everyone.
+And with that in mind, there are a couple of alternatives
+to CS61A that you might want to keep in mind.
+So the first one is CS10, called the beauty and joy
+of computing.
+CS10 is designed for students who do not have prior experience.
+So even though in 61A, we try to make the course such
+that you can still succeed.
+Even if you don't have prior programming experience,
+I didn't have prior programming experience
+when I took the course, for example.
+However, CS10 is specifically designed
+for students without prior experience.
+So for some students, this is a better fit for your first class.
+This is an introduction to some of the fundamentals
+of computer science.
+It does go over some Python, although some of the class
+is also in a language called snap, which
+is more of a visual language.
+But after going through CS10, you'll
+know a lot of the concepts and Python fundamentals
+that you'll need for 61A.
+Right now, it has a shortest waitlist.
+And over the summer, it has been taught by Matthew and Monty.
+So you can see more info at cs10.org.
+There's also data eight, which is the foundations of data science.
+So data goes over the fundamentals of computing
+of statistical inference and some a little bit
+of machine learning applied to real world data sets.
+So the purpose of data eight is a little bit different
+than CS61A.
+CS61A is a class about computer science.
+Data eight is a class about data science,
+which is a little bit different because it's more concerned
+with how you process data, but there is still
+quite a bit of overlap.
+It does feature more statistics than computer science.
+However, the programming isn't 61A,
+so it is a good exposure to Python if you want to take that
+before 61A.
+If you want to enroll, it's listed as CSC8,
+although it's referred to as data eight.
+It has a little bit of a larger waitlist,
+but it is being taught over the summer by Natalia and Francie.
+It's actually the lecture right before this one.
+So you'll probably run to them as they're exiting the hall.
+All right.
+So more info on data eight.org.
+So I'm going to go ahead and hand it off to Tiffany
+to talk a little bit about the course logistics,
+again, pardon me, as there's a little bit of noise here.
+So we're trying to get screencasts for most of these lectures,
+which means we need both the mic to project
+and another mic to record.
+So it's a little bit of technical setup.
+We'll talk a bit about that in a minute.
+So I'm going to talk a bit about course format
+and concretely just, so first off,
+this course has a lot of different components.
+I'll just do the thing right now.
+There's a lecture that'll be every Monday
+through Thursday at 11 a.m. in this room.
+Lecture is where you're going to be exposed
+to course material for the first time.
+So we strongly encourage you to come in person.
+So you see the lecture before your discussion,
+because generally, although your change
+is very kind, it will be we need discussions most effective
+if you've seen the relevant lecture beforehand.
+There's also a lab, discussion and office analysis.
+The reason that these are all labeled
+the most important part of the course
+is because it really depends on the student
+and we encourage you to both.
+You should really complete all of them,
+and you'll see that probably one of them
+will be the most effective for your learning.
+The lab is the place where you'll usually,
+after lecture before discussion,
+you're going to actually interact with your machine
+to do some programming in the soda labs.
+This is where you'll get to interact with a lot of concepts
+for the first time in discussion.
+You're going to actually be working on pen and paper.
+And you may be wondering, why do we do that?
+This is because this course is actually quite theoretical.
+This isn't a programming course.
+You will learn programming over the course of the course,
+but that was not meant to be like a hot rhyme.
+That isn't the focus.
+The focus is giving you a foundation and computer science.
+And that's why discussion where you go over questions
+with a pen and paper is a really fundamental part of the course
+and happens after a lab once you've got your fundamentals down.
+All this hours are where you can drop by to ask any questions.
+Oftentimes, we'll come with a side of questions
+because the assignments are very challenging.
+This is where you'll interact with a lot of the active
+in the interns as well.
+And then, we also have an online textbook.
+Some students read this textbook,
+and the chapter is associated.
+You'll feed on the website.
+Every lecture has associated text and chapters.
+Some students read this before lecture.
+Some students read this after lecture.
+Some students don't read this textbook at all.
+I don't know about the key here, how much of the text works.
+But we highly encourage you for a use of first
+D to read the text book and see what you're
+trying to help for.
+Personally, a lot of the text books.
+And I think, because now it's going to read the text book,
+because it's not a color.
+I'm not trying to say both are normal and acceptable.
+But ultimately, it just depends on what your learning style is.
+So try it out and see what works for you.
+And there's also weekly homework assignments
+for big program projects, a midterm and a final.
+And the reason we're listing all this
+is to say, it will be very demanding.
+And this is what you can expect.
+But there also will be a lot of support along the way.
+Any questions?
+Yeah, in the front.
+So the program is going to be able to program the project
+all the time.
+Yes.
+Holly, you put it in the program you project.
+You wouldn't believe the point is.
+But you're like, yeah, so there are four projects.
+There are a lot of means about them online.
+And soon, you'll be able to relate to those movies.
+So in terms of the first week, you just logistics.
+Lab will start in Wednesday.
+So even if you have a Monday or Tuesday
+lab not happening this week, because that's just set up.
+Do the lab on your own.
+Stop it all.
+The stars if you need help, but set up.
+Just one quick announcement about Lab Zero.
+On Piazza, some of you were mentioning
+that you were running into some issues with Lab Zero.
+I think we found that some students running in Map OS
+are able to run Lab Zero.
+So we're working on fixing that.
+So this is not working for you.
+We'll let you know when you can read download it,
+and it should be fixed.
+This is an example of debugging on the spot.
+There'll be a left-shandered bug you see.
+But yeah, we'll have a fix up shortly,
+and you should keep an eye on Piazza.
+In terms of discussion, discussions start on Tuesday.
+And we highly encourage you to attend the discussion
+of matches your lab.
+You can see on the base in your discussion number,
+you can see whether they've mapped your lab.
+They should have the same pattern.
+The reason for this is so that you see the same Pia,
+and they get to know you, and they'll
+be able to help you much more effectively.
+It's also better organizationally for hours.
+And finally, office hours will also start on Tuesday.
+There are no office hours today.
+OK, so in terms of attendance,
+we do not select luxury tenants at all.
+But as I said, you highly encourage you to attend.
+This is our first time trying to webcast the summer session.
+So we'll try to make it as involved as you can,
+but there are no promises around that.
+This is kind of an experience.
+So you can come in person without quality bets.
+And historically, if you fall behind in terms of lecture,
+which is what often happens with students don't come to lecture,
+the other parts of the course is snowball
+and become a lot more difficult.
+So it really encourage you to come with your tenant.
+Discussion and lab attendance aren't tracked,
+and we're going to talk about what that counts for in a bit.
+It doesn't directly count for your grades,
+but it counts for something called participation points.
+And then finally, all your assignments, labs,
+home rates, projects can be submitted remotely.
+So if you happen to be out of Berkeley for some reason,
+or you have an emergency, as long as you look computer on you,
+you should be fine.
+OK, so as you mentioned earlier, with some of your tutors,
+we also offer a small room tutoring section,
+which are led by the staff that we saw earlier.
+Local structures are around four of these people,
+and it's just to be a more intimate environment
+to review the material.
+But these are from the optional, and there
+are limited number of spots.
+So around the end of this week, we'll have sign-ups.
+And to make it more clear, the purpose of these sections
+are, if in discussion, you feel like you
+aren't getting enough review, and you would like more practice,
+you can sign up for one of these tutoring sections,
+you'll get more practice with supplemental material,
+and a small environment, so maybe you can ask more questions
+and feel more comfortable.
+Those sign-ups will be up on this.
+And in this week, I'm Piazza.
+Also, we have something called conceptual office hours.
+So I do think it all upstairs is a good session
+in my training work.
+But unfortunately, you're on a side of usually
+that cloned with just to make a sign-up question
+and debugging help, which is also useful,
+but usually doesn't get to the core of the material,
+the key constants that may test on your exams,
+for example.
+So conceptual office hours are a place that
+are specifically reserved for no assignment help
+and only conceptual questions.
+So these will be out into the calendar scene,
+and you can expect to go there for that type of help.
+So girl is such a piece.
+Historically, in this course, a combination
+is because people can continue collecting every single day
+and it's kind of a great decade.
+It was student falls behind to whatever reason.
+There's a great opportunity to catch
+back up on materials that just pass, right?
+Because we just keep going with new content.
+Real sections are kind of meant to go this gap
+because they'll be once a week.
+They go from zero to a hundred of that little material
+to a scaffolding worksheet.
+Essentially, with a formatting, they'll go to this room
+with a bunch of mixed units,
+working to get some on the view on depth
+as this is a big topic.
+So it's doing it from cheering sections
+and that you don't sign up.
+They're going to be dropping.
+You can go to one, you can go to all of them.
+And at the bill section, you'll be in groups
+and work through this gap with a worksheet
+and hopefully by the end,
+feel much more comfortable with those topics
+that you might have missed earlier in the week.
+Does that make sense to be ready?
+Or any questions that I think I went through so far?
+Yeah, that's fine.
+Is the left task going to be real?
+So I'm not going to go to the court as opposed to that.
+For a court and a post it, Alex and Chris know more about it.
+Yeah, so we're like, the reason we have so many microphones
+is because we're recording it right now.
+But to note, there's no guarantees on one
+that screencast will go up.
+It might be that evening, it might be a day or two later.
+So that's, it's meant to help you review the lectures
+if you missed something in live lecture,
+but it's not meant to be a consistent replacement
+for live lecture.
+Cool.
+Any other questions?
+Yeah.
+What answer?
+Yeah.
+We're going to be every Friday at 11 a.m.
+So we have lecture, money,
+you're freezing, real protection, but Friday, I think
+it's still in the book or room,
+but we'll have those details on the website too.
+It won't start this week.
+It will start like in the future.
+Yeah, don't we know the real section this week?
+They start second week.
+Okay.
+Are you missing at home?
+Yes.
+In the front.
+Oh.
+I mean,
+it's going to look more and more carefully
+to take the stage around it,
+but more more more more.
+They may change right.
+Oh, yes, it turns from the fire, of course,
+to the hands,
+but I don't know if it's the one hand to the one
+that won't be done at 18.
+Yeah.
+So the question was,
+do the homework to change?
+So the function has to be where it is.
+We also do know if the project will change
+by the way, doesn't look enough.
+The homework will be so much different
+because we're going in a different case,
+the numbers will map,
+but quite a few of the problems are shared.
+I hope this has been getting at like,
+ask your friends to introduce them up to you,
+do you think?
+You not do that.
+Those are a lot of things,
+but yeah, some of the homework problems
+are similar to the past and that.
+All right.
+There's one more question.
+Yeah.
+So the realizations are 11 a.m. on Friday, two, what time?
+11 1 p.m. on Friday.
+Yeah.
+Okay.
+And we have more details up on Kiazza
+once you have the room book
+and one deception that for half of it.
+Yeah.
+Oh, can we come like half way?
+Yeah.
+So you're,
+you're free to come half way, no one will stop you.
+But it might, because we try to keep the group's pace,
+it'll be a little bit harder,
+possibly, but you're free to come,
+just have that in mind that it'll be a little bit more
+difficult to keep up and become half way.
+Cool.
+So let's go a little bit into disagreeing breakdown.
+This is a graph of how your points are distributed.
+There's more details on the website.
+I don't want to get to it in the new shazits.
+Just to note, 140 of your points are from the exams,
+which we'll talk about in a bit,
+and 150 of your points within the budget.
+So it was a really the both of your points.
+So it made you put the decision points earlier
+from discussion and lab attendance,
+participation points as you would have noticed
+in that three graph, not here.
+The reason for that is because they don't
+explicitly count towards your final grade.
+If you don't want to participate,
+you could not participate in any lab discussion.
+However, we don't really encourage that.
+So if you're putting in effort,
+if you go to every lab and every discussion,
+if you happen to do below 50% of your exam,
+your attendance and your participation points
+will help you get closer to 50%.
+So if you do above 50%, it won't help you at all.
+If you do below 50%, it'll help you at closer.
+The specific or mill we use for toppling this
+is on the website, you can like 10,000 numbers
+see the precise number of discussions
+you want to go to, but ultimately,
+I encourage you to just go to your discussions and labs.
+The point of this is to give the credit
+the people who are really trying the best in the course.
+And for some reason, don't go to the exam,
+but you will let everything out.
+That'll make sense.
+Any questions?
+Does that make this patient?
+Yeah.
+Can you tell me if you're going to the school
+or are you especially going to the lab
+that we are involved in?
+Yeah, you can get the patient credit going
+to a different section, but for the first two weeks,
+please try to put this section here in Golden,
+just because we'll all be quite happy.
+To be clear, the discussion section here in Golden
+and the lab section that matches with that discussion section.
+Yes.
+Am I missing any?
+Okay.
+All right.
+So another thing I'm reading,
+there's going to be quite a bit of a new shift
+for a next slide, five slides.
+We're almost there.
+Homer 3D is done because after.
+What this means is that you don't be distressed
+about getting the entire homework fully threatened,
+especially some of the homework from this class
+will be very challenging.
+And we don't want you, that's your head.
+If you're too bored because you can't get one or two problems.
+Instead of how we do homework 3D is,
+if you get the majority of the problems correct,
+and we see some evidence of effort for the rest of the problems
+I mean, you wrote a program, we have other metrics
+for measuring whether you tried on our end,
+but for your purposes, this means Google attempts
+and all the problems getting most of them correct.
+If you do this, you will get credit
+for your homework assignments.
+This means basically the point of this is knowing
+you to be pressured to teach or look your friend's solution
+at anything like that, because if you put in your effort,
+keep up in the material, you should be able to get both
+in on the homework just by trying on your problems
+and getting most of them correct.
+Any questions on this because I know
+this might be able to confuse you?
+Okay, other, yeah, in the front.
+Or some of them are more than two lines of homework
+so all of them come out of the network.
+Yeah.
+So we've got to be in the front,
+some of the homework and a few lines of code,
+only a few lines of code, how do you measure effort?
+That's really good question.
+So effort is definitely not writing a wall
+and it's program possible.
+That's not how programming works.
+That's what it could mean.
+We have evidence of all your methods.
+So the reason I give you details is because this one
+should be easy when you're trying to name the system
+and that's not what we want.
+The reason we don't be creative corrected
+is trying to make it as easy and possible,
+but just to give some transparency,
+we have kind of our whole history of your homework.
+We've seen when you started,
+you see how many times you tried,
+there's a lot of data there.
+So we know, yeah, I hope that kind of answers the question.
+But if I give you like a black threshold,
+then you could all just, I don't know,
+try making five submissions and then we're done with it
+and that's not really the point.
+I don't even know what to do with it,
+but yeah.
+I don't know what to do with it as you go through it
+as well as the fact that what I don't do
+are asking for asking to do it for us.
+Yeah.
+Oh, okay.
+Good question.
+So you won't know what you're correct.
+That's a big deal.
+All the homework's from autofrainers,
+so you'll know what you're correct
+as soon as you found the correct question.
+In the front.
+I don't think that seeing programming is good
+to do around that first end,
+you have to correct me as you do,
+get out of the right answer, right?
+Yeah, I'm correct, I'm correct.
+I'm correct.
+So you get a 100 and a 10.
+If you read the about page,
+we go more in depth into this.
+It's kind of hard to explain in person,
+so you should read that first
+and then there are any questions.
+Essentially, we'd be like to extract away
+how the effort creating works to kind of open earlier,
+but just trust that happens that the point is,
+don't stress about getting all the problems correct,
+but try all of them, get most of them correct.
+All right.
+So, you guys are seeing uncorrected and composition,
+but you will get project partners.
+So hopefully that lightens below in a bit.
+Where you tell us that here,
+and keep in mind that projects are pretty big,
+it's the start one there, it actually posted.
+Please don't put them off for the last minute.
+Labs are also bringing on confusion,
+but you get two labs jobs.
+So we encourage you to put in your best effort.
+We are gonna double check something.
+Labs are great uncorrected, is right?
+Yeah, yeah.
+Okay.
+Yes.
+So, I've got the view both correct measurements,
+but yeah.
+So, we encourage you to complete all the labs
+and try to finish,
+and there are many to be assignments
+that you can finish in the lab fully correct.
+But if you end up having an off day,
+you get one or two, not at 100%, it's okay.
+You get two labs job.
+More details, you have this website.
+Okay.
+So also we have slip days.
+There are a lot of ways you try to introduce
+community in the course, one is your one 24 hour slip day.
+So this can be used on homework and projects.
+We have, you know, final deadline,
+officially on the course website,
+let's say you have some emergency situation,
+then you can use your slip day,
+and submit a day later,
+and you'll still get full credit.
+But you can only do this one for this semester.
+One thing to note is that,
+let's say you have a project partner,
+you use your slip hand off,
+and then you partner up for dance,
+which is on project three.
+They have a slip day, but you don't.
+If you both submit together a day later,
+you're gonna get the late penalty, but they won't.
+So that's an important thing to note.
+Slip days are individual,
+they can't be shared or gifted.
+We don't agree, so sort of great economy in this class.
+Okay.
+And it's finally, these are the two of your exams.
+Please make sure that your schedules are cleared.
+Unless you have another class
+with a directing van conflict,
+we cannot offer an alternate.
+So there will be a post for,
+if you do have a class with a direct conflict,
+how you can request an alternate,
+that information will all be on Piazza,
+but otherwise, please note the exam times.
+Unless you have another class,
+we cannot make exceptions.
+All right, and now, let's just talk a little bit
+about preparing for these exams
+that feel like I've been deciding a lot of fear
+about for the past, like 20 minutes,
+because I just want to make it clear
+that these exams are meant to be some sort of year.
+They're not meant to be able to be scared.
+The purpose of these exams are kind of like I mentioned earlier,
+just is quite a few rental courts.
+And the other types of the courts
+tend to be a bit more practical,
+especially your labs and your homework.
+But in exams, to get asking questions
+that get more to the core of specific concepts,
+for example, share a person with a mental leader,
+choose, I don't know how I'm only thinking
+about you later, really, really in danger now,
+but those are two big topics.
+These are big concepts.
+Sometimes when we don't enter them,
+we have to ask, create a couple examples,
+really get a sense of where you are
+and showing your understanding.
+So how do you say it's a new exam?
+Generally, I think kind of this is a back down
+for life courts and courts.
+And this isn't maybe what worked for everybody,
+but I want to give you my background.
+And maybe the last one of you
+to also explain how you did it,
+just to give you perspectives.
+For me, usually, at the end of the first week,
+I decided to push a lot to classes.
+I would look at one of the first exams
+from maybe the past year or all of our exams
+are posted on the resources page as soon as.
+You can access them there and take a look.
+What I'm trying to say is I would look at that exam
+and then it'll look like complete gibberish community, right?
+If I want to be able to identify
+what are the terms that come up the most often?
+What are the types of problems that come up on this exam?
+And then later on, in lecture, in discussion, in lab.
+But when I see that term again,
+when I see that there's a problem,
+I notice a super important.
+And I also know the levels of importance.
+And so once I've seen a couple of those problems,
+I do like to now go back and try out those past exam problems.
+Because I've seen them before and now you know
+of a learn the material when they got to that part of the course.
+What I'm trying to get at is just one approach.
+Some people don't like this because if it's world exam,
+in my experience, I don't remember
+and then I looked at me once,
+so it feels well for me.
+But what I'm trying to get at is not putting off exam settings
+to be told because that'll make it a lot more stressful.
+If you try to pack an exam problem every week,
+at the end of the week or the end of the fall week
+after went through that material,
+you'll find that it's a lot easier
+to figure out how to approach them and master them
+and create strategies to tackle them.
+I also really urge you to talk to your staff
+about this, the TA's, because they'll have
+the experience of them being able to relate to you
+more closely and you don't experience it.
+I guess one of the things I'll mention
+is that all the resources page,
+as we get further into the course,
+for every topic will have specific lists
+of the past exam problems from that topic.
+So that's another way to study.
+You can go through, all right,
+we just went through higher functions.
+We'll leave on the resources page
+and try the past exam problems or higher responses.
+Yeah.
+Alex also made this helpful flowchart.
+So, what he is trying to believe here
+is that you can start out with going to lecture
+and then you can catch up with him, you can prefer that.
+Then you go to lab, do some homework, go to discussion.
+After that, he's no post-shaking on a concept.
+That's what really sectioned it for.
+Also tuning sections that you like.
+And then after you have a foundation,
+you should be ready to tell me
+how those are naturally advanced.
+It won't be difficult,
+but the point of that little tooth
+is that you do it over and over again.
+I don't even know if you'd lecture in your test,
+but I really want to encourage you to start early
+and I think that'll really improve your experience.
+Cool.
+Any questions on the exams or the resources we have for that?
+Yeah, you know?
+We saw people asking about it.
+Yes.
+So, in here, there's no hours without,
+you know, people preparing for exams work.
+That's a good point.
+So conceptual officers are,
+they're kind of mentioned as purpose.
+You go to conceptual office hours with past exam problems
+and we're looking forward to helping you there.
+You know what's good,
+right?
+They're office hours for sure.
+You're free to do that as well.
+Like a sexual or kind of specialized for this.
+So yes, definitely a component.
+Any other questions?
+Cool.
+I'm almost tired of these logistics.
+I think this is the last slide.
+Okay.
+So just some stuff, an academic honesty
+or put nicely collaboration.
+So, this class is not clear.
+They're acceptance.
+This means that whether the 10 people next to you fail
+because you, but I'm not going to admit to a scenario.
+No one would happen to a student.
+It's not going to change the green that you get.
+So there's no incentive to do so, please.
+So, instead, what you really want to call through this class
+is an environment of collaboration, helping,
+and sharing with one another.
+We highly bridging work together
+because really for me,
+that's how we look at this class.
+So my best friend was 16 one day.
+Wow, it's used right here.
+And that's really the point of this operation.
+Policy, but there are limits.
+One, you cannot share code as anyone else in the courts
+except for your project partner
+on a project that you're working together on.
+The only circumstance, yeah,
+where you can look at someone else's code
+is what your partner is.
+So, sharing code with you the means,
+if you're sitting together in your dorm
+and you look at someone else's dreams
+and you want to help them, that's still sharing code.
+And it's explicitly not allowed.
+We've run into what businesses or people say
+that's all they're doing
+and that's how they ended up with exact copies.
+And even if you go to 10 this such,
+it often happens inadvertently when you're programming.
+So, please do not look at anyone else's code.
+We also have software for detecting this,
+and we will find out what's likely to do it.
+So, that's just a warning.
+Sorry to get to your software.
+Okay, so, if you wanted to just read anything I just said,
+it's all on the website.
+Chris, you're a very detailed documentation,
+and now you can talk to Alex.
+Okay, so now we're going to dive into
+the content of the course.
+The first thing we're talking about is expressions.
+So, what are expressions?
+So, expression describes a computation
+and evaluates to a value.
+So, this is some way we can kind of symbolically
+represent or programmatically represent some sort of
+computation that we're going to be doing.
+The field of mathematics has done this for a really long time.
+They have numbers.
+They represent things in a bunch of different ways.
+Some of the ways, you put two numbers.
+You put a plus sign between them.
+Here you have some other format.
+You have some line between them.
+Competition's really love notation.
+Here you put some number.
+You put some house over it.
+You get another number.
+Here you just put a word and you get another value.
+So, here you can use another language, Greek,
+and you just suddenly have another thing.
+So, and there's a bunch of these.
+Okay, so, mathematics has a lot of ways
+that they like to describe things
+because they like doing notation
+and having really short hand in the research papers.
+It's really hard to read.
+In computer science, we really like to simplify things.
+So, in computer science, the only thing
+that we really care about is this one
+a particular f of x.
+What this is kind of saying
+is that we're taking in some particular value
+and we're going to manipulate it in some way.
+Really general, it's really abstract.
+Take something, change it.
+The function f describes how we're going to change it.
+The input x is just the particular value
+that we care about.
+I claim that every single one of these kind of expressions
+or any other sort of expression
+that we might think about in math,
+that these can actually be represented
+in this f of x notation.
+And so, we're actually going to look at this in,
+Python, would somebody be willing to hold this
+since it isn't working?
+I think we're going to download.
+I put on a college shirt
+because supposedly they work best,
+but apparently they work worse.
+Not me or sis?
+Thank you.
+Okay, so,
+what I just did is I open me, this is just in Linux,
+it's similar in Mac and Windows,
+you'll probably use Git Bash.
+If I went to open the Python interpreter,
+I typed Python 3.
+So what this is, is it's a looping mechanism
+where we can type in things,
+Python figures out what the means
+and what I typed and then it returns the value.
+So for example, I can type 2019,
+it figures out what 2019 is,
+there's nothing special and we output that.
+The other thing we can do is we could do addition.
+We can output some other values.
+So here it's figuring out that we want to add to numbers.
+It calculates the addition and then puts them together.
+We can also do addition, we can do division,
+we can do more addition, we can do nested equations,
+we can do more multiple locations.
+And it automatically knows the sort of standard
+orders of operation and it'll sort of evaluate it
+in the normal way that we're used to.
+Another thing that we can do in the sort of functional
+notation that I was mentioning is there's some built in
+things that we can type.
+So we can say max of two numbers.
+It's going to return the value that it's a maximum.
+The function notation just says,
+okay, there's something that we want to call
+and we're to separate these in parentheses
+and put some commas between these things.
+This is how Python more or less knows
+that we're doing a function call.
+We can do min, calculates minimum.
+And this is great null, but I claim that we can do
+everything in this function call notation.
+Right here we're not doing this with the addition.
+And it doesn't quite work that we can't just do this.
+It's going to give some strange error
+that doesn't quite make sense.
+We actually have to do it, it's kind of the way
+Python works, we have to run this line.
+And this is kind of the underlying behavior
+of how the addition and multiplication works
+and it allows us to do this other format.
+So we can now add things together,
+we can multiply things together, let me.
+And another thing we can do is if you've ever seen
+in mathematics where we do multiple values
+in a particular function,
+we can actually just separate them in more commas.
+We'll get more values.
+We can also nest them, and it'll automatically figure out
+the order of evaluation based on the nesting structure.
+And so the nice part about using this call
+expression notation is it's very clear what goes where.
+We are going to evaluate the multiplication of 4 and 56
+before we add to do it.
+We're going to figure out what our validation is
+before we max that in the other addition.
+And sort of this nested structure makes it very clear.
+In the first lines that we're doing,
+you have to kind of know the order of operations
+of mathematics, and maybe you're too lazy
+and you don't remember that.
+Having this sort of consistent notation
+is very nice for program languages as well as computers
+because it just follows a simple set of rules
+and it'll figure out what it is.
+Are there any questions about that?
+All right, cool.
+Thank you.
+I don't know how to get back.
+Maybe.
+OK, so call expressions itself.
+We're going to look kind of like how they're formatted
+and how they work.
+So a general call expression here, we're saying add 2 and 3.
+This whole thing is what we call a call expression.
+The way you kind of know there's the name of the function.
+There's some parentheses.
+There's some values separated by commas.
+Some terminology we call add the operator.
+This is the thing that we're operating on the values.
+Add will do the addition.
+And the other things are calling operands.
+So operators apply to operands.
+We're applying add 2 and 3.
+In this case, it's not a particularly complex call
+expression, but in the case that we saw in the demo,
+we saw nested structures.
+So each of these values can also be expressions themselves.
+Instead of two, I could have said mole 5 and 6.
+And I could have had some other value.
+And it needs to sort of figure out these values
+before it does this kind of application.
+The exact way that Python goes about this
+is the first thing it does is it sees this as a call
+expression, it says, all right, I want to figure out
+what this evaluates to.
+So the first thing I'm going to do is figure out
+what is the operator?
+In this case, it's just looking up what add is.
+It says, OK, this is some thing that does addition,
+takes some numbers, and adds them together.
+The next thing it does is it goes through each of the
+operands.
+These are the arguments that we're plugging in.
+It figures out what 2 is, it figures out what 3 is.
+Now that we've kind of figured out all these values,
+and the reason why we're doing this is because in the case
+I mentioned, if 2 is instead mole 4 and 5,
+we have to figure out what 4 times 5 is before we can add
+4 times 5 and 3.
+Once we've figured out all these values,
+we can actually do this application.
+So we know what addition is.
+We know what 2 and 3 is.
+So now we can actually add 2 and 3 according to how
+addition works.
+By following this very precise sort of set of rules,
+it allows us to understand how computers are going about
+to calculate any arbitrary sort of value.
+And because it's so simple, and it's these sort of three
+relatively simple steps, computers can follow this
+relatively quickly.
+It says, all right, I don't have to really think about how
+this is structured.
+Do this step, this step, and then this step,
+and I'll have the result.
+So we're going to look at an example.
+So it's add, we're adding 6 and 4 times 6 as well as 3 times 5.
+So as people, the way we kind of approach this
+is we look from the inside out.
+The first thing that we're going to try and figure out
+is what's 4 times 6.
+We're going to get 24.
+Now after this, we're going to add 6 and 24.
+We're going to get 30.
+We're going to multiply 3 times 5, 15, and add these together.
+We're going to get 45.
+So when I look at this, I can quickly say, OK, what's the
+innermost call?
+OK, it's 4 times 6.
+So I should probably do that one first.
+You can also imagine saying, OK, I'll actually do 3 times 5.
+Then I'll do 4 times 6, and then I'll add them together,
+as long as we're kind of building up through the levels.
+Computers in Python can't quite do this.
+It needs to have a specific set of rules.
+And while we're kind of as people can look at the whole thing,
+kind of jump around and do whatever we want,
+programs need to follow a very specific set of rules.
+The way we would do this in sort of the following the 3 steps
+that we said before is we're going to follow these 3 steps.
+If I like to operator, the operands and apply.
+This is something that will be set a lot.
+I'm probably in discussion as well as lecture.
+And the process for this is here.
+We see a call expression.
+We're going to evaluate the operator.
+In this case, it's just addition.
+Nothing particularly complex.
+The next thing is the operand.
+We're going to add 6 and multiplication of 4 and 6.
+We have to figure out what this is before we can actually
+do the top level addition.
+To figure out what this value is, we have to repeat the set.
+Evaluate the operator.
+Evaluate the operand.
+In this case, it's 6.
+So we just get 6.
+And we repeat the process.
+We evaluate the operator, the operand, and the operand.
+Now for this sub-expression, mole 4 and 6,
+we figured out the first 2 steps.
+We've added, we figured out what the operator is.
+We figured out what the operands.
+We can now do this final step of applying things.
+We can say multiplication 4 times 6, the 24.
+We'll kind of go up this tree structure.
+Because it's like branching out.
+Then we'll say 6 plus 30.
+Now to figure out the top level, we have to kind of go
+through this again.
+And so this is how computers are actually
+going about solving these, like you've given instruction.
+It says, all right, let's compute this value.
+And this is a process that it's going through.
+It says, first, let's look at the uppermost level.
+All right, what are we looking at?
+A call expression.
+All right, let's look at the operator.
+Let's look at the operands.
+Let's kind of go through this structure
+and to figure out all of the possible values.
+And we kind of resolved ultimately what we're trying to do.
+There's whole things called an expression tree,
+where we have each of the things being the expressions.
+And they break into sub-expressions.
+And each of these evaluate to some particular value.
+Are there any questions about this?
+Cool.
+And then we're going to do another demo.
+Thank you.
+OK, so a couple of concepts in this course
+are functions, values, objects, interpreters, and data.
+So you've seen the interpreter.
+That's the type of interpreter.
+We can type in things.
+It evaluates things.
+I mentioned functions like add and mole.
+Values are like numbers.
+And we'll see a little bit of objects in data.
+In this demo, I'm going to be using some things
+that we haven't taught.
+But the point is not too confusing.
+The point is just if we had to introduce all these concepts,
+it would get to a cool demo in the first day.
+So we want to do that.
+So I'm just going to kind of do some things.
+You aren't going to have to understand everything.
+If you come back maybe later in this semester,
+some of these might make more sense.
+OK, so a long time ago, there is this author Shakespeare.
+I have a file on my computer.
+Actually, I think I need to.
+Nope.
+I misspelled Shakespeare.
+All right.
+Cool.
+So what this is, is this is a text document with a bunch,
+or I think all of Shakespeare's writings.
+So we can get the particular values,
+so we can read the data from this file,
+and then we can split these into words.
+This is going to be common.
+OK.
+So what is in this?
+We go to the first 25 words, and we see the first play,
+at least in this document.
+And it's a very nice game.
+That's the first words, and it tells the play itself.
+OK, so we can ask Python how many words are in Shakespeare?
+OK.
+So there's 980,000 words in all of the text of Shakespeare.
+If we're going to do this manually, it's take a long time.
+But Python did this pretty quick.
+So this is pretty impressive.
+But let's actually take a closer look.
+So let's ask, OK, how many of these words to Shakespeare write
+are actually the word the?
+So it turns out 23,000 of every word that Shakespeare wrote
+is just the word that is.
+So that's about 2%, something like that.
+I don't think we can look at is, if you notice, in the first line,
+we see a bunch of commas.
+So because of the way I split this, commas are also considered words.
+So let's actually look at how many commas there are.
+So there's actually 81,000 commas just in Shakespeare.
+So that's how many words are.
+We can figure out exactly what percentages
+by dividing this by how many words there are.
+We get about 8% of Shakespeare's just commas.
+And I think we do say, OK, there's a lot of repeats.
+Clearly, there's a lot of does.
+But maybe we're only interested in looking
+at the particular unique words.
+So the way we can do that is we can say, all right, only
+with unique words from Shakespeare.
+And now we can check, OK, is that in the words that Shakespeare has?
+Yeah, so it is.
+All right, how many words, unique words
+does Shakespeare use?
+OK, they have 33,000 unique words in Shakespeare.
+That's a lot.
+Another thing we can do is we can do some string manipulation.
+So here, if I put this thing in quotes,
+this is way Python says, all right,
+we're just going to type this string of characters in a word.
+Another thing we can do is we can actually reverse words.
+So now it's word.
+Oh, that's interesting.
+John Ward are both actually words.
+So maybe we can look in Shakespeare, which words are also
+inside of their reverse.
+So the way we do that is we're going to look over all the words.
+You don't have to understand what I'm doing right here.
+Yeah, OK, I guess that's a good point.
+We're going to clarify the goal of this.
+The goal is to show that Shakespeare has a lot of words.
+And the power of computers, it allows us to go through things
+automatically in order to see a lot of analysis and sort of data
+that would be really painful to do manually.
+Computers do this almost instantly and basically instantly.
+Well, if we were to do this manually, you'd take a long time.
+And so we can leverage the power of computers
+to sort of do this analysis on data, which
+was the other topic in this course.
+We've also seen sets, which are actually objects.
+And you can make believe these.
+We'll kind of cover each of these concepts
+that I mentioned a little bit more in depth throughout the course.
+OK, so here, I'm looking at all the words that are also
+the reverse of the words.
+So this is going to be palindroms, I guess.
+So we see all of the palindroms and Shakespeare, which
+are length greater than four, or these ones.
+So writer is also a writer, level is level.
+One of the thing we can do is we can look in Shakespeare.
+Maybe we only care about if the word is actually also in the words.
+So here, we're looking at all the words of length four,
+that when you take the word, you reverse it.
+It's also in Shakespeare.
+So let's see, there's, I don't know if these are words.
+I'm not quite.
+OK, gums and smug.
+Oh, snug.
+Oh, no, these are words.
+OK, move and pull.
+Yes, OK.
+This is why I guess the computer science major.
+OK, we can also look at length five.
+So we have some more.
+We can look at length six, all right.
+There's still some more.
+Are there seven?
+So there's no more.
+Are there any more greater than seven?
+OK.
+So we're kind of in our adoptions.
+And the reason for this is Shakespeare didn't use all of the words
+of the English dictionary.
+We can also actually load in, let's see.
+I need to figure out the document.
+So on my computer, I have a file.
+You don't have to understand this.
+OK, so now I've loaded in the dictionary of all of the words
+on my computer, at least in this one dictionary.
+So now, look at the length of words, there's now 102,000.
+So originally we had, I think, 30-ish,000.
+So we've increased the number of words by a lot.
+So we can do things like, OK, what
+is the longest word in this list of words or a set of words?
+We can take all the words.
+We can say, all right, what I care about
+is the length of these.
+OK, so this is the longest word in the dictionary.
+Oh, I'm not going to try to pronounce that.
+We can also look alphabetically.
+We can say, OK, what's the last word in the dictionary alphabetically?
+We get it toads.
+Let's see, what else can we do?
+We can go back to the original thing we had.
+We're saying all the words, which also have reverses in it,
+which are length 6.
+So we see there's a little bit more words.
+And then we can, again, are there
+anyone's greater than 6?
+So in this case, we actually have more of these.
+So stressed and desir, desir, oh, OK, OK, so we can actually,
+for example, we could say, OK, what is the largest word?
+Such that.
+So we're looking at the longest word
+in this set of words, such that the reverses in it.
+And we get stressed and desir.
+Cool.
+OK, so this is kind of all I have for this.
+Are there any other things you guys would be interested in looking at
+what we could do in this sort of data set?
+Maybe like looking up words that are, I don't know,
+are there any ideas?
+Yeah.
+How many words start with A?
+How many words start with A?
+OK, so we could take how many words, if the first letter is A?
+So 4,600, so many things.
+And then I think, yeah, so some of these, let's say,
+let's say, this, except now, we're going to look at that for.
+OK, so 6,000 words, ignoring capitalization, start with A.
+Any other guess?
+Yeah.
+Is there a simple way in it?
+So instead, in that stop-up, I mean,
+that's stressed and dessert is another thing,
+versus avoiding A, so that those between ones won't be there.
+So we only care about, so if there's a word like stress,
+you don't care about the inverse of it.
+Yeah, so in other words, you can do that is back in this one.
+Not this one.
+So another thing we can say is, I can't hear a people if you want this
+too.
+Oh, yeah.
+Thank you.
+He asked, is there anything we could exclude the reverse of the
+word?
+So we got stressed, but maybe we don't want desserts as well.
+Or maybe we want desserts, but not stressed, if you don't
+want to reverse.
+So the way you can do that is we can say, and we only care
+about the one that is actually smaller alphabetically.
+So we get two of them.
+Cool.
+So this actually excluded palindromes.
+We can actually say less than or equal if we care about palindromes.
+Cool.
+Because deified is also the reverse.
+Yeah.
+How is the number that's not had out for this?
+Do you know what that is?
+Do you know what that is?
+That's what that is.
+That's what the word is.
+Um, I'm interested in what are the words that
+store the capital H or the lower key say?
+This might elucidate something.
+There's a lot.
+Oh, so the reason why is let's look at...
+So some of these words like arctic also have the capitalization.
+So when we lowercase them, we don't care about the ones
+that we're also duplicated.
+Any other ideas?
+Yeah.
+Most number of vowels.
+Most number of vowels.
+Okay.
+So we can say, um, we're going to max over the words, uh, you
+don't need to know what this means, uh, I'm going to say...
+But you will see.
+You'll be able to understand all of this.
+Yes.
+And we want to, um, uh, one for W in X if, uh, let's see, uh,
+so this is the word that has the most, uh, like the word that has the most, uh,
+the most repeating single letter, um, so we can say, we want the maximum word where the
+key is equal to, well, okay, so we can do it with a specific vowel.
+So if I said which one has the most ease, we get teleconference, it's a X, which one
+has the most X's, X ons, not quite sure how you do with all of the letters, though.
+Yeah, you'd have to kind of go through all the letters and then get the maximum over
+all of those.
+So we'd have to sit here and type a long string with the whole alphabet.
+We could do it, but it'll take a while.
+Oh, yeah, he's saying like, um, he's saying to the subtract the set of unique letters
+from the length of the word, um, because then you'll have a, but like, I think that that
+version, right?
+So if you have two letters that both repeat a lot, you want to certainly get the one word
+with the most repeats of the same letter, right?
+Like, okay, basically the probably isn't easy way to do this, but we don't know if the
+top of our head, but I think that approach would, I mean, yeah, you could say, oh, my
+God, okay, so I'm iterating over all the letters and I'm saying, and now it's intact.
+Oh, no, I don't need this, nope, generics, oh, okay, I see, I have the most A's, I guess,
+wait, that's like not that many A's, I think maybe it's a lot of A's, yeah, I guess I
+guess it's a lot of A's, yeah, use a regular expression, maybe, I'm not very good at
+regular expression, okay, cool, yes, I can hold it up for you, cool.
+So I guess the purpose is going to show you some neat things you can do in Python, you
+can actually download the Shakespeare text, it's in the textbook, I think it's one of the
+first links, if you go to the 1.1 chapter, if you want to mess around with it yourself,
+it's just kind of show you the neat things you can do in Python, what kind of moving on
+to some other kind of building up and maybe by the end of the semester, you kind of understand
+all the specific things that we've done and how you might approach these for yourself.
+Anyway, tomorrow, thank you all for coming, we'll be up here if you have any questions.
+Thank you.

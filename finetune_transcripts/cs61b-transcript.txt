@@ -1,0 +1,472 @@
+So today we're going to be doing a software engineering lecture.
+This is a somewhat of an experiment.
+So I'm going to give you some backscorian why it's happening.
+So an interesting note that in 2003-ish and earlier,
+61A had two days a week, Monday,
+Wednesdays of technical topics,
+and then Friday was always something else.
+Now sometimes that was some social implications thing
+where we talk about the impact of computing.
+And it was a way before I was like your age at the time.
+But they would talk about alternate topics, whatever it may be.
+You get guest speakers, whatever else.
+But over time, 61A's content grew and grew
+until social Fridays, as I believe they were called,
+disappeared entirely.
+So what I'm trying this semester is I'm
+going to bring this back a little bit in 61B.
+Where for three weeks, I'm going to dedicate this class
+to these sorts of topics.
+So to be a different flavor of lecture,
+it'll be less technical.
+It's not going to be we have this old computation problem.
+Let's try and solve it together.
+It's going to be generally a little bigger.
+Now these are untested lectures.
+Maybe they'll be good.
+Maybe they won't be.
+So do let me know what you think.
+    So some motivation for today is that if you think
+    about your education at Berkeley so far,
+    doing programming, we've misled you a little bit.
+    In 61A, a lot of the projects and homework
+    were filled in the function, where there's already a function.
+    You just have to write the code to make it do the thing.
+    And that's great for learning how programming works.
+    And even for finding and identifying sub-problems,
+    but it's not quite real world coding practice, sometimes.
+    Now in 61B, we've zoomed out a little bit.
+    And we said, we'd like you to build a class,
+    say, an extrinsic min pq or whatever.
+    And you're supposed to do it according to our spec.
+    We kind of kicked off the training wheels
+    and the projects as we went, taking away our autograder
+    and so forth, occasionally.
+    But I think it's fair to say that everything we've done,
+    even project 2C, is all at a small scale.
+I mean, 2C, you're going to have this giant code base.
+You're not touching most of it.
+Most of it's just mysterious.
+You can go look at it.
+But it's not really something that you
+have to interact with deeply.
+Now, because you've always been working at a small scale,
+you have built habits that may cause you great pain
+if you build your own projects or whatever else in the future.
+So in these lectures, among other things,
+I'm going to give you a sense of how
+you would deal with large scale, where
+you're trying to actually build huge systems
+from scratch where you're designing everything.
+Though I will note that in lecture, it's actually very hard
+to do this, because it's tough to find something
+that's small enough to fit into lecture.
+But it's large enough to showcase where
+these issues are problematic.
+I gave it a shot with an exercise.
+We'll do at the end of today's lecture, but we'll see.
+So project 3, that's where you'll have some breathing room.
+This is after bear maps.
+This will be a chance for you to actually design something
+totally from scratch.
+And you will feel the pain of the complexity
+as you realize that you're boxing yourself
+in the corner with short-sided decisions.
+So I hope that these lectures help you, at least,
+in some vague way.
+But this is one of the very hardest topics
+to teach you computer science.
+169 is another place where you can get a taste of this,
+or if you go and do internships.
+So we'll see how it goes.
+Now I should note that these lectures would not be possible
+or they wouldn't be nearly as good if I did not
+have this book.
+So I had a former TA K. Osterhout who
+was a grad student here.
+And her dad is a computer science professor as it happens.
+And he wrote this book.
+So if you want to check it out, I think it's pretty good.
+It's very high level, though.
+It's a high level description of where you run into trouble.
+And so I'm borrowing heavily from this book.
+I want to give credit where credit is due.
+And it's cheatbook.
+All right.
+So let's try it out.
+So you've heard me say before that complexity
+is your opponent, your enemy, and computer science.
+And so I'm going to try and define complexity.
+And I'm going to use John's definitions,
+because I think they're pretty good.
+Now, funny story.
+Part of the activity here ever heard of the text editor
+project that existed in 61B, some of you.
+So let's bring 2016.
+We did a text editor project where I had you guys
+as the big, open, and did project build a GUI-based text
+editor like Sublime Text, but much smaller.
+And it's, again, these challenges,
+the ones where we have you build something from scratch
+are all about you hitting the black city
+and feeling a little bad about it.
+Now, that project was particularly tricky.
+And since K was my TA at the time,
+she told her dad, who teaches software engineering,
+about this project.
+And so he ran it not in an intro course,
+but in an upper division software engineering course,
+and he found it very interesting to see the mistakes
+and strange errors and design decisions
+that people made in building their text editor.
+And in fact, indirectly, if you read in here,
+there's some talk about that text editor project, which
+is a descendant of our own.
+So we're kind of going full circle here.
+Anyway, so the point of this is he and I and others
+out there teaching computer science,
+we know that students grapple with complexity
+and as a result of these kind of studies,
+not just the text editor project in his class,
+but his entire career.
+He's another generation older than me.
+He's come up with some definitions of complexity
+that resonated with me, but these are by no means universal.
+So to start understanding like complexity
+is such a special problem in computer science,
+it's actually kind of a great lecture for visitors,
+by the way, if you have to know anything.
+Anyway, so unlike other engineering disciplines,
+like I don't know chemical engineering or whatever else,
+software is not constrained by physics.
+I mean, it is a little bit, because our computers only
+run so fast and have so much memory.
+But for the most part, you don't have
+to think explicitly about that.
+Now, as a result, when you try to build the system,
+when you're programming, it's an act of almost pure creativity.
+So chemical engineers, when they're dealing with building
+systems, they have to think about messy things
+like temperature.
+If I run these reactions, there's latent heat that gets
+built up, and I have to deal with getting rid of that heat.
+It restricts what you can do, because there's physics.
+Material scientists, they have to think about how brittle
+the material is in order to recommend it for use in,
+I don't know, airplane window shades or whatever.
+And civil engineers need to worry about, say,
+the strength of concrete if they're building bridges.
+These things are very important.
+And they have to deeply understand them.
+And there's math, where we deeply look at the properties.
+The tensile strengths of various materials,
+we don't really have that in computer science so much.
+We kind of do, but it's not nearly as deep
+and as reflective of some physical world that we're limited by.
+So instead, the limitation is not the materials
+that we are working with, or the physical universe
+around it, but it's our own brains.
+It's the fact that we're not smart enough
+to understand really complicated systems.
+So the only limitation in terms of what
+you're capable of achieving is being
+able to understand what you're doing, which
+is a very unique and interesting space.
+Mathematics is kind of similar.
+Mathematics is a purely creative discipline,
+but it's not quite as directly applicable,
+because there's no machine that brings
+to life what you're building.
+But at computer science, we have math that kind of lives.
+And now, in the modern era, of course,
+we've seen that it's very financially lucrative
+and impactful on society to be able to do this.
+Now that there's an internet, it's kind of insane
+how the mathematical ideas you come up with
+can deeply impact how people spend their time
+or what's going on in the world.
+So the limits of what it's possible to do at this point,
+especially now that we have the internet,
+is just what you are capable of fitting in your brain.
+So the enemy then is complexity.
+Our limitation is we are trying to understand
+the systems that we want to build.
+And what you'll observe, especially,
+so in this class, you usually build a program.
+You submit it to an autograder.
+You make 30 changes, and you have get commits
+that are like, help, please, help, please, please, help, whatever.
+And then you push it.
+And then you never touch that code again.
+It's very different than the real world.
+If you were to take those programs that you did
+that committing style with, they would eventually
+get so burdened and ugly under all those little changes
+you made that they become painful.
+So as programs are worked on over periods of months or years,
+which you never ever do in these courses,
+well, they gain more features, and they gain more complexity.
+And over time, if you have a group of people working,
+it becomes harder and harder to understand
+what pieces you need to know about in order
+to make modifications.
+If you have hundreds of classes and they all interact
+in complex ways, then adding a new feature
+that, for example, lets the user animals
+scroll around or something, maybe very hard.
+You don't even know where to start necessarily.
+Now tools like IntelliJ, which we've used,
+or JUnit, or the IntelliJ debugger, or the Visualizer,
+they make it easier to grapple with complexity.
+When you have it, you can use these things
+to extricate yourself from problems that you fall into.
+But actually, the most important thing you want
+to do in real software is to keep it simple.
+So let's try and define this a little more.
+So I'll start, I guess, just by mentioning
+ways that you might try to keep complexity under control.
+So one approach is to keep your code, well, as it's simple,
+and what John uses the term obvious.
+So you don't want special cases.
+We saw that already creeping in early, early, early
+in our class when we were building SLists.
+So we hit a case where there was a problem where our code
+crashed, and we tried to do add back.
+And we could add an if statement that candles the null root,
+or a null front node case.
+Instead, we could also create a Sentinel node.
+It's another approach.
+Another is encapsulation into modules.
+These are the two ways that he says you keep your code
+under control.
+So one is make it simple and obvious.
+And the other is encapsulate things.
+Put them in modules where you can hide information.
+So that the creator of one module, let's say bear maps,
+can use other modules like kdtree or a star solver
+or whatever else.
+And they don't have to know how they work.
+All they need to know is the API.
+These are incredibly important pair of practices
+that if you go to any real-world project,
+there will be the two techniques, the two levers you can
+use to keep things under control.
+This means there's less stuff to think about.
+And this means the things that you need to think about
+are small, they fit in our tiny working memories.
+So what is complexity then?
+How do you define this phenomenon?
+Well, Osterhote defines it as follows.
+He says complexity is anything related
+to the structure of a software system that
+makes it hard to understand and modify the system.
+So it's a human-centric definition.
+It's saying, however hard it is for a human to deal with the system,
+to interact with it, to modify it, that's what matters.
+We don't really care necessarily how complicated
+it is just sitting on the shelf.
+But if we ever need to change it again,
+then that's we're going to run into trouble.
+So complexity takes on a lot of forms.
+So for example, understanding how the code works.
+If you need to modify a piece of code,
+you have to be able to look at it and know what it's doing.
+It takes into account, for example, the amount of time
+you need to make small improvements.
+So like, oh, well, the font size sucks.
+I don't like it.
+How do I fix that?
+Well, in some systems, that's easy.
+There's some config file.
+I just change some number to 26 or whatever.
+And now it's bigger.
+In others, maybe you have to do something crazier.
+Like, go dig in the source code, modify a number
+and recompile whatever it may be.
+Another is just being able to find what needs to be modified.
+I mean, that's closely related to the above idea.
+And another is if it's difficult to fix one bug
+without introducing another, which happens in code,
+where your code has so many interdependencies
+that changing anything breaks something else.
+So it goes on to say that if a software system is hard
+to understand and modify, then it is complicated.
+If it is easy to understand and modify, then it is simple.
+So he has a cost view of complexity, which
+is that, I mean, another sort of not a different definition,
+but a different way of thinking about complexity
+is you can think of it as follows.
+In a complex system, it takes tons of effort
+to make even small changes.
+But in a simple system, big improvements
+require less effort.
+So I'm going to give you an example.
+You guys remember Katie Trees, Project 2B.
+And I gave you guys some pseudo code that
+looked a little like this.
+So we had a nearest helper method.
+And what it does is you give it a node, which
+is the root of a Katie tree, or maybe a root of a sub tree.
+We have a goal point, the thing we want to find.
+And we have a best point, which is our best known point.
+And the code is that this is the pseudo code as follows.
+So we say, if the node is null, we don't have anything better.
+So let's return best.
+If the distance of the goal from the current node
+is better than the distance to best,
+well, then I'm going to reset my best pointer.
+And then we're going to say, OK, we have a good child
+and a bad child.
+So we'll figure out which one's good and bad.
+Then we search for good and the bad child,
+and we return best.
+So this approach I'd say is simple in the sense
+that if you understand this pseudo code,
+you know the basics of 61B, and you build code that looks
+like this, it's going to be relatively easy to work with.
+So a question for you.
+Something's actually missing here.
+I'm going to let you guys try and find it.
+I'm going to answer it.
+See if you can find the thing that is missing.
+Yeah, I heard someone say, OK.
+Yeah, remember that pruning rule.
+So what's missing?
+Let's see.
+Types are changing and professor hugs the world.
+All right, cool.
+So what's missing is what?
+The pruning rule, what do we need?
+We need to say what?
+So there should be an if statement here
+that I'm just going to write out in English.
+It basically just says, if there could possibly
+be something better on the bad side, then do the search.
+Now I've written this out narratively,
+but it is possible the right code
+that is reflective of this narrative.
+And that's the glory of programming,
+that it can actually read like a story, if you do it right.
+So let me show you an example of a Katie tree
+that is too complicated.
+This is not for many students this semester.
+In fact, it's from not even our class, but it's related.
+So here's a different way to implement the nearest method,
+in a Katie tree.
+So this is a little different than what we showed.
+It's not the same helper method.
+But just briefly looking at it,
+we can see that it is much more complicated.
+It's doing something kind of similar.
+So we have if is vertical, then do these things.
+Otherwise, do these things.
+There's a search here, and there's a check left variable.
+We've got this is an L statement that has to do
+if it's not vertical.
+When this case we search, and then we say we should check
+the right, then we have a check left variable,
+then we go on to have some other stuff
+that if we check left, and if it's vertical,
+then we'll do the Euclidean and so forth.
+And so, I mean, if you had to describe in a few words
+what feels bad about this, like what is,
+I don't know, I'm kind of curious,
+how you would try and describe this in English.
+Sure.
+There's a lot of redundancy here, right?
+This notion of check left, check right,
+being set to true, like, I mean, at least it's narrative
+in the sense that we're specifying what it is we're going
+to do, it's not like do X or whatever.
+So that's like the names, but there's redundancy.
+And then, else there are other ways you might put it.
+Yeah.
+Yes, it's hard to read, hard to stave, it's correct.
+And so, what about it?
+I mean, other than redundancy or any other phrasing
+about what feels bad about it, yeah.
+Yeah, that's a really great point.
+If you want to expand this to a third,
+like you have X, you now have Z coordinates as well.
+Well, because we have this Boolean that is vertical,
+let's say we wanted to now have three levels.
+Well, we could change that to an integer,
+but you can see this code won't generalize well.
+We would have to have an if statement for the X,
+the Y, and the Z, and so forth,
+and we would need to have God knows what.
+So it seems like it gets more complicated.
+Expanding on this code is nightmarish.
+I'll be thoughts that occur to you.
+Yeah.
+Yeah, so say you find a bug.
+Uh-oh, you know, this should be,
+like this should be Y and this should be X.
+I now need to go through every piece of code
+and swap that everywhere,
+and it's going to be really hard for me to keep track of it.
+Maybe by the time I get eight lines then,
+I'm like, oh, wait, should I have changed this one
+because it's a slightly different case than they want above.
+So this code is very hard to modify
+if you find there's any bugs,
+or if you decide to make it better in some way.
+So for example, the pruning rule, in this case,
+it was basically just a line,
+and my kd tree solution looks almost like this,
+where it really is just an if statement,
+somewhere that changes the behavior.
+Here, trying to get rid of the pruning rule
+is so complicated.
+The pruning rule, it's like roots all grown through it.
+This is like a weed, if you've ever dug them up
+in a garden where it's all grabbing your actual plants.
+You know, God, what am I going to do?
+This plant's so cool, but this is standalone growing through it.
+Very upset about it.
+Like this, the pruning rule is baked into every aspect of the code.
+It permeates all of it, and that's dangerous.
+Any other thoughts?
+Yeah. God, it says verbose.
+Can you give me some examples?
+Like, yeah, it feels maybe a little strange
+to have check right and check left.
+And I think that's because of the framing or the abstractions
+that the author used, they were kind of stuck with them.
+But yeah, I agree.
+That seems like that's more stuff you have to keep track of.
+That if I'm using the debugger,
+now I have to need to think about this check left
+and check right variable.
+And it could have maybe just been called something
+like check other, or I don't know what,
+but probably downstream that becomes complicated.
+Interesting thought.
+Other thoughts?
+Yeah.
+Yeah, so many cases, so many statements
+that have become hard to reason about.
+And indeed, yes, that's a, and that's sort of redundant
+with an observation that's redundant,
+but I think it's a great observation.
+Yeah.
+Yeah, trying to understand the intent of the author
+is really hard.
+They came at this cold.
+Like, here's a great example.
+Let's say that you're a TA at office hours.
+And somebody says, my code's not working.
+Here.
+And then they want you to start explaining the whole piece of code.
+There's, I mean, we could do it, but it would take you
+perhaps an hour to explain what you were thinking.
+And if the problem is that you did this,
+there's no way that a TA.
+No TA will ever, ever find that.
+It's not possible.
+That's another reason.
+It's hard to communicate, get help, whatever else.
+Yeah.
+There's little code coverage.
+What do you mean by that?
+It's not a term we've used.

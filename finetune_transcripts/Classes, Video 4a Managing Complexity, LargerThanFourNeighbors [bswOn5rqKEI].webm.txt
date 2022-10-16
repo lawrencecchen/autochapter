@@ -1,0 +1,86 @@
+There's one last topic I'd like to discuss today that's important for Project Zero.
+Now, something may have popped up in your mind, which is like, why does Java the way it is?
+Like, why does Java force us to use classes?
+Why can't there be codes not in a class?
+Or why do we have static methods?
+Like, I get it that it would be strange to instantiate a math object,
+but it would really be so bad.
+Like, why do we need the special keyword?
+Seems to add extra complexity to the language.
+Well, it turns out that the reason is that it takes choices away from you as a programmer.
+That is, you cannot write code that's not part of a class.
+And by taking that control away, you make it in a life better, right?
+So fewer choices means fewer ways to do things.
+And so if you make a method static, you are putting constraint on what is possible.
+You're saying this method is static.
+So there's a lot of things that can't do, right?
+I mean, most importantly, it can't rely on any state of the current object.
+It can't use instance variables, okay?
+And so that makes the code easier to reason about and just restricts what you need to think about
+because that's really our one of our biggest challenges on programming.
+Now, fewer ways to do things.
+I mean, fundamentally, what it really boils down to is less complexity.
+And we get to week 11 or so.
+We're going to talk a lot more about complexity of code, but basically,
+we want to keep our lives as simple as possible, okay?
+So these two Java features forcing you to use classes and allowing you to use static
+methods, those are way of constraining the complexity of our code.
+Even though we first see these features, they seem a little mysterious.
+Now, in general, if you were doing an intro programming class,
+really what it's truly about in my heart when I think about a good class,
+it's about managing complexity.
+And so Project Zero is going to give you a chance to grapple with complexity, right?
+So that philosophy of trying to manage complexity is really fundamental to 61 B's
+design and how I think about the lectures, the labs, the projects, and so forth.
+And Project Zero is going to be the first place where you stare complexity in the face
+in this class and struggle a little.
+So one of the additional tools that you've already learned in a previous class,
+but that I really want to drive home as an important thing you should do in Project Zero,
+is the idea of a helper method.
+What's a helper method?
+It's just a function that does something simple.
+Using helper methods basically lets you formalize the decomposition of a large problem
+into several smaller problems, right?
+It's just you create yourself a little task that you can do,
+and then you can focus all your attention on that.
+And so by focusing all your effort on that single task,
+there's less room to make mistakes.
+You have a better sense of what's going on.
+You end up with ultimately less complex code.
+So as an exercise in seeing a helper methods are useful,
+let me introduce you a problem we're going to do together in this lecture.
+So let's say we want to write a method called larger than four neighbors,
+takes an array of dogs in it, returns a new array that is every dog that is larger
+than its four closest neighbors.
+So it's two neighbors on the left, and it's two neighbors on the right.
+So for example, if I give it an array of dogs with size 10, 20, 30, 25, 20, 40, and 10,
+the two dogs, which are larger than their four neighbors are 30 and 40.
+So in other words, if I take this and I highlight these,
+these are the four neighbors of 30, and it's bigger than all them.
+And then 40, it's four neighbors are 25, 20, and 10,
+and then it doesn't actually have a neighbor over here.
+So if you go off the end of the array, well,
+then you don't actually have four neighbors, right?
+So I guess I'll make that more clear.
+If there are not enough neighbors, i.e., here at the end of the array,
+I think consider just the neighbors that exist.
+All right, right.
+And so that gives us the return value would be 30 and 40,
+or sorry, an array with the hugs of size 30 and 40, and again,
+it's because of this one.
+Now, let me make sure that that programming task actually makes sense,
+and then we'll solve it together.
+So let's say we want to write this method.
+If we give a new input, 10, 15, 20, 15, 10, 5, 10, 15, 20, 20,
+what is the output going to be for larger than four neighbors?
+And I have three choices for you here.
+There's no way to submit this, by the way.
+Do it, and then in your head.
+Okay.
+The correct answer is 20, 22.
+That's because 20, it's four neighbors are 10, 15, 15, 10.
+It's bigger than all those.
+And 22, which is bigger than 10, 15, and 20.
+So now we understand the problem.
+So next, let's try and solve it.
+Okay.

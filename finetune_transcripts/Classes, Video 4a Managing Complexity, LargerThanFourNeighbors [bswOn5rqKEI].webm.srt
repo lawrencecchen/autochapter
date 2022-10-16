@@ -1,0 +1,344 @@
+1
+00:00:00,000 --> 00:00:05,000
+There's one last topic I'd like to discuss today that's important for Project Zero.
+
+2
+00:00:05,000 --> 00:00:11,000
+Now, something may have popped up in your mind, which is like, why does Java the way it is?
+
+3
+00:00:11,000 --> 00:00:13,000
+Like, why does Java force us to use classes?
+
+4
+00:00:13,000 --> 00:00:15,000
+Why can't there be codes not in a class?
+
+5
+00:00:15,000 --> 00:00:17,000
+Or why do we have static methods?
+
+6
+00:00:17,000 --> 00:00:21,000
+Like, I get it that it would be strange to instantiate a math object,
+
+7
+00:00:21,000 --> 00:00:23,000
+but it would really be so bad.
+
+8
+00:00:23,000 --> 00:00:25,000
+Like, why do we need the special keyword?
+
+9
+00:00:25,000 --> 00:00:28,000
+Seems to add extra complexity to the language.
+
+10
+00:00:28,000 --> 00:00:34,000
+Well, it turns out that the reason is that it takes choices away from you as a programmer.
+
+11
+00:00:34,000 --> 00:00:37,000
+That is, you cannot write code that's not part of a class.
+
+12
+00:00:37,000 --> 00:00:41,000
+And by taking that control away, you make it in a life better, right?
+
+13
+00:00:41,000 --> 00:00:44,000
+So fewer choices means fewer ways to do things.
+
+14
+00:00:44,000 --> 00:00:49,000
+And so if you make a method static, you are putting constraint on what is possible.
+
+15
+00:00:49,000 --> 00:00:51,000
+You're saying this method is static.
+
+16
+00:00:51,000 --> 00:00:53,000
+So there's a lot of things that can't do, right?
+
+17
+00:00:53,000 --> 00:00:57,000
+I mean, most importantly, it can't rely on any state of the current object.
+
+18
+00:00:57,000 --> 00:01:00,000
+It can't use instance variables, okay?
+
+19
+00:01:00,000 --> 00:01:04,000
+And so that makes the code easier to reason about and just restricts what you need to think about
+
+20
+00:01:04,000 --> 00:01:08,000
+because that's really our one of our biggest challenges on programming.
+
+21
+00:01:08,000 --> 00:01:09,000
+Now, fewer ways to do things.
+
+22
+00:01:09,000 --> 00:01:13,000
+I mean, fundamentally, what it really boils down to is less complexity.
+
+23
+00:01:13,000 --> 00:01:15,000
+And we get to week 11 or so.
+
+24
+00:01:15,000 --> 00:01:18,000
+We're going to talk a lot more about complexity of code, but basically,
+
+25
+00:01:18,000 --> 00:01:21,000
+we want to keep our lives as simple as possible, okay?
+
+26
+00:01:21,000 --> 00:01:26,000
+So these two Java features forcing you to use classes and allowing you to use static
+
+27
+00:01:26,000 --> 00:01:30,000
+methods, those are way of constraining the complexity of our code.
+
+28
+00:01:30,000 --> 00:01:34,000
+Even though we first see these features, they seem a little mysterious.
+
+29
+00:01:34,000 --> 00:01:38,000
+Now, in general, if you were doing an intro programming class,
+
+30
+00:01:38,000 --> 00:01:41,000
+really what it's truly about in my heart when I think about a good class,
+
+31
+00:01:41,000 --> 00:01:43,000
+it's about managing complexity.
+
+32
+00:01:43,000 --> 00:01:48,000
+And so Project Zero is going to give you a chance to grapple with complexity, right?
+
+33
+00:01:48,000 --> 00:01:53,000
+So that philosophy of trying to manage complexity is really fundamental to 61 B's
+
+34
+00:01:53,000 --> 00:01:57,000
+design and how I think about the lectures, the labs, the projects, and so forth.
+
+35
+00:01:57,000 --> 00:02:00,000
+And Project Zero is going to be the first place where you stare complexity in the face
+
+36
+00:02:00,000 --> 00:02:03,000
+in this class and struggle a little.
+
+37
+00:02:03,000 --> 00:02:08,000
+So one of the additional tools that you've already learned in a previous class,
+
+38
+00:02:08,000 --> 00:02:12,000
+but that I really want to drive home as an important thing you should do in Project Zero,
+
+39
+00:02:12,000 --> 00:02:15,000
+is the idea of a helper method.
+
+40
+00:02:15,000 --> 00:02:16,000
+What's a helper method?
+
+41
+00:02:16,000 --> 00:02:19,000
+It's just a function that does something simple.
+
+42
+00:02:19,000 --> 00:02:24,000
+Using helper methods basically lets you formalize the decomposition of a large problem
+
+43
+00:02:24,000 --> 00:02:26,000
+into several smaller problems, right?
+
+44
+00:02:26,000 --> 00:02:29,000
+It's just you create yourself a little task that you can do,
+
+45
+00:02:29,000 --> 00:02:32,000
+and then you can focus all your attention on that.
+
+46
+00:02:32,000 --> 00:02:34,000
+And so by focusing all your effort on that single task,
+
+47
+00:02:34,000 --> 00:02:36,000
+there's less room to make mistakes.
+
+48
+00:02:36,000 --> 00:02:38,000
+You have a better sense of what's going on.
+
+49
+00:02:38,000 --> 00:02:41,000
+You end up with ultimately less complex code.
+
+50
+00:02:41,000 --> 00:02:45,000
+So as an exercise in seeing a helper methods are useful,
+
+51
+00:02:45,000 --> 00:02:49,000
+let me introduce you a problem we're going to do together in this lecture.
+
+52
+00:02:49,000 --> 00:02:53,000
+So let's say we want to write a method called larger than four neighbors,
+
+53
+00:02:53,000 --> 00:02:58,000
+takes an array of dogs in it, returns a new array that is every dog that is larger
+
+54
+00:02:58,000 --> 00:03:00,000
+than its four closest neighbors.
+
+55
+00:03:00,000 --> 00:03:03,000
+So it's two neighbors on the left, and it's two neighbors on the right.
+
+56
+00:03:03,000 --> 00:03:10,000
+So for example, if I give it an array of dogs with size 10, 20, 30, 25, 20, 40, and 10,
+
+57
+00:03:10,000 --> 00:03:15,000
+the two dogs, which are larger than their four neighbors are 30 and 40.
+
+58
+00:03:15,000 --> 00:03:18,000
+So in other words, if I take this and I highlight these,
+
+59
+00:03:18,000 --> 00:03:21,000
+these are the four neighbors of 30, and it's bigger than all them.
+
+60
+00:03:21,000 --> 00:03:26,000
+And then 40, it's four neighbors are 25, 20, and 10,
+
+61
+00:03:26,000 --> 00:03:28,000
+and then it doesn't actually have a neighbor over here.
+
+62
+00:03:28,000 --> 00:03:30,000
+So if you go off the end of the array, well,
+
+63
+00:03:30,000 --> 00:03:32,000
+then you don't actually have four neighbors, right?
+
+64
+00:03:32,000 --> 00:03:34,000
+So I guess I'll make that more clear.
+
+65
+00:03:34,000 --> 00:03:42,000
+If there are not enough neighbors, i.e., here at the end of the array,
+
+66
+00:03:42,000 --> 00:03:54,000
+I think consider just the neighbors that exist.
+
+67
+00:03:54,000 --> 00:03:56,000
+All right, right.
+
+68
+00:03:56,000 --> 00:04:01,000
+And so that gives us the return value would be 30 and 40,
+
+69
+00:04:01,000 --> 00:04:04,000
+or sorry, an array with the hugs of size 30 and 40, and again,
+
+70
+00:04:04,000 --> 00:04:07,000
+it's because of this one.
+
+71
+00:04:07,000 --> 00:04:10,000
+Now, let me make sure that that programming task actually makes sense,
+
+72
+00:04:10,000 --> 00:04:12,000
+and then we'll solve it together.
+
+73
+00:04:12,000 --> 00:04:14,000
+So let's say we want to write this method.
+
+74
+00:04:14,000 --> 00:04:18,000
+If we give a new input, 10, 15, 20, 15, 10, 5, 10, 15, 20, 20,
+
+75
+00:04:18,000 --> 00:04:21,000
+what is the output going to be for larger than four neighbors?
+
+76
+00:04:21,000 --> 00:04:25,000
+And I have three choices for you here.
+
+77
+00:04:25,000 --> 00:04:27,000
+There's no way to submit this, by the way.
+
+78
+00:04:27,000 --> 00:04:32,000
+Do it, and then in your head.
+
+79
+00:04:32,000 --> 00:04:35,000
+Okay.
+
+80
+00:04:35,000 --> 00:04:37,000
+The correct answer is 20, 22.
+
+81
+00:04:37,000 --> 00:04:40,000
+That's because 20, it's four neighbors are 10, 15, 15, 10.
+
+82
+00:04:40,000 --> 00:04:42,000
+It's bigger than all those.
+
+83
+00:04:42,000 --> 00:04:45,000
+And 22, which is bigger than 10, 15, and 20.
+
+84
+00:04:45,000 --> 00:04:47,000
+So now we understand the problem.
+
+85
+00:04:47,000 --> 00:04:49,000
+So next, let's try and solve it.
+
+86
+00:04:49,000 --> 00:05:05,000
+Okay.
+

@@ -1,0 +1,5956 @@
+1
+00:00:00,000 --> 00:00:05,000
+All right, okay, is this projecting at all?
+
+2
+00:00:05,000 --> 00:00:06,240
+Can everyone hear me?
+
+3
+00:00:06,240 --> 00:00:07,720
+Give me the back.
+
+4
+00:00:07,720 --> 00:00:09,080
+We get, awesome.
+
+5
+00:00:09,080 --> 00:00:11,520
+All right, so welcome everyone to the first lecture
+
+6
+00:00:11,520 --> 00:00:13,720
+of CS61A.
+
+7
+00:00:13,720 --> 00:00:14,560
+Yeah!
+
+8
+00:00:14,560 --> 00:00:19,560
+APPLAUSE
+
+9
+00:00:19,560 --> 00:00:21,880
+Wow, I'm so glad that got a response.
+
+10
+00:00:21,880 --> 00:00:28,320
+So this is, I'm super glad to see this lecture in so full.
+
+11
+00:00:28,320 --> 00:00:32,480
+So let's just go ahead and jump in to the first lecture.
+
+12
+00:00:32,480 --> 00:00:36,160
+Before we talk about anything relating to computer science,
+
+13
+00:00:36,160 --> 00:00:38,560
+first we're going to talk about 6.1A as a class,
+
+14
+00:00:38,560 --> 00:00:40,840
+starting with the 6.1A community.
+
+15
+00:00:40,840 --> 00:00:44,920
+So first of all, hi, my name's Chris.
+
+16
+00:00:44,920 --> 00:00:46,960
+I'm going to be one of your instructors.
+
+17
+00:00:46,960 --> 00:00:49,480
+My pronouns are they, them.
+
+18
+00:00:49,480 --> 00:00:52,720
+And I've been teaching 6.1A for a while.
+
+19
+00:00:52,720 --> 00:00:56,320
+I've been a TA for five semesters involved a bit before that.
+
+20
+00:00:56,320 --> 00:00:58,720
+And this is my first time as an instructor for this course.
+
+21
+00:00:58,720 --> 00:01:00,200
+So I'm really excited.
+
+22
+00:01:00,200 --> 00:01:02,040
+Some might interest within computer science
+
+23
+00:01:02,040 --> 00:01:06,400
+our computational biology and programming languages.
+
+24
+00:01:06,400 --> 00:01:08,200
+So if you want to talk about that or really anything
+
+25
+00:01:08,200 --> 00:01:10,560
+in the course, you can feel free to reach out.
+
+26
+00:01:10,560 --> 00:01:12,120
+I'm going to go ahead and pass around this mic.
+
+27
+00:01:12,120 --> 00:01:14,160
+There's going to be a little bit of like,
+
+28
+00:01:14,160 --> 00:01:15,760
+some noise is going on.
+
+29
+00:01:15,760 --> 00:01:17,920
+Let's see.
+
+30
+00:01:17,920 --> 00:01:19,880
+Let's see.
+
+31
+00:01:19,880 --> 00:01:22,400
+Yeah.
+
+32
+00:01:22,400 --> 00:01:23,600
+My name's Debbie.
+
+33
+00:01:23,600 --> 00:01:26,720
+This is, I'll be one of your other lecturers in the summer.
+
+34
+00:01:26,720 --> 00:01:28,440
+This is my eight time teaching the course.
+
+35
+00:01:28,440 --> 00:01:31,760
+So my first time lecture, in terms of computer science,
+
+36
+00:01:31,760 --> 00:01:33,440
+my interest in computer security
+
+37
+00:01:33,440 --> 00:01:35,640
+and a demo some research in agritorial and out.
+
+38
+00:01:35,640 --> 00:01:38,120
+So if you find yourself interested in that later
+
+39
+00:01:38,120 --> 00:01:40,240
+on the course, which we'll try to talk to me,
+
+40
+00:01:40,240 --> 00:01:41,800
+also this is a really difficult course.
+
+41
+00:01:41,800 --> 00:01:44,120
+So we're all here to talk to you about anything
+
+42
+00:01:44,120 --> 00:01:44,920
+if you've ever needed.
+
+43
+00:01:44,920 --> 00:01:47,880
+So free email on us, I think that's it.
+
+44
+00:01:47,880 --> 00:01:55,120
+I'll be one of the other three instructors.
+
+45
+00:01:55,120 --> 00:01:56,760
+My research interests are kind of probably
+
+46
+00:01:56,760 --> 00:01:59,080
+language design, as well as the applications
+
+47
+00:01:59,080 --> 00:02:01,320
+to CS education in particular.
+
+48
+00:02:01,320 --> 00:02:04,800
+This is also taught it for a fair amount.
+
+49
+00:02:04,800 --> 00:02:06,760
+Excited to be.
+
+50
+00:02:06,760 --> 00:02:07,760
+Cool.
+
+51
+00:02:07,760 --> 00:02:09,120
+All right, so I'll take this back.
+
+52
+00:02:09,120 --> 00:02:11,040
+So if you ever want to contact us,
+
+53
+00:02:11,040 --> 00:02:16,560
+you should email us at CS61A plus SU19 at Berkeley.edu.
+
+54
+00:02:16,560 --> 00:02:19,720
+If you email us there, you'll be able to,
+
+55
+00:02:19,720 --> 00:02:20,960
+all three of us will see that.
+
+56
+00:02:20,960 --> 00:02:23,280
+So that's the best way to contact us.
+
+57
+00:02:23,280 --> 00:02:24,840
+You can also reach out to us individually
+
+58
+00:02:24,840 --> 00:02:27,120
+if you have something pertaining to one of us
+
+59
+00:02:27,120 --> 00:02:30,000
+as individuals, but this is the email you should be
+
+60
+00:02:30,000 --> 00:02:31,680
+looking at for the most part.
+
+61
+00:02:31,680 --> 00:02:33,880
+So we're here in Struck.
+
+62
+00:02:33,880 --> 00:02:35,400
+We're also here coming in.
+
+63
+00:02:35,400 --> 00:02:37,520
+There's a lot of seats on this side.
+
+64
+00:02:37,520 --> 00:02:40,720
+So it's so pretty to go in on the other entry.
+
+65
+00:02:40,720 --> 00:02:42,400
+And those are like seats in experts.
+
+66
+00:02:42,400 --> 00:02:43,640
+So maybe if you're in the middle area,
+
+67
+00:02:43,640 --> 00:02:45,040
+we could like switch together a little bit,
+
+68
+00:02:45,040 --> 00:02:46,600
+really just coming in.
+
+69
+00:02:46,600 --> 00:02:47,960
+Yeah, there's a seat next to you,
+
+70
+00:02:47,960 --> 00:02:49,120
+and you can move to the center.
+
+71
+00:02:49,120 --> 00:02:52,400
+Let's do that so people coming in can do that.
+
+72
+00:02:52,400 --> 00:02:53,320
+Awesome.
+
+73
+00:02:53,320 --> 00:02:55,760
+I'll give like a minute for the noise to settle here.
+
+74
+00:02:59,000 --> 00:03:02,240
+All right, so you've met us.
+
+75
+00:03:02,240 --> 00:03:03,880
+We're going to be your instructors,
+
+76
+00:03:03,880 --> 00:03:05,600
+but there's just three of us,
+
+77
+00:03:05,600 --> 00:03:08,560
+and there's like 400 plus a view in this room.
+
+78
+00:03:08,560 --> 00:03:11,400
+So there's no way we can do all this by ourselves,
+
+79
+00:03:11,400 --> 00:03:15,960
+which is why we have a wonderful team of TAs,
+
+80
+00:03:15,960 --> 00:03:18,240
+as well as tutors.
+
+81
+00:03:18,240 --> 00:03:22,360
+So TAs are responsible for running lab and discussion sections.
+
+82
+00:03:22,360 --> 00:03:24,760
+You'll see them in office hours.
+
+83
+00:03:24,760 --> 00:03:28,520
+Tutors are responsible for running smaller group tutoring
+
+84
+00:03:28,520 --> 00:03:31,000
+sections, which we'll talk about a little bit later.
+
+85
+00:03:31,000 --> 00:03:33,720
+But both TAs and tutors are going to be the people you're
+
+86
+00:03:33,720 --> 00:03:38,080
+going to be interacting with most often throughout the course.
+
+87
+00:03:38,080 --> 00:03:41,000
+So with that in mind, we have a bunch of them
+
+88
+00:03:41,000 --> 00:03:42,760
+up here on stage, so I'm going to go ahead
+
+89
+00:03:42,760 --> 00:03:46,200
+and try to pass down the mic when you get it.
+
+90
+00:03:46,200 --> 00:03:49,400
+If you can just give your name, your role.
+
+91
+00:03:49,400 --> 00:03:52,600
+Oh, yeah, yeah, yeah, if you can come down here
+
+92
+00:03:52,600 --> 00:03:53,880
+and pass it down, yeah.
+
+93
+00:03:53,880 --> 00:03:56,320
+So I have like two cables tethering me down.
+
+94
+00:03:56,320 --> 00:03:57,680
+It's a lot of fun.
+
+95
+00:03:57,680 --> 00:04:02,960
+OK, I want to make TAs an Albert.
+
+96
+00:04:02,960 --> 00:04:06,240
+I want to be part of the new grading,
+
+97
+00:04:06,240 --> 00:04:10,960
+so I'll give you why as TAs, and then I'll also be doing
+
+98
+00:04:10,960 --> 00:04:12,920
+a little bit of the T, that music's on the side,
+
+99
+00:04:12,920 --> 00:04:15,280
+so maybe this is not a whole domain of TAs,
+
+100
+00:04:15,280 --> 00:04:17,800
+but I've got to give you some money on my music,
+
+101
+00:04:17,800 --> 00:04:19,240
+so it's an opportunity to talk about that,
+
+102
+00:04:19,240 --> 00:04:22,280
+to give you the objective.
+
+103
+00:04:22,280 --> 00:04:23,840
+Hello, I'm Richard.
+
+104
+00:04:23,840 --> 00:04:25,440
+I took six to make last summer.
+
+105
+00:04:25,440 --> 00:04:26,920
+I'm going to be a TAs this summer.
+
+106
+00:04:26,920 --> 00:04:28,680
+I'm really excited to be teaching about it, so.
+
+107
+00:04:31,480 --> 00:04:34,440
+And while I'm running on one of the other materials,
+
+108
+00:04:34,440 --> 00:04:39,000
+and I do content for the projects.
+
+109
+00:04:39,000 --> 00:04:40,880
+Hello, my name is Jason.
+
+110
+00:04:40,880 --> 00:04:42,960
+I'm going to be TAs this summer,
+
+111
+00:04:42,960 --> 00:04:48,120
+and you can feel free to come here in one second.
+
+112
+00:04:48,120 --> 00:04:51,200
+Hi, I'm Olivia, I'm a TAs, and I think
+
+113
+00:04:51,200 --> 00:04:55,520
+we're just a little bit more in.
+
+114
+00:04:55,520 --> 00:04:57,360
+I'm also TAs, and I'm going to be working
+
+115
+00:04:57,360 --> 00:04:59,720
+on the online content itself.
+
+116
+00:04:59,720 --> 00:05:02,080
+Welcome.
+
+117
+00:05:02,080 --> 00:05:06,240
+Hi, I'm Edo, and I'm a TAs.
+
+118
+00:05:06,240 --> 00:05:08,800
+Hi, I'm Michelle, and welcome with Olivia,
+
+119
+00:05:08,800 --> 00:05:11,800
+and I'm a little bit of just six.
+
+120
+00:05:11,800 --> 00:05:17,360
+Hi, I'm Edo, and I'm TAs, and I'm TAs, and I'm TAs.
+
+121
+00:05:17,360 --> 00:05:21,360
+Hi, I'm Jenny, first, and I'm from the classical century.
+
+122
+00:05:21,360 --> 00:05:22,360
+Woo!
+
+123
+00:05:22,360 --> 00:05:23,360
+Woo!
+
+124
+00:05:23,360 --> 00:05:24,360
+Thank you.
+
+125
+00:05:24,360 --> 00:05:25,360
+Thank you.
+
+126
+00:05:25,360 --> 00:05:26,840
+Thank you.
+
+127
+00:05:26,840 --> 00:05:31,800
+All right, y'all can feel free to add back a little bit.
+
+128
+00:05:31,800 --> 00:05:46,640
+All right, okay, so again, these tutors and TAs
+
+129
+00:05:46,640 --> 00:05:47,920
+are going to be the people you're going to be
+
+130
+00:05:47,920 --> 00:05:50,360
+interacting with the most throughout the semester.
+
+131
+00:05:50,360 --> 00:05:53,320
+So once you start going to lab and discussion,
+
+132
+00:05:53,320 --> 00:05:55,280
+these are the people that you should be sure to get to know,
+
+133
+00:05:55,280 --> 00:05:57,760
+and they'll be the best people to handle
+
+134
+00:05:57,760 --> 00:06:00,800
+most of your questions and concerns in this course.
+
+135
+00:06:00,800 --> 00:06:04,280
+In addition to TAs and tutors, we also have a very, very
+
+136
+00:06:04,280 --> 00:06:06,160
+large group of academic interns.
+
+137
+00:06:06,160 --> 00:06:09,040
+Academic interns are students who usually recently
+
+138
+00:06:09,040 --> 00:06:11,960
+took the class, and they'll be helping out in your lab
+
+139
+00:06:11,960 --> 00:06:16,240
+and office hour sections to give you some help with the assignments.
+
+140
+00:06:16,240 --> 00:06:19,440
+This is like a very small subset of the people we'll have
+
+141
+00:06:19,440 --> 00:06:22,360
+helping out as AI's over the summer, so you'll
+
+142
+00:06:22,360 --> 00:06:24,760
+be seeing a lot of those as well.
+
+143
+00:06:24,760 --> 00:06:29,440
+And then, in addition to TAs, tutors, instructors,
+
+144
+00:06:29,440 --> 00:06:31,880
+and academic interns, we have the most important people
+
+145
+00:06:31,880 --> 00:06:35,040
+in this course, all of you.
+
+146
+00:06:35,040 --> 00:06:36,040
+Yeah.
+
+147
+00:06:36,040 --> 00:06:42,000
+APPLAUSE
+
+148
+00:06:42,000 --> 00:06:45,840
+Very much not used to all this applause, but I don't know.
+
+149
+00:06:45,840 --> 00:06:48,160
+Yeah, it comes with a job, I guess.
+
+150
+00:06:48,160 --> 00:06:51,520
+So yeah, over the summer, this is by far the largest group
+
+151
+00:06:51,520 --> 00:06:53,520
+of students we've ever had for summer course,
+
+152
+00:06:53,520 --> 00:06:57,280
+across the in-person 61A and online 6.1A sections.
+
+153
+00:06:57,280 --> 00:07:01,240
+We have over 650 people enrolled in this course.
+
+154
+00:07:01,240 --> 00:07:04,400
+And all of us are really, really excited
+
+155
+00:07:04,400 --> 00:07:07,240
+to be able to work with all of you and put on a great class
+
+156
+00:07:07,240 --> 00:07:08,840
+semester.
+
+157
+00:07:08,840 --> 00:07:11,040
+Really excited to be able to talk to you and work
+
+158
+00:07:11,040 --> 00:07:12,800
+with you through all of this.
+
+159
+00:07:12,800 --> 00:07:17,240
+So with that, let's start talking about 6.1A in particular.
+
+160
+00:07:17,240 --> 00:07:22,560
+So 6.1A is a class in the computer science department.
+
+161
+00:07:22,560 --> 00:07:25,680
+For many of you, it might be your first computer science class.
+
+162
+00:07:25,680 --> 00:07:29,560
+So what is computer science?
+
+163
+00:07:29,560 --> 00:07:32,280
+Computer science is a very broad field.
+
+164
+00:07:32,280 --> 00:07:37,160
+But in general, computer science is the study
+
+165
+00:07:37,160 --> 00:07:41,240
+of different problems that can be solved using computation.
+
+166
+00:07:41,240 --> 00:07:45,600
+So all computation means is that you do some series of steps.
+
+167
+00:07:45,600 --> 00:07:48,440
+Maybe you're doing some math or just following some instructions
+
+168
+00:07:48,440 --> 00:07:51,400
+to be able to get some result.
+
+169
+00:07:51,400 --> 00:07:54,680
+This doesn't even need to be done with computers.
+
+170
+00:07:54,680 --> 00:07:57,080
+In fact, in the early days, if you just
+
+171
+00:07:57,080 --> 00:08:00,120
+had someone write a bunch of math,
+
+172
+00:08:00,120 --> 00:08:04,360
+you might even call them computers.
+
+173
+00:08:04,360 --> 00:08:06,480
+But more specifically, computer science
+
+174
+00:08:06,480 --> 00:08:12,560
+is how do you take these problems and solve the different approaches
+
+175
+00:08:12,560 --> 00:08:14,080
+for being able to solve these problems?
+
+176
+00:08:14,080 --> 00:08:17,120
+So there are a bunch of different ways
+
+177
+00:08:17,120 --> 00:08:18,280
+you can approach different problems.
+
+178
+00:08:18,280 --> 00:08:22,400
+A bunch of different ways you can solve them with computation.
+
+179
+00:08:22,400 --> 00:08:23,960
+And computer science talks about some
+
+180
+00:08:23,960 --> 00:08:25,560
+of those different approaches.
+
+181
+00:08:25,560 --> 00:08:29,680
+In particular, we are interested in the techniques
+
+182
+00:08:29,680 --> 00:08:31,920
+that lead to the most effective solutions.
+
+183
+00:08:31,920 --> 00:08:35,840
+So of course, some solutions will take more time or require
+
+184
+00:08:35,840 --> 00:08:37,360
+more resources than others.
+
+185
+00:08:37,360 --> 00:08:39,040
+So we're interested in the solutions
+
+186
+00:08:39,040 --> 00:08:41,560
+that are going to be the most effective.
+
+187
+00:08:44,760 --> 00:08:48,800
+One other thing to note is that not all problems
+
+188
+00:08:48,800 --> 00:08:52,280
+can be solved effectively through computation.
+
+189
+00:08:52,280 --> 00:08:54,720
+For example, a lot of problems out there
+
+190
+00:08:54,720 --> 00:08:59,880
+will require you to actually, I don't know, interact with people.
+
+191
+00:08:59,880 --> 00:09:03,080
+And those tasks aren't very easily solved
+
+192
+00:09:03,080 --> 00:09:06,360
+by just a list of steps you can blindly follow.
+
+193
+00:09:06,360 --> 00:09:08,200
+So it's important to note that computer science
+
+194
+00:09:08,200 --> 00:09:10,440
+doesn't tell you how to solve every problem.
+
+195
+00:09:10,440 --> 00:09:12,120
+But there's a great variety of problems
+
+196
+00:09:12,120 --> 00:09:14,280
+that it can solve.
+
+197
+00:09:14,280 --> 00:09:15,720
+And we're interested in effective solutions
+
+198
+00:09:15,720 --> 00:09:17,080
+for those problems.
+
+199
+00:09:17,080 --> 00:09:21,240
+So what are some of these different problems that you can solve?
+
+200
+00:09:21,240 --> 00:09:24,040
+So there's systems like operating systems,
+
+201
+00:09:24,040 --> 00:09:26,680
+compilers, artificial intelligence, graphics,
+
+202
+00:09:26,680 --> 00:09:29,640
+so on and so forth.
+
+203
+00:09:29,640 --> 00:09:30,880
+There's a big long list.
+
+204
+00:09:30,880 --> 00:09:32,640
+These are just a subset of the interests
+
+205
+00:09:32,640 --> 00:09:36,080
+that people at Berkeley have as their research interests.
+
+206
+00:09:36,080 --> 00:09:38,400
+But just about any of these topics,
+
+207
+00:09:38,400 --> 00:09:40,080
+if you're interested in, you can ultimately
+
+208
+00:09:40,080 --> 00:09:42,720
+take a class in at Berkeley or elsewhere.
+
+209
+00:09:42,720 --> 00:09:44,160
+By the way, if you're sitting in the back,
+
+210
+00:09:44,160 --> 00:09:46,800
+we still do have quite a few seats on this side of the room
+
+211
+00:09:46,800 --> 00:09:51,720
+if you want to move over and not clog up the rows.
+
+212
+00:09:51,720 --> 00:09:54,800
+So, are these ways probably exiting
+
+213
+00:09:54,800 --> 00:09:56,640
+and then going through the other entry?
+
+214
+00:09:56,640 --> 00:09:57,840
+There's another door on this side,
+
+215
+00:09:57,840 --> 00:10:00,040
+so if you exit the ground.
+
+216
+00:10:00,040 --> 00:10:01,040
+Of course.
+
+217
+00:10:01,040 --> 00:10:03,040
+So that's computer science.
+
+218
+00:10:03,040 --> 00:10:05,600
+What is 61A in particular about?
+
+219
+00:10:05,600 --> 00:10:08,160
+Well, it's about managing complexity.
+
+220
+00:10:08,160 --> 00:10:10,840
+So a lot of these problems can have really
+
+221
+00:10:10,840 --> 00:10:13,160
+complicated and large solutions.
+
+222
+00:10:13,160 --> 00:10:15,680
+And one important skill to be able to have
+
+223
+00:10:15,680 --> 00:10:18,760
+is how to take these solutions and express them
+
+224
+00:10:18,760 --> 00:10:22,200
+in a really simple and effective way.
+
+225
+00:10:22,200 --> 00:10:24,280
+One of the ways we teach this in this course
+
+226
+00:10:24,280 --> 00:10:26,840
+is through mastering abstraction.
+
+227
+00:10:26,840 --> 00:10:33,080
+So what abstraction means is for most things you run across,
+
+228
+00:10:33,080 --> 00:10:36,080
+you don't need to know exactly how they work.
+
+229
+00:10:36,080 --> 00:10:39,200
+You can take some of the complicated details
+
+230
+00:10:39,200 --> 00:10:40,960
+and, well, abstract them away.
+
+231
+00:10:40,960 --> 00:10:44,160
+So for example, when you're interacting with other people,
+
+232
+00:10:44,160 --> 00:10:45,920
+when you see human being, you don't see them
+
+233
+00:10:45,920 --> 00:10:49,600
+as a collection of cells or a bunch of chemical processes
+
+234
+00:10:49,600 --> 00:10:53,080
+happening, you interact with them as humans.
+
+235
+00:10:53,080 --> 00:10:56,100
+So you abstract away all those chemical and biological
+
+236
+00:10:56,100 --> 00:11:00,240
+processes and view them as a human.
+
+237
+00:11:00,240 --> 00:11:05,640
+With programs, instead of looking at the very minute details
+
+238
+00:11:05,640 --> 00:11:08,800
+of what's going on, we'll see different ways
+
+239
+00:11:08,800 --> 00:11:11,600
+to group them and abstract them.
+
+240
+00:11:11,600 --> 00:11:14,720
+One of those ways is by exposing you to different programming
+
+241
+00:11:14,720 --> 00:11:15,600
+paradigms.
+
+242
+00:11:15,600 --> 00:11:18,520
+So programming paradigms are just different ways
+
+243
+00:11:18,520 --> 00:11:21,320
+to approach writing programs.
+
+244
+00:11:21,320 --> 00:11:25,000
+And a lot of these have very general abstract differences.
+
+245
+00:11:25,000 --> 00:11:29,240
+So across this course, we'll be exposing you
+
+246
+00:11:29,240 --> 00:11:33,320
+to imperative, declarative, functional,
+
+247
+00:11:33,320 --> 00:11:35,000
+several different types of programming.
+
+248
+00:11:35,000 --> 00:11:37,680
+And these are different ways that you can organize your program
+
+249
+00:11:37,680 --> 00:11:40,680
+and help manage its complexity.
+
+250
+00:11:40,680 --> 00:11:44,760
+Of course, 61A, again, is many of your first computer science
+
+251
+00:11:44,760 --> 00:11:47,240
+classes, so we also hope for it to serve
+
+252
+00:11:47,240 --> 00:11:49,880
+as an introduction to program.
+
+253
+00:11:49,880 --> 00:11:52,160
+So we'll hope that we can give you
+
+254
+00:11:52,160 --> 00:11:55,440
+a pretty full understanding of Python fundamentals.
+
+255
+00:11:55,440 --> 00:11:56,720
+After you go through this course, you
+
+256
+00:11:56,720 --> 00:12:01,120
+should be able to do a lot in Python.
+
+257
+00:12:01,120 --> 00:12:04,320
+We also take a lot of smaller ideas
+
+258
+00:12:04,320 --> 00:12:06,440
+that will teach in lecture and discussion in lab
+
+259
+00:12:06,440 --> 00:12:09,040
+and combine those into larger projects, which
+
+260
+00:12:09,040 --> 00:12:10,960
+is an important skill to be able to have
+
+261
+00:12:10,960 --> 00:12:12,640
+when you're in the real world, because most of what you're
+
+262
+00:12:12,640 --> 00:12:15,760
+going to be doing is large projects.
+
+263
+00:12:15,760 --> 00:12:17,440
+And finally, we'll talk a little bit
+
+264
+00:12:17,440 --> 00:12:20,960
+about how computers interpret programming languages.
+
+265
+00:12:20,960 --> 00:12:24,640
+So when you write code, how does your computer actually
+
+266
+00:12:24,640 --> 00:12:28,240
+take that code and how is it able to run it?
+
+267
+00:12:28,240 --> 00:12:29,920
+In the beginning of the course, we'll
+
+268
+00:12:29,920 --> 00:12:34,000
+talk about this more mechanically.
+
+269
+00:12:34,000 --> 00:12:36,720
+So we'll have you actually do some of the interpretation
+
+270
+00:12:36,720 --> 00:12:37,520
+yourself.
+
+271
+00:12:37,520 --> 00:12:40,000
+But later in the course, we'll talk about how computers
+
+272
+00:12:40,000 --> 00:12:44,280
+can interpret programming languages automatically.
+
+273
+00:12:44,280 --> 00:12:46,800
+And finally, this is a challenging course
+
+274
+00:12:46,800 --> 00:12:48,920
+that will demand a lot for me.
+
+275
+00:12:48,920 --> 00:12:50,840
+The pace of this course is very fast.
+
+276
+00:12:50,840 --> 00:12:53,320
+There's going to be a lot of assignments.
+
+277
+00:12:53,320 --> 00:12:57,360
+However, if you do choose to stick with this class,
+
+278
+00:12:57,360 --> 00:12:59,320
+we have a lot of resources available,
+
+279
+00:12:59,320 --> 00:13:01,280
+and we do really want you to succeed.
+
+280
+00:13:01,280 --> 00:13:03,760
+So please don't understand the pace and difficulty
+
+281
+00:13:03,760 --> 00:13:06,320
+of this class, but also understand
+
+282
+00:13:06,320 --> 00:13:09,720
+that there's a lot of things available for you
+
+283
+00:13:09,720 --> 00:13:11,800
+if you want to stick with this class.
+
+284
+00:13:11,800 --> 00:13:16,000
+That being said, this class isn't the right first programming
+
+285
+00:13:16,000 --> 00:13:18,720
+or computer science class for everyone.
+
+286
+00:13:18,720 --> 00:13:20,720
+And with that in mind, there are a couple of alternatives
+
+287
+00:13:20,720 --> 00:13:23,480
+to CS61A that you might want to keep in mind.
+
+288
+00:13:23,480 --> 00:13:27,280
+So the first one is CS10, called the beauty and joy
+
+289
+00:13:27,280 --> 00:13:29,240
+of computing.
+
+290
+00:13:29,240 --> 00:13:34,360
+CS10 is designed for students who do not have prior experience.
+
+291
+00:13:34,360 --> 00:13:38,080
+So even though in 61A, we try to make the course such
+
+292
+00:13:38,080 --> 00:13:39,720
+that you can still succeed.
+
+293
+00:13:39,720 --> 00:13:42,040
+Even if you don't have prior programming experience,
+
+294
+00:13:42,040 --> 00:13:43,480
+I didn't have prior programming experience
+
+295
+00:13:43,480 --> 00:13:46,120
+when I took the course, for example.
+
+296
+00:13:46,120 --> 00:13:48,760
+However, CS10 is specifically designed
+
+297
+00:13:48,760 --> 00:13:50,200
+for students without prior experience.
+
+298
+00:13:50,200 --> 00:13:54,560
+So for some students, this is a better fit for your first class.
+
+299
+00:13:54,560 --> 00:13:57,520
+This is an introduction to some of the fundamentals
+
+300
+00:13:57,520 --> 00:13:59,080
+of computer science.
+
+301
+00:13:59,080 --> 00:14:01,560
+It does go over some Python, although some of the class
+
+302
+00:14:01,560 --> 00:14:05,080
+is also in a language called snap, which
+
+303
+00:14:05,080 --> 00:14:06,920
+is more of a visual language.
+
+304
+00:14:06,920 --> 00:14:08,560
+But after going through CS10, you'll
+
+305
+00:14:08,560 --> 00:14:11,680
+know a lot of the concepts and Python fundamentals
+
+306
+00:14:11,680 --> 00:14:14,440
+that you'll need for 61A.
+
+307
+00:14:14,440 --> 00:14:17,360
+Right now, it has a shortest waitlist.
+
+308
+00:14:17,360 --> 00:14:21,720
+And over the summer, it has been taught by Matthew and Monty.
+
+309
+00:14:21,720 --> 00:14:26,840
+So you can see more info at cs10.org.
+
+310
+00:14:26,840 --> 00:14:30,880
+There's also data eight, which is the foundations of data science.
+
+311
+00:14:30,880 --> 00:14:34,400
+So data goes over the fundamentals of computing
+
+312
+00:14:34,400 --> 00:14:36,640
+of statistical inference and some a little bit
+
+313
+00:14:36,640 --> 00:14:39,760
+of machine learning applied to real world data sets.
+
+314
+00:14:39,760 --> 00:14:42,760
+So the purpose of data eight is a little bit different
+
+315
+00:14:42,760 --> 00:14:44,480
+than CS61A.
+
+316
+00:14:44,480 --> 00:14:47,680
+CS61A is a class about computer science.
+
+317
+00:14:47,680 --> 00:14:50,200
+Data eight is a class about data science,
+
+318
+00:14:50,200 --> 00:14:52,080
+which is a little bit different because it's more concerned
+
+319
+00:14:52,080 --> 00:14:54,160
+with how you process data, but there is still
+
+320
+00:14:54,160 --> 00:14:56,080
+quite a bit of overlap.
+
+321
+00:14:56,080 --> 00:14:59,520
+It does feature more statistics than computer science.
+
+322
+00:14:59,520 --> 00:15:02,520
+However, the programming isn't 61A,
+
+323
+00:15:02,520 --> 00:15:06,640
+so it is a good exposure to Python if you want to take that
+
+324
+00:15:06,640 --> 00:15:07,920
+before 61A.
+
+325
+00:15:07,920 --> 00:15:10,920
+If you want to enroll, it's listed as CSC8,
+
+326
+00:15:10,920 --> 00:15:14,440
+although it's referred to as data eight.
+
+327
+00:15:14,440 --> 00:15:17,280
+It has a little bit of a larger waitlist,
+
+328
+00:15:17,280 --> 00:15:21,000
+but it is being taught over the summer by Natalia and Francie.
+
+329
+00:15:21,000 --> 00:15:22,760
+It's actually the lecture right before this one.
+
+330
+00:15:22,760 --> 00:15:25,720
+So you'll probably run to them as they're exiting the hall.
+
+331
+00:15:28,320 --> 00:15:29,280
+All right.
+
+332
+00:15:29,280 --> 00:15:32,120
+So more info on data eight.org.
+
+333
+00:15:37,640 --> 00:15:39,200
+So I'm going to go ahead and hand it off to Tiffany
+
+334
+00:15:39,200 --> 00:15:41,240
+to talk a little bit about the course logistics,
+
+335
+00:15:41,240 --> 00:15:45,680
+again, pardon me, as there's a little bit of noise here.
+
+336
+00:15:45,680 --> 00:15:49,160
+So we're trying to get screencasts for most of these lectures,
+
+337
+00:15:49,160 --> 00:15:51,440
+which means we need both the mic to project
+
+338
+00:15:51,440 --> 00:15:52,480
+and another mic to record.
+
+339
+00:15:52,480 --> 00:15:54,520
+So it's a little bit of technical setup.
+
+340
+00:15:54,520 --> 00:15:56,480
+We'll talk a bit about that in a minute.
+
+341
+00:15:56,480 --> 00:15:58,520
+So I'm going to talk a bit about course format
+
+342
+00:15:58,520 --> 00:16:01,880
+and concretely just, so first off,
+
+343
+00:16:01,880 --> 00:16:04,240
+this course has a lot of different components.
+
+344
+00:16:04,240 --> 00:16:05,720
+I'll just do the thing right now.
+
+345
+00:16:05,720 --> 00:16:07,600
+There's a lecture that'll be every Monday
+
+346
+00:16:07,600 --> 00:16:10,640
+through Thursday at 11 a.m. in this room.
+
+347
+00:16:10,640 --> 00:16:12,120
+Lecture is where you're going to be exposed
+
+348
+00:16:12,120 --> 00:16:14,080
+to course material for the first time.
+
+349
+00:16:14,080 --> 00:16:16,160
+So we strongly encourage you to come in person.
+
+350
+00:16:16,160 --> 00:16:18,160
+So you see the lecture before your discussion,
+
+351
+00:16:18,160 --> 00:16:20,000
+because generally, although your change
+
+352
+00:16:20,000 --> 00:16:23,760
+is very kind, it will be we need discussions most effective
+
+353
+00:16:23,760 --> 00:16:25,720
+if you've seen the relevant lecture beforehand.
+
+354
+00:16:25,720 --> 00:16:29,960
+There's also a lab, discussion and office analysis.
+
+355
+00:16:29,960 --> 00:16:31,640
+The reason that these are all labeled
+
+356
+00:16:31,640 --> 00:16:33,000
+the most important part of the course
+
+357
+00:16:33,000 --> 00:16:35,080
+is because it really depends on the student
+
+358
+00:16:35,080 --> 00:16:37,120
+and we encourage you to both.
+
+359
+00:16:37,120 --> 00:16:38,920
+You should really complete all of them,
+
+360
+00:16:38,920 --> 00:16:40,520
+and you'll see that probably one of them
+
+361
+00:16:40,520 --> 00:16:42,400
+will be the most effective for your learning.
+
+362
+00:16:42,400 --> 00:16:46,200
+The lab is the place where you'll usually,
+
+363
+00:16:46,200 --> 00:16:47,680
+after lecture before discussion,
+
+364
+00:16:47,680 --> 00:16:50,120
+you're going to actually interact with your machine
+
+365
+00:16:50,120 --> 00:16:52,280
+to do some programming in the soda labs.
+
+366
+00:16:52,280 --> 00:16:54,240
+This is where you'll get to interact with a lot of concepts
+
+367
+00:16:54,240 --> 00:16:56,280
+for the first time in discussion.
+
+368
+00:16:56,280 --> 00:16:58,800
+You're going to actually be working on pen and paper.
+
+369
+00:16:58,800 --> 00:17:00,600
+And you may be wondering, why do we do that?
+
+370
+00:17:00,600 --> 00:17:04,200
+This is because this course is actually quite theoretical.
+
+371
+00:17:04,200 --> 00:17:06,240
+This isn't a programming course.
+
+372
+00:17:06,240 --> 00:17:09,120
+You will learn programming over the course of the course,
+
+373
+00:17:09,120 --> 00:17:12,120
+but that was not meant to be like a hot rhyme.
+
+374
+00:17:14,320 --> 00:17:15,320
+That isn't the focus.
+
+375
+00:17:15,320 --> 00:17:17,880
+The focus is giving you a foundation and computer science.
+
+376
+00:17:17,880 --> 00:17:19,880
+And that's why discussion where you go over questions
+
+377
+00:17:19,880 --> 00:17:23,360
+with a pen and paper is a really fundamental part of the course
+
+378
+00:17:23,360 --> 00:17:26,880
+and happens after a lab once you've got your fundamentals down.
+
+379
+00:17:26,880 --> 00:17:29,600
+All this hours are where you can drop by to ask any questions.
+
+380
+00:17:29,600 --> 00:17:31,920
+Oftentimes, we'll come with a side of questions
+
+381
+00:17:31,920 --> 00:17:34,000
+because the assignments are very challenging.
+
+382
+00:17:34,000 --> 00:17:35,600
+This is where you'll interact with a lot of the active
+
+383
+00:17:35,600 --> 00:17:37,760
+in the interns as well.
+
+384
+00:17:37,760 --> 00:17:40,680
+And then, we also have an online textbook.
+
+385
+00:17:40,680 --> 00:17:42,320
+Some students read this textbook,
+
+386
+00:17:42,320 --> 00:17:43,640
+and the chapter is associated.
+
+387
+00:17:43,640 --> 00:17:44,960
+You'll feed on the website.
+
+388
+00:17:44,960 --> 00:17:47,760
+Every lecture has associated text and chapters.
+
+389
+00:17:47,760 --> 00:17:49,800
+Some students read this before lecture.
+
+390
+00:17:49,800 --> 00:17:51,720
+Some students read this after lecture.
+
+391
+00:17:51,720 --> 00:17:53,920
+Some students don't read this textbook at all.
+
+392
+00:17:53,920 --> 00:17:56,760
+I don't know about the key here, how much of the text works.
+
+393
+00:17:56,760 --> 00:17:59,720
+But we highly encourage you for a use of first
+
+394
+00:17:59,720 --> 00:18:01,720
+D to read the text book and see what you're
+
+395
+00:18:01,720 --> 00:18:02,800
+trying to help for.
+
+396
+00:18:02,800 --> 00:18:04,840
+Personally, a lot of the text books.
+
+397
+00:18:04,840 --> 00:18:08,800
+And I think, because now it's going to read the text book,
+
+398
+00:18:08,800 --> 00:18:09,600
+because it's not a color.
+
+399
+00:18:09,600 --> 00:18:13,040
+I'm not trying to say both are normal and acceptable.
+
+400
+00:18:13,040 --> 00:18:16,960
+But ultimately, it just depends on what your learning style is.
+
+401
+00:18:16,960 --> 00:18:20,800
+So try it out and see what works for you.
+
+402
+00:18:20,800 --> 00:18:22,960
+And there's also weekly homework assignments
+
+403
+00:18:22,960 --> 00:18:26,120
+for big program projects, a midterm and a final.
+
+404
+00:18:26,120 --> 00:18:27,240
+And the reason we're listing all this
+
+405
+00:18:27,240 --> 00:18:29,240
+is to say, it will be very demanding.
+
+406
+00:18:29,240 --> 00:18:30,520
+And this is what you can expect.
+
+407
+00:18:30,520 --> 00:18:33,480
+But there also will be a lot of support along the way.
+
+408
+00:18:33,480 --> 00:18:35,880
+Any questions?
+
+409
+00:18:35,880 --> 00:18:37,440
+Yeah, in the front.
+
+410
+00:18:37,440 --> 00:18:41,080
+So the program is going to be able to program the project
+
+411
+00:18:41,080 --> 00:18:42,440
+all the time.
+
+412
+00:18:42,440 --> 00:18:42,920
+Yes.
+
+413
+00:18:42,920 --> 00:18:44,960
+Holly, you put it in the program you project.
+
+414
+00:18:44,960 --> 00:18:47,240
+You wouldn't believe the point is.
+
+415
+00:18:47,240 --> 00:18:49,320
+But you're like, yeah, so there are four projects.
+
+416
+00:18:49,320 --> 00:18:51,000
+There are a lot of means about them online.
+
+417
+00:18:51,000 --> 00:18:54,640
+And soon, you'll be able to relate to those movies.
+
+418
+00:18:54,640 --> 00:18:58,280
+So in terms of the first week, you just logistics.
+
+419
+00:18:58,280 --> 00:18:59,560
+Lab will start in Wednesday.
+
+420
+00:18:59,560 --> 00:19:01,360
+So even if you have a Monday or Tuesday
+
+421
+00:19:01,360 --> 00:19:04,440
+lab not happening this week, because that's just set up.
+
+422
+00:19:04,440 --> 00:19:05,440
+Do the lab on your own.
+
+423
+00:19:05,440 --> 00:19:05,960
+Stop it all.
+
+424
+00:19:05,960 --> 00:19:08,720
+The stars if you need help, but set up.
+
+425
+00:19:08,720 --> 00:19:11,560
+Just one quick announcement about Lab Zero.
+
+426
+00:19:11,560 --> 00:19:13,240
+On Piazza, some of you were mentioning
+
+427
+00:19:13,240 --> 00:19:16,560
+that you were running into some issues with Lab Zero.
+
+428
+00:19:16,560 --> 00:19:20,400
+I think we found that some students running in Map OS
+
+429
+00:19:20,400 --> 00:19:22,120
+are able to run Lab Zero.
+
+430
+00:19:22,120 --> 00:19:23,880
+So we're working on fixing that.
+
+431
+00:19:23,880 --> 00:19:25,800
+So this is not working for you.
+
+432
+00:19:25,800 --> 00:19:27,360
+We'll let you know when you can read download it,
+
+433
+00:19:27,360 --> 00:19:28,760
+and it should be fixed.
+
+434
+00:19:28,760 --> 00:19:30,920
+This is an example of debugging on the spot.
+
+435
+00:19:30,920 --> 00:19:33,360
+There'll be a left-shandered bug you see.
+
+436
+00:19:33,360 --> 00:19:36,760
+But yeah, we'll have a fix up shortly,
+
+437
+00:19:36,760 --> 00:19:39,240
+and you should keep an eye on Piazza.
+
+438
+00:19:39,240 --> 00:19:41,640
+In terms of discussion, discussions start on Tuesday.
+
+439
+00:19:41,640 --> 00:19:44,200
+And we highly encourage you to attend the discussion
+
+440
+00:19:44,200 --> 00:19:47,040
+of matches your lab.
+
+441
+00:19:47,040 --> 00:19:49,440
+You can see on the base in your discussion number,
+
+442
+00:19:49,440 --> 00:19:51,280
+you can see whether they've mapped your lab.
+
+443
+00:19:51,280 --> 00:19:53,200
+They should have the same pattern.
+
+444
+00:19:53,200 --> 00:19:56,120
+The reason for this is so that you see the same Pia,
+
+445
+00:19:56,120 --> 00:19:57,200
+and they get to know you, and they'll
+
+446
+00:19:57,200 --> 00:19:59,200
+be able to help you much more effectively.
+
+447
+00:19:59,200 --> 00:20:01,800
+It's also better organizationally for hours.
+
+448
+00:20:01,800 --> 00:20:04,080
+And finally, office hours will also start on Tuesday.
+
+449
+00:20:04,080 --> 00:20:07,640
+There are no office hours today.
+
+450
+00:20:07,640 --> 00:20:09,640
+OK, so in terms of attendance,
+
+451
+00:20:09,640 --> 00:20:12,080
+we do not select luxury tenants at all.
+
+452
+00:20:12,080 --> 00:20:15,120
+But as I said, you highly encourage you to attend.
+
+453
+00:20:15,120 --> 00:20:18,320
+This is our first time trying to webcast the summer session.
+
+454
+00:20:18,320 --> 00:20:20,720
+So we'll try to make it as involved as you can,
+
+455
+00:20:20,720 --> 00:20:22,160
+but there are no promises around that.
+
+456
+00:20:22,160 --> 00:20:23,840
+This is kind of an experience.
+
+457
+00:20:23,840 --> 00:20:26,760
+So you can come in person without quality bets.
+
+458
+00:20:26,760 --> 00:20:30,560
+And historically, if you fall behind in terms of lecture,
+
+459
+00:20:30,560 --> 00:20:33,400
+which is what often happens with students don't come to lecture,
+
+460
+00:20:33,400 --> 00:20:35,440
+the other parts of the course is snowball
+
+461
+00:20:35,440 --> 00:20:37,040
+and become a lot more difficult.
+
+462
+00:20:37,040 --> 00:20:39,960
+So it really encourage you to come with your tenant.
+
+463
+00:20:39,960 --> 00:20:42,320
+Discussion and lab attendance aren't tracked,
+
+464
+00:20:42,320 --> 00:20:44,720
+and we're going to talk about what that counts for in a bit.
+
+465
+00:20:44,720 --> 00:20:46,320
+It doesn't directly count for your grades,
+
+466
+00:20:46,320 --> 00:20:49,400
+but it counts for something called participation points.
+
+467
+00:20:49,400 --> 00:20:52,520
+And then finally, all your assignments, labs,
+
+468
+00:20:52,520 --> 00:20:55,520
+home rates, projects can be submitted remotely.
+
+469
+00:20:55,520 --> 00:20:57,520
+So if you happen to be out of Berkeley for some reason,
+
+470
+00:20:57,520 --> 00:21:00,000
+or you have an emergency, as long as you look computer on you,
+
+471
+00:21:00,000 --> 00:21:00,800
+you should be fine.
+
+472
+00:21:04,440 --> 00:21:07,360
+OK, so as you mentioned earlier, with some of your tutors,
+
+473
+00:21:07,360 --> 00:21:09,640
+we also offer a small room tutoring section,
+
+474
+00:21:09,640 --> 00:21:12,560
+which are led by the staff that we saw earlier.
+
+475
+00:21:12,560 --> 00:21:14,760
+Local structures are around four of these people,
+
+476
+00:21:14,760 --> 00:21:16,680
+and it's just to be a more intimate environment
+
+477
+00:21:16,680 --> 00:21:17,880
+to review the material.
+
+478
+00:21:17,880 --> 00:21:19,960
+But these are from the optional, and there
+
+479
+00:21:19,960 --> 00:21:21,600
+are limited number of spots.
+
+480
+00:21:21,600 --> 00:21:24,520
+So around the end of this week, we'll have sign-ups.
+
+481
+00:21:24,520 --> 00:21:27,360
+And to make it more clear, the purpose of these sections
+
+482
+00:21:27,360 --> 00:21:29,440
+are, if in discussion, you feel like you
+
+483
+00:21:29,440 --> 00:21:32,280
+aren't getting enough review, and you would like more practice,
+
+484
+00:21:32,280 --> 00:21:34,320
+you can sign up for one of these tutoring sections,
+
+485
+00:21:34,320 --> 00:21:37,160
+you'll get more practice with supplemental material,
+
+486
+00:21:37,160 --> 00:21:40,400
+and a small environment, so maybe you can ask more questions
+
+487
+00:21:40,400 --> 00:21:42,280
+and feel more comfortable.
+
+488
+00:21:42,280 --> 00:21:43,880
+Those sign-ups will be up on this.
+
+489
+00:21:43,880 --> 00:21:47,240
+And in this week, I'm Piazza.
+
+490
+00:21:47,240 --> 00:21:50,280
+Also, we have something called conceptual office hours.
+
+491
+00:21:50,280 --> 00:21:52,640
+So I do think it all upstairs is a good session
+
+492
+00:21:52,640 --> 00:21:53,920
+in my training work.
+
+493
+00:21:53,920 --> 00:21:55,760
+But unfortunately, you're on a side of usually
+
+494
+00:21:55,760 --> 00:21:58,520
+that cloned with just to make a sign-up question
+
+495
+00:21:58,520 --> 00:22:00,480
+and debugging help, which is also useful,
+
+496
+00:22:00,480 --> 00:22:03,840
+but usually doesn't get to the core of the material,
+
+497
+00:22:03,840 --> 00:22:06,560
+the key constants that may test on your exams,
+
+498
+00:22:06,560 --> 00:22:07,720
+for example.
+
+499
+00:22:07,720 --> 00:22:09,920
+So conceptual office hours are a place that
+
+500
+00:22:09,920 --> 00:22:12,680
+are specifically reserved for no assignment help
+
+501
+00:22:12,680 --> 00:22:14,560
+and only conceptual questions.
+
+502
+00:22:14,560 --> 00:22:17,040
+So these will be out into the calendar scene,
+
+503
+00:22:17,040 --> 00:22:19,280
+and you can expect to go there for that type of help.
+
+504
+00:22:22,240 --> 00:22:25,000
+So girl is such a piece.
+
+505
+00:22:25,000 --> 00:22:27,440
+Historically, in this course, a combination
+
+506
+00:22:27,440 --> 00:22:31,040
+is because people can continue collecting every single day
+
+507
+00:22:31,040 --> 00:22:33,000
+and it's kind of a great decade.
+
+508
+00:22:33,000 --> 00:22:35,440
+It was student falls behind to whatever reason.
+
+509
+00:22:35,440 --> 00:22:37,320
+There's a great opportunity to catch
+
+510
+00:22:37,320 --> 00:22:40,120
+back up on materials that just pass, right?
+
+511
+00:22:40,120 --> 00:22:42,480
+Because we just keep going with new content.
+
+512
+00:22:42,480 --> 00:22:45,080
+Real sections are kind of meant to go this gap
+
+513
+00:22:45,080 --> 00:22:47,120
+because they'll be once a week.
+
+514
+00:22:47,120 --> 00:22:49,720
+They go from zero to a hundred of that little material
+
+515
+00:22:49,720 --> 00:22:51,800
+to a scaffolding worksheet.
+
+516
+00:22:51,800 --> 00:22:53,960
+Essentially, with a formatting, they'll go to this room
+
+517
+00:22:53,960 --> 00:22:54,960
+with a bunch of mixed units,
+
+518
+00:22:54,960 --> 00:22:57,280
+working to get some on the view on depth
+
+519
+00:22:57,280 --> 00:22:58,200
+as this is a big topic.
+
+520
+00:22:58,200 --> 00:22:59,680
+So it's doing it from cheering sections
+
+521
+00:22:59,680 --> 00:23:00,600
+and that you don't sign up.
+
+522
+00:23:00,600 --> 00:23:01,720
+They're going to be dropping.
+
+523
+00:23:01,720 --> 00:23:03,680
+You can go to one, you can go to all of them.
+
+524
+00:23:03,680 --> 00:23:06,400
+And at the bill section, you'll be in groups
+
+525
+00:23:06,400 --> 00:23:07,920
+and work through this gap with a worksheet
+
+526
+00:23:07,920 --> 00:23:09,560
+and hopefully by the end,
+
+527
+00:23:09,560 --> 00:23:11,360
+feel much more comfortable with those topics
+
+528
+00:23:11,360 --> 00:23:13,800
+that you might have missed earlier in the week.
+
+529
+00:23:13,800 --> 00:23:15,240
+Does that make sense to be ready?
+
+530
+00:23:15,240 --> 00:23:17,920
+Or any questions that I think I went through so far?
+
+531
+00:23:19,440 --> 00:23:20,280
+Yeah, that's fine.
+
+532
+00:23:20,280 --> 00:23:21,800
+Is the left task going to be real?
+
+533
+00:23:21,800 --> 00:23:23,960
+So I'm not going to go to the court as opposed to that.
+
+534
+00:23:23,960 --> 00:23:26,520
+For a court and a post it, Alex and Chris know more about it.
+
+535
+00:23:26,520 --> 00:23:29,760
+Yeah, so we're like, the reason we have so many microphones
+
+536
+00:23:29,760 --> 00:23:31,760
+is because we're recording it right now.
+
+537
+00:23:31,760 --> 00:23:35,680
+But to note, there's no guarantees on one
+
+538
+00:23:35,680 --> 00:23:37,080
+that screencast will go up.
+
+539
+00:23:37,080 --> 00:23:39,640
+It might be that evening, it might be a day or two later.
+
+540
+00:23:39,640 --> 00:23:43,480
+So that's, it's meant to help you review the lectures
+
+541
+00:23:43,480 --> 00:23:45,640
+if you missed something in live lecture,
+
+542
+00:23:45,640 --> 00:23:47,840
+but it's not meant to be a consistent replacement
+
+543
+00:23:47,840 --> 00:23:48,680
+for live lecture.
+
+544
+00:23:49,880 --> 00:23:51,000
+Cool.
+
+545
+00:23:51,000 --> 00:23:52,440
+Any other questions?
+
+546
+00:23:52,440 --> 00:23:53,280
+Yeah.
+
+547
+00:23:53,280 --> 00:23:54,360
+What answer?
+
+548
+00:23:54,360 --> 00:23:55,200
+Yeah.
+
+549
+00:23:55,200 --> 00:23:57,040
+We're going to be every Friday at 11 a.m.
+
+550
+00:23:57,040 --> 00:23:58,040
+So we have lecture, money,
+
+551
+00:23:58,040 --> 00:24:01,520
+you're freezing, real protection, but Friday, I think
+
+552
+00:24:01,520 --> 00:24:03,000
+it's still in the book or room,
+
+553
+00:24:03,000 --> 00:24:05,200
+but we'll have those details on the website too.
+
+554
+00:24:05,200 --> 00:24:06,320
+It won't start this week.
+
+555
+00:24:06,320 --> 00:24:08,280
+It will start like in the future.
+
+556
+00:24:08,280 --> 00:24:10,360
+Yeah, don't we know the real section this week?
+
+557
+00:24:10,360 --> 00:24:11,600
+They start second week.
+
+558
+00:24:13,400 --> 00:24:14,240
+Okay.
+
+559
+00:24:15,080 --> 00:24:16,280
+Are you missing at home?
+
+560
+00:24:16,280 --> 00:24:17,120
+Yes.
+
+561
+00:24:17,120 --> 00:24:18,120
+In the front.
+
+562
+00:24:18,120 --> 00:24:18,960
+Oh.
+
+563
+00:24:18,960 --> 00:24:20,160
+I mean,
+
+564
+00:24:20,160 --> 00:24:21,800
+it's going to look more and more carefully
+
+565
+00:24:21,800 --> 00:24:23,280
+to take the stage around it,
+
+566
+00:24:23,280 --> 00:24:24,480
+but more more more more.
+
+567
+00:24:24,480 --> 00:24:26,000
+They may change right.
+
+568
+00:24:26,000 --> 00:24:28,400
+Oh, yes, it turns from the fire, of course,
+
+569
+00:24:28,400 --> 00:24:29,120
+to the hands,
+
+570
+00:24:29,120 --> 00:24:31,920
+but I don't know if it's the one hand to the one
+
+571
+00:24:31,920 --> 00:24:33,760
+that won't be done at 18.
+
+572
+00:24:33,760 --> 00:24:34,600
+Yeah.
+
+573
+00:24:34,600 --> 00:24:35,440
+So the question was,
+
+574
+00:24:35,440 --> 00:24:36,400
+do the homework to change?
+
+575
+00:24:36,400 --> 00:24:38,040
+So the function has to be where it is.
+
+576
+00:24:38,040 --> 00:24:39,840
+We also do know if the project will change
+
+577
+00:24:39,840 --> 00:24:41,600
+by the way, doesn't look enough.
+
+578
+00:24:41,600 --> 00:24:43,880
+The homework will be so much different
+
+579
+00:24:43,880 --> 00:24:45,520
+because we're going in a different case,
+
+580
+00:24:45,520 --> 00:24:46,840
+the numbers will map,
+
+581
+00:24:46,840 --> 00:24:49,800
+but quite a few of the problems are shared.
+
+582
+00:24:49,800 --> 00:24:51,160
+I hope this has been getting at like,
+
+583
+00:24:51,160 --> 00:24:52,760
+ask your friends to introduce them up to you,
+
+584
+00:24:52,760 --> 00:24:53,600
+do you think?
+
+585
+00:24:53,600 --> 00:24:54,440
+You not do that.
+
+586
+00:24:54,440 --> 00:24:55,760
+Those are a lot of things,
+
+587
+00:24:55,760 --> 00:24:58,040
+but yeah, some of the homework problems
+
+588
+00:24:58,040 --> 00:24:59,520
+are similar to the past and that.
+
+589
+00:25:01,240 --> 00:25:02,080
+All right.
+
+590
+00:25:02,080 --> 00:25:03,440
+There's one more question.
+
+591
+00:25:03,440 --> 00:25:04,280
+Yeah.
+
+592
+00:25:04,280 --> 00:25:07,960
+So the realizations are 11 a.m. on Friday, two, what time?
+
+593
+00:25:07,960 --> 00:25:09,960
+11 1 p.m. on Friday.
+
+594
+00:25:09,960 --> 00:25:10,800
+Yeah.
+
+595
+00:25:10,800 --> 00:25:11,640
+Okay.
+
+596
+00:25:11,640 --> 00:25:13,200
+And we have more details up on Kiazza
+
+597
+00:25:13,200 --> 00:25:14,200
+once you have the room book
+
+598
+00:25:14,200 --> 00:25:16,040
+and one deception that for half of it.
+
+599
+00:25:17,680 --> 00:25:18,520
+Yeah.
+
+600
+00:25:18,520 --> 00:25:20,280
+Oh, can we come like half way?
+
+601
+00:25:22,040 --> 00:25:22,880
+Yeah.
+
+602
+00:25:22,880 --> 00:25:24,480
+So you're,
+
+603
+00:25:24,480 --> 00:25:26,760
+you're free to come half way, no one will stop you.
+
+604
+00:25:27,760 --> 00:25:30,480
+But it might, because we try to keep the group's pace,
+
+605
+00:25:30,480 --> 00:25:31,920
+it'll be a little bit harder,
+
+606
+00:25:33,240 --> 00:25:34,640
+possibly, but you're free to come,
+
+607
+00:25:34,640 --> 00:25:38,440
+just have that in mind that it'll be a little bit more
+
+608
+00:25:38,440 --> 00:25:40,480
+difficult to keep up and become half way.
+
+609
+00:25:41,840 --> 00:25:42,840
+Cool.
+
+610
+00:25:42,840 --> 00:25:45,920
+So let's go a little bit into disagreeing breakdown.
+
+611
+00:25:45,920 --> 00:25:48,160
+This is a graph of how your points are distributed.
+
+612
+00:25:48,160 --> 00:25:49,440
+There's more details on the website.
+
+613
+00:25:49,440 --> 00:25:51,440
+I don't want to get to it in the new shazits.
+
+614
+00:25:51,440 --> 00:25:55,120
+Just to note, 140 of your points are from the exams,
+
+615
+00:25:55,120 --> 00:25:56,800
+which we'll talk about in a bit,
+
+616
+00:25:56,800 --> 00:25:58,760
+and 150 of your points within the budget.
+
+617
+00:25:58,760 --> 00:26:00,720
+So it was a really the both of your points.
+
+618
+00:26:04,960 --> 00:26:06,920
+So it made you put the decision points earlier
+
+619
+00:26:06,920 --> 00:26:08,960
+from discussion and lab attendance,
+
+620
+00:26:08,960 --> 00:26:11,160
+participation points as you would have noticed
+
+621
+00:26:11,160 --> 00:26:14,840
+in that three graph, not here.
+
+622
+00:26:14,840 --> 00:26:16,400
+The reason for that is because they don't
+
+623
+00:26:16,400 --> 00:26:18,760
+explicitly count towards your final grade.
+
+624
+00:26:18,760 --> 00:26:20,360
+If you don't want to participate,
+
+625
+00:26:20,360 --> 00:26:24,040
+you could not participate in any lab discussion.
+
+626
+00:26:24,040 --> 00:26:27,280
+However, we don't really encourage that.
+
+627
+00:26:27,280 --> 00:26:28,760
+So if you're putting in effort,
+
+628
+00:26:28,760 --> 00:26:30,760
+if you go to every lab and every discussion,
+
+629
+00:26:30,760 --> 00:26:34,320
+if you happen to do below 50% of your exam,
+
+630
+00:26:34,320 --> 00:26:37,040
+your attendance and your participation points
+
+631
+00:26:37,040 --> 00:26:40,000
+will help you get closer to 50%.
+
+632
+00:26:40,000 --> 00:26:42,840
+So if you do above 50%, it won't help you at all.
+
+633
+00:26:42,840 --> 00:26:45,640
+If you do below 50%, it'll help you at closer.
+
+634
+00:26:45,640 --> 00:26:48,120
+The specific or mill we use for toppling this
+
+635
+00:26:48,120 --> 00:26:50,440
+is on the website, you can like 10,000 numbers
+
+636
+00:26:50,440 --> 00:26:52,040
+see the precise number of discussions
+
+637
+00:26:52,040 --> 00:26:54,040
+you want to go to, but ultimately,
+
+638
+00:26:54,040 --> 00:26:57,040
+I encourage you to just go to your discussions and labs.
+
+639
+00:26:57,040 --> 00:26:58,760
+The point of this is to give the credit
+
+640
+00:26:58,760 --> 00:27:01,480
+the people who are really trying the best in the course.
+
+641
+00:27:01,480 --> 00:27:03,520
+And for some reason, don't go to the exam,
+
+642
+00:27:03,520 --> 00:27:05,440
+but you will let everything out.
+
+643
+00:27:05,440 --> 00:27:06,720
+That'll make sense.
+
+644
+00:27:06,720 --> 00:27:07,560
+Any questions?
+
+645
+00:27:07,560 --> 00:27:09,560
+Does that make this patient?
+
+646
+00:27:09,560 --> 00:27:10,400
+Yeah.
+
+647
+00:27:10,400 --> 00:27:14,200
+Can you tell me if you're going to the school
+
+648
+00:27:14,200 --> 00:27:15,520
+or are you especially going to the lab
+
+649
+00:27:15,520 --> 00:27:17,840
+that we are involved in?
+
+650
+00:27:17,840 --> 00:27:20,800
+Yeah, you can get the patient credit going
+
+651
+00:27:20,800 --> 00:27:25,040
+to a different section, but for the first two weeks,
+
+652
+00:27:25,040 --> 00:27:27,240
+please try to put this section here in Golden,
+
+653
+00:27:27,240 --> 00:27:30,000
+just because we'll all be quite happy.
+
+654
+00:27:30,000 --> 00:27:32,520
+To be clear, the discussion section here in Golden
+
+655
+00:27:32,520 --> 00:27:35,280
+and the lab section that matches with that discussion section.
+
+656
+00:27:35,280 --> 00:27:36,120
+Yes.
+
+657
+00:27:39,280 --> 00:27:40,200
+Am I missing any?
+
+658
+00:27:42,600 --> 00:27:43,440
+Okay.
+
+659
+00:27:43,440 --> 00:27:45,000
+All right.
+
+660
+00:27:45,000 --> 00:27:47,480
+So another thing I'm reading,
+
+661
+00:27:47,480 --> 00:27:48,920
+there's going to be quite a bit of a new shift
+
+662
+00:27:48,920 --> 00:27:50,280
+for a next slide, five slides.
+
+663
+00:27:50,280 --> 00:27:51,960
+We're almost there.
+
+664
+00:27:51,960 --> 00:27:54,640
+Homer 3D is done because after.
+
+665
+00:27:54,640 --> 00:27:57,600
+What this means is that you don't be distressed
+
+666
+00:27:57,600 --> 00:28:00,320
+about getting the entire homework fully threatened,
+
+667
+00:28:00,320 --> 00:28:02,000
+especially some of the homework from this class
+
+668
+00:28:02,000 --> 00:28:03,040
+will be very challenging.
+
+669
+00:28:03,040 --> 00:28:05,480
+And we don't want you, that's your head.
+
+670
+00:28:05,480 --> 00:28:08,560
+If you're too bored because you can't get one or two problems.
+
+671
+00:28:08,560 --> 00:28:10,800
+Instead of how we do homework 3D is,
+
+672
+00:28:10,800 --> 00:28:15,720
+if you get the majority of the problems correct,
+
+673
+00:28:15,720 --> 00:28:19,960
+and we see some evidence of effort for the rest of the problems
+
+674
+00:28:19,960 --> 00:28:23,960
+I mean, you wrote a program, we have other metrics
+
+675
+00:28:23,960 --> 00:28:26,480
+for measuring whether you tried on our end,
+
+676
+00:28:26,480 --> 00:28:31,120
+but for your purposes, this means Google attempts
+
+677
+00:28:31,120 --> 00:28:33,640
+and all the problems getting most of them correct.
+
+678
+00:28:33,640 --> 00:28:36,240
+If you do this, you will get credit
+
+679
+00:28:36,240 --> 00:28:38,440
+for your homework assignments.
+
+680
+00:28:38,440 --> 00:28:41,120
+This means basically the point of this is knowing
+
+681
+00:28:41,120 --> 00:28:44,680
+you to be pressured to teach or look your friend's solution
+
+682
+00:28:44,680 --> 00:28:47,520
+at anything like that, because if you put in your effort,
+
+683
+00:28:47,520 --> 00:28:49,320
+keep up in the material, you should be able to get both
+
+684
+00:28:49,320 --> 00:28:51,760
+in on the homework just by trying on your problems
+
+685
+00:28:51,760 --> 00:28:54,120
+and getting most of them correct.
+
+686
+00:28:54,120 --> 00:28:55,720
+Any questions on this because I know
+
+687
+00:28:55,720 --> 00:28:57,360
+this might be able to confuse you?
+
+688
+00:29:00,120 --> 00:29:02,840
+Okay, other, yeah, in the front.
+
+689
+00:29:02,840 --> 00:29:06,680
+Or some of them are more than two lines of homework
+
+690
+00:29:06,680 --> 00:29:10,320
+so all of them come out of the network.
+
+691
+00:29:10,320 --> 00:29:11,160
+Yeah.
+
+692
+00:29:14,160 --> 00:29:16,000
+So we've got to be in the front,
+
+693
+00:29:16,000 --> 00:29:18,320
+some of the homework and a few lines of code,
+
+694
+00:29:18,320 --> 00:29:20,480
+only a few lines of code, how do you measure effort?
+
+695
+00:29:20,480 --> 00:29:21,840
+That's really good question.
+
+696
+00:29:21,840 --> 00:29:25,240
+So effort is definitely not writing a wall
+
+697
+00:29:25,240 --> 00:29:26,520
+and it's program possible.
+
+698
+00:29:26,520 --> 00:29:29,000
+That's not how programming works.
+
+699
+00:29:29,000 --> 00:29:29,840
+That's what it could mean.
+
+700
+00:29:29,840 --> 00:29:32,000
+We have evidence of all your methods.
+
+701
+00:29:32,000 --> 00:29:34,960
+So the reason I give you details is because this one
+
+702
+00:29:34,960 --> 00:29:36,960
+should be easy when you're trying to name the system
+
+703
+00:29:36,960 --> 00:29:38,120
+and that's not what we want.
+
+704
+00:29:38,120 --> 00:29:39,560
+The reason we don't be creative corrected
+
+705
+00:29:39,560 --> 00:29:41,520
+is trying to make it as easy and possible,
+
+706
+00:29:41,520 --> 00:29:44,040
+but just to give some transparency,
+
+707
+00:29:44,040 --> 00:29:48,320
+we have kind of our whole history of your homework.
+
+708
+00:29:48,320 --> 00:29:49,280
+We've seen when you started,
+
+709
+00:29:49,280 --> 00:29:51,080
+you see how many times you tried,
+
+710
+00:29:51,080 --> 00:29:52,320
+there's a lot of data there.
+
+711
+00:29:52,320 --> 00:29:57,320
+So we know, yeah, I hope that kind of answers the question.
+
+712
+00:29:58,240 --> 00:29:59,840
+But if I give you like a black threshold,
+
+713
+00:29:59,840 --> 00:30:02,120
+then you could all just, I don't know,
+
+714
+00:30:02,120 --> 00:30:04,280
+try making five submissions and then we're done with it
+
+715
+00:30:04,280 --> 00:30:05,800
+and that's not really the point.
+
+716
+00:30:07,440 --> 00:30:08,400
+I don't even know what to do with it,
+
+717
+00:30:08,400 --> 00:30:09,240
+but yeah.
+
+718
+00:30:09,240 --> 00:30:10,600
+I don't know what to do with it as you go through it
+
+719
+00:30:10,600 --> 00:30:12,440
+as well as the fact that what I don't do
+
+720
+00:30:12,440 --> 00:30:14,440
+are asking for asking to do it for us.
+
+721
+00:30:14,440 --> 00:30:15,280
+Yeah.
+
+722
+00:30:15,280 --> 00:30:16,120
+Oh, okay.
+
+723
+00:30:16,120 --> 00:30:16,960
+Good question.
+
+724
+00:30:16,960 --> 00:30:18,000
+So you won't know what you're correct.
+
+725
+00:30:18,000 --> 00:30:19,240
+That's a big deal.
+
+726
+00:30:19,240 --> 00:30:20,560
+All the homework's from autofrainers,
+
+727
+00:30:20,560 --> 00:30:21,840
+so you'll know what you're correct
+
+728
+00:30:21,840 --> 00:30:23,560
+as soon as you found the correct question.
+
+729
+00:30:23,560 --> 00:30:25,040
+In the front.
+
+730
+00:30:25,040 --> 00:30:27,320
+I don't think that seeing programming is good
+
+731
+00:30:27,320 --> 00:30:29,120
+to do around that first end,
+
+732
+00:30:29,120 --> 00:30:31,160
+you have to correct me as you do,
+
+733
+00:30:31,160 --> 00:30:32,960
+get out of the right answer, right?
+
+734
+00:30:32,960 --> 00:30:35,280
+Yeah, I'm correct, I'm correct.
+
+735
+00:30:35,280 --> 00:30:36,120
+I'm correct.
+
+736
+00:30:36,120 --> 00:30:39,640
+So you get a 100 and a 10.
+
+737
+00:30:39,640 --> 00:30:41,120
+If you read the about page,
+
+738
+00:30:41,120 --> 00:30:42,880
+we go more in depth into this.
+
+739
+00:30:42,880 --> 00:30:44,560
+It's kind of hard to explain in person,
+
+740
+00:30:44,560 --> 00:30:45,600
+so you should read that first
+
+741
+00:30:45,600 --> 00:30:46,720
+and then there are any questions.
+
+742
+00:30:46,720 --> 00:30:50,040
+Essentially, we'd be like to extract away
+
+743
+00:30:50,040 --> 00:30:52,960
+how the effort creating works to kind of open earlier,
+
+744
+00:30:52,960 --> 00:30:55,360
+but just trust that happens that the point is,
+
+745
+00:30:55,360 --> 00:30:57,480
+don't stress about getting all the problems correct,
+
+746
+00:30:57,480 --> 00:31:00,560
+but try all of them, get most of them correct.
+
+747
+00:31:00,560 --> 00:31:01,400
+All right.
+
+748
+00:31:01,400 --> 00:31:03,640
+So, you guys are seeing uncorrected and composition,
+
+749
+00:31:03,640 --> 00:31:05,360
+but you will get project partners.
+
+750
+00:31:05,360 --> 00:31:07,240
+So hopefully that lightens below in a bit.
+
+751
+00:31:07,240 --> 00:31:09,160
+Where you tell us that here,
+
+752
+00:31:09,160 --> 00:31:11,840
+and keep in mind that projects are pretty big,
+
+753
+00:31:11,840 --> 00:31:14,080
+it's the start one there, it actually posted.
+
+754
+00:31:14,080 --> 00:31:17,080
+Please don't put them off for the last minute.
+
+755
+00:31:17,080 --> 00:31:19,280
+Labs are also bringing on confusion,
+
+756
+00:31:19,280 --> 00:31:20,840
+but you get two labs jobs.
+
+757
+00:31:20,840 --> 00:31:23,060
+So we encourage you to put in your best effort.
+
+758
+00:31:25,880 --> 00:31:26,980
+We are gonna double check something.
+
+759
+00:31:26,980 --> 00:31:28,520
+Labs are great uncorrected, is right?
+
+760
+00:31:28,520 --> 00:31:29,360
+Yeah, yeah.
+
+761
+00:31:29,360 --> 00:31:30,680
+Okay.
+
+762
+00:31:30,680 --> 00:31:31,520
+Yes.
+
+763
+00:31:31,520 --> 00:31:33,840
+So, I've got the view both correct measurements,
+
+764
+00:31:33,840 --> 00:31:34,680
+but yeah.
+
+765
+00:31:34,680 --> 00:31:38,400
+So, we encourage you to complete all the labs
+
+766
+00:31:38,400 --> 00:31:39,240
+and try to finish,
+
+767
+00:31:39,240 --> 00:31:40,480
+and there are many to be assignments
+
+768
+00:31:40,480 --> 00:31:43,080
+that you can finish in the lab fully correct.
+
+769
+00:31:43,080 --> 00:31:45,080
+But if you end up having an off day,
+
+770
+00:31:45,080 --> 00:31:48,600
+you get one or two, not at 100%, it's okay.
+
+771
+00:31:48,600 --> 00:31:49,640
+You get two labs job.
+
+772
+00:31:51,200 --> 00:31:53,520
+More details, you have this website.
+
+773
+00:31:53,520 --> 00:31:54,360
+Okay.
+
+774
+00:31:54,360 --> 00:31:56,200
+So also we have slip days.
+
+775
+00:31:56,200 --> 00:31:57,960
+There are a lot of ways you try to introduce
+
+776
+00:31:57,960 --> 00:32:02,160
+community in the course, one is your one 24 hour slip day.
+
+777
+00:32:02,160 --> 00:32:04,920
+So this can be used on homework and projects.
+
+778
+00:32:04,920 --> 00:32:06,520
+We have, you know, final deadline,
+
+779
+00:32:06,520 --> 00:32:08,040
+officially on the course website,
+
+780
+00:32:08,040 --> 00:32:11,320
+let's say you have some emergency situation,
+
+781
+00:32:11,320 --> 00:32:12,680
+then you can use your slip day,
+
+782
+00:32:12,680 --> 00:32:15,240
+and submit a day later,
+
+783
+00:32:15,240 --> 00:32:18,720
+and you'll still get full credit.
+
+784
+00:32:18,720 --> 00:32:20,520
+But you can only do this one for this semester.
+
+785
+00:32:20,520 --> 00:32:22,200
+One thing to note is that,
+
+786
+00:32:22,200 --> 00:32:23,960
+let's say you have a project partner,
+
+787
+00:32:23,960 --> 00:32:25,720
+you use your slip hand off,
+
+788
+00:32:25,720 --> 00:32:27,440
+and then you partner up for dance,
+
+789
+00:32:27,440 --> 00:32:29,280
+which is on project three.
+
+790
+00:32:29,280 --> 00:32:31,240
+They have a slip day, but you don't.
+
+791
+00:32:31,240 --> 00:32:33,320
+If you both submit together a day later,
+
+792
+00:32:33,320 --> 00:32:35,840
+you're gonna get the late penalty, but they won't.
+
+793
+00:32:35,840 --> 00:32:38,400
+So that's an important thing to note.
+
+794
+00:32:38,400 --> 00:32:39,760
+Slip days are individual,
+
+795
+00:32:39,760 --> 00:32:42,720
+they can't be shared or gifted.
+
+796
+00:32:44,120 --> 00:32:47,080
+We don't agree, so sort of great economy in this class.
+
+797
+00:32:47,080 --> 00:32:47,920
+Okay.
+
+798
+00:32:49,360 --> 00:32:53,360
+And it's finally, these are the two of your exams.
+
+799
+00:32:53,360 --> 00:32:56,520
+Please make sure that your schedules are cleared.
+
+800
+00:32:56,520 --> 00:32:58,040
+Unless you have another class
+
+801
+00:32:58,040 --> 00:32:59,960
+with a directing van conflict,
+
+802
+00:32:59,960 --> 00:33:01,800
+we cannot offer an alternate.
+
+803
+00:33:01,800 --> 00:33:04,320
+So there will be a post for,
+
+804
+00:33:04,320 --> 00:33:07,400
+if you do have a class with a direct conflict,
+
+805
+00:33:07,400 --> 00:33:08,600
+how you can request an alternate,
+
+806
+00:33:08,600 --> 00:33:10,280
+that information will all be on Piazza,
+
+807
+00:33:10,280 --> 00:33:13,480
+but otherwise, please note the exam times.
+
+808
+00:33:15,080 --> 00:33:16,240
+Unless you have another class,
+
+809
+00:33:16,240 --> 00:33:17,640
+we cannot make exceptions.
+
+810
+00:33:21,000 --> 00:33:24,000
+All right, and now, let's just talk a little bit
+
+811
+00:33:24,000 --> 00:33:26,280
+about preparing for these exams
+
+812
+00:33:26,280 --> 00:33:28,000
+that feel like I've been deciding a lot of fear
+
+813
+00:33:28,000 --> 00:33:30,840
+about for the past, like 20 minutes,
+
+814
+00:33:30,840 --> 00:33:34,280
+because I just want to make it clear
+
+815
+00:33:34,280 --> 00:33:37,120
+that these exams are meant to be some sort of year.
+
+816
+00:33:37,120 --> 00:33:39,160
+They're not meant to be able to be scared.
+
+817
+00:33:39,160 --> 00:33:42,000
+The purpose of these exams are kind of like I mentioned earlier,
+
+818
+00:33:42,000 --> 00:33:44,120
+just is quite a few rental courts.
+
+819
+00:33:44,120 --> 00:33:45,520
+And the other types of the courts
+
+820
+00:33:45,520 --> 00:33:46,800
+tend to be a bit more practical,
+
+821
+00:33:46,800 --> 00:33:49,000
+especially your labs and your homework.
+
+822
+00:33:49,000 --> 00:33:51,000
+But in exams, to get asking questions
+
+823
+00:33:51,000 --> 00:33:54,200
+that get more to the core of specific concepts,
+
+824
+00:33:54,200 --> 00:33:57,000
+for example, share a person with a mental leader,
+
+825
+00:33:57,000 --> 00:33:58,640
+choose, I don't know how I'm only thinking
+
+826
+00:33:58,640 --> 00:34:01,160
+about you later, really, really in danger now,
+
+827
+00:34:01,160 --> 00:34:03,320
+but those are two big topics.
+
+828
+00:34:03,320 --> 00:34:05,080
+These are big concepts.
+
+829
+00:34:05,080 --> 00:34:06,720
+Sometimes when we don't enter them,
+
+830
+00:34:06,720 --> 00:34:09,760
+we have to ask, create a couple examples,
+
+831
+00:34:09,760 --> 00:34:11,240
+really get a sense of where you are
+
+832
+00:34:11,240 --> 00:34:12,760
+and showing your understanding.
+
+833
+00:34:12,760 --> 00:34:14,840
+So how do you say it's a new exam?
+
+834
+00:34:15,960 --> 00:34:18,380
+Generally, I think kind of this is a back down
+
+835
+00:34:18,380 --> 00:34:19,680
+for life courts and courts.
+
+836
+00:34:20,720 --> 00:34:23,000
+And this isn't maybe what worked for everybody,
+
+837
+00:34:23,000 --> 00:34:25,080
+but I want to give you my background.
+
+838
+00:34:25,080 --> 00:34:26,080
+And maybe the last one of you
+
+839
+00:34:26,080 --> 00:34:27,200
+to also explain how you did it,
+
+840
+00:34:27,200 --> 00:34:28,600
+just to give you perspectives.
+
+841
+00:34:29,760 --> 00:34:32,800
+For me, usually, at the end of the first week,
+
+842
+00:34:32,800 --> 00:34:34,680
+I decided to push a lot to classes.
+
+843
+00:34:34,680 --> 00:34:37,240
+I would look at one of the first exams
+
+844
+00:34:37,240 --> 00:34:41,280
+from maybe the past year or all of our exams
+
+845
+00:34:41,280 --> 00:34:43,680
+are posted on the resources page as soon as.
+
+846
+00:34:43,680 --> 00:34:46,000
+You can access them there and take a look.
+
+847
+00:34:46,000 --> 00:34:48,400
+What I'm trying to say is I would look at that exam
+
+848
+00:34:48,400 --> 00:34:52,600
+and then it'll look like complete gibberish community, right?
+
+849
+00:34:52,600 --> 00:34:54,000
+If I want to be able to identify
+
+850
+00:34:54,000 --> 00:34:56,440
+what are the terms that come up the most often?
+
+851
+00:34:56,440 --> 00:34:58,880
+What are the types of problems that come up on this exam?
+
+852
+00:34:58,880 --> 00:35:01,760
+And then later on, in lecture, in discussion, in lab.
+
+853
+00:35:01,760 --> 00:35:03,240
+But when I see that term again,
+
+854
+00:35:03,240 --> 00:35:04,680
+when I see that there's a problem,
+
+855
+00:35:04,680 --> 00:35:06,160
+I notice a super important.
+
+856
+00:35:06,160 --> 00:35:08,080
+And I also know the levels of importance.
+
+857
+00:35:08,080 --> 00:35:11,040
+And so once I've seen a couple of those problems,
+
+858
+00:35:11,040 --> 00:35:14,680
+I do like to now go back and try out those past exam problems.
+
+859
+00:35:14,680 --> 00:35:16,160
+Because I've seen them before and now you know
+
+860
+00:35:16,160 --> 00:35:19,720
+of a learn the material when they got to that part of the course.
+
+861
+00:35:19,720 --> 00:35:21,840
+What I'm trying to get at is just one approach.
+
+862
+00:35:21,840 --> 00:35:24,080
+Some people don't like this because if it's world exam,
+
+863
+00:35:24,080 --> 00:35:25,960
+in my experience, I don't remember
+
+864
+00:35:25,960 --> 00:35:27,480
+and then I looked at me once,
+
+865
+00:35:27,480 --> 00:35:29,280
+so it feels well for me.
+
+866
+00:35:29,280 --> 00:35:33,720
+But what I'm trying to get at is not putting off exam settings
+
+867
+00:35:33,720 --> 00:35:36,680
+to be told because that'll make it a lot more stressful.
+
+868
+00:35:36,680 --> 00:35:40,640
+If you try to pack an exam problem every week,
+
+869
+00:35:40,640 --> 00:35:43,000
+at the end of the week or the end of the fall week
+
+870
+00:35:43,000 --> 00:35:45,120
+after went through that material,
+
+871
+00:35:45,120 --> 00:35:46,720
+you'll find that it's a lot easier
+
+872
+00:35:46,720 --> 00:35:49,200
+to figure out how to approach them and master them
+
+873
+00:35:49,200 --> 00:35:51,240
+and create strategies to tackle them.
+
+874
+00:35:51,240 --> 00:35:53,320
+I also really urge you to talk to your staff
+
+875
+00:35:53,320 --> 00:35:55,480
+about this, the TA's, because they'll have
+
+876
+00:35:55,480 --> 00:35:57,640
+the experience of them being able to relate to you
+
+877
+00:35:57,640 --> 00:35:59,600
+more closely and you don't experience it.
+
+878
+00:36:03,320 --> 00:36:04,440
+I guess one of the things I'll mention
+
+879
+00:36:04,440 --> 00:36:05,960
+is that all the resources page,
+
+880
+00:36:05,960 --> 00:36:07,840
+as we get further into the course,
+
+881
+00:36:07,840 --> 00:36:11,880
+for every topic will have specific lists
+
+882
+00:36:11,880 --> 00:36:14,680
+of the past exam problems from that topic.
+
+883
+00:36:14,680 --> 00:36:15,800
+So that's another way to study.
+
+884
+00:36:15,800 --> 00:36:17,080
+You can go through, all right,
+
+885
+00:36:17,080 --> 00:36:19,360
+we just went through higher functions.
+
+886
+00:36:19,360 --> 00:36:20,480
+We'll leave on the resources page
+
+887
+00:36:20,480 --> 00:36:23,040
+and try the past exam problems or higher responses.
+
+888
+00:36:24,280 --> 00:36:25,600
+Yeah.
+
+889
+00:36:25,600 --> 00:36:28,000
+Alex also made this helpful flowchart.
+
+890
+00:36:28,000 --> 00:36:30,640
+So, what he is trying to believe here
+
+891
+00:36:30,640 --> 00:36:33,360
+is that you can start out with going to lecture
+
+892
+00:36:33,360 --> 00:36:35,320
+and then you can catch up with him, you can prefer that.
+
+893
+00:36:35,320 --> 00:36:39,400
+Then you go to lab, do some homework, go to discussion.
+
+894
+00:36:39,400 --> 00:36:41,960
+After that, he's no post-shaking on a concept.
+
+895
+00:36:41,960 --> 00:36:43,640
+That's what really sectioned it for.
+
+896
+00:36:43,640 --> 00:36:45,800
+Also tuning sections that you like.
+
+897
+00:36:45,800 --> 00:36:48,040
+And then after you have a foundation,
+
+898
+00:36:48,040 --> 00:36:49,320
+you should be ready to tell me
+
+899
+00:36:49,320 --> 00:36:51,040
+how those are naturally advanced.
+
+900
+00:36:51,040 --> 00:36:52,400
+It won't be difficult,
+
+901
+00:36:52,400 --> 00:36:54,040
+but the point of that little tooth
+
+902
+00:36:54,040 --> 00:36:55,880
+is that you do it over and over again.
+
+903
+00:36:55,880 --> 00:36:57,520
+I don't even know if you'd lecture in your test,
+
+904
+00:36:57,520 --> 00:37:01,040
+but I really want to encourage you to start early
+
+905
+00:37:01,040 --> 00:37:03,280
+and I think that'll really improve your experience.
+
+906
+00:37:04,760 --> 00:37:05,600
+Cool.
+
+907
+00:37:06,640 --> 00:37:09,440
+Any questions on the exams or the resources we have for that?
+
+908
+00:37:10,560 --> 00:37:11,400
+Yeah, you know?
+
+909
+00:37:11,400 --> 00:37:13,240
+We saw people asking about it.
+
+910
+00:37:13,240 --> 00:37:14,080
+Yes.
+
+911
+00:37:14,080 --> 00:37:17,120
+So, in here, there's no hours without,
+
+912
+00:37:17,120 --> 00:37:18,960
+you know, people preparing for exams work.
+
+913
+00:37:18,960 --> 00:37:19,840
+That's a good point.
+
+914
+00:37:19,840 --> 00:37:22,000
+So conceptual officers are,
+
+915
+00:37:22,000 --> 00:37:23,600
+they're kind of mentioned as purpose.
+
+916
+00:37:23,600 --> 00:37:26,720
+You go to conceptual office hours with past exam problems
+
+917
+00:37:26,720 --> 00:37:28,560
+and we're looking forward to helping you there.
+
+918
+00:37:28,560 --> 00:37:29,400
+You know what's good,
+
+919
+00:37:29,400 --> 00:37:30,240
+right?
+
+920
+00:37:30,240 --> 00:37:30,920
+They're office hours for sure.
+
+921
+00:37:30,920 --> 00:37:32,080
+You're free to do that as well.
+
+922
+00:37:32,080 --> 00:37:34,520
+Like a sexual or kind of specialized for this.
+
+923
+00:37:34,520 --> 00:37:36,240
+So yes, definitely a component.
+
+924
+00:37:37,320 --> 00:37:38,360
+Any other questions?
+
+925
+00:37:41,440 --> 00:37:42,980
+Cool.
+
+926
+00:37:42,980 --> 00:37:45,200
+I'm almost tired of these logistics.
+
+927
+00:37:45,200 --> 00:37:46,520
+I think this is the last slide.
+
+928
+00:37:46,520 --> 00:37:47,360
+Okay.
+
+929
+00:37:47,360 --> 00:37:49,720
+So just some stuff, an academic honesty
+
+930
+00:37:49,720 --> 00:37:51,720
+or put nicely collaboration.
+
+931
+00:37:51,720 --> 00:37:55,400
+So, this class is not clear.
+
+932
+00:37:55,400 --> 00:37:56,640
+They're acceptance.
+
+933
+00:37:56,640 --> 00:38:01,280
+This means that whether the 10 people next to you fail
+
+934
+00:38:01,280 --> 00:38:04,600
+because you, but I'm not going to admit to a scenario.
+
+935
+00:38:04,600 --> 00:38:06,760
+No one would happen to a student.
+
+936
+00:38:06,760 --> 00:38:08,600
+It's not going to change the green that you get.
+
+937
+00:38:08,600 --> 00:38:10,840
+So there's no incentive to do so, please.
+
+938
+00:38:10,840 --> 00:38:14,800
+So, instead, what you really want to call through this class
+
+939
+00:38:14,800 --> 00:38:17,440
+is an environment of collaboration, helping,
+
+940
+00:38:17,440 --> 00:38:18,560
+and sharing with one another.
+
+941
+00:38:18,560 --> 00:38:20,080
+We highly bridging work together
+
+942
+00:38:20,080 --> 00:38:21,720
+because really for me,
+
+943
+00:38:21,720 --> 00:38:23,560
+that's how we look at this class.
+
+944
+00:38:23,560 --> 00:38:25,080
+So my best friend was 16 one day.
+
+945
+00:38:25,080 --> 00:38:27,080
+Wow, it's used right here.
+
+946
+00:38:27,080 --> 00:38:30,280
+And that's really the point of this operation.
+
+947
+00:38:30,280 --> 00:38:31,920
+Policy, but there are limits.
+
+948
+00:38:31,920 --> 00:38:34,640
+One, you cannot share code as anyone else in the courts
+
+949
+00:38:34,640 --> 00:38:36,160
+except for your project partner
+
+950
+00:38:36,160 --> 00:38:38,320
+on a project that you're working together on.
+
+951
+00:38:39,520 --> 00:38:41,320
+The only circumstance, yeah,
+
+952
+00:38:41,320 --> 00:38:42,640
+where you can look at someone else's code
+
+953
+00:38:42,640 --> 00:38:43,600
+is what your partner is.
+
+954
+00:38:43,600 --> 00:38:46,480
+So, sharing code with you the means,
+
+955
+00:38:46,480 --> 00:38:48,800
+if you're sitting together in your dorm
+
+956
+00:38:48,800 --> 00:38:50,960
+and you look at someone else's dreams
+
+957
+00:38:50,960 --> 00:38:53,800
+and you want to help them, that's still sharing code.
+
+958
+00:38:53,800 --> 00:38:55,480
+And it's explicitly not allowed.
+
+959
+00:38:55,480 --> 00:38:57,080
+We've run into what businesses or people say
+
+960
+00:38:57,080 --> 00:38:57,920
+that's all they're doing
+
+961
+00:38:57,920 --> 00:39:00,120
+and that's how they ended up with exact copies.
+
+962
+00:39:00,120 --> 00:39:01,680
+And even if you go to 10 this such,
+
+963
+00:39:01,680 --> 00:39:04,480
+it often happens inadvertently when you're programming.
+
+964
+00:39:04,480 --> 00:39:07,880
+So, please do not look at anyone else's code.
+
+965
+00:39:07,880 --> 00:39:10,520
+We also have software for detecting this,
+
+966
+00:39:10,520 --> 00:39:12,640
+and we will find out what's likely to do it.
+
+967
+00:39:12,640 --> 00:39:14,560
+So, that's just a warning.
+
+968
+00:39:14,560 --> 00:39:15,920
+Sorry to get to your software.
+
+969
+00:39:17,280 --> 00:39:21,000
+Okay, so, if you wanted to just read anything I just said,
+
+970
+00:39:21,000 --> 00:39:22,400
+it's all on the website.
+
+971
+00:39:22,400 --> 00:39:24,960
+Chris, you're a very detailed documentation,
+
+972
+00:39:26,320 --> 00:39:28,520
+and now you can talk to Alex.
+
+973
+00:39:28,520 --> 00:39:30,000
+Okay, so now we're going to dive into
+
+974
+00:39:30,000 --> 00:39:32,040
+the content of the course.
+
+975
+00:39:32,040 --> 00:39:34,600
+The first thing we're talking about is expressions.
+
+976
+00:39:34,600 --> 00:39:36,360
+So, what are expressions?
+
+977
+00:39:36,360 --> 00:39:38,320
+So, expression describes a computation
+
+978
+00:39:38,320 --> 00:39:39,840
+and evaluates to a value.
+
+979
+00:39:39,840 --> 00:39:42,160
+So, this is some way we can kind of symbolically
+
+980
+00:39:42,160 --> 00:39:45,120
+represent or programmatically represent some sort of
+
+981
+00:39:45,120 --> 00:39:47,800
+computation that we're going to be doing.
+
+982
+00:39:47,800 --> 00:39:50,320
+The field of mathematics has done this for a really long time.
+
+983
+00:39:50,320 --> 00:39:51,320
+They have numbers.
+
+984
+00:39:51,320 --> 00:39:53,560
+They represent things in a bunch of different ways.
+
+985
+00:39:53,560 --> 00:39:55,200
+Some of the ways, you put two numbers.
+
+986
+00:39:55,200 --> 00:39:56,720
+You put a plus sign between them.
+
+987
+00:39:56,720 --> 00:39:57,800
+Here you have some other format.
+
+988
+00:39:57,800 --> 00:39:59,120
+You have some line between them.
+
+989
+00:39:59,120 --> 00:40:01,160
+Competition's really love notation.
+
+990
+00:40:01,160 --> 00:40:02,360
+Here you put some number.
+
+991
+00:40:02,360 --> 00:40:03,520
+You put some house over it.
+
+992
+00:40:03,520 --> 00:40:05,040
+You get another number.
+
+993
+00:40:05,040 --> 00:40:08,600
+Here you just put a word and you get another value.
+
+994
+00:40:08,600 --> 00:40:12,480
+So, here you can use another language, Greek,
+
+995
+00:40:12,480 --> 00:40:14,840
+and you just suddenly have another thing.
+
+996
+00:40:14,840 --> 00:40:18,800
+So, and there's a bunch of these.
+
+997
+00:40:18,800 --> 00:40:21,000
+Okay, so, mathematics has a lot of ways
+
+998
+00:40:21,000 --> 00:40:22,400
+that they like to describe things
+
+999
+00:40:22,400 --> 00:40:24,360
+because they like doing notation
+
+1000
+00:40:24,360 --> 00:40:26,440
+and having really short hand in the research papers.
+
+1001
+00:40:26,440 --> 00:40:28,240
+It's really hard to read.
+
+1002
+00:40:28,240 --> 00:40:31,240
+In computer science, we really like to simplify things.
+
+1003
+00:40:31,240 --> 00:40:33,320
+So, in computer science, the only thing
+
+1004
+00:40:33,320 --> 00:40:35,040
+that we really care about is this one
+
+1005
+00:40:35,040 --> 00:40:36,560
+a particular f of x.
+
+1006
+00:40:36,560 --> 00:40:39,400
+What this is kind of saying
+
+1007
+00:40:39,400 --> 00:40:41,520
+is that we're taking in some particular value
+
+1008
+00:40:41,520 --> 00:40:43,480
+and we're going to manipulate it in some way.
+
+1009
+00:40:43,480 --> 00:40:45,400
+Really general, it's really abstract.
+
+1010
+00:40:45,400 --> 00:40:47,520
+Take something, change it.
+
+1011
+00:40:47,520 --> 00:40:49,680
+The function f describes how we're going to change it.
+
+1012
+00:40:49,680 --> 00:40:51,440
+The input x is just the particular value
+
+1013
+00:40:51,440 --> 00:40:52,280
+that we care about.
+
+1014
+00:40:53,960 --> 00:40:57,280
+I claim that every single one of these kind of expressions
+
+1015
+00:40:57,280 --> 00:40:58,520
+or any other sort of expression
+
+1016
+00:40:58,520 --> 00:41:00,120
+that we might think about in math,
+
+1017
+00:41:00,120 --> 00:41:01,360
+that these can actually be represented
+
+1018
+00:41:01,360 --> 00:41:03,000
+in this f of x notation.
+
+1019
+00:41:03,000 --> 00:41:06,840
+And so, we're actually going to look at this in,
+
+1020
+00:41:06,840 --> 00:41:11,320
+Python, would somebody be willing to hold this
+
+1021
+00:41:11,320 --> 00:41:12,960
+since it isn't working?
+
+1022
+00:41:14,320 --> 00:41:16,000
+I think we're going to download.
+
+1023
+00:41:22,320 --> 00:41:23,440
+I put on a college shirt
+
+1024
+00:41:23,440 --> 00:41:24,760
+because supposedly they work best,
+
+1025
+00:41:24,760 --> 00:41:26,480
+but apparently they work worse.
+
+1026
+00:41:26,480 --> 00:41:27,320
+Not me or sis?
+
+1027
+00:41:27,320 --> 00:41:28,160
+Thank you.
+
+1028
+00:41:28,160 --> 00:41:29,480
+Okay, so,
+
+1029
+00:41:29,480 --> 00:41:36,480
+what I just did is I open me, this is just in Linux,
+
+1030
+00:41:39,680 --> 00:41:41,520
+it's similar in Mac and Windows,
+
+1031
+00:41:41,520 --> 00:41:43,320
+you'll probably use Git Bash.
+
+1032
+00:41:43,320 --> 00:41:44,840
+If I went to open the Python interpreter,
+
+1033
+00:41:44,840 --> 00:41:46,080
+I typed Python 3.
+
+1034
+00:41:46,080 --> 00:41:48,480
+So what this is, is it's a looping mechanism
+
+1035
+00:41:48,480 --> 00:41:49,600
+where we can type in things,
+
+1036
+00:41:49,600 --> 00:41:51,080
+Python figures out what the means
+
+1037
+00:41:51,080 --> 00:41:53,040
+and what I typed and then it returns the value.
+
+1038
+00:41:53,040 --> 00:41:55,560
+So for example, I can type 2019,
+
+1039
+00:41:55,560 --> 00:41:57,080
+it figures out what 2019 is,
+
+1040
+00:41:57,080 --> 00:41:59,280
+there's nothing special and we output that.
+
+1041
+00:41:59,280 --> 00:42:02,280
+The other thing we can do is we could do addition.
+
+1042
+00:42:02,280 --> 00:42:03,520
+We can output some other values.
+
+1043
+00:42:03,520 --> 00:42:05,600
+So here it's figuring out that we want to add to numbers.
+
+1044
+00:42:05,600 --> 00:42:08,760
+It calculates the addition and then puts them together.
+
+1045
+00:42:08,760 --> 00:42:12,160
+We can also do addition, we can do division,
+
+1046
+00:42:12,160 --> 00:42:16,000
+we can do more addition, we can do nested equations,
+
+1047
+00:42:20,200 --> 00:42:22,880
+we can do more multiple locations.
+
+1048
+00:42:22,880 --> 00:42:25,800
+And it automatically knows the sort of standard
+
+1049
+00:42:25,800 --> 00:42:28,120
+orders of operation and it'll sort of evaluate it
+
+1050
+00:42:28,120 --> 00:42:30,440
+in the normal way that we're used to.
+
+1051
+00:42:30,440 --> 00:42:32,800
+Another thing that we can do in the sort of functional
+
+1052
+00:42:32,800 --> 00:42:35,000
+notation that I was mentioning is there's some built in
+
+1053
+00:42:35,000 --> 00:42:35,920
+things that we can type.
+
+1054
+00:42:35,920 --> 00:42:38,080
+So we can say max of two numbers.
+
+1055
+00:42:38,080 --> 00:42:41,040
+It's going to return the value that it's a maximum.
+
+1056
+00:42:41,040 --> 00:42:42,400
+The function notation just says,
+
+1057
+00:42:42,400 --> 00:42:44,040
+okay, there's something that we want to call
+
+1058
+00:42:44,040 --> 00:42:45,440
+and we're to separate these in parentheses
+
+1059
+00:42:45,440 --> 00:42:47,040
+and put some commas between these things.
+
+1060
+00:42:47,040 --> 00:42:48,880
+This is how Python more or less knows
+
+1061
+00:42:48,880 --> 00:42:50,960
+that we're doing a function call.
+
+1062
+00:42:50,960 --> 00:42:55,240
+We can do min, calculates minimum.
+
+1063
+00:42:55,240 --> 00:43:00,240
+And this is great null, but I claim that we can do
+
+1064
+00:43:01,560 --> 00:43:03,800
+everything in this function call notation.
+
+1065
+00:43:03,800 --> 00:43:05,960
+Right here we're not doing this with the addition.
+
+1066
+00:43:05,960 --> 00:43:10,200
+And it doesn't quite work that we can't just do this.
+
+1067
+00:43:10,200 --> 00:43:11,280
+It's going to give some strange error
+
+1068
+00:43:11,280 --> 00:43:12,840
+that doesn't quite make sense.
+
+1069
+00:43:12,840 --> 00:43:14,400
+We actually have to do it, it's kind of the way
+
+1070
+00:43:14,400 --> 00:43:17,600
+Python works, we have to run this line.
+
+1071
+00:43:20,760 --> 00:43:22,440
+And this is kind of the underlying behavior
+
+1072
+00:43:22,440 --> 00:43:24,080
+of how the addition and multiplication works
+
+1073
+00:43:24,080 --> 00:43:25,960
+and it allows us to do this other format.
+
+1074
+00:43:25,960 --> 00:43:27,560
+So we can now add things together,
+
+1075
+00:43:27,560 --> 00:43:30,440
+we can multiply things together, let me.
+
+1076
+00:43:32,760 --> 00:43:36,040
+And another thing we can do is if you've ever seen
+
+1077
+00:43:36,040 --> 00:43:39,480
+in mathematics where we do multiple values
+
+1078
+00:43:39,480 --> 00:43:40,520
+in a particular function,
+
+1079
+00:43:40,520 --> 00:43:42,840
+we can actually just separate them in more commas.
+
+1080
+00:43:44,280 --> 00:43:45,840
+We'll get more values.
+
+1081
+00:43:45,840 --> 00:43:55,640
+We can also nest them, and it'll automatically figure out
+
+1082
+00:43:55,640 --> 00:43:58,320
+the order of evaluation based on the nesting structure.
+
+1083
+00:43:58,320 --> 00:44:00,280
+And so the nice part about using this call
+
+1084
+00:44:00,280 --> 00:44:04,360
+expression notation is it's very clear what goes where.
+
+1085
+00:44:04,360 --> 00:44:06,920
+We are going to evaluate the multiplication of 4 and 56
+
+1086
+00:44:06,920 --> 00:44:08,520
+before we add to do it.
+
+1087
+00:44:08,520 --> 00:44:10,480
+We're going to figure out what our validation is
+
+1088
+00:44:10,480 --> 00:44:13,360
+before we max that in the other addition.
+
+1089
+00:44:13,360 --> 00:44:15,680
+And sort of this nested structure makes it very clear.
+
+1090
+00:44:15,680 --> 00:44:17,600
+In the first lines that we're doing,
+
+1091
+00:44:17,600 --> 00:44:20,240
+you have to kind of know the order of operations
+
+1092
+00:44:20,240 --> 00:44:22,160
+of mathematics, and maybe you're too lazy
+
+1093
+00:44:22,160 --> 00:44:23,160
+and you don't remember that.
+
+1094
+00:44:23,160 --> 00:44:25,200
+Having this sort of consistent notation
+
+1095
+00:44:25,200 --> 00:44:28,400
+is very nice for program languages as well as computers
+
+1096
+00:44:28,400 --> 00:44:29,960
+because it just follows a simple set of rules
+
+1097
+00:44:29,960 --> 00:44:31,640
+and it'll figure out what it is.
+
+1098
+00:44:35,680 --> 00:44:37,080
+Are there any questions about that?
+
+1099
+00:44:40,320 --> 00:44:41,320
+All right, cool.
+
+1100
+00:44:41,320 --> 00:44:42,480
+Thank you.
+
+1101
+00:44:42,480 --> 00:44:43,640
+I don't know how to get back.
+
+1102
+00:44:43,640 --> 00:44:45,320
+Maybe.
+
+1103
+00:44:45,320 --> 00:44:48,200
+OK, so call expressions itself.
+
+1104
+00:44:48,200 --> 00:44:50,240
+We're going to look kind of like how they're formatted
+
+1105
+00:44:50,240 --> 00:44:51,480
+and how they work.
+
+1106
+00:44:51,480 --> 00:44:55,400
+So a general call expression here, we're saying add 2 and 3.
+
+1107
+00:44:55,400 --> 00:44:56,960
+This whole thing is what we call a call expression.
+
+1108
+00:44:56,960 --> 00:44:59,200
+The way you kind of know there's the name of the function.
+
+1109
+00:44:59,200 --> 00:45:00,120
+There's some parentheses.
+
+1110
+00:45:00,120 --> 00:45:02,680
+There's some values separated by commas.
+
+1111
+00:45:02,680 --> 00:45:05,560
+Some terminology we call add the operator.
+
+1112
+00:45:05,560 --> 00:45:07,680
+This is the thing that we're operating on the values.
+
+1113
+00:45:07,680 --> 00:45:09,480
+Add will do the addition.
+
+1114
+00:45:09,480 --> 00:45:11,240
+And the other things are calling operands.
+
+1115
+00:45:11,240 --> 00:45:13,080
+So operators apply to operands.
+
+1116
+00:45:13,080 --> 00:45:14,440
+We're applying add 2 and 3.
+
+1117
+00:45:18,040 --> 00:45:20,440
+In this case, it's not a particularly complex call
+
+1118
+00:45:20,440 --> 00:45:22,280
+expression, but in the case that we saw in the demo,
+
+1119
+00:45:22,280 --> 00:45:23,520
+we saw nested structures.
+
+1120
+00:45:23,520 --> 00:45:26,480
+So each of these values can also be expressions themselves.
+
+1121
+00:45:26,480 --> 00:45:29,000
+Instead of two, I could have said mole 5 and 6.
+
+1122
+00:45:29,000 --> 00:45:30,720
+And I could have had some other value.
+
+1123
+00:45:30,720 --> 00:45:32,160
+And it needs to sort of figure out these values
+
+1124
+00:45:32,160 --> 00:45:35,680
+before it does this kind of application.
+
+1125
+00:45:35,680 --> 00:45:38,400
+The exact way that Python goes about this
+
+1126
+00:45:38,400 --> 00:45:40,960
+is the first thing it does is it sees this as a call
+
+1127
+00:45:40,960 --> 00:45:43,520
+expression, it says, all right, I want to figure out
+
+1128
+00:45:43,520 --> 00:45:44,880
+what this evaluates to.
+
+1129
+00:45:44,880 --> 00:45:47,080
+So the first thing I'm going to do is figure out
+
+1130
+00:45:47,080 --> 00:45:48,720
+what is the operator?
+
+1131
+00:45:48,720 --> 00:45:50,560
+In this case, it's just looking up what add is.
+
+1132
+00:45:50,560 --> 00:45:53,240
+It says, OK, this is some thing that does addition,
+
+1133
+00:45:53,240 --> 00:45:56,040
+takes some numbers, and adds them together.
+
+1134
+00:45:56,040 --> 00:45:57,560
+The next thing it does is it goes through each of the
+
+1135
+00:45:57,560 --> 00:45:58,040
+operands.
+
+1136
+00:45:58,040 --> 00:45:59,920
+These are the arguments that we're plugging in.
+
+1137
+00:45:59,920 --> 00:46:02,840
+It figures out what 2 is, it figures out what 3 is.
+
+1138
+00:46:02,840 --> 00:46:04,440
+Now that we've kind of figured out all these values,
+
+1139
+00:46:04,440 --> 00:46:06,160
+and the reason why we're doing this is because in the case
+
+1140
+00:46:06,160 --> 00:46:08,640
+I mentioned, if 2 is instead mole 4 and 5,
+
+1141
+00:46:08,640 --> 00:46:11,520
+we have to figure out what 4 times 5 is before we can add
+
+1142
+00:46:11,520 --> 00:46:15,040
+4 times 5 and 3.
+
+1143
+00:46:15,040 --> 00:46:16,560
+Once we've figured out all these values,
+
+1144
+00:46:16,560 --> 00:46:18,760
+we can actually do this application.
+
+1145
+00:46:18,760 --> 00:46:21,520
+So we know what addition is.
+
+1146
+00:46:21,520 --> 00:46:23,320
+We know what 2 and 3 is.
+
+1147
+00:46:23,320 --> 00:46:26,080
+So now we can actually add 2 and 3 according to how
+
+1148
+00:46:26,080 --> 00:46:28,920
+addition works.
+
+1149
+00:46:28,920 --> 00:46:32,520
+By following this very precise sort of set of rules,
+
+1150
+00:46:32,520 --> 00:46:35,000
+it allows us to understand how computers are going about
+
+1151
+00:46:35,000 --> 00:46:39,000
+to calculate any arbitrary sort of value.
+
+1152
+00:46:39,000 --> 00:46:42,520
+And because it's so simple, and it's these sort of three
+
+1153
+00:46:42,520 --> 00:46:45,800
+relatively simple steps, computers can follow this
+
+1154
+00:46:45,800 --> 00:46:47,320
+relatively quickly.
+
+1155
+00:46:47,320 --> 00:46:49,120
+It says, all right, I don't have to really think about how
+
+1156
+00:46:49,120 --> 00:46:50,000
+this is structured.
+
+1157
+00:46:50,000 --> 00:46:51,600
+Do this step, this step, and then this step,
+
+1158
+00:46:51,600 --> 00:46:54,600
+and I'll have the result.
+
+1159
+00:46:54,600 --> 00:46:55,760
+So we're going to look at an example.
+
+1160
+00:46:55,760 --> 00:47:03,080
+So it's add, we're adding 6 and 4 times 6 as well as 3 times 5.
+
+1161
+00:47:03,080 --> 00:47:05,960
+So as people, the way we kind of approach this
+
+1162
+00:47:05,960 --> 00:47:08,200
+is we look from the inside out.
+
+1163
+00:47:08,200 --> 00:47:09,840
+The first thing that we're going to try and figure out
+
+1164
+00:47:09,840 --> 00:47:11,800
+is what's 4 times 6.
+
+1165
+00:47:11,800 --> 00:47:13,160
+We're going to get 24.
+
+1166
+00:47:13,160 --> 00:47:15,920
+Now after this, we're going to add 6 and 24.
+
+1167
+00:47:15,920 --> 00:47:16,760
+We're going to get 30.
+
+1168
+00:47:16,760 --> 00:47:19,280
+We're going to multiply 3 times 5, 15, and add these together.
+
+1169
+00:47:19,280 --> 00:47:21,840
+We're going to get 45.
+
+1170
+00:47:21,840 --> 00:47:25,280
+So when I look at this, I can quickly say, OK, what's the
+
+1171
+00:47:25,280 --> 00:47:26,760
+innermost call?
+
+1172
+00:47:26,760 --> 00:47:27,920
+OK, it's 4 times 6.
+
+1173
+00:47:27,920 --> 00:47:29,520
+So I should probably do that one first.
+
+1174
+00:47:29,520 --> 00:47:31,880
+You can also imagine saying, OK, I'll actually do 3 times 5.
+
+1175
+00:47:31,880 --> 00:47:34,320
+Then I'll do 4 times 6, and then I'll add them together,
+
+1176
+00:47:34,320 --> 00:47:38,000
+as long as we're kind of building up through the levels.
+
+1177
+00:47:38,000 --> 00:47:40,280
+Computers in Python can't quite do this.
+
+1178
+00:47:40,280 --> 00:47:42,480
+It needs to have a specific set of rules.
+
+1179
+00:47:42,480 --> 00:47:44,920
+And while we're kind of as people can look at the whole thing,
+
+1180
+00:47:44,920 --> 00:47:46,960
+kind of jump around and do whatever we want,
+
+1181
+00:47:46,960 --> 00:47:50,600
+programs need to follow a very specific set of rules.
+
+1182
+00:47:50,600 --> 00:47:53,160
+The way we would do this in sort of the following the 3 steps
+
+1183
+00:47:53,160 --> 00:47:55,760
+that we said before is we're going to follow these 3 steps.
+
+1184
+00:47:55,760 --> 00:47:57,520
+If I like to operator, the operands and apply.
+
+1185
+00:47:57,520 --> 00:47:59,560
+This is something that will be set a lot.
+
+1186
+00:47:59,560 --> 00:48:01,920
+I'm probably in discussion as well as lecture.
+
+1187
+00:48:01,920 --> 00:48:03,320
+And the process for this is here.
+
+1188
+00:48:03,320 --> 00:48:04,880
+We see a call expression.
+
+1189
+00:48:04,880 --> 00:48:05,960
+We're going to evaluate the operator.
+
+1190
+00:48:05,960 --> 00:48:07,160
+In this case, it's just addition.
+
+1191
+00:48:07,160 --> 00:48:09,160
+Nothing particularly complex.
+
+1192
+00:48:09,160 --> 00:48:10,600
+The next thing is the operand.
+
+1193
+00:48:10,600 --> 00:48:13,400
+We're going to add 6 and multiplication of 4 and 6.
+
+1194
+00:48:13,400 --> 00:48:15,080
+We have to figure out what this is before we can actually
+
+1195
+00:48:15,080 --> 00:48:17,680
+do the top level addition.
+
+1196
+00:48:17,680 --> 00:48:20,360
+To figure out what this value is, we have to repeat the set.
+
+1197
+00:48:20,360 --> 00:48:21,760
+Evaluate the operator.
+
+1198
+00:48:21,760 --> 00:48:22,640
+Evaluate the operand.
+
+1199
+00:48:22,640 --> 00:48:23,640
+In this case, it's 6.
+
+1200
+00:48:23,640 --> 00:48:25,080
+So we just get 6.
+
+1201
+00:48:25,080 --> 00:48:26,480
+And we repeat the process.
+
+1202
+00:48:26,480 --> 00:48:30,040
+We evaluate the operator, the operand, and the operand.
+
+1203
+00:48:30,040 --> 00:48:32,040
+Now for this sub-expression, mole 4 and 6,
+
+1204
+00:48:32,040 --> 00:48:35,120
+we figured out the first 2 steps.
+
+1205
+00:48:35,120 --> 00:48:37,200
+We've added, we figured out what the operator is.
+
+1206
+00:48:37,200 --> 00:48:38,640
+We figured out what the operands.
+
+1207
+00:48:38,640 --> 00:48:40,440
+We can now do this final step of applying things.
+
+1208
+00:48:40,440 --> 00:48:42,960
+We can say multiplication 4 times 6, the 24.
+
+1209
+00:48:42,960 --> 00:48:45,600
+We'll kind of go up this tree structure.
+
+1210
+00:48:45,600 --> 00:48:47,240
+Because it's like branching out.
+
+1211
+00:48:47,240 --> 00:48:48,920
+Then we'll say 6 plus 30.
+
+1212
+00:48:48,920 --> 00:48:50,760
+Now to figure out the top level, we have to kind of go
+
+1213
+00:48:50,760 --> 00:48:53,200
+through this again.
+
+1214
+00:48:53,200 --> 00:48:54,440
+And so this is how computers are actually
+
+1215
+00:48:54,440 --> 00:48:57,240
+going about solving these, like you've given instruction.
+
+1216
+00:48:57,240 --> 00:48:58,800
+It says, all right, let's compute this value.
+
+1217
+00:48:58,800 --> 00:49:00,520
+And this is a process that it's going through.
+
+1218
+00:49:00,520 --> 00:49:03,400
+It says, first, let's look at the uppermost level.
+
+1219
+00:49:03,400 --> 00:49:04,600
+All right, what are we looking at?
+
+1220
+00:49:04,600 --> 00:49:05,600
+A call expression.
+
+1221
+00:49:05,600 --> 00:49:06,720
+All right, let's look at the operator.
+
+1222
+00:49:06,720 --> 00:49:07,520
+Let's look at the operands.
+
+1223
+00:49:07,520 --> 00:49:08,640
+Let's kind of go through this structure
+
+1224
+00:49:08,640 --> 00:49:10,480
+and to figure out all of the possible values.
+
+1225
+00:49:10,480 --> 00:49:14,120
+And we kind of resolved ultimately what we're trying to do.
+
+1226
+00:49:14,120 --> 00:49:16,600
+There's whole things called an expression tree,
+
+1227
+00:49:16,600 --> 00:49:19,920
+where we have each of the things being the expressions.
+
+1228
+00:49:19,920 --> 00:49:21,360
+And they break into sub-expressions.
+
+1229
+00:49:21,360 --> 00:49:25,640
+And each of these evaluate to some particular value.
+
+1230
+00:49:25,640 --> 00:49:26,800
+Are there any questions about this?
+
+1231
+00:49:32,040 --> 00:49:33,000
+Cool.
+
+1232
+00:49:33,000 --> 00:49:35,680
+And then we're going to do another demo.
+
+1233
+00:49:35,680 --> 00:49:38,240
+Thank you.
+
+1234
+00:49:38,240 --> 00:49:40,280
+OK, so a couple of concepts in this course
+
+1235
+00:49:40,280 --> 00:49:42,560
+are functions, values, objects, interpreters, and data.
+
+1236
+00:49:42,560 --> 00:49:43,960
+So you've seen the interpreter.
+
+1237
+00:49:43,960 --> 00:49:45,320
+That's the type of interpreter.
+
+1238
+00:49:45,320 --> 00:49:46,240
+We can type in things.
+
+1239
+00:49:46,240 --> 00:49:47,920
+It evaluates things.
+
+1240
+00:49:47,920 --> 00:49:49,520
+I mentioned functions like add and mole.
+
+1241
+00:49:49,520 --> 00:49:50,880
+Values are like numbers.
+
+1242
+00:49:50,880 --> 00:49:55,280
+And we'll see a little bit of objects in data.
+
+1243
+00:49:55,280 --> 00:49:57,480
+In this demo, I'm going to be using some things
+
+1244
+00:49:57,480 --> 00:49:59,000
+that we haven't taught.
+
+1245
+00:49:59,000 --> 00:50:00,880
+But the point is not too confusing.
+
+1246
+00:50:00,880 --> 00:50:04,320
+The point is just if we had to introduce all these concepts,
+
+1247
+00:50:04,320 --> 00:50:07,360
+it would get to a cool demo in the first day.
+
+1248
+00:50:07,360 --> 00:50:08,840
+So we want to do that.
+
+1249
+00:50:08,840 --> 00:50:10,320
+So I'm just going to kind of do some things.
+
+1250
+00:50:10,320 --> 00:50:11,600
+You aren't going to have to understand everything.
+
+1251
+00:50:11,600 --> 00:50:13,000
+If you come back maybe later in this semester,
+
+1252
+00:50:13,000 --> 00:50:14,560
+some of these might make more sense.
+
+1253
+00:50:14,560 --> 00:50:19,600
+OK, so a long time ago, there is this author Shakespeare.
+
+1254
+00:50:19,600 --> 00:50:22,800
+I have a file on my computer.
+
+1255
+00:50:22,800 --> 00:50:24,440
+Actually, I think I need to.
+
+1256
+00:50:34,280 --> 00:50:35,080
+Nope.
+
+1257
+00:50:35,080 --> 00:50:36,280
+I misspelled Shakespeare.
+
+1258
+00:50:36,280 --> 00:50:37,320
+All right.
+
+1259
+00:50:37,320 --> 00:50:39,160
+Cool.
+
+1260
+00:50:39,160 --> 00:50:41,600
+So what this is, is this is a text document with a bunch,
+
+1261
+00:50:41,600 --> 00:50:43,760
+or I think all of Shakespeare's writings.
+
+1262
+00:50:43,760 --> 00:50:46,440
+So we can get the particular values,
+
+1263
+00:50:46,440 --> 00:50:48,480
+so we can read the data from this file,
+
+1264
+00:50:48,480 --> 00:50:49,720
+and then we can split these into words.
+
+1265
+00:50:52,920 --> 00:50:55,200
+This is going to be common.
+
+1266
+00:50:55,200 --> 00:50:56,560
+OK.
+
+1267
+00:50:56,560 --> 00:50:58,800
+So what is in this?
+
+1268
+00:50:58,800 --> 00:51:02,040
+We go to the first 25 words, and we see the first play,
+
+1269
+00:51:02,040 --> 00:51:02,920
+at least in this document.
+
+1270
+00:51:02,920 --> 00:51:03,840
+And it's a very nice game.
+
+1271
+00:51:03,840 --> 00:51:07,360
+That's the first words, and it tells the play itself.
+
+1272
+00:51:07,360 --> 00:51:10,080
+OK, so we can ask Python how many words are in Shakespeare?
+
+1273
+00:51:10,080 --> 00:51:12,920
+OK.
+
+1274
+00:51:12,920 --> 00:51:16,360
+So there's 980,000 words in all of the text of Shakespeare.
+
+1275
+00:51:16,360 --> 00:51:18,520
+If we're going to do this manually, it's take a long time.
+
+1276
+00:51:18,520 --> 00:51:21,440
+But Python did this pretty quick.
+
+1277
+00:51:21,440 --> 00:51:22,560
+So this is pretty impressive.
+
+1278
+00:51:22,560 --> 00:51:26,160
+But let's actually take a closer look.
+
+1279
+00:51:26,160 --> 00:51:28,840
+So let's ask, OK, how many of these words to Shakespeare write
+
+1280
+00:51:28,840 --> 00:51:30,760
+are actually the word the?
+
+1281
+00:51:30,760 --> 00:51:34,400
+So it turns out 23,000 of every word that Shakespeare wrote
+
+1282
+00:51:34,400 --> 00:51:35,320
+is just the word that is.
+
+1283
+00:51:35,320 --> 00:51:41,960
+So that's about 2%, something like that.
+
+1284
+00:51:41,960 --> 00:51:45,640
+I don't think we can look at is, if you notice, in the first line,
+
+1285
+00:51:45,640 --> 00:51:46,760
+we see a bunch of commas.
+
+1286
+00:51:46,760 --> 00:51:50,120
+So because of the way I split this, commas are also considered words.
+
+1287
+00:51:50,120 --> 00:51:53,600
+So let's actually look at how many commas there are.
+
+1288
+00:51:53,600 --> 00:51:57,680
+So there's actually 81,000 commas just in Shakespeare.
+
+1289
+00:51:57,680 --> 00:51:58,600
+So that's how many words are.
+
+1290
+00:51:58,600 --> 00:52:00,600
+We can figure out exactly what percentages
+
+1291
+00:52:00,600 --> 00:52:03,600
+by dividing this by how many words there are.
+
+1292
+00:52:03,600 --> 00:52:06,080
+We get about 8% of Shakespeare's just commas.
+
+1293
+00:52:08,920 --> 00:52:11,360
+And I think we do say, OK, there's a lot of repeats.
+
+1294
+00:52:11,360 --> 00:52:12,600
+Clearly, there's a lot of does.
+
+1295
+00:52:12,600 --> 00:52:13,840
+But maybe we're only interested in looking
+
+1296
+00:52:13,840 --> 00:52:15,960
+at the particular unique words.
+
+1297
+00:52:15,960 --> 00:52:18,520
+So the way we can do that is we can say, all right, only
+
+1298
+00:52:18,520 --> 00:52:24,200
+with unique words from Shakespeare.
+
+1299
+00:52:24,200 --> 00:52:30,000
+And now we can check, OK, is that in the words that Shakespeare has?
+
+1300
+00:52:30,000 --> 00:52:31,520
+Yeah, so it is.
+
+1301
+00:52:31,520 --> 00:52:33,240
+All right, how many words, unique words
+
+1302
+00:52:33,240 --> 00:52:34,360
+does Shakespeare use?
+
+1303
+00:52:34,360 --> 00:52:37,520
+OK, they have 33,000 unique words in Shakespeare.
+
+1304
+00:52:37,520 --> 00:52:39,520
+That's a lot.
+
+1305
+00:52:39,520 --> 00:52:44,360
+Another thing we can do is we can do some string manipulation.
+
+1306
+00:52:44,360 --> 00:52:48,280
+So here, if I put this thing in quotes,
+
+1307
+00:52:48,280 --> 00:52:49,680
+this is way Python says, all right,
+
+1308
+00:52:49,680 --> 00:52:53,440
+we're just going to type this string of characters in a word.
+
+1309
+00:52:53,440 --> 00:52:56,040
+Another thing we can do is we can actually reverse words.
+
+1310
+00:52:56,040 --> 00:52:57,480
+So now it's word.
+
+1311
+00:52:57,480 --> 00:52:58,200
+Oh, that's interesting.
+
+1312
+00:52:58,200 --> 00:53:00,920
+John Ward are both actually words.
+
+1313
+00:53:00,920 --> 00:53:04,680
+So maybe we can look in Shakespeare, which words are also
+
+1314
+00:53:04,680 --> 00:53:05,880
+inside of their reverse.
+
+1315
+00:53:05,880 --> 00:53:11,640
+So the way we do that is we're going to look over all the words.
+
+1316
+00:53:11,640 --> 00:53:13,320
+You don't have to understand what I'm doing right here.
+
+1317
+00:53:17,320 --> 00:53:19,680
+Yeah, OK, I guess that's a good point.
+
+1318
+00:53:19,680 --> 00:53:21,240
+We're going to clarify the goal of this.
+
+1319
+00:53:21,240 --> 00:53:26,000
+The goal is to show that Shakespeare has a lot of words.
+
+1320
+00:53:26,000 --> 00:53:30,240
+And the power of computers, it allows us to go through things
+
+1321
+00:53:30,240 --> 00:53:35,160
+automatically in order to see a lot of analysis and sort of data
+
+1322
+00:53:35,160 --> 00:53:37,440
+that would be really painful to do manually.
+
+1323
+00:53:37,440 --> 00:53:41,040
+Computers do this almost instantly and basically instantly.
+
+1324
+00:53:41,040 --> 00:53:43,440
+Well, if we were to do this manually, you'd take a long time.
+
+1325
+00:53:43,440 --> 00:53:45,200
+And so we can leverage the power of computers
+
+1326
+00:53:45,200 --> 00:53:46,680
+to sort of do this analysis on data, which
+
+1327
+00:53:46,680 --> 00:53:48,920
+was the other topic in this course.
+
+1328
+00:53:48,920 --> 00:53:51,760
+We've also seen sets, which are actually objects.
+
+1329
+00:53:51,760 --> 00:53:53,080
+And you can make believe these.
+
+1330
+00:53:53,080 --> 00:53:54,840
+We'll kind of cover each of these concepts
+
+1331
+00:53:54,840 --> 00:53:58,480
+that I mentioned a little bit more in depth throughout the course.
+
+1332
+00:53:58,480 --> 00:54:09,080
+OK, so here, I'm looking at all the words that are also
+
+1333
+00:54:09,080 --> 00:54:10,080
+the reverse of the words.
+
+1334
+00:54:10,080 --> 00:54:12,960
+So this is going to be palindroms, I guess.
+
+1335
+00:54:17,040 --> 00:54:19,560
+So we see all of the palindroms and Shakespeare, which
+
+1336
+00:54:19,560 --> 00:54:21,800
+are length greater than four, or these ones.
+
+1337
+00:54:21,800 --> 00:54:25,160
+So writer is also a writer, level is level.
+
+1338
+00:54:25,160 --> 00:54:30,480
+One of the thing we can do is we can look in Shakespeare.
+
+1339
+00:54:30,480 --> 00:54:34,320
+Maybe we only care about if the word is actually also in the words.
+
+1340
+00:54:37,640 --> 00:54:40,360
+So here, we're looking at all the words of length four,
+
+1341
+00:54:40,360 --> 00:54:42,760
+that when you take the word, you reverse it.
+
+1342
+00:54:42,760 --> 00:54:44,880
+It's also in Shakespeare.
+
+1343
+00:54:44,880 --> 00:54:53,440
+So let's see, there's, I don't know if these are words.
+
+1344
+00:54:53,440 --> 00:54:57,120
+I'm not quite.
+
+1345
+00:54:57,120 --> 00:54:59,840
+OK, gums and smug.
+
+1346
+00:54:59,840 --> 00:55:00,360
+Oh, snug.
+
+1347
+00:55:00,360 --> 00:55:01,280
+Oh, no, these are words.
+
+1348
+00:55:01,280 --> 00:55:02,680
+OK, move and pull.
+
+1349
+00:55:02,680 --> 00:55:03,720
+Yes, OK.
+
+1350
+00:55:03,720 --> 00:55:05,760
+This is why I guess the computer science major.
+
+1351
+00:55:05,760 --> 00:55:10,480
+OK, we can also look at length five.
+
+1352
+00:55:10,480 --> 00:55:11,600
+So we have some more.
+
+1353
+00:55:11,600 --> 00:55:14,040
+We can look at length six, all right.
+
+1354
+00:55:14,040 --> 00:55:15,320
+There's still some more.
+
+1355
+00:55:15,320 --> 00:55:16,840
+Are there seven?
+
+1356
+00:55:16,840 --> 00:55:17,760
+So there's no more.
+
+1357
+00:55:17,760 --> 00:55:20,800
+Are there any more greater than seven?
+
+1358
+00:55:20,800 --> 00:55:22,200
+OK.
+
+1359
+00:55:22,200 --> 00:55:24,080
+So we're kind of in our adoptions.
+
+1360
+00:55:24,080 --> 00:55:26,760
+And the reason for this is Shakespeare didn't use all of the words
+
+1361
+00:55:26,760 --> 00:55:27,760
+of the English dictionary.
+
+1362
+00:55:27,760 --> 00:55:31,720
+We can also actually load in, let's see.
+
+1363
+00:55:31,720 --> 00:55:34,720
+I need to figure out the document.
+
+1364
+00:55:34,720 --> 00:55:37,120
+So on my computer, I have a file.
+
+1365
+00:55:37,120 --> 00:55:39,080
+You don't have to understand this.
+
+1366
+00:55:39,080 --> 00:56:02,760
+OK, so now I've loaded in the dictionary of all of the words
+
+1367
+00:56:02,760 --> 00:56:04,880
+on my computer, at least in this one dictionary.
+
+1368
+00:56:04,880 --> 00:56:10,360
+So now, look at the length of words, there's now 102,000.
+
+1369
+00:56:10,360 --> 00:56:13,880
+So originally we had, I think, 30-ish,000.
+
+1370
+00:56:13,880 --> 00:56:17,360
+So we've increased the number of words by a lot.
+
+1371
+00:56:17,360 --> 00:56:19,240
+So we can do things like, OK, what
+
+1372
+00:56:19,240 --> 00:56:23,240
+is the longest word in this list of words or a set of words?
+
+1373
+00:56:23,240 --> 00:56:25,600
+We can take all the words.
+
+1374
+00:56:25,600 --> 00:56:27,200
+We can say, all right, what I care about
+
+1375
+00:56:27,200 --> 00:56:29,640
+is the length of these.
+
+1376
+00:56:29,640 --> 00:56:31,360
+OK, so this is the longest word in the dictionary.
+
+1377
+00:56:31,360 --> 00:56:35,880
+Oh, I'm not going to try to pronounce that.
+
+1378
+00:56:35,880 --> 00:56:37,880
+We can also look alphabetically.
+
+1379
+00:56:37,880 --> 00:56:40,720
+We can say, OK, what's the last word in the dictionary alphabetically?
+
+1380
+00:56:40,720 --> 00:56:41,760
+We get it toads.
+
+1381
+00:56:45,680 --> 00:56:46,800
+Let's see, what else can we do?
+
+1382
+00:56:46,800 --> 00:56:49,680
+We can go back to the original thing we had.
+
+1383
+00:56:49,680 --> 00:56:55,480
+We're saying all the words, which also have reverses in it,
+
+1384
+00:56:55,480 --> 00:56:56,960
+which are length 6.
+
+1385
+00:56:56,960 --> 00:56:58,360
+So we see there's a little bit more words.
+
+1386
+00:56:58,360 --> 00:56:59,760
+And then we can, again, are there
+
+1387
+00:56:59,760 --> 00:57:00,920
+anyone's greater than 6?
+
+1388
+00:57:00,920 --> 00:57:03,520
+So in this case, we actually have more of these.
+
+1389
+00:57:03,520 --> 00:57:16,160
+So stressed and desir, desir, oh, OK, OK, so we can actually,
+
+1390
+00:57:16,160 --> 00:57:20,480
+for example, we could say, OK, what is the largest word?
+
+1391
+00:57:20,480 --> 00:57:30,960
+Such that.
+
+1392
+00:57:30,960 --> 00:57:34,880
+So we're looking at the longest word
+
+1393
+00:57:34,880 --> 00:57:39,200
+in this set of words, such that the reverses in it.
+
+1394
+00:57:39,200 --> 00:57:40,520
+And we get stressed and desir.
+
+1395
+00:57:40,520 --> 00:57:41,020
+Cool.
+
+1396
+00:57:43,520 --> 00:57:46,240
+OK, so this is kind of all I have for this.
+
+1397
+00:57:46,240 --> 00:57:48,440
+Are there any other things you guys would be interested in looking at
+
+1398
+00:57:48,440 --> 00:57:51,160
+what we could do in this sort of data set?
+
+1399
+00:57:51,160 --> 00:57:57,240
+Maybe like looking up words that are, I don't know,
+
+1400
+00:57:57,240 --> 00:57:58,200
+are there any ideas?
+
+1401
+00:57:58,200 --> 00:57:58,680
+Yeah.
+
+1402
+00:57:58,680 --> 00:58:00,040
+How many words start with A?
+
+1403
+00:58:00,040 --> 00:58:01,240
+How many words start with A?
+
+1404
+00:58:01,240 --> 00:58:11,440
+OK, so we could take how many words, if the first letter is A?
+
+1405
+00:58:11,440 --> 00:58:13,360
+So 4,600, so many things.
+
+1406
+00:58:13,360 --> 00:58:18,400
+And then I think, yeah, so some of these, let's say,
+
+1407
+00:58:18,400 --> 00:58:36,120
+let's say, this, except now, we're going to look at that for.
+
+1408
+00:58:36,120 --> 00:58:40,400
+OK, so 6,000 words, ignoring capitalization, start with A.
+
+1409
+00:58:40,400 --> 00:58:41,280
+Any other guess?
+
+1410
+00:58:41,280 --> 00:58:41,800
+Yeah.
+
+1411
+00:58:41,800 --> 00:58:43,440
+Is there a simple way in it?
+
+1412
+00:58:43,440 --> 00:58:46,160
+So instead, in that stop-up, I mean,
+
+1413
+00:58:46,160 --> 00:58:48,640
+that's stressed and dessert is another thing,
+
+1414
+00:58:48,640 --> 00:58:53,360
+versus avoiding A, so that those between ones won't be there.
+
+1415
+00:58:53,360 --> 00:58:57,760
+So we only care about, so if there's a word like stress,
+
+1416
+00:58:57,760 --> 00:58:59,840
+you don't care about the inverse of it.
+
+1417
+00:58:59,840 --> 00:59:04,960
+Yeah, so in other words, you can do that is back in this one.
+
+1418
+00:59:04,960 --> 00:59:06,800
+Not this one.
+
+1419
+00:59:06,800 --> 00:59:09,760
+So another thing we can say is, I can't hear a people if you want this
+
+1420
+00:59:09,760 --> 00:59:10,160
+too.
+
+1421
+00:59:10,160 --> 00:59:11,160
+Oh, yeah.
+
+1422
+00:59:11,160 --> 00:59:11,720
+Thank you.
+
+1423
+00:59:11,720 --> 00:59:14,480
+He asked, is there anything we could exclude the reverse of the
+
+1424
+00:59:14,480 --> 00:59:14,680
+word?
+
+1425
+00:59:14,680 --> 00:59:17,280
+So we got stressed, but maybe we don't want desserts as well.
+
+1426
+00:59:17,280 --> 00:59:18,680
+Or maybe we want desserts, but not stressed, if you don't
+
+1427
+00:59:18,680 --> 00:59:20,080
+want to reverse.
+
+1428
+00:59:20,080 --> 00:59:29,560
+So the way you can do that is we can say, and we only care
+
+1429
+00:59:29,560 --> 00:59:33,200
+about the one that is actually smaller alphabetically.
+
+1430
+00:59:33,200 --> 00:59:36,440
+So we get two of them.
+
+1431
+00:59:36,440 --> 00:59:36,880
+Cool.
+
+1432
+00:59:36,880 --> 00:59:38,400
+So this actually excluded palindromes.
+
+1433
+00:59:38,400 --> 00:59:43,040
+We can actually say less than or equal if we care about palindromes.
+
+1434
+00:59:43,040 --> 00:59:43,560
+Cool.
+
+1435
+00:59:43,560 --> 00:59:46,640
+Because deified is also the reverse.
+
+1436
+00:59:46,640 --> 00:59:47,640
+Yeah.
+
+1437
+00:59:47,640 --> 00:59:50,600
+How is the number that's not had out for this?
+
+1438
+00:59:50,600 --> 00:59:51,640
+Do you know what that is?
+
+1439
+00:59:51,640 --> 00:59:52,640
+Do you know what that is?
+
+1440
+00:59:52,640 --> 00:59:54,640
+That's what that is.
+
+1441
+00:59:54,640 --> 00:59:57,280
+That's what the word is.
+
+1442
+00:59:57,280 --> 01:00:02,760
+Um, I'm interested in what are the words that
+
+1443
+01:00:02,760 --> 01:00:06,320
+store the capital H or the lower key say?
+
+1444
+01:00:06,320 --> 01:00:18,200
+This might elucidate something.
+
+1445
+01:00:18,200 --> 01:00:21,920
+There's a lot.
+
+1446
+01:00:21,920 --> 01:00:33,880
+Oh, so the reason why is let's look at...
+
+1447
+01:00:33,880 --> 01:00:37,240
+So some of these words like arctic also have the capitalization.
+
+1448
+01:00:37,240 --> 01:00:39,120
+So when we lowercase them, we don't care about the ones
+
+1449
+01:00:39,120 --> 01:00:40,120
+that we're also duplicated.
+
+1450
+01:00:40,120 --> 01:00:44,160
+Any other ideas?
+
+1451
+01:00:44,160 --> 01:00:45,160
+Yeah.
+
+1452
+01:00:45,160 --> 01:00:47,440
+Most number of vowels.
+
+1453
+01:00:47,440 --> 01:00:48,440
+Most number of vowels.
+
+1454
+01:00:48,440 --> 01:00:49,440
+Okay.
+
+1455
+01:00:49,440 --> 01:00:54,480
+So we can say, um, we're going to max over the words, uh, you
+
+1456
+01:00:54,480 --> 01:00:59,800
+don't need to know what this means, uh, I'm going to say...
+
+1457
+01:00:59,800 --> 01:01:00,800
+But you will see.
+
+1458
+01:01:00,800 --> 01:01:02,240
+You'll be able to understand all of this.
+
+1459
+01:01:02,240 --> 01:01:03,240
+Yes.
+
+1460
+01:01:03,240 --> 01:01:22,360
+And we want to, um, uh, one for W in X if, uh, let's see, uh,
+
+1461
+01:01:22,360 --> 01:01:44,960
+so this is the word that has the most, uh, like the word that has the most, uh,
+
+1462
+01:01:44,960 --> 01:01:56,920
+the most repeating single letter, um, so we can say, we want the maximum word where the
+
+1463
+01:01:56,920 --> 01:02:03,320
+key is equal to, well, okay, so we can do it with a specific vowel.
+
+1464
+01:02:03,320 --> 01:02:09,280
+So if I said which one has the most ease, we get teleconference, it's a X, which one
+
+1465
+01:02:09,280 --> 01:02:17,600
+has the most X's, X ons, not quite sure how you do with all of the letters, though.
+
+1466
+01:02:17,600 --> 01:02:22,680
+Yeah, you'd have to kind of go through all the letters and then get the maximum over
+
+1467
+01:02:22,680 --> 01:02:23,680
+all of those.
+
+1468
+01:02:23,680 --> 01:02:27,240
+So we'd have to sit here and type a long string with the whole alphabet.
+
+1469
+01:02:27,240 --> 01:02:31,280
+We could do it, but it'll take a while.
+
+1470
+01:02:31,280 --> 01:03:00,000
+Oh, yeah, he's saying like, um, he's saying to the subtract the set of unique letters
+
+1471
+01:03:00,000 --> 01:03:05,760
+from the length of the word, um, because then you'll have a, but like, I think that that
+
+1472
+01:03:05,760 --> 01:03:06,760
+version, right?
+
+1473
+01:03:06,760 --> 01:03:11,480
+So if you have two letters that both repeat a lot, you want to certainly get the one word
+
+1474
+01:03:11,480 --> 01:03:15,000
+with the most repeats of the same letter, right?
+
+1475
+01:03:15,000 --> 01:03:19,760
+Like, okay, basically the probably isn't easy way to do this, but we don't know if the
+
+1476
+01:03:19,760 --> 01:03:35,360
+top of our head, but I think that approach would, I mean, yeah, you could say, oh, my
+
+1477
+01:03:35,360 --> 01:04:03,360
+God, okay, so I'm iterating over all the letters and I'm saying, and now it's intact.
+
+1478
+01:04:03,360 --> 01:04:21,720
+Oh, no, I don't need this, nope, generics, oh, okay, I see, I have the most A's, I guess,
+
+1479
+01:04:21,720 --> 01:04:29,040
+wait, that's like not that many A's, I think maybe it's a lot of A's, yeah, I guess I
+
+1480
+01:04:29,040 --> 01:04:41,120
+guess it's a lot of A's, yeah, use a regular expression, maybe, I'm not very good at
+
+1481
+01:04:41,120 --> 01:04:54,720
+regular expression, okay, cool, yes, I can hold it up for you, cool.
+
+1482
+01:04:54,720 --> 01:04:57,680
+So I guess the purpose is going to show you some neat things you can do in Python, you
+
+1483
+01:04:57,680 --> 01:05:02,120
+can actually download the Shakespeare text, it's in the textbook, I think it's one of the
+
+1484
+01:05:02,120 --> 01:05:05,960
+first links, if you go to the 1.1 chapter, if you want to mess around with it yourself,
+
+1485
+01:05:05,960 --> 01:05:11,000
+it's just kind of show you the neat things you can do in Python, what kind of moving on
+
+1486
+01:05:11,000 --> 01:05:14,560
+to some other kind of building up and maybe by the end of the semester, you kind of understand
+
+1487
+01:05:14,560 --> 01:05:20,320
+all the specific things that we've done and how you might approach these for yourself.
+
+1488
+01:05:20,320 --> 01:05:34,680
+Anyway, tomorrow, thank you all for coming, we'll be up here if you have any questions.
+
+1489
+01:05:34,680 --> 01:05:57,320
+Thank you.
+

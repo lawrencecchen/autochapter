@@ -1,0 +1,4180 @@
+1
+00:00:00,000 --> 00:00:02,680
+So today we're going to be doing a software engineering lecture.
+
+2
+00:00:02,680 --> 00:00:04,280
+This is a somewhat of an experiment.
+
+3
+00:00:04,280 --> 00:00:06,760
+So I'm going to give you some backscorian why it's happening.
+
+4
+00:00:06,760 --> 00:00:12,800
+So an interesting note that in 2003-ish and earlier,
+
+5
+00:00:12,800 --> 00:00:15,560
+61A had two days a week, Monday,
+
+6
+00:00:15,560 --> 00:00:17,480
+Wednesdays of technical topics,
+
+7
+00:00:17,480 --> 00:00:19,680
+and then Friday was always something else.
+
+8
+00:00:19,680 --> 00:00:22,560
+Now sometimes that was some social implications thing
+
+9
+00:00:22,560 --> 00:00:24,200
+where we talk about the impact of computing.
+
+10
+00:00:24,200 --> 00:00:27,040
+And it was a way before I was like your age at the time.
+
+11
+00:00:27,040 --> 00:00:30,920
+But they would talk about alternate topics, whatever it may be.
+
+12
+00:00:30,920 --> 00:00:32,680
+You get guest speakers, whatever else.
+
+13
+00:00:32,680 --> 00:00:35,360
+But over time, 61A's content grew and grew
+
+14
+00:00:35,360 --> 00:00:38,440
+until social Fridays, as I believe they were called,
+
+15
+00:00:38,440 --> 00:00:40,000
+disappeared entirely.
+
+16
+00:00:40,000 --> 00:00:41,280
+So what I'm trying this semester is I'm
+
+17
+00:00:41,280 --> 00:00:43,640
+going to bring this back a little bit in 61B.
+
+18
+00:00:43,640 --> 00:00:46,600
+Where for three weeks, I'm going to dedicate this class
+
+19
+00:00:46,600 --> 00:00:48,280
+to these sorts of topics.
+
+20
+00:00:48,280 --> 00:00:49,760
+So to be a different flavor of lecture,
+
+21
+00:00:49,760 --> 00:00:50,920
+it'll be less technical.
+
+22
+00:00:50,920 --> 00:00:53,880
+It's not going to be we have this old computation problem.
+
+23
+00:00:53,880 --> 00:00:55,200
+Let's try and solve it together.
+
+24
+00:00:55,200 --> 00:00:57,320
+It's going to be generally a little bigger.
+
+25
+00:00:57,320 --> 00:00:59,760
+Now these are untested lectures.
+
+26
+00:00:59,760 --> 00:01:00,640
+Maybe they'll be good.
+
+27
+00:01:00,640 --> 00:01:01,440
+Maybe they won't be.
+
+28
+00:01:01,440 --> 00:01:03,720
+So do let me know what you think.
+
+29
+00:01:03,720 --> 00:01:06,680
+So some motivation for today is that if you think
+
+30
+00:01:06,680 --> 00:01:08,480
+about your education at Berkeley so far,
+
+31
+00:01:08,480 --> 00:01:11,240
+doing programming, we've misled you a little bit.
+
+32
+00:01:11,240 --> 00:01:13,280
+In 61A, a lot of the projects and homework
+
+33
+00:01:13,280 --> 00:01:16,080
+were filled in the function, where there's already a function.
+
+34
+00:01:16,080 --> 00:01:18,480
+You just have to write the code to make it do the thing.
+
+35
+00:01:18,480 --> 00:01:21,280
+And that's great for learning how programming works.
+
+36
+00:01:21,280 --> 00:01:23,880
+And even for finding and identifying sub-problems,
+
+37
+00:01:23,880 --> 00:01:27,520
+but it's not quite real world coding practice, sometimes.
+
+38
+00:01:27,520 --> 00:01:29,840
+Now in 61B, we've zoomed out a little bit.
+
+39
+00:01:29,840 --> 00:01:31,760
+And we said, we'd like you to build a class,
+
+40
+00:01:31,760 --> 00:01:34,560
+say, an extrinsic min pq or whatever.
+
+41
+00:01:34,560 --> 00:01:36,640
+And you're supposed to do it according to our spec.
+
+42
+00:01:36,640 --> 00:01:38,120
+We kind of kicked off the training wheels
+
+43
+00:01:38,120 --> 00:01:41,520
+and the projects as we went, taking away our autograder
+
+44
+00:01:41,520 --> 00:01:44,040
+and so forth, occasionally.
+
+45
+00:01:44,040 --> 00:01:46,280
+But I think it's fair to say that everything we've done,
+
+46
+00:01:46,280 --> 00:01:49,560
+even project 2C, is all at a small scale.
+
+47
+00:01:49,560 --> 00:01:51,760
+I mean, 2C, you're going to have this giant code base.
+
+48
+00:01:51,760 --> 00:01:52,840
+You're not touching most of it.
+
+49
+00:01:52,840 --> 00:01:54,040
+Most of it's just mysterious.
+
+50
+00:01:54,040 --> 00:01:54,760
+You can go look at it.
+
+51
+00:01:54,760 --> 00:01:56,040
+But it's not really something that you
+
+52
+00:01:56,040 --> 00:01:57,880
+have to interact with deeply.
+
+53
+00:01:57,880 --> 00:02:00,920
+Now, because you've always been working at a small scale,
+
+54
+00:02:00,920 --> 00:02:03,480
+you have built habits that may cause you great pain
+
+55
+00:02:03,480 --> 00:02:06,680
+if you build your own projects or whatever else in the future.
+
+56
+00:02:06,680 --> 00:02:08,800
+So in these lectures, among other things,
+
+57
+00:02:08,800 --> 00:02:10,000
+I'm going to give you a sense of how
+
+58
+00:02:10,000 --> 00:02:11,600
+you would deal with large scale, where
+
+59
+00:02:11,600 --> 00:02:13,400
+you're trying to actually build huge systems
+
+60
+00:02:13,400 --> 00:02:15,920
+from scratch where you're designing everything.
+
+61
+00:02:15,920 --> 00:02:17,920
+Though I will note that in lecture, it's actually very hard
+
+62
+00:02:17,920 --> 00:02:20,720
+to do this, because it's tough to find something
+
+63
+00:02:20,720 --> 00:02:22,840
+that's small enough to fit into lecture.
+
+64
+00:02:22,840 --> 00:02:24,840
+But it's large enough to showcase where
+
+65
+00:02:24,840 --> 00:02:26,400
+these issues are problematic.
+
+66
+00:02:26,400 --> 00:02:28,200
+I gave it a shot with an exercise.
+
+67
+00:02:28,200 --> 00:02:30,600
+We'll do at the end of today's lecture, but we'll see.
+
+68
+00:02:30,600 --> 00:02:33,360
+So project 3, that's where you'll have some breathing room.
+
+69
+00:02:33,360 --> 00:02:34,480
+This is after bear maps.
+
+70
+00:02:34,480 --> 00:02:36,320
+This will be a chance for you to actually design something
+
+71
+00:02:36,320 --> 00:02:37,200
+totally from scratch.
+
+72
+00:02:37,200 --> 00:02:39,560
+And you will feel the pain of the complexity
+
+73
+00:02:39,560 --> 00:02:41,000
+as you realize that you're boxing yourself
+
+74
+00:02:41,000 --> 00:02:43,400
+in the corner with short-sided decisions.
+
+75
+00:02:43,400 --> 00:02:45,000
+So I hope that these lectures help you, at least,
+
+76
+00:02:45,000 --> 00:02:46,080
+in some vague way.
+
+77
+00:02:46,080 --> 00:02:47,720
+But this is one of the very hardest topics
+
+78
+00:02:47,720 --> 00:02:49,120
+to teach you computer science.
+
+79
+00:02:49,120 --> 00:02:52,000
+169 is another place where you can get a taste of this,
+
+80
+00:02:52,000 --> 00:02:53,840
+or if you go and do internships.
+
+81
+00:02:53,840 --> 00:02:55,760
+So we'll see how it goes.
+
+82
+00:02:55,760 --> 00:02:58,240
+Now I should note that these lectures would not be possible
+
+83
+00:02:58,240 --> 00:03:00,640
+or they wouldn't be nearly as good if I did not
+
+84
+00:03:00,640 --> 00:03:01,400
+have this book.
+
+85
+00:03:01,400 --> 00:03:03,760
+So I had a former TA K. Osterhout who
+
+86
+00:03:03,760 --> 00:03:06,040
+was a grad student here.
+
+87
+00:03:06,040 --> 00:03:08,960
+And her dad is a computer science professor as it happens.
+
+88
+00:03:08,960 --> 00:03:10,080
+And he wrote this book.
+
+89
+00:03:10,080 --> 00:03:12,320
+So if you want to check it out, I think it's pretty good.
+
+90
+00:03:12,320 --> 00:03:13,440
+It's very high level, though.
+
+91
+00:03:13,440 --> 00:03:17,000
+It's a high level description of where you run into trouble.
+
+92
+00:03:17,000 --> 00:03:18,840
+And so I'm borrowing heavily from this book.
+
+93
+00:03:18,840 --> 00:03:20,880
+I want to give credit where credit is due.
+
+94
+00:03:20,880 --> 00:03:21,880
+And it's cheatbook.
+
+95
+00:03:21,880 --> 00:03:22,920
+All right.
+
+96
+00:03:22,920 --> 00:03:25,800
+So let's try it out.
+
+97
+00:03:25,800 --> 00:03:27,680
+So you've heard me say before that complexity
+
+98
+00:03:27,680 --> 00:03:31,160
+is your opponent, your enemy, and computer science.
+
+99
+00:03:31,160 --> 00:03:33,320
+And so I'm going to try and define complexity.
+
+100
+00:03:33,320 --> 00:03:35,000
+And I'm going to use John's definitions,
+
+101
+00:03:35,000 --> 00:03:36,400
+because I think they're pretty good.
+
+102
+00:03:36,400 --> 00:03:37,200
+Now, funny story.
+
+103
+00:03:37,200 --> 00:03:40,240
+Part of the activity here ever heard of the text editor
+
+104
+00:03:40,240 --> 00:03:43,080
+project that existed in 61B, some of you.
+
+105
+00:03:43,080 --> 00:03:44,200
+So let's bring 2016.
+
+106
+00:03:44,200 --> 00:03:46,520
+We did a text editor project where I had you guys
+
+107
+00:03:46,520 --> 00:03:49,960
+as the big, open, and did project build a GUI-based text
+
+108
+00:03:49,960 --> 00:03:52,840
+editor like Sublime Text, but much smaller.
+
+109
+00:03:52,840 --> 00:03:55,160
+And it's, again, these challenges,
+
+110
+00:03:55,160 --> 00:03:56,880
+the ones where we have you build something from scratch
+
+111
+00:03:56,880 --> 00:03:58,440
+are all about you hitting the black city
+
+112
+00:03:58,440 --> 00:04:00,200
+and feeling a little bad about it.
+
+113
+00:04:00,200 --> 00:04:02,920
+Now, that project was particularly tricky.
+
+114
+00:04:02,920 --> 00:04:05,760
+And since K was my TA at the time,
+
+115
+00:04:05,760 --> 00:04:08,600
+she told her dad, who teaches software engineering,
+
+116
+00:04:08,600 --> 00:04:09,400
+about this project.
+
+117
+00:04:09,400 --> 00:04:11,800
+And so he ran it not in an intro course,
+
+118
+00:04:11,800 --> 00:04:14,760
+but in an upper division software engineering course,
+
+119
+00:04:14,760 --> 00:04:18,640
+and he found it very interesting to see the mistakes
+
+120
+00:04:18,640 --> 00:04:21,560
+and strange errors and design decisions
+
+121
+00:04:21,560 --> 00:04:24,320
+that people made in building their text editor.
+
+122
+00:04:24,320 --> 00:04:26,520
+And in fact, indirectly, if you read in here,
+
+123
+00:04:26,520 --> 00:04:28,720
+there's some talk about that text editor project, which
+
+124
+00:04:28,720 --> 00:04:30,120
+is a descendant of our own.
+
+125
+00:04:30,120 --> 00:04:32,440
+So we're kind of going full circle here.
+
+126
+00:04:32,440 --> 00:04:37,760
+Anyway, so the point of this is he and I and others
+
+127
+00:04:37,760 --> 00:04:39,200
+out there teaching computer science,
+
+128
+00:04:39,200 --> 00:04:41,240
+we know that students grapple with complexity
+
+129
+00:04:41,240 --> 00:04:42,800
+and as a result of these kind of studies,
+
+130
+00:04:42,800 --> 00:04:44,760
+not just the text editor project in his class,
+
+131
+00:04:44,760 --> 00:04:46,080
+but his entire career.
+
+132
+00:04:46,080 --> 00:04:47,760
+He's another generation older than me.
+
+133
+00:04:47,760 --> 00:04:49,760
+He's come up with some definitions of complexity
+
+134
+00:04:49,760 --> 00:04:55,240
+that resonated with me, but these are by no means universal.
+
+135
+00:04:55,240 --> 00:04:57,720
+So to start understanding like complexity
+
+136
+00:04:57,720 --> 00:05:00,120
+is such a special problem in computer science,
+
+137
+00:05:00,120 --> 00:05:01,880
+it's actually kind of a great lecture for visitors,
+
+138
+00:05:01,880 --> 00:05:03,640
+by the way, if you have to know anything.
+
+139
+00:05:03,640 --> 00:05:06,240
+Anyway, so unlike other engineering disciplines,
+
+140
+00:05:06,240 --> 00:05:09,200
+like I don't know chemical engineering or whatever else,
+
+141
+00:05:09,200 --> 00:05:11,640
+software is not constrained by physics.
+
+142
+00:05:11,640 --> 00:05:13,680
+I mean, it is a little bit, because our computers only
+
+143
+00:05:13,680 --> 00:05:15,440
+run so fast and have so much memory.
+
+144
+00:05:15,440 --> 00:05:17,320
+But for the most part, you don't have
+
+145
+00:05:17,320 --> 00:05:19,160
+to think explicitly about that.
+
+146
+00:05:19,160 --> 00:05:21,240
+Now, as a result, when you try to build the system,
+
+147
+00:05:21,240 --> 00:05:24,760
+when you're programming, it's an act of almost pure creativity.
+
+148
+00:05:24,760 --> 00:05:27,920
+So chemical engineers, when they're dealing with building
+
+149
+00:05:27,920 --> 00:05:29,840
+systems, they have to think about messy things
+
+150
+00:05:29,840 --> 00:05:30,480
+like temperature.
+
+151
+00:05:30,480 --> 00:05:32,560
+If I run these reactions, there's latent heat that gets
+
+152
+00:05:32,560 --> 00:05:34,880
+built up, and I have to deal with getting rid of that heat.
+
+153
+00:05:34,880 --> 00:05:37,160
+It restricts what you can do, because there's physics.
+
+154
+00:05:37,160 --> 00:05:39,320
+Material scientists, they have to think about how brittle
+
+155
+00:05:39,320 --> 00:05:41,760
+the material is in order to recommend it for use in,
+
+156
+00:05:41,760 --> 00:05:45,360
+I don't know, airplane window shades or whatever.
+
+157
+00:05:45,360 --> 00:05:47,080
+And civil engineers need to worry about, say,
+
+158
+00:05:47,080 --> 00:05:49,040
+the strength of concrete if they're building bridges.
+
+159
+00:05:49,040 --> 00:05:50,480
+These things are very important.
+
+160
+00:05:50,480 --> 00:05:52,200
+And they have to deeply understand them.
+
+161
+00:05:52,200 --> 00:05:56,560
+And there's math, where we deeply look at the properties.
+
+162
+00:05:56,560 --> 00:05:58,800
+The tensile strengths of various materials,
+
+163
+00:05:58,800 --> 00:06:00,680
+we don't really have that in computer science so much.
+
+164
+00:06:00,680 --> 00:06:02,920
+We kind of do, but it's not nearly as deep
+
+165
+00:06:02,920 --> 00:06:06,200
+and as reflective of some physical world that we're limited by.
+
+166
+00:06:06,200 --> 00:06:08,760
+So instead, the limitation is not the materials
+
+167
+00:06:08,760 --> 00:06:10,640
+that we are working with, or the physical universe
+
+168
+00:06:10,640 --> 00:06:13,360
+around it, but it's our own brains.
+
+169
+00:06:13,360 --> 00:06:14,880
+It's the fact that we're not smart enough
+
+170
+00:06:14,880 --> 00:06:16,800
+to understand really complicated systems.
+
+171
+00:06:16,800 --> 00:06:18,720
+So the only limitation in terms of what
+
+172
+00:06:18,720 --> 00:06:21,040
+you're capable of achieving is being
+
+173
+00:06:21,040 --> 00:06:22,960
+able to understand what you're doing, which
+
+174
+00:06:22,960 --> 00:06:25,360
+is a very unique and interesting space.
+
+175
+00:06:25,360 --> 00:06:27,440
+Mathematics is kind of similar.
+
+176
+00:06:27,440 --> 00:06:29,760
+Mathematics is a purely creative discipline,
+
+177
+00:06:29,760 --> 00:06:31,400
+but it's not quite as directly applicable,
+
+178
+00:06:31,400 --> 00:06:32,880
+because there's no machine that brings
+
+179
+00:06:32,880 --> 00:06:34,320
+to life what you're building.
+
+180
+00:06:34,320 --> 00:06:36,800
+But at computer science, we have math that kind of lives.
+
+181
+00:06:36,800 --> 00:06:38,520
+And now, in the modern era, of course,
+
+182
+00:06:38,520 --> 00:06:40,480
+we've seen that it's very financially lucrative
+
+183
+00:06:40,480 --> 00:06:43,800
+and impactful on society to be able to do this.
+
+184
+00:06:43,800 --> 00:06:46,520
+Now that there's an internet, it's kind of insane
+
+185
+00:06:46,520 --> 00:06:49,080
+how the mathematical ideas you come up with
+
+186
+00:06:49,080 --> 00:06:52,160
+can deeply impact how people spend their time
+
+187
+00:06:52,160 --> 00:06:54,120
+or what's going on in the world.
+
+188
+00:06:54,120 --> 00:06:56,880
+So the limits of what it's possible to do at this point,
+
+189
+00:06:56,880 --> 00:06:58,040
+especially now that we have the internet,
+
+190
+00:06:58,040 --> 00:07:01,480
+is just what you are capable of fitting in your brain.
+
+191
+00:07:01,480 --> 00:07:03,280
+So the enemy then is complexity.
+
+192
+00:07:03,280 --> 00:07:05,240
+Our limitation is we are trying to understand
+
+193
+00:07:05,240 --> 00:07:07,000
+the systems that we want to build.
+
+194
+00:07:07,000 --> 00:07:09,680
+And what you'll observe, especially,
+
+195
+00:07:09,680 --> 00:07:12,240
+so in this class, you usually build a program.
+
+196
+00:07:12,240 --> 00:07:13,720
+You submit it to an autograder.
+
+197
+00:07:13,720 --> 00:07:15,600
+You make 30 changes, and you have get commits
+
+198
+00:07:15,600 --> 00:07:18,360
+that are like, help, please, help, please, please, help, whatever.
+
+199
+00:07:18,360 --> 00:07:19,200
+And then you push it.
+
+200
+00:07:19,200 --> 00:07:20,960
+And then you never touch that code again.
+
+201
+00:07:20,960 --> 00:07:23,320
+It's very different than the real world.
+
+202
+00:07:23,320 --> 00:07:25,240
+If you were to take those programs that you did
+
+203
+00:07:25,240 --> 00:07:26,880
+that committing style with, they would eventually
+
+204
+00:07:26,880 --> 00:07:30,280
+get so burdened and ugly under all those little changes
+
+205
+00:07:30,280 --> 00:07:32,360
+you made that they become painful.
+
+206
+00:07:32,360 --> 00:07:35,760
+So as programs are worked on over periods of months or years,
+
+207
+00:07:35,760 --> 00:07:37,920
+which you never ever do in these courses,
+
+208
+00:07:37,920 --> 00:07:40,800
+well, they gain more features, and they gain more complexity.
+
+209
+00:07:40,800 --> 00:07:42,960
+And over time, if you have a group of people working,
+
+210
+00:07:42,960 --> 00:07:44,760
+it becomes harder and harder to understand
+
+211
+00:07:44,760 --> 00:07:46,840
+what pieces you need to know about in order
+
+212
+00:07:46,840 --> 00:07:48,280
+to make modifications.
+
+213
+00:07:48,280 --> 00:07:50,440
+If you have hundreds of classes and they all interact
+
+214
+00:07:50,440 --> 00:07:52,920
+in complex ways, then adding a new feature
+
+215
+00:07:52,920 --> 00:07:54,600
+that, for example, lets the user animals
+
+216
+00:07:54,600 --> 00:07:56,640
+scroll around or something, maybe very hard.
+
+217
+00:07:56,640 --> 00:07:59,120
+You don't even know where to start necessarily.
+
+218
+00:07:59,120 --> 00:08:01,120
+Now tools like IntelliJ, which we've used,
+
+219
+00:08:01,120 --> 00:08:04,520
+or JUnit, or the IntelliJ debugger, or the Visualizer,
+
+220
+00:08:04,520 --> 00:08:06,680
+they make it easier to grapple with complexity.
+
+221
+00:08:06,680 --> 00:08:08,560
+When you have it, you can use these things
+
+222
+00:08:08,560 --> 00:08:11,240
+to extricate yourself from problems that you fall into.
+
+223
+00:08:11,240 --> 00:08:13,040
+But actually, the most important thing you want
+
+224
+00:08:13,040 --> 00:08:16,840
+to do in real software is to keep it simple.
+
+225
+00:08:16,840 --> 00:08:20,000
+So let's try and define this a little more.
+
+226
+00:08:20,000 --> 00:08:21,480
+So I'll start, I guess, just by mentioning
+
+227
+00:08:21,480 --> 00:08:24,640
+ways that you might try to keep complexity under control.
+
+228
+00:08:24,640 --> 00:08:27,840
+So one approach is to keep your code, well, as it's simple,
+
+229
+00:08:27,840 --> 00:08:30,880
+and what John uses the term obvious.
+
+230
+00:08:30,880 --> 00:08:32,800
+So you don't want special cases.
+
+231
+00:08:32,800 --> 00:08:35,240
+We saw that already creeping in early, early, early
+
+232
+00:08:35,240 --> 00:08:37,600
+in our class when we were building SLists.
+
+233
+00:08:37,600 --> 00:08:41,040
+So we hit a case where there was a problem where our code
+
+234
+00:08:41,040 --> 00:08:42,960
+crashed, and we tried to do add back.
+
+235
+00:08:42,960 --> 00:08:46,400
+And we could add an if statement that candles the null root,
+
+236
+00:08:46,400 --> 00:08:48,400
+or a null front node case.
+
+237
+00:08:48,400 --> 00:08:50,280
+Instead, we could also create a Sentinel node.
+
+238
+00:08:50,280 --> 00:08:51,680
+It's another approach.
+
+239
+00:08:51,680 --> 00:08:54,000
+Another is encapsulation into modules.
+
+240
+00:08:54,000 --> 00:08:55,920
+These are the two ways that he says you keep your code
+
+241
+00:08:55,920 --> 00:08:56,640
+under control.
+
+242
+00:08:56,640 --> 00:08:59,000
+So one is make it simple and obvious.
+
+243
+00:08:59,000 --> 00:09:00,680
+And the other is encapsulate things.
+
+244
+00:09:00,680 --> 00:09:03,480
+Put them in modules where you can hide information.
+
+245
+00:09:03,480 --> 00:09:06,760
+So that the creator of one module, let's say bear maps,
+
+246
+00:09:06,760 --> 00:09:10,080
+can use other modules like kdtree or a star solver
+
+247
+00:09:10,080 --> 00:09:10,840
+or whatever else.
+
+248
+00:09:10,840 --> 00:09:12,480
+And they don't have to know how they work.
+
+249
+00:09:12,480 --> 00:09:14,440
+All they need to know is the API.
+
+250
+00:09:14,440 --> 00:09:17,120
+These are incredibly important pair of practices
+
+251
+00:09:17,120 --> 00:09:19,200
+that if you go to any real-world project,
+
+252
+00:09:19,200 --> 00:09:22,120
+there will be the two techniques, the two levers you can
+
+253
+00:09:22,120 --> 00:09:23,880
+use to keep things under control.
+
+254
+00:09:23,880 --> 00:09:26,520
+This means there's less stuff to think about.
+
+255
+00:09:26,520 --> 00:09:28,400
+And this means the things that you need to think about
+
+256
+00:09:28,400 --> 00:09:32,280
+are small, they fit in our tiny working memories.
+
+257
+00:09:32,280 --> 00:09:33,520
+So what is complexity then?
+
+258
+00:09:33,520 --> 00:09:35,560
+How do you define this phenomenon?
+
+259
+00:09:35,560 --> 00:09:37,440
+Well, Osterhote defines it as follows.
+
+260
+00:09:37,440 --> 00:09:40,040
+He says complexity is anything related
+
+261
+00:09:40,040 --> 00:09:42,160
+to the structure of a software system that
+
+262
+00:09:42,160 --> 00:09:45,640
+makes it hard to understand and modify the system.
+
+263
+00:09:45,640 --> 00:09:47,920
+So it's a human-centric definition.
+
+264
+00:09:47,920 --> 00:09:51,240
+It's saying, however hard it is for a human to deal with the system,
+
+265
+00:09:51,240 --> 00:09:54,000
+to interact with it, to modify it, that's what matters.
+
+266
+00:09:54,000 --> 00:09:55,840
+We don't really care necessarily how complicated
+
+267
+00:09:55,840 --> 00:09:57,320
+it is just sitting on the shelf.
+
+268
+00:09:57,320 --> 00:09:58,840
+But if we ever need to change it again,
+
+269
+00:09:58,840 --> 00:10:01,160
+then that's we're going to run into trouble.
+
+270
+00:10:01,160 --> 00:10:03,000
+So complexity takes on a lot of forms.
+
+271
+00:10:03,000 --> 00:10:05,680
+So for example, understanding how the code works.
+
+272
+00:10:05,680 --> 00:10:07,160
+If you need to modify a piece of code,
+
+273
+00:10:07,160 --> 00:10:10,160
+you have to be able to look at it and know what it's doing.
+
+274
+00:10:10,160 --> 00:10:12,240
+It takes into account, for example, the amount of time
+
+275
+00:10:12,240 --> 00:10:13,920
+you need to make small improvements.
+
+276
+00:10:13,920 --> 00:10:15,560
+So like, oh, well, the font size sucks.
+
+277
+00:10:15,560 --> 00:10:16,080
+I don't like it.
+
+278
+00:10:16,080 --> 00:10:17,080
+How do I fix that?
+
+279
+00:10:17,080 --> 00:10:18,400
+Well, in some systems, that's easy.
+
+280
+00:10:18,400 --> 00:10:19,360
+There's some config file.
+
+281
+00:10:19,360 --> 00:10:21,920
+I just change some number to 26 or whatever.
+
+282
+00:10:21,920 --> 00:10:22,800
+And now it's bigger.
+
+283
+00:10:22,800 --> 00:10:24,920
+In others, maybe you have to do something crazier.
+
+284
+00:10:24,920 --> 00:10:27,040
+Like, go dig in the source code, modify a number
+
+285
+00:10:27,040 --> 00:10:29,360
+and recompile whatever it may be.
+
+286
+00:10:29,360 --> 00:10:31,760
+Another is just being able to find what needs to be modified.
+
+287
+00:10:31,760 --> 00:10:34,600
+I mean, that's closely related to the above idea.
+
+288
+00:10:34,600 --> 00:10:37,000
+And another is if it's difficult to fix one bug
+
+289
+00:10:37,000 --> 00:10:39,760
+without introducing another, which happens in code,
+
+290
+00:10:39,760 --> 00:10:41,680
+where your code has so many interdependencies
+
+291
+00:10:41,680 --> 00:10:44,520
+that changing anything breaks something else.
+
+292
+00:10:44,520 --> 00:10:46,800
+So it goes on to say that if a software system is hard
+
+293
+00:10:46,800 --> 00:10:49,800
+to understand and modify, then it is complicated.
+
+294
+00:10:49,800 --> 00:10:54,080
+If it is easy to understand and modify, then it is simple.
+
+295
+00:10:54,080 --> 00:10:57,880
+So he has a cost view of complexity, which
+
+296
+00:10:57,880 --> 00:11:04,080
+is that, I mean, another sort of not a different definition,
+
+297
+00:11:04,080 --> 00:11:06,160
+but a different way of thinking about complexity
+
+298
+00:11:06,160 --> 00:11:08,000
+is you can think of it as follows.
+
+299
+00:11:08,000 --> 00:11:10,720
+In a complex system, it takes tons of effort
+
+300
+00:11:10,720 --> 00:11:12,440
+to make even small changes.
+
+301
+00:11:12,440 --> 00:11:14,560
+But in a simple system, big improvements
+
+302
+00:11:14,560 --> 00:11:16,480
+require less effort.
+
+303
+00:11:16,480 --> 00:11:17,720
+So I'm going to give you an example.
+
+304
+00:11:17,720 --> 00:11:20,720
+You guys remember Katie Trees, Project 2B.
+
+305
+00:11:20,720 --> 00:11:22,320
+And I gave you guys some pseudo code that
+
+306
+00:11:22,320 --> 00:11:23,480
+looked a little like this.
+
+307
+00:11:23,480 --> 00:11:25,600
+So we had a nearest helper method.
+
+308
+00:11:25,600 --> 00:11:27,400
+And what it does is you give it a node, which
+
+309
+00:11:27,400 --> 00:11:31,320
+is the root of a Katie tree, or maybe a root of a sub tree.
+
+310
+00:11:31,320 --> 00:11:33,720
+We have a goal point, the thing we want to find.
+
+311
+00:11:33,720 --> 00:11:36,840
+And we have a best point, which is our best known point.
+
+312
+00:11:36,840 --> 00:11:39,120
+And the code is that this is the pseudo code as follows.
+
+313
+00:11:39,120 --> 00:11:42,240
+So we say, if the node is null, we don't have anything better.
+
+314
+00:11:42,240 --> 00:11:44,640
+So let's return best.
+
+315
+00:11:44,640 --> 00:11:47,560
+If the distance of the goal from the current node
+
+316
+00:11:47,560 --> 00:11:49,560
+is better than the distance to best,
+
+317
+00:11:49,560 --> 00:11:52,640
+well, then I'm going to reset my best pointer.
+
+318
+00:11:52,640 --> 00:11:55,080
+And then we're going to say, OK, we have a good child
+
+319
+00:11:55,080 --> 00:11:55,920
+and a bad child.
+
+320
+00:11:55,920 --> 00:11:57,840
+So we'll figure out which one's good and bad.
+
+321
+00:11:57,840 --> 00:11:59,240
+Then we search for good and the bad child,
+
+322
+00:11:59,240 --> 00:12:00,520
+and we return best.
+
+323
+00:12:00,520 --> 00:12:02,800
+So this approach I'd say is simple in the sense
+
+324
+00:12:02,800 --> 00:12:04,520
+that if you understand this pseudo code,
+
+325
+00:12:04,520 --> 00:12:07,640
+you know the basics of 61B, and you build code that looks
+
+326
+00:12:07,640 --> 00:12:10,240
+like this, it's going to be relatively easy to work with.
+
+327
+00:12:10,240 --> 00:12:11,120
+So a question for you.
+
+328
+00:12:11,120 --> 00:12:13,320
+Something's actually missing here.
+
+329
+00:12:13,320 --> 00:12:14,560
+I'm going to let you guys try and find it.
+
+330
+00:12:14,560 --> 00:12:15,840
+I'm going to answer it.
+
+331
+00:12:18,320 --> 00:12:22,200
+See if you can find the thing that is missing.
+
+332
+00:12:22,200 --> 00:12:27,800
+Yeah, I heard someone say, OK.
+
+333
+00:12:27,800 --> 00:12:29,240
+Yeah, remember that pruning rule.
+
+334
+00:12:29,240 --> 00:12:31,120
+So what's missing?
+
+335
+00:12:31,120 --> 00:12:31,620
+Let's see.
+
+336
+00:12:37,200 --> 00:12:39,760
+Types are changing and professor hugs the world.
+
+337
+00:12:39,760 --> 00:12:41,480
+All right, cool.
+
+338
+00:12:41,480 --> 00:12:42,880
+So what's missing is what?
+
+339
+00:12:42,880 --> 00:12:44,880
+The pruning rule, what do we need?
+
+340
+00:12:44,880 --> 00:12:47,880
+We need to say what?
+
+341
+00:12:47,880 --> 00:12:50,440
+So there should be an if statement here
+
+342
+00:12:50,440 --> 00:12:51,800
+that I'm just going to write out in English.
+
+343
+00:12:51,800 --> 00:12:55,080
+It basically just says, if there could possibly
+
+344
+00:12:55,080 --> 00:12:59,640
+be something better on the bad side, then do the search.
+
+345
+00:12:59,640 --> 00:13:00,880
+Now I've written this out narratively,
+
+346
+00:13:00,880 --> 00:13:02,240
+but it is possible the right code
+
+347
+00:13:02,240 --> 00:13:04,840
+that is reflective of this narrative.
+
+348
+00:13:04,840 --> 00:13:06,880
+And that's the glory of programming,
+
+349
+00:13:06,880 --> 00:13:10,680
+that it can actually read like a story, if you do it right.
+
+350
+00:13:10,680 --> 00:13:12,120
+So let me show you an example of a Katie tree
+
+351
+00:13:12,120 --> 00:13:13,120
+that is too complicated.
+
+352
+00:13:13,120 --> 00:13:15,320
+This is not for many students this semester.
+
+353
+00:13:15,320 --> 00:13:19,040
+In fact, it's from not even our class, but it's related.
+
+354
+00:13:19,040 --> 00:13:21,640
+So here's a different way to implement the nearest method,
+
+355
+00:13:21,640 --> 00:13:22,800
+in a Katie tree.
+
+356
+00:13:22,800 --> 00:13:24,960
+So this is a little different than what we showed.
+
+357
+00:13:24,960 --> 00:13:26,680
+It's not the same helper method.
+
+358
+00:13:26,680 --> 00:13:28,400
+But just briefly looking at it,
+
+359
+00:13:28,400 --> 00:13:30,520
+we can see that it is much more complicated.
+
+360
+00:13:30,520 --> 00:13:34,000
+It's doing something kind of similar.
+
+361
+00:13:34,000 --> 00:13:36,440
+So we have if is vertical, then do these things.
+
+362
+00:13:36,440 --> 00:13:38,320
+Otherwise, do these things.
+
+363
+00:13:38,320 --> 00:13:41,680
+There's a search here, and there's a check left variable.
+
+364
+00:13:41,680 --> 00:13:44,960
+We've got this is an L statement that has to do
+
+365
+00:13:44,960 --> 00:13:46,080
+if it's not vertical.
+
+366
+00:13:46,080 --> 00:13:48,160
+When this case we search, and then we say we should check
+
+367
+00:13:48,160 --> 00:13:51,000
+the right, then we have a check left variable,
+
+368
+00:13:51,000 --> 00:13:52,400
+then we go on to have some other stuff
+
+369
+00:13:52,400 --> 00:13:54,480
+that if we check left, and if it's vertical,
+
+370
+00:13:54,480 --> 00:13:56,240
+then we'll do the Euclidean and so forth.
+
+371
+00:13:56,240 --> 00:13:58,600
+And so, I mean, if you had to describe in a few words
+
+372
+00:13:58,600 --> 00:14:00,400
+what feels bad about this, like what is,
+
+373
+00:14:00,400 --> 00:14:01,320
+I don't know, I'm kind of curious,
+
+374
+00:14:01,320 --> 00:14:03,440
+how you would try and describe this in English.
+
+375
+00:14:03,440 --> 00:14:04,280
+Sure.
+
+376
+00:14:04,280 --> 00:14:07,800
+There's a lot of redundancy here, right?
+
+377
+00:14:07,800 --> 00:14:09,640
+This notion of check left, check right,
+
+378
+00:14:09,640 --> 00:14:12,520
+being set to true, like, I mean, at least it's narrative
+
+379
+00:14:12,520 --> 00:14:14,360
+in the sense that we're specifying what it is we're going
+
+380
+00:14:14,360 --> 00:14:17,160
+to do, it's not like do X or whatever.
+
+381
+00:14:17,160 --> 00:14:19,520
+So that's like the names, but there's redundancy.
+
+382
+00:14:19,520 --> 00:14:22,080
+And then, else there are other ways you might put it.
+
+383
+00:14:22,080 --> 00:14:22,920
+Yeah.
+
+384
+00:14:29,920 --> 00:14:31,840
+Yes, it's hard to read, hard to stave, it's correct.
+
+385
+00:14:31,840 --> 00:14:32,600
+And so, what about it?
+
+386
+00:14:32,600 --> 00:14:35,440
+I mean, other than redundancy or any other phrasing
+
+387
+00:14:35,440 --> 00:14:37,160
+about what feels bad about it, yeah.
+
+388
+00:14:41,160 --> 00:14:42,400
+Yeah, that's a really great point.
+
+389
+00:14:42,400 --> 00:14:44,360
+If you want to expand this to a third,
+
+390
+00:14:44,360 --> 00:14:48,640
+like you have X, you now have Z coordinates as well.
+
+391
+00:14:48,640 --> 00:14:51,720
+Well, because we have this Boolean that is vertical,
+
+392
+00:14:51,720 --> 00:14:54,040
+let's say we wanted to now have three levels.
+
+393
+00:14:54,040 --> 00:14:55,800
+Well, we could change that to an integer,
+
+394
+00:14:55,800 --> 00:14:57,840
+but you can see this code won't generalize well.
+
+395
+00:14:57,840 --> 00:14:59,560
+We would have to have an if statement for the X,
+
+396
+00:14:59,560 --> 00:15:01,040
+the Y, and the Z, and so forth,
+
+397
+00:15:01,040 --> 00:15:02,800
+and we would need to have God knows what.
+
+398
+00:15:02,800 --> 00:15:04,520
+So it seems like it gets more complicated.
+
+399
+00:15:04,520 --> 00:15:06,960
+Expanding on this code is nightmarish.
+
+400
+00:15:06,960 --> 00:15:08,240
+I'll be thoughts that occur to you.
+
+401
+00:15:08,240 --> 00:15:09,080
+Yeah.
+
+402
+00:15:12,600 --> 00:15:14,680
+Yeah, so say you find a bug.
+
+403
+00:15:14,680 --> 00:15:16,960
+Uh-oh, you know, this should be,
+
+404
+00:15:16,960 --> 00:15:18,720
+like this should be Y and this should be X.
+
+405
+00:15:18,720 --> 00:15:20,400
+I now need to go through every piece of code
+
+406
+00:15:20,400 --> 00:15:21,640
+and swap that everywhere,
+
+407
+00:15:21,640 --> 00:15:23,640
+and it's going to be really hard for me to keep track of it.
+
+408
+00:15:23,640 --> 00:15:25,600
+Maybe by the time I get eight lines then,
+
+409
+00:15:25,600 --> 00:15:27,120
+I'm like, oh, wait, should I have changed this one
+
+410
+00:15:27,120 --> 00:15:29,440
+because it's a slightly different case than they want above.
+
+411
+00:15:29,440 --> 00:15:31,200
+So this code is very hard to modify
+
+412
+00:15:31,200 --> 00:15:32,320
+if you find there's any bugs,
+
+413
+00:15:32,320 --> 00:15:34,680
+or if you decide to make it better in some way.
+
+414
+00:15:34,680 --> 00:15:37,040
+So for example, the pruning rule, in this case,
+
+415
+00:15:37,040 --> 00:15:38,480
+it was basically just a line,
+
+416
+00:15:38,480 --> 00:15:41,000
+and my kd tree solution looks almost like this,
+
+417
+00:15:41,000 --> 00:15:42,800
+where it really is just an if statement,
+
+418
+00:15:42,800 --> 00:15:44,800
+somewhere that changes the behavior.
+
+419
+00:15:44,800 --> 00:15:47,280
+Here, trying to get rid of the pruning rule
+
+420
+00:15:47,280 --> 00:15:48,400
+is so complicated.
+
+421
+00:15:48,400 --> 00:15:51,440
+The pruning rule, it's like roots all grown through it.
+
+422
+00:15:51,440 --> 00:15:53,600
+This is like a weed, if you've ever dug them up
+
+423
+00:15:53,600 --> 00:15:55,880
+in a garden where it's all grabbing your actual plants.
+
+424
+00:15:55,880 --> 00:15:57,440
+You know, God, what am I going to do?
+
+425
+00:15:57,440 --> 00:16:00,160
+This plant's so cool, but this is standalone growing through it.
+
+426
+00:16:00,160 --> 00:16:01,200
+Very upset about it.
+
+427
+00:16:01,200 --> 00:16:04,920
+Like this, the pruning rule is baked into every aspect of the code.
+
+428
+00:16:04,920 --> 00:16:07,200
+It permeates all of it, and that's dangerous.
+
+429
+00:16:08,160 --> 00:16:09,880
+Any other thoughts?
+
+430
+00:16:09,880 --> 00:16:16,360
+Yeah. God, it says verbose.
+
+431
+00:16:16,360 --> 00:16:17,520
+Can you give me some examples?
+
+432
+00:16:17,520 --> 00:16:21,760
+Like, yeah, it feels maybe a little strange
+
+433
+00:16:21,760 --> 00:16:23,400
+to have check right and check left.
+
+434
+00:16:23,400 --> 00:16:27,480
+And I think that's because of the framing or the abstractions
+
+435
+00:16:27,480 --> 00:16:29,960
+that the author used, they were kind of stuck with them.
+
+436
+00:16:29,960 --> 00:16:30,640
+But yeah, I agree.
+
+437
+00:16:30,640 --> 00:16:33,440
+That seems like that's more stuff you have to keep track of.
+
+438
+00:16:33,440 --> 00:16:34,720
+That if I'm using the debugger,
+
+439
+00:16:34,720 --> 00:16:36,480
+now I have to need to think about this check left
+
+440
+00:16:36,480 --> 00:16:37,720
+and check right variable.
+
+441
+00:16:37,720 --> 00:16:39,320
+And it could have maybe just been called something
+
+442
+00:16:39,320 --> 00:16:41,120
+like check other, or I don't know what,
+
+443
+00:16:41,120 --> 00:16:43,720
+but probably downstream that becomes complicated.
+
+444
+00:16:43,720 --> 00:16:45,120
+Interesting thought.
+
+445
+00:16:45,120 --> 00:16:46,360
+Other thoughts?
+
+446
+00:16:46,360 --> 00:16:47,200
+Yeah.
+
+447
+00:16:50,080 --> 00:16:52,280
+Yeah, so many cases, so many statements
+
+448
+00:16:52,280 --> 00:16:53,760
+that have become hard to reason about.
+
+449
+00:16:53,760 --> 00:16:56,800
+And indeed, yes, that's a, and that's sort of redundant
+
+450
+00:16:56,800 --> 00:16:58,240
+with an observation that's redundant,
+
+451
+00:16:58,240 --> 00:17:00,040
+but I think it's a great observation.
+
+452
+00:17:00,040 --> 00:17:09,240
+Yeah.
+
+453
+00:17:09,240 --> 00:17:11,160
+Yeah, trying to understand the intent of the author
+
+454
+00:17:11,160 --> 00:17:11,800
+is really hard.
+
+455
+00:17:11,800 --> 00:17:13,080
+They came at this cold.
+
+456
+00:17:13,080 --> 00:17:14,640
+Like, here's a great example.
+
+457
+00:17:14,640 --> 00:17:16,640
+Let's say that you're a TA at office hours.
+
+458
+00:17:16,640 --> 00:17:18,920
+And somebody says, my code's not working.
+
+459
+00:17:18,920 --> 00:17:19,640
+Here.
+
+460
+00:17:19,640 --> 00:17:23,640
+And then they want you to start explaining the whole piece of code.
+
+461
+00:17:23,640 --> 00:17:25,760
+There's, I mean, we could do it, but it would take you
+
+462
+00:17:25,760 --> 00:17:28,440
+perhaps an hour to explain what you were thinking.
+
+463
+00:17:28,440 --> 00:17:32,040
+And if the problem is that you did this,
+
+464
+00:17:32,040 --> 00:17:33,200
+there's no way that a TA.
+
+465
+00:17:33,200 --> 00:17:35,680
+No TA will ever, ever find that.
+
+466
+00:17:35,680 --> 00:17:38,480
+It's not possible.
+
+467
+00:17:38,480 --> 00:17:39,400
+That's another reason.
+
+468
+00:17:39,400 --> 00:17:41,480
+It's hard to communicate, get help, whatever else.
+
+469
+00:17:41,480 --> 00:17:44,200
+Yeah.
+
+470
+00:17:44,200 --> 00:17:45,400
+There's little code coverage.
+
+471
+00:17:45,400 --> 00:17:46,160
+What do you mean by that?
+
+472
+00:17:46,160 --> 00:17:47,200
+It's not a term we've used.
+
+473
+00:17:53,880 --> 00:17:56,240
+Yeah, so only some of the if conditions will be active at once.
+
+474
+00:17:56,240 --> 00:17:57,520
+Why do you feel like that's a problem?
+
+475
+00:17:57,520 --> 00:17:58,520
+Just to get some sense.
+
+476
+00:18:11,680 --> 00:18:14,240
+So if you're trying to maybe identify errors or fail like it
+
+477
+00:18:14,240 --> 00:18:16,120
+was correct, yeah, there's just so much to think about.
+
+478
+00:18:16,120 --> 00:18:18,880
+So many different conditions that need to be considered.
+
+479
+00:18:18,880 --> 00:18:20,760
+Great.
+
+480
+00:18:20,760 --> 00:18:21,640
+OK, these are all reasons.
+
+481
+00:18:21,640 --> 00:18:25,000
+So this right here, you may have produced programs like this
+
+482
+00:18:25,000 --> 00:18:25,600
+is fine.
+
+483
+00:18:25,600 --> 00:18:27,280
+I mean, I've written terrible programs,
+
+484
+00:18:27,280 --> 00:18:28,960
+especially when I first started writing code.
+
+485
+00:18:28,960 --> 00:18:32,040
+And even now, I still produce code that's bad, usually when
+
+486
+00:18:32,040 --> 00:18:32,760
+I'm in a hurry.
+
+487
+00:18:32,760 --> 00:18:33,600
+And that's just how it goes.
+
+488
+00:18:33,600 --> 00:18:35,560
+And we'll talk about that a little more.
+
+489
+00:18:35,560 --> 00:18:38,320
+Here's another example of overly complex code.
+
+490
+00:18:38,320 --> 00:18:40,280
+So this right here is a SNAP program.
+
+491
+00:18:40,280 --> 00:18:44,040
+This one of my former TAs, or my former students in CS10.
+
+492
+00:18:44,040 --> 00:18:45,520
+This is in the SNAP programming language.
+
+493
+00:18:45,520 --> 00:18:46,840
+Who took CS10 here?
+
+494
+00:18:46,840 --> 00:18:47,320
+Cool.
+
+495
+00:18:47,320 --> 00:18:48,040
+Hi friends.
+
+496
+00:18:48,040 --> 00:18:48,680
+What's up?
+
+497
+00:18:48,680 --> 00:18:49,320
+Anyway.
+
+498
+00:18:49,320 --> 00:18:52,240
+So CS10 is your first dose of programming.
+
+499
+00:18:52,240 --> 00:18:55,960
+And in that class, it is all about getting things just to work.
+
+500
+00:18:55,960 --> 00:18:58,040
+So you've never seen this language many of you.
+
+501
+00:18:58,040 --> 00:19:01,440
+But I'll give you a sense of what's going on here that's surprising.
+
+502
+00:19:01,440 --> 00:19:03,280
+So look at this.
+
+503
+00:19:03,280 --> 00:19:04,680
+Even if you don't know the language,
+
+504
+00:19:04,680 --> 00:19:08,720
+what seems maybe a little funny about this block of code?
+
+505
+00:19:08,720 --> 00:19:15,000
+So it's an if statement, which is if this and this, and this, and this, and not this,
+
+506
+00:19:15,000 --> 00:19:17,240
+and not this, and so forth.
+
+507
+00:19:17,240 --> 00:19:18,560
+This is a lot to look at.
+
+508
+00:19:18,560 --> 00:19:20,320
+And you can imagine as a novice programmer,
+
+509
+00:19:20,320 --> 00:19:22,800
+this is an implementation of the game battleship.
+
+510
+00:19:22,800 --> 00:19:27,720
+So it's like if ship hit is true, and down is true, and right is true, and up is true,
+
+511
+00:19:27,720 --> 00:19:33,320
+and left is true, and num is less than 91, who knows what that means?
+
+512
+00:19:33,320 --> 00:19:34,880
+That seems very hard to understand.
+
+513
+00:19:34,880 --> 00:19:35,880
+Oh, and not.
+
+514
+00:19:35,880 --> 00:19:39,520
+It's some item of a, I mean, it's hard to even imagine what it means, right?
+
+515
+00:19:39,520 --> 00:19:43,640
+Now this student, by the way, is now 186 TA.
+
+516
+00:19:43,640 --> 00:19:46,960
+So now four years later, they are graduating.
+
+517
+00:19:46,960 --> 00:19:49,040
+They started here with this code.
+
+518
+00:19:49,040 --> 00:19:50,720
+This is how they used a program.
+
+519
+00:19:50,720 --> 00:19:53,840
+But now they're running a pretty sophisticated upper division course.
+
+520
+00:19:53,840 --> 00:19:55,560
+That's one of the 20-hour TA's.
+
+521
+00:19:55,560 --> 00:20:00,160
+So I bring this as an example up, because in this case, this is not a large and sophisticated
+
+522
+00:20:00,160 --> 00:20:01,160
+system.
+
+523
+00:20:01,160 --> 00:20:04,880
+It's just complicated in the sense that it is just impossible to imagine trying to find
+
+524
+00:20:04,880 --> 00:20:10,120
+a bug in this code, or change it in some way to fix it, like, though, just especially
+
+525
+00:20:10,120 --> 00:20:11,120
+interesting.
+
+526
+00:20:11,120 --> 00:20:14,760
+Numb less than 91, I have to ask them what that means.
+
+527
+00:20:14,760 --> 00:20:18,360
+All right, snap, by the way, it's a great programming language.
+
+528
+00:20:18,360 --> 00:20:19,360
+I enjoy it a lot.
+
+529
+00:20:19,360 --> 00:20:21,680
+And let's you do recursion, but visually.
+
+530
+00:20:21,680 --> 00:20:23,680
+Anyway, all right.
+
+531
+00:20:23,680 --> 00:20:26,680
+Now one last little note about complexity in its definition.
+
+532
+00:20:26,680 --> 00:20:33,040
+So it also depends in John's view on how often a piece of code is modified.
+
+533
+00:20:33,040 --> 00:20:36,080
+So a system may have a few pieces that are highly complex.
+
+534
+00:20:36,080 --> 00:20:40,840
+Like, for example, it has like a Rungo CUDA solver for like ordinary differential equations,
+
+535
+00:20:40,840 --> 00:20:43,960
+because it needs to simulate some thermodynamic yada yada, right?
+
+536
+00:20:43,960 --> 00:20:48,040
+But if nobody ever really looks at that code, then the overall impact on the complexity
+
+537
+00:20:48,040 --> 00:20:49,760
+of the system is minimal.
+
+538
+00:20:49,760 --> 00:20:52,600
+So he says, if you want, you can write it out as a math equation.
+
+539
+00:20:52,600 --> 00:20:58,120
+So we could say that the total complexity is the complexity of each part times the time spent
+
+540
+00:20:58,120 --> 00:21:03,720
+on each part, say, where time is like someone needs to maintain the ordinary differential
+
+541
+00:21:03,720 --> 00:21:05,400
+equation solver or whatever.
+
+542
+00:21:05,400 --> 00:21:06,400
+We just sum that.
+
+543
+00:21:06,400 --> 00:21:10,520
+So if there's pieces that are rarely modified, but are highly complex, maybe that's
+
+544
+00:21:10,520 --> 00:21:11,520
+OK.
+
+545
+00:21:11,520 --> 00:21:12,520
+Just the thought.
+
+546
+00:21:12,520 --> 00:21:13,520
+All right.
+
+547
+00:21:13,520 --> 00:21:14,520
+So we're good.
+
+548
+00:21:14,520 --> 00:21:15,520
+I mentioned.
+
+549
+00:21:15,520 --> 00:21:16,520
+I was kind of cute.
+
+550
+00:21:16,520 --> 00:21:17,520
+OK.
+
+551
+00:21:17,520 --> 00:21:21,960
+You guys have some insight into this, but I'll tell you what, first, I'll tell you some
+
+552
+00:21:21,960 --> 00:21:22,960
+symptoms.
+
+553
+00:21:22,960 --> 00:21:26,440
+I'll tell you some causes, and then I'd be kind of curious to hear some anecdotes of
+
+554
+00:21:26,440 --> 00:21:27,440
+anybody has any.
+
+555
+00:21:27,440 --> 00:21:32,080
+So Osterhote, he describes three symptoms of complexity, signed to your code as becoming
+
+556
+00:21:32,080 --> 00:21:33,800
+bad, complex.
+
+557
+00:21:33,800 --> 00:21:36,080
+So the first is change amplification.
+
+558
+00:21:36,080 --> 00:21:40,280
+So if it's the case that a simple change requires you to modify lots of pieces, then
+
+559
+00:21:40,280 --> 00:21:41,840
+your code's getting complicated.
+
+560
+00:21:41,840 --> 00:21:44,560
+So that bad kd tree we saw earlier was an example of that.
+
+561
+00:21:44,560 --> 00:21:47,680
+If I needed to change anything, I'd have to do it in lots of places.
+
+562
+00:21:47,680 --> 00:21:52,120
+And this happens whenever you, for example, say, oh, well, I have this case, and then I'm
+
+563
+00:21:52,120 --> 00:21:55,520
+going to copy and paste it somewhere else, and I have two copies of the method, which is
+
+564
+00:21:55,520 --> 00:21:57,800
+like some minus sign flip, or whatever.
+
+565
+00:21:57,800 --> 00:22:00,760
+That's an example of complexity creeping into your code.
+
+566
+00:22:00,760 --> 00:22:02,600
+Another is cognitive load.
+
+567
+00:22:02,600 --> 00:22:06,120
+So this is how much you need to know in order to make some kind of a change.
+
+568
+00:22:06,120 --> 00:22:09,200
+Now, this is not the same thing as the number of lines of code.
+
+569
+00:22:09,200 --> 00:22:14,200
+It's often the case that more lines of code is simpler, because it's more narrative.
+
+570
+00:22:14,200 --> 00:22:18,120
+That's why I often define variables on one line, and then use them elsewhere.
+
+571
+00:22:18,120 --> 00:22:22,400
+You can do it in one line, but I find the code much simpler if it has a name.
+
+572
+00:22:22,400 --> 00:22:27,160
+In some cases, you may incur a small performance hit, but in modern compilers and Java,
+
+573
+00:22:27,160 --> 00:22:29,800
+that stuff mostly gets optimized out anyway.
+
+574
+00:22:29,800 --> 00:22:34,880
+Incidentally, someone asked, why don't we use plus plus or minus minus on Piazza recently?
+
+575
+00:22:34,880 --> 00:22:38,200
+So you can do it, but you'll notice I often use plus equals one.
+
+576
+00:22:38,200 --> 00:22:42,360
+The reason I don't really like plus plus is because it allows you to do things like,
+
+577
+00:22:42,360 --> 00:22:44,600
+well, comment this out.
+
+578
+00:22:44,600 --> 00:22:50,880
+So it allows you to do things like return x plus plus, whatever.
+
+579
+00:22:50,880 --> 00:22:54,800
+So if x is some variable, this says I want to both increment and
+
+580
+00:22:54,800 --> 00:22:57,000
+calculate the result of x plus one.
+
+581
+00:22:57,000 --> 00:23:02,280
+And I'm going to return the value before the change actually happens.
+
+582
+00:23:02,280 --> 00:23:04,440
+So that's something that's comprehensible to humans.
+
+583
+00:23:04,440 --> 00:23:07,640
+I just said it so fast that you didn't really get a chance to digest it.
+
+584
+00:23:07,640 --> 00:23:11,200
+So it's not so crazy, but I still think that it introduces a new possibility
+
+585
+00:23:11,200 --> 00:23:12,800
+where bugs can arise.
+
+586
+00:23:12,800 --> 00:23:15,760
+And actually, one thing that I really wish I had done,
+
+587
+00:23:15,760 --> 00:23:19,800
+especially inspired by homework four, is change the setup for IntelliJ so
+
+588
+00:23:19,800 --> 00:23:24,760
+that using equal equals versus dot equals was some kind of very glaring warning.
+
+589
+00:23:24,760 --> 00:23:28,320
+Because I know who here had that hop into them on homework four out of curiosity.
+
+590
+00:23:28,320 --> 00:23:31,760
+Yeah, we're used equal equals, and then you spend hours of your life realizing,
+
+591
+00:23:31,760 --> 00:23:36,200
+oh, so next semester, maybe I'll set up an IntelliJ warning.
+
+592
+00:23:36,200 --> 00:23:40,040
+Yeah, yeah, a lot of them.
+
+593
+00:23:40,040 --> 00:23:45,360
+You know, so, incidentally, that's why I find plus, plus difficult.
+
+594
+00:23:45,360 --> 00:23:48,400
+That's actually an example of cognitive load to some degree.
+
+595
+00:23:48,400 --> 00:23:52,080
+That's the idea that it's just more stuff to think about.
+
+596
+00:23:52,080 --> 00:23:55,320
+And one of the reasons I really like Java as a programming language is the static
+
+597
+00:23:55,320 --> 00:23:57,280
+types constrain your thinking.
+
+598
+00:23:57,280 --> 00:24:00,200
+When you go back to writing Python code, if you happen in a while,
+
+599
+00:24:00,200 --> 00:24:02,920
+you'll feel a little like it's like scary.
+
+600
+00:24:02,920 --> 00:24:05,520
+It's like waking up on the beach in the middle of a night, you know?
+
+601
+00:24:05,520 --> 00:24:07,000
+You're like, how did I get here?
+
+602
+00:24:07,000 --> 00:24:08,360
+You don't know where anything is.
+
+603
+00:24:08,360 --> 00:24:09,840
+There's functions, they're giving you stuff.
+
+604
+00:24:09,840 --> 00:24:12,520
+You don't know, it just feels bad to me.
+
+605
+00:24:12,520 --> 00:24:16,200
+And every time I come back to a statically typed language, I feel like I'm home.
+
+606
+00:24:16,200 --> 00:24:17,040
+All right.
+
+607
+00:24:17,040 --> 00:24:19,760
+Reduce this cognitive load.
+
+608
+00:24:19,760 --> 00:24:23,480
+Then the last he describes as something known, he calls unknown unknowns.
+
+609
+00:24:23,480 --> 00:24:26,800
+Now, this is a bit of a slippery definition that I will say I don't fully understand,
+
+610
+00:24:26,800 --> 00:24:31,960
+but he says it's the worst type of complexity.
+
+611
+00:24:31,960 --> 00:24:35,760
+The difference here is that unknown unknowns are when it's not even clear what you need
+
+612
+00:24:35,760 --> 00:24:37,880
+to know in order to make modifications.
+
+613
+00:24:37,880 --> 00:24:41,800
+Now, I can certainly appreciate that, where I have downloaded some tool,
+
+614
+00:24:41,800 --> 00:24:47,920
+actually somebody came to my office hours, who was working on a tool to do gaze tracking.
+
+615
+00:24:47,920 --> 00:24:51,560
+So for people who can't move their arms and legs, it's hard to use a computer,
+
+616
+00:24:51,560 --> 00:24:55,120
+but not impossible, because most people can still move their eyes.
+
+617
+00:24:55,120 --> 00:24:56,760
+So you can look around, you can blink.
+
+618
+00:24:56,760 --> 00:24:59,000
+And if you have a camera tracking somebody's eyes,
+
+619
+00:24:59,000 --> 00:25:01,680
+well, then they can actually manipulate the physical universe around them,
+
+620
+00:25:01,680 --> 00:25:04,080
+because they can look around blink in certain locations.
+
+621
+00:25:04,080 --> 00:25:06,720
+And in principle, it's possible to control a mouse cursor.
+
+622
+00:25:06,720 --> 00:25:09,120
+And if you're somebody who has locked into that degree,
+
+623
+00:25:09,120 --> 00:25:11,560
+it's quite freeing to be able to interact with the world,
+
+624
+00:25:11,560 --> 00:25:14,680
+even if it's kind of low bandwidth, it's better than nothing.
+
+625
+00:25:14,680 --> 00:25:17,920
+And so the student who I was talking to in office hours said,
+
+626
+00:25:17,920 --> 00:25:21,800
+how do I take this very complicated open source gaze tracking software
+
+627
+00:25:21,800 --> 00:25:24,200
+and make it that I can click when I blink?
+
+628
+00:25:24,200 --> 00:25:27,720
+And here, it's actually, I mean, this is not a flaw with the software system,
+
+629
+00:25:27,720 --> 00:25:31,640
+but just the fact that it's a difficult task, there's a significant unknown unknown.
+
+630
+00:25:31,640 --> 00:25:34,520
+How do you take this thing and somehow control the mouse cursor?
+
+631
+00:25:34,520 --> 00:25:38,080
+And that's something that's very difficult to grapple with in systems.
+
+632
+00:25:38,080 --> 00:25:39,320
+All right.
+
+633
+00:25:39,320 --> 00:25:40,320
+So what about good systems?
+
+634
+00:25:40,320 --> 00:25:43,280
+What features do they have that help us avoid these symptoms?
+
+635
+00:25:43,280 --> 00:25:46,520
+Well, the main one I love this term is that he says,
+
+636
+00:25:46,520 --> 00:25:48,840
+the system should be ideally obvious.
+
+637
+00:25:48,840 --> 00:25:51,120
+So in a good design, the system is obvious.
+
+638
+00:25:51,120 --> 00:25:55,440
+And in an obvious system, to make a change, you can easily, quickly understand
+
+639
+00:25:55,440 --> 00:25:58,880
+what you need to change, how you understand how the code works.
+
+640
+00:25:58,880 --> 00:26:01,880
+And if you want to do something like change the font size
+
+641
+00:26:01,880 --> 00:26:07,240
+or make it so that the user doesn't have to log in every 15 days,
+
+642
+00:26:07,240 --> 00:26:09,080
+but only every 30 days and whatever.
+
+643
+00:26:09,080 --> 00:26:12,280
+They're two factor authentication or whatever.
+
+644
+00:26:12,280 --> 00:26:14,880
+Then ideally in an obvious system, it's just easy.
+
+645
+00:26:14,880 --> 00:26:16,160
+They don't have to think about it.
+
+646
+00:26:16,160 --> 00:26:19,440
+And what's more is that they should feel pretty good that the change will work,
+
+647
+00:26:19,440 --> 00:26:21,040
+even though they don't read much code.
+
+648
+00:26:21,040 --> 00:26:24,240
+So examples of this would be you have a table of constants
+
+649
+00:26:24,240 --> 00:26:28,280
+and you just go into the constants that are well labeled and you say instead of 1530.
+
+650
+00:26:28,280 --> 00:26:31,080
+That's an example of an obvious system.
+
+651
+00:26:31,080 --> 00:26:34,640
+So why are systems not obvious?
+
+652
+00:26:34,640 --> 00:26:36,320
+Where does complexity come from?
+
+653
+00:26:36,320 --> 00:26:39,360
+Well, I should note that every software system starts up beautiful, pure,
+
+654
+00:26:39,360 --> 00:26:40,560
+and clean.
+
+655
+00:26:40,560 --> 00:26:42,520
+It's just a blank file.
+
+656
+00:26:42,520 --> 00:26:46,560
+The problem is, though, that as you work with code, it slowly gets uglier and uglier.
+
+657
+00:26:46,560 --> 00:26:51,120
+And this is almost an inevitable feature of every program I have personally ever written.
+
+658
+00:26:51,120 --> 00:26:54,920
+And what happens, basically, is that you introduce these little complexities
+
+659
+00:26:54,920 --> 00:26:55,640
+a bit at a time.
+
+660
+00:26:55,640 --> 00:26:57,240
+And some complexity is inevitable, right?
+
+661
+00:26:57,240 --> 00:27:01,040
+And if you're building a system that's able to track the gaze of a human being,
+
+662
+00:27:01,040 --> 00:27:05,800
+it is going to have some complexity to it because that's just inherently a complicated task.
+
+663
+00:27:05,800 --> 00:27:10,360
+Now, what happens, though, as you build a software system is that you make these hundreds
+
+664
+00:27:10,360 --> 00:27:15,440
+or thousands of small dependencies and obscurities that are going to build up over time.
+
+665
+00:27:15,440 --> 00:27:19,680
+And eventually, there's going to be so many small issues that every possible change
+
+666
+00:27:19,680 --> 00:27:21,040
+is affected by a lot of them.
+
+667
+00:27:21,040 --> 00:27:26,600
+So this incremental process of creeping complexity is why it's so hard to keep complexity under control.
+
+668
+00:27:26,600 --> 00:27:29,800
+You've done this when you're writing programs, where you're working on it,
+
+669
+00:27:29,800 --> 00:27:32,320
+you're adding little bits of changes to fix some corner case.
+
+670
+00:27:32,320 --> 00:27:36,600
+And eventually, your code becomes, well, I mean, it turns into this kd tree, right?
+
+671
+00:27:36,600 --> 00:27:38,840
+This author didn't set out to write something like this.
+
+672
+00:27:38,840 --> 00:27:42,560
+But as they added pieces, it's like, what could go back and refactor?
+
+673
+00:27:42,560 --> 00:27:44,400
+But I know if I just add another if statement.
+
+674
+00:27:44,400 --> 00:27:46,640
+I think I'm pretty sure it'll work.
+
+675
+00:27:46,640 --> 00:27:50,320
+So Osterhote says, rather than ever, ever, ever letting yourself do this,
+
+676
+00:27:50,320 --> 00:27:53,080
+you should have a zero tolerance philosophy.
+
+677
+00:27:53,080 --> 00:27:56,000
+And I think that's actually a good message when you're building real software.
+
+678
+00:27:56,000 --> 00:27:58,760
+Arguably not reasonable in the middle of a semester when you're busy.
+
+679
+00:27:58,760 --> 00:28:03,840
+But hey, it's a good strategy for the real world.
+
+680
+00:28:03,840 --> 00:28:05,200
+So I'm rounding out some thoughts.
+
+681
+00:28:05,200 --> 00:28:07,520
+And we're going to do a little exercise too.
+
+682
+00:28:07,520 --> 00:28:10,920
+So let's talk about what he calls strategic versus tactical programming.
+
+683
+00:28:10,920 --> 00:28:14,800
+So out of all the programming you've ever done, I'd say that it's pretty much all
+
+684
+00:28:14,800 --> 00:28:15,640
+tactical.
+
+685
+00:28:15,640 --> 00:28:19,040
+So your goal was to get something working, like introduce a new feature or
+
+686
+00:28:19,040 --> 00:28:21,560
+fix a bug, like this is what you do.
+
+687
+00:28:21,560 --> 00:28:24,920
+So that may seem like kind of a silly criticism because having code that works
+
+688
+00:28:24,920 --> 00:28:25,800
+is a good thing.
+
+689
+00:28:25,800 --> 00:28:28,640
+Like why is it bad to optimize for working code?
+
+690
+00:28:28,640 --> 00:28:31,240
+And you can probably see this coming.
+
+691
+00:28:31,240 --> 00:28:34,160
+But the problem is that if you do this, you don't spend time thinking about
+
+692
+00:28:34,160 --> 00:28:35,000
+the design.
+
+693
+00:28:35,000 --> 00:28:36,680
+And you introduce these little complexities.
+
+694
+00:28:36,680 --> 00:28:39,560
+Like I need two copies of a method that do similar things.
+
+695
+00:28:39,560 --> 00:28:42,400
+And every one of those complexities always feels fine, right?
+
+696
+00:28:42,400 --> 00:28:43,880
+You're like, this is going to make my code work.
+
+697
+00:28:43,880 --> 00:28:45,080
+They'll do this extra thing.
+
+698
+00:28:45,080 --> 00:28:49,080
+But eventually when you do work on these problems, you start to feel the weight.
+
+699
+00:28:49,080 --> 00:28:50,560
+You could step back and fix it.
+
+700
+00:28:50,560 --> 00:28:53,800
+The author of Katie Tree here could have stepped back and changed things up.
+
+701
+00:28:53,800 --> 00:28:55,000
+But why don't you?
+
+702
+00:28:55,000 --> 00:28:57,440
+Well, because you just need to make a few more changes that you could submit
+
+703
+00:28:57,440 --> 00:29:00,320
+the autograder and then you could do everything else that you want to do in your life,
+
+704
+00:29:00,320 --> 00:29:01,600
+right?
+
+705
+00:29:01,600 --> 00:29:05,840
+So the problem, if you take that with you, forwards, and maybe even now while
+
+706
+00:29:05,840 --> 00:29:08,960
+you're working on projects, is that you end up building so much complexity into
+
+707
+00:29:08,960 --> 00:29:12,160
+your system that you can't really keep track of it.
+
+708
+00:29:12,160 --> 00:29:15,720
+And eventually, you end up adding even more complexity to deal with the original
+
+709
+00:29:15,720 --> 00:29:17,640
+complexity in its no balls.
+
+710
+00:29:17,640 --> 00:29:21,040
+So in project three, good news, I will give you a chance to build something big
+
+711
+00:29:21,040 --> 00:29:23,240
+enough that you will feel the complexity creeping.
+
+712
+00:29:23,240 --> 00:29:27,000
+Because you're going to build something from scratch and you should see it and feel this
+
+713
+00:29:27,000 --> 00:29:28,000
+menacing complexity.
+
+714
+00:29:28,000 --> 00:29:31,440
+Now, the good news is that the system is just small enough that I think you can get
+
+715
+00:29:31,440 --> 00:29:35,440
+through it without a bad time, but you will feel the bad time all around you.
+
+716
+00:29:35,440 --> 00:29:36,440
+OK?
+
+717
+00:29:36,440 --> 00:29:37,440
+All right.
+
+718
+00:29:37,440 --> 00:29:39,920
+So there it gets kind of like painting yourself into a corner and then like tossing
+
+719
+00:29:39,920 --> 00:29:40,920
+them with your landmines.
+
+720
+00:29:40,920 --> 00:29:43,440
+And then you can quit and you don't have to worry about it again.
+
+721
+00:29:43,440 --> 00:29:44,440
+OK.
+
+722
+00:29:44,440 --> 00:29:45,440
+Yeah.
+
+723
+00:29:45,440 --> 00:29:46,440
+Yeah.
+
+724
+00:29:46,440 --> 00:29:47,440
+Oh, yes.
+
+725
+00:29:47,440 --> 00:29:48,440
+Thank you.
+
+726
+00:29:48,440 --> 00:29:49,440
+Cool.
+
+727
+00:29:49,440 --> 00:29:50,440
+All right.
+
+728
+00:29:50,440 --> 00:29:53,440
+Go back.
+
+729
+00:29:53,440 --> 00:29:54,440
+OK.
+
+730
+00:29:54,440 --> 00:29:55,440
+All right.
+
+731
+00:29:55,440 --> 00:29:56,440
+Anyway.
+
+732
+00:29:56,440 --> 00:29:57,440
+No luck.
+
+733
+00:29:57,440 --> 00:29:58,440
+Mysterious.
+
+734
+00:29:58,440 --> 00:29:59,440
+Right.
+
+735
+00:29:59,440 --> 00:30:00,440
+Let's do that.
+
+736
+00:30:00,440 --> 00:30:01,440
+OK.
+
+737
+00:30:01,440 --> 00:30:02,440
+Hold on.
+
+738
+00:30:02,440 --> 00:30:03,440
+Yeah.
+
+739
+00:30:03,440 --> 00:30:04,440
+I meant to.
+
+740
+00:30:04,440 --> 00:30:05,440
+Yeah.
+
+741
+00:30:05,440 --> 00:30:08,440
+We were making the slides animated earlier, but they didn't show up.
+
+742
+00:30:08,440 --> 00:30:09,440
+OK.
+
+743
+00:30:09,440 --> 00:30:10,440
+Let's go.
+
+744
+00:30:10,440 --> 00:30:11,440
+Project 2C is out.
+
+745
+00:30:11,440 --> 00:30:14,440
+Let's do it on when we have any visitors for Cal Day.
+
+746
+00:30:14,440 --> 00:30:15,440
+Oh, good.
+
+747
+00:30:15,440 --> 00:30:16,440
+No.
+
+748
+00:30:16,440 --> 00:30:17,440
+OK.
+
+749
+00:30:17,440 --> 00:30:18,440
+I got to scroll back over.
+
+750
+00:30:18,440 --> 00:30:19,440
+OK.
+
+751
+00:30:19,440 --> 00:30:21,440
+OK.
+
+752
+00:30:21,440 --> 00:30:22,440
+Is it worth it?
+
+753
+00:30:22,440 --> 00:30:23,440
+Anytime we'll find out.
+
+754
+00:30:23,440 --> 00:30:24,440
+That's fine.
+
+755
+00:30:24,440 --> 00:30:25,440
+OK.
+
+756
+00:30:25,440 --> 00:30:27,440
+Let's see if it happens.
+
+757
+00:30:27,440 --> 00:30:28,440
+Whatever.
+
+758
+00:30:28,440 --> 00:30:29,440
+All right.
+
+759
+00:30:29,440 --> 00:30:32,440
+So it goes on to say that rather than be tactical, the first step, OK?
+
+760
+00:30:32,440 --> 00:30:35,440
+Maybe there's one sentence that I want you to take home today.
+
+761
+00:30:35,440 --> 00:30:38,440
+The first step towards becoming a good software designer is to realize
+
+762
+00:30:38,440 --> 00:30:40,440
+that working code isn't enough.
+
+763
+00:30:40,440 --> 00:30:44,440
+Actually, what really matters when you're building real software, not necessarily 61A,
+
+764
+00:30:44,440 --> 00:30:48,440
+B or C or whatever other projects, but when you're building real systems that need
+
+765
+00:30:48,440 --> 00:30:52,440
+to last, the most important thing is the long-term structure of the system.
+
+766
+00:30:52,440 --> 00:30:55,440
+Because getting it working, I mean, it might take an extra day or two to get it.
+
+767
+00:30:55,440 --> 00:30:59,440
+Working if you're building things out in this strategic and carefully thought out manner,
+
+768
+00:30:59,440 --> 00:31:02,440
+but you will get much better benefits in the long term.
+
+769
+00:31:02,440 --> 00:31:06,440
+He also says, though, that again, never he has this zero tolerance policy,
+
+770
+00:31:06,440 --> 00:31:09,440
+which I think is a great idea, and I try to keep that with me when we build
+
+771
+00:31:09,440 --> 00:31:10,440
+graders.
+
+772
+00:31:10,440 --> 00:31:13,440
+I feel like our autorator infrastructure is generally pretty good.
+
+773
+00:31:13,440 --> 00:31:15,440
+Doesn't break on a fundamental level.
+
+774
+00:31:15,440 --> 00:31:18,440
+Though, the homework for autorator was definitely done tactically.
+
+775
+00:31:18,440 --> 00:31:19,440
+Sorry.
+
+776
+00:31:19,440 --> 00:31:20,440
+Anyway.
+
+777
+00:31:20,440 --> 00:31:24,440
+Strategic programming, of course, takes lots of time investment, and again,
+
+778
+00:31:24,440 --> 00:31:28,440
+it will seem mysterious and hard, but Project 3 will have you a chance to
+
+779
+00:31:28,440 --> 00:31:30,440
+give you a chance to see what's going on.
+
+780
+00:31:30,440 --> 00:31:32,440
+So we give you a couple suggestions.
+
+781
+00:31:32,440 --> 00:31:34,440
+It feels like it's going a little long now.
+
+782
+00:31:34,440 --> 00:31:36,440
+I hope you're still enjoying it.
+
+783
+00:31:36,440 --> 00:31:43,440
+So it goes on to say that, I mean, this is my interpretation, so I agree with this.
+
+784
+00:31:43,440 --> 00:31:47,440
+So when you're actually building something out, what do you do that's better?
+
+785
+00:31:47,440 --> 00:31:51,440
+Well, rather than, I think this is a great idea, rather than just implementing
+
+786
+00:31:51,440 --> 00:31:55,440
+the first idea that you come up with and just running with it until you're done.
+
+787
+00:31:55,440 --> 00:31:59,440
+I would say come up with a few different ideas, and maybe start implementing
+
+788
+00:31:59,440 --> 00:32:01,440
+a few of them, just a little bit at a time.
+
+789
+00:32:01,440 --> 00:32:04,440
+And when you feel like you've found something that feels truly clean, then commit.
+
+790
+00:32:04,440 --> 00:32:07,440
+Now, often, I don't know if this has happened to you in office hours,
+
+791
+00:32:07,440 --> 00:32:10,440
+we are working on one way to solve a problem, like say, A star, Katie,
+
+792
+00:32:10,440 --> 00:32:14,440
+tree, or whatever, and you're debugging, and you've spent four hours trying to
+
+793
+00:32:14,440 --> 00:32:18,440
+debug this compact little piece of code where you know there's something wrong,
+
+794
+00:32:18,440 --> 00:32:19,440
+but you're not sure quite what?
+
+795
+00:32:19,440 --> 00:32:21,440
+Yeah, quite what is wrong.
+
+796
+00:32:21,440 --> 00:32:26,440
+But sometimes really the best solution is take that file, like uncomment everything out,
+
+797
+00:32:26,440 --> 00:32:30,440
+and then just redo it from a fresh perspective, because what you're going to do is
+
+798
+00:32:30,440 --> 00:32:34,440
+it's approach it from a slightly different angle, and doing it from a clean and
+
+799
+00:32:34,440 --> 00:32:37,440
+informed perspective will get you better results.
+
+800
+00:32:37,440 --> 00:32:41,440
+That's kind of a different version of this, that rather than just trying as
+
+801
+00:32:41,440 --> 00:32:45,440
+hard as possible to get your first implementation work working, sometimes it's
+
+802
+00:32:45,440 --> 00:32:46,440
+best to set it aside.
+
+803
+00:32:46,440 --> 00:32:51,440
+And then in real systems, including Project 3, you should try and imagine how things
+
+804
+00:32:51,440 --> 00:32:55,440
+might need to change in the future, and I'll give some examples when we do our
+
+805
+00:32:55,440 --> 00:32:56,440
+exercise.
+
+806
+00:32:56,440 --> 00:32:59,440
+Okay, now again, I must note that this is extremely hard.
+
+807
+00:32:59,440 --> 00:33:04,440
+Me saying we'll just plan ahead, I think is a little dangerous, because no matter what you do,
+
+808
+00:33:04,440 --> 00:33:06,440
+there will always be mistakes.
+
+809
+00:33:06,440 --> 00:33:10,440
+I talked about the idea, for example, in Project 3 of having a design document where you have
+
+810
+00:33:10,440 --> 00:33:14,440
+to specify all the dependencies and classes and whatever else, but I find that next to
+
+811
+00:33:14,440 --> 00:33:18,440
+impossible to actually sit down and do something like that without programming, and especially
+
+812
+00:33:18,440 --> 00:33:20,440
+in 61B, I think it's tough.
+
+813
+00:33:20,440 --> 00:33:24,440
+So I guess what I would say, when you're doing Project 3, is avoid the temptation to
+
+814
+00:33:24,440 --> 00:33:26,440
+patch around the mistakes that you do make in your design.
+
+815
+00:33:26,440 --> 00:33:30,440
+Instead, I would actually take the time to step back and fix what's wrong.
+
+816
+00:33:30,440 --> 00:33:35,440
+So, I mean, just tiny example is S lists, we have that special case, and we could have
+
+817
+00:33:35,440 --> 00:33:38,440
+statements, but I think Sentinel nodes were a cool idea.
+
+818
+00:33:38,440 --> 00:33:39,440
+Okay.
+
+819
+00:33:39,440 --> 00:33:44,440
+Now, quick note, from an industry perspective, before we do our exercise, he talks about
+
+820
+00:33:44,440 --> 00:33:48,440
+how different companies have different cultures, and he describes that as a startup, when
+
+821
+00:33:48,440 --> 00:33:53,440
+Facebook was very small, which was not that long ago, Facebook embraced what he calls
+
+822
+00:33:53,440 --> 00:33:54,440
+tactical programming.
+
+823
+00:33:54,440 --> 00:33:58,440
+They have the slogan, move fast and break things, and basically you would get hired, and
+
+824
+00:33:58,440 --> 00:34:03,440
+it would be pretty normal for people to be building code and pushing it to the live site
+
+825
+00:34:03,440 --> 00:34:06,440
+within the first week on the job, things that code that people are actually
+
+826
+00:34:06,440 --> 00:34:07,440
+interacting with.
+
+827
+00:34:07,440 --> 00:34:10,440
+And so that's great, because when you're an engineer, it feels like you actually have
+
+828
+00:34:10,440 --> 00:34:11,440
+control.
+
+829
+00:34:11,440 --> 00:34:14,440
+You're just an employee, but I can actually change the way that messages are sent, or the
+
+830
+00:34:14,440 --> 00:34:17,440
+way that the feed is displayed, or what shows up in the feed.
+
+831
+00:34:17,440 --> 00:34:21,440
+And it also means the development is really fast in the short term, because you don't have
+
+832
+00:34:21,440 --> 00:34:24,440
+to go through more complex code review processes or whatever else.
+
+833
+00:34:24,440 --> 00:34:29,440
+Now, clearly, Facebook was incredibly successful, but its code base was noted as a mess.
+
+834
+00:34:29,440 --> 00:34:34,440
+So Osterhote, having the inside scoop, says that their code base was incomprehensible, unstable,
+
+835
+00:34:34,440 --> 00:34:38,440
+few comments or tests, and painful to work with, which made working there last month.
+
+836
+00:34:38,440 --> 00:34:42,440
+Now, eventually, they changed the company program in culture, and their motto became move
+
+837
+00:34:42,440 --> 00:34:46,440
+fast with stable infra, which certainly sounds less sexy, but I guess makes people's
+
+838
+00:34:46,440 --> 00:34:48,440
+jobs better.
+
+839
+00:34:48,440 --> 00:34:52,440
+Now, interesting note, and we'll talk about this in another one of our Friday lectures, is
+
+840
+00:34:52,440 --> 00:34:56,440
+the impact of how companies make decisions about what to work on.
+
+841
+00:34:56,440 --> 00:35:02,440
+And so Facebook, you could argue that their general attitude in life, this same kind of
+
+842
+00:35:02,440 --> 00:35:04,440
+theme has done great harm to the world, arguably.
+
+843
+00:35:04,440 --> 00:35:07,440
+And we'll talk in a future lecture, and I'll get some of your perspectives.
+
+844
+00:35:07,440 --> 00:35:12,440
+But obviously, they built this very powerful tool that has been released to the world, and arguably
+
+845
+00:35:12,440 --> 00:35:13,440
+has done damage.
+
+846
+00:35:13,440 --> 00:35:18,440
+Now, by contrast, there are other companies that have a more strategic culture, so he points
+
+847
+00:35:18,440 --> 00:35:19,440
+that Google and VMware.
+
+848
+00:35:19,440 --> 00:35:24,440
+And I will say that I've had this vision, but I have not yet done so of interning at Google,
+
+849
+00:35:24,440 --> 00:35:27,440
+or Facebook, or something, some summer, because it seems fun.
+
+850
+00:35:27,440 --> 00:35:31,440
+I have a friend at Google, who I was going to intern with summer ago, but then I didn't
+
+851
+00:35:31,440 --> 00:35:34,440
+want to commute to Mountain View from here, because it's too far, plus the baby.
+
+852
+00:35:34,440 --> 00:35:38,440
+Anyway, but he says that, because I wanted to know about their software practices, because
+
+853
+00:35:38,440 --> 00:35:41,440
+they teach this class, and I want to have more rural world stuff to bring you, because
+
+854
+00:35:41,440 --> 00:35:42,440
+it's been a while.
+
+855
+00:35:42,440 --> 00:35:47,440
+And so he says Google, a company known for its strategic approach to software, and VMware.
+
+856
+00:35:47,440 --> 00:35:50,440
+They place a heavy emphasis on high quality code and good design.
+
+857
+00:35:50,440 --> 00:35:55,440
+They build sophisticated products that solve complex problems with reliable software systems.
+
+858
+00:35:55,440 --> 00:35:58,440
+That's especially true if you're familiar with VMware, where they write software
+
+859
+00:35:58,440 --> 00:36:03,440
+that literally emulates operating systems inside of other operating systems.
+
+860
+00:36:03,440 --> 00:36:05,440
+Very technical and difficult work.
+
+861
+00:36:05,440 --> 00:36:09,440
+And so these companies, strong technical cultures, are well-known in Silicon Valley,
+
+862
+00:36:09,440 --> 00:36:14,440
+and few companies can compete with them to hire the top technical talent, whoever those people are.
+
+863
+00:36:14,440 --> 00:36:18,440
+Now, real world projects and companies, they succeed with either approach.
+
+864
+00:36:18,440 --> 00:36:23,440
+Obviously, Facebook is an enormously successful company, even though it's original technical
+
+865
+00:36:23,440 --> 00:36:25,440
+routes where maybe a little diceier.
+
+866
+00:36:25,440 --> 00:36:28,440
+Those two, though, then says, I think it'd be more fun to work somewhere with a nice
+
+867
+00:36:28,440 --> 00:36:31,440
+code base, so I guess if you trust them, you should work at Google in that Facebook,
+
+868
+00:36:31,440 --> 00:36:32,440
+but I don't know.
+
+869
+00:36:32,440 --> 00:36:33,440
+Anyway.
+
+870
+00:36:33,440 --> 00:36:34,440
+Yeah.
+
+871
+00:36:34,440 --> 00:36:35,440
+All right.
+
+872
+00:36:35,440 --> 00:36:36,440
+So, complexity.
+
+873
+00:36:36,440 --> 00:36:37,440
+Okay.
+
+874
+00:36:37,440 --> 00:36:40,440
+You know, let's see, do I want to just jump in?
+
+875
+00:36:40,440 --> 00:36:41,440
+Yeah.
+
+876
+00:36:41,440 --> 00:36:43,440
+I'm just going to say one more thing.
+
+877
+00:36:43,440 --> 00:36:45,440
+You know, this slide used to be earlier.
+
+878
+00:36:45,440 --> 00:36:46,440
+Oopsie.
+
+879
+00:36:46,440 --> 00:36:47,440
+Anyway.
+
+880
+00:36:47,440 --> 00:36:48,440
+Okay.
+
+881
+00:36:48,440 --> 00:36:50,440
+So, where the complexity come from?
+
+882
+00:36:50,440 --> 00:36:51,440
+It gives two examples.
+
+883
+00:36:51,440 --> 00:36:53,440
+Dependencies and obscurity.
+
+884
+00:36:53,440 --> 00:36:54,440
+Okay.
+
+885
+00:36:54,440 --> 00:36:56,440
+So, let's see if he has an example.
+
+886
+00:36:56,440 --> 00:36:57,440
+I'm getting rid of that slide.
+
+887
+00:36:57,440 --> 00:36:58,440
+We're going to come back to that one later.
+
+888
+00:36:58,440 --> 00:36:59,440
+Anyway, cal day.
+
+889
+00:36:59,440 --> 00:37:00,440
+Thanks for visiting.
+
+890
+00:37:00,440 --> 00:37:01,440
+Cool.
+
+891
+00:37:01,440 --> 00:37:02,440
+All right.
+
+892
+00:37:02,440 --> 00:37:07,440
+So, now what we're going to do is we are going to try and do an exercise to make obvious
+
+893
+00:37:07,440 --> 00:37:08,440
+code.
+
+894
+00:37:08,440 --> 00:37:12,440
+So, one of the most important ways to make your code obvious is to decompose it into separate
+
+895
+00:37:12,440 --> 00:37:16,440
+parts, which are often implemented as helper methods or subclasses or whatever else.
+
+896
+00:37:16,440 --> 00:37:19,440
+So, I'm going to try and exercise, which is inspired by bear maps.
+
+897
+00:37:19,440 --> 00:37:23,440
+And this is a very simplified version of something you'll do in that project, but you might find
+
+898
+00:37:23,440 --> 00:37:25,440
+it helpful to think about this.
+
+899
+00:37:25,440 --> 00:37:30,440
+So, the problem I'm giving you, arbitrary problem of the day, is that we have two, a two-dimensional
+
+900
+00:37:30,440 --> 00:37:34,440
+space that goes from zero to max x and zero to max y.
+
+901
+00:37:34,440 --> 00:37:37,440
+So, if max x is 100 and max y is 100, this is the space.
+
+902
+00:37:37,440 --> 00:37:38,440
+Okay.
+
+903
+00:37:38,440 --> 00:37:39,440
+It's small.
+
+904
+00:37:39,440 --> 00:37:40,440
+It's finite.
+
+905
+00:37:40,440 --> 00:37:42,440
+Now, let's say we break that space up into subspaces.
+
+906
+00:37:42,440 --> 00:37:47,440
+In this case, 16 of them.
+
+907
+00:37:47,440 --> 00:37:53,440
+Now, let's say I want to find all regions, sorry.
+
+908
+00:37:53,440 --> 00:37:57,440
+I want to find all of the regions that overlap a query rectangle.
+
+909
+00:37:57,440 --> 00:38:01,440
+This is very closely related to the rastering task on the assignment, though it's different
+
+910
+00:38:01,440 --> 00:38:04,440
+enough that I'm not spoiling anything, and it's easier in certain ways.
+
+911
+00:38:04,440 --> 00:38:10,440
+So, for example, if I have the rectangle 20, 90, so 20 over 90 up, and 40 comma 60, I end
+
+912
+00:38:10,440 --> 00:38:15,440
+up with, this is the answer to this problem would be AA, AB, BA, BB.
+
+913
+00:38:15,440 --> 00:38:18,440
+And I want to give the answer in level order.
+
+914
+00:38:18,440 --> 00:38:20,440
+So, AA, AB, AB.
+
+915
+00:38:20,440 --> 00:38:23,440
+So, solving this problem, this is fascinating to me.
+
+916
+00:38:23,440 --> 00:38:30,440
+Last semester, at the very end of 61B, after, I mean, 30 weeks or 28 weeks of an intense
+
+917
+00:38:30,440 --> 00:38:35,440
+Berkeley education, I was very surprised to see that a lot of people ran into a bit of
+
+918
+00:38:35,440 --> 00:38:38,440
+a brick wall, not with this problem, but something kind of similar.
+
+919
+00:38:38,440 --> 00:38:42,440
+And I think a lot of it really boiled down to jumping in and not thinking ahead.
+
+920
+00:38:42,440 --> 00:38:46,440
+So, I was just, I was surprised, I figured this list of problems going to be no problem
+
+921
+00:38:46,440 --> 00:38:47,440
+from my kids.
+
+922
+00:38:47,440 --> 00:38:48,440
+They're going to do good.
+
+923
+00:38:48,440 --> 00:38:51,440
+And a lot of people did fine, but it was just very interesting.
+
+924
+00:38:51,440 --> 00:38:55,440
+And I think my main advice is to think very carefully before jumping in.
+
+925
+00:38:55,440 --> 00:38:59,440
+So, what I'd like you to do is let's imagine we're writing this code above.
+
+926
+00:38:59,440 --> 00:39:02,440
+So, there's no rectangle, there's no AA, there's no BB.
+
+927
+00:39:02,440 --> 00:39:05,440
+All that stuff is just something you're going to have to produce, right?
+
+928
+00:39:05,440 --> 00:39:10,440
+So, all you have is a function that takes x1, y1, x2, y2.
+
+929
+00:39:10,440 --> 00:39:15,440
+And ultimately, you're going to have to return for this specific example, AA, AB, ABB.
+
+930
+00:39:15,440 --> 00:39:17,440
+The point is that the starter code is very simple.
+
+931
+00:39:17,440 --> 00:39:20,440
+So, let's suppose you're trying to solve this code above.
+
+932
+00:39:20,440 --> 00:39:23,440
+I'd like you to try and come up with an approach or two to solve this.
+
+933
+00:39:23,440 --> 00:39:26,440
+And what are some helpful methods you might imagine are useful, okay?
+
+934
+00:39:26,440 --> 00:39:30,440
+So, I'm going to leave this up here, and I will give you guys like, two,
+
+935
+00:39:30,440 --> 00:39:31,440
+what have we got to?
+
+936
+00:39:31,440 --> 00:39:37,440
+Let's do like two and a half minutes of pondering helper methods or approaches you might use.
+
+937
+00:39:37,440 --> 00:39:41,440
+Just let a very high level, and then I'll talk a little bit about what you might come up with, okay?
+
+938
+00:39:41,440 --> 00:39:48,440
+So, give it a shot, trying to forget how you solved this problem.
+
+939
+00:39:48,440 --> 00:39:50,440
+Now, one thing you'll note is that it's very hard to solve these problems,
+
+940
+00:39:50,440 --> 00:39:53,440
+so that a computer to try out a little bit of stuff, but give it a shot.
+
+941
+00:39:53,440 --> 00:40:08,440
+Thank you so much.
+
+942
+00:40:23,440 --> 00:40:46,440
+Thank you.
+
+943
+00:40:46,440 --> 00:41:15,440
+Thank you.
+
+944
+00:41:15,440 --> 00:41:38,440
+Thank you.
+
+945
+00:41:38,440 --> 00:41:58,440
+Okay, I would be curious to know if anybody has specific helper functions you want to suggest or approaches.
+
+946
+00:41:58,440 --> 00:42:01,440
+Either way, helper functions, things that might be useful.
+
+947
+00:42:01,440 --> 00:42:10,440
+Yeah.
+
+948
+00:42:10,440 --> 00:42:11,440
+Okay, got it.
+
+949
+00:42:11,440 --> 00:42:17,440
+So, we'll call this thing like x column, and you give it an x, and you could in principle
+
+950
+00:42:17,440 --> 00:42:18,440
+do this.
+
+951
+00:42:18,440 --> 00:42:23,440
+So, for example, if you have 23, so x column, I'll give you some input, output example.
+
+952
+00:42:23,440 --> 00:42:26,440
+So, we've got 23 would give you what?
+
+953
+00:42:26,440 --> 00:42:32,440
+All right, let's do like 15.
+
+954
+00:42:32,440 --> 00:42:35,440
+You give it 15, and what does it return?
+
+955
+00:42:35,440 --> 00:42:38,440
+There are 25 each, I guess, max x divided by 4 each.
+
+956
+00:42:38,440 --> 00:42:45,440
+0, like 33 would give you 1, 51 would give you 2, 76 would give you 4, something like that,
+
+957
+00:42:45,440 --> 00:42:46,440
+some examples.
+
+958
+00:42:46,440 --> 00:42:51,440
+Okay, I think that's a great example of a helper method that might be useful.
+
+959
+00:42:51,440 --> 00:42:57,440
+Out of bounds, that's interesting, so I don't know, private Boolean, I'll do in bounds.
+
+960
+00:42:57,440 --> 00:42:58,440
+What do you want?
+
+961
+00:42:58,440 --> 00:43:01,440
+This should really be a double by the way.
+
+962
+00:43:01,440 --> 00:43:03,440
+Double x, double y.
+
+963
+00:43:03,440 --> 00:43:06,440
+Okay, so that could be handy because you could throw exceptions.
+
+964
+00:43:06,440 --> 00:43:10,440
+So, it returns false if x, y is outside max x, max y.
+
+965
+00:43:10,440 --> 00:43:13,440
+Okay, I know that's not strictly speaking true.
+
+966
+00:43:13,440 --> 00:43:15,440
+We've got to say the other coordinate is zero, but I'm not going to do it.
+
+967
+00:43:15,440 --> 00:43:16,440
+Okay, so we could write that.
+
+968
+00:43:16,440 --> 00:43:18,440
+Okay, other helper methods that might be useful.
+
+969
+00:43:18,440 --> 00:43:19,440
+Yeah.
+
+970
+00:43:19,440 --> 00:43:27,440
+I mean, the vertices of the rectangle.
+
+971
+00:43:27,440 --> 00:43:30,440
+Uh-huh, 2090.
+
+972
+00:43:30,440 --> 00:43:31,440
+Uh-huh.
+
+973
+00:43:31,440 --> 00:43:33,440
+Oh, the other two.
+
+974
+00:43:33,440 --> 00:43:34,440
+Okay, that's interesting.
+
+975
+00:43:34,440 --> 00:43:36,440
+So, you could write, for example.
+
+976
+00:43:36,440 --> 00:43:38,440
+So, let's say you wanted to do that.
+
+977
+00:43:38,440 --> 00:43:40,440
+Now, what type would that return?
+
+978
+00:43:40,440 --> 00:43:46,440
+So, I want to return like upper right, where I give it the x1, double x,
+
+979
+00:43:46,440 --> 00:43:49,440
+or y1, double x2, double y2.
+
+980
+00:43:49,440 --> 00:43:50,440
+Okay?
+
+981
+00:43:50,440 --> 00:43:55,440
+So, what would it return, this upper right function?
+
+982
+00:43:55,440 --> 00:43:56,440
+Oh, so a list.
+
+983
+00:43:56,440 --> 00:44:00,440
+Okay, so a list of, let's say, doubles.
+
+984
+00:44:00,440 --> 00:44:02,440
+Okay, and this is a really interesting discussion.
+
+985
+00:44:02,440 --> 00:44:05,440
+Uh, so it returns a list of length two.
+
+986
+00:44:05,440 --> 00:44:07,440
+Is that right?
+
+987
+00:44:07,440 --> 00:44:08,440
+Oh, it's actually all.
+
+988
+00:44:08,440 --> 00:44:12,440
+Okay, I'm going to recommend that what you want really here is something like,
+
+989
+00:44:12,440 --> 00:44:15,440
+uh, I don't know, like, point 2D or something like that.
+
+990
+00:44:15,440 --> 00:44:17,440
+So, you can give a type that returns the upper right.
+
+991
+00:44:17,440 --> 00:44:20,440
+Though funny story, um, it turns out that,
+
+992
+00:44:20,440 --> 00:44:22,440
+I guess I'll import whatever this thing is.
+
+993
+00:44:22,440 --> 00:44:25,440
+Um, it turns out that this is not actually a useful method,
+
+994
+00:44:25,440 --> 00:44:26,440
+but it's unclear, right?
+
+995
+00:44:26,440 --> 00:44:28,440
+At least the approaches I might have.
+
+996
+00:44:28,440 --> 00:44:29,440
+Yeah.
+
+997
+00:44:29,440 --> 00:44:30,440
+Yeah.
+
+998
+00:44:30,440 --> 00:44:34,440
+Yeah.
+
+999
+00:44:34,440 --> 00:44:35,440
+Got it.
+
+1000
+00:44:35,440 --> 00:44:36,440
+So, something like string.
+
+1001
+00:44:36,440 --> 00:44:38,440
+Let's call it like a box string.
+
+1002
+00:44:38,440 --> 00:44:44,440
+You give it double x1, double y1, double x2, double y2.
+
+1003
+00:44:44,440 --> 00:44:48,440
+And this will tell you, in a specific location, what is that going to be?
+
+1004
+00:44:48,440 --> 00:44:51,440
+So, you give it like this point, and it'll give you AA back.
+
+1005
+00:44:51,440 --> 00:44:54,440
+Okay, last thing I want to ask is, what are some approaches?
+
+1006
+00:44:54,440 --> 00:44:58,440
+If you have all these helper methods, what's something you could do to solve the problem?
+
+1007
+00:44:58,440 --> 00:45:00,440
+What do you think?
+
+1008
+00:45:00,440 --> 00:45:01,440
+Yeah.
+
+1009
+00:45:01,440 --> 00:45:02,440
+Okay.
+
+1010
+00:45:02,440 --> 00:45:12,440
+So, smallest x, which will always be, let's say that this is always the upper left.
+
+1011
+00:45:12,440 --> 00:45:14,440
+So, let's say it's x1.
+
+1012
+00:45:14,440 --> 00:45:15,440
+Yep.
+
+1013
+00:45:15,440 --> 00:45:16,440
+Okay.
+
+1014
+00:45:16,440 --> 00:45:17,440
+Which will be here.
+
+1015
+00:45:17,440 --> 00:45:19,440
+So, I got the smallest and the largest x value.
+
+1016
+00:45:19,440 --> 00:45:20,440
+Great.
+
+1017
+00:45:20,440 --> 00:45:21,440
+Do the same thing for y.
+
+1018
+00:45:21,440 --> 00:45:24,440
+So, you have a range of y values.
+
+1019
+00:45:24,440 --> 00:45:25,440
+Yep.
+
+1020
+00:45:25,440 --> 00:45:26,440
+Yeah.
+
+1021
+00:45:26,440 --> 00:45:34,440
+So, you basically create a list, or you know the start x, the start y of ny, and you just iterate
+
+1022
+00:45:34,440 --> 00:45:35,440
+over.
+
+1023
+00:45:35,440 --> 00:45:36,440
+So, that's one approach.
+
+1024
+00:45:36,440 --> 00:45:38,440
+What I think is the more natural approach.
+
+1025
+00:45:38,440 --> 00:45:41,440
+The other approach that you may attempt, but is not a good idea.
+
+1026
+00:45:41,440 --> 00:45:46,440
+One project to see is, let's just iterate over every possible box and say, is it valid?
+
+1027
+00:45:46,440 --> 00:45:48,440
+I don't like that approach as much.
+
+1028
+00:45:48,440 --> 00:45:49,440
+It's more complicated.
+
+1029
+00:45:49,440 --> 00:45:52,440
+So, that approach is, let's look at AABACAD.
+
+1030
+00:45:52,440 --> 00:45:54,440
+For each box, see if it intersects the rectangle.
+
+1031
+00:45:54,440 --> 00:45:58,440
+I think it is more natural just to iterate only those rectangles you know are good.
+
+1032
+00:45:58,440 --> 00:45:59,440
+I know that's a little vague.
+
+1033
+00:45:59,440 --> 00:46:05,440
+But the big picture here is that these ideas, having these helper methods and mind you writing
+
+1034
+00:46:05,440 --> 00:46:10,440
+tests to verify that they work, these are better building blocks, better types of abstractions
+
+1035
+00:46:10,440 --> 00:46:11,440
+that will make your code more obvious.
+
+1036
+00:46:11,440 --> 00:46:16,440
+And so, when you work on your raster, when you do a project to see, strive for obvious
+
+1037
+00:46:16,440 --> 00:46:17,440
+code.
+
+1038
+00:46:17,440 --> 00:46:18,440
+It'll make your life better.
+
+1039
+00:46:18,440 --> 00:46:20,440
+It'll make the TAs happier in office hours.
+
+1040
+00:46:20,440 --> 00:46:21,440
+All right.
+
+1041
+00:46:21,440 --> 00:46:22,440
+Thank you everybody.
+
+1042
+00:46:22,440 --> 00:46:23,440
+I hope you enjoyed this weird lecture.
+
+1043
+00:46:23,440 --> 00:46:26,440
+There'll be two more weird lectures to come.
+
+1044
+00:46:26,440 --> 00:46:27,440
+All right.
+
+1045
+00:46:27,440 --> 00:46:30,440
+I think it was successful.
+
