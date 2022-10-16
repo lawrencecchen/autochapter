@@ -24,7 +24,8 @@ pytesseract.tesseract_cmd = r'/opt/homebrew/bin/tesseract'
 
 
 # COHERE_API_KEY = "Dbvh24GpdsMeb3Gs4K87iy0zh3ruYN8znXDXBSqE"
-COHERE_API_KEY = "8rLIrm60Gf9mSmeIF2RHxv1TNcjXpHFDZ9XnqjD2"
+# COHERE_API_KEY = "smw4Q4kVBOzzmsy5L6VHtQ0bjzc70rqEalAwNsWt"
+COHERE_API_KEY = "2eXv0jtdPHV3tpe6ak9w5NmHDd1cV1n4mwLu8pLL"
 cohere = cohere.Client(COHERE_API_KEY)
 
 

@@ -65,39 +65,43 @@ export default function Video() {
   return (
     <div className="flex h-screen overflow-hidden">
       <div className="p-4 overflow-auto border-r max-w-md w-full">
-        <h1 className="font-semibold text-xl mb-1.5">Summary</h1>
+        <h1 className="font-semibold text-xl mb-1.5">
+          <Link href="/">Summary</Link>
+        </h1>
         <ol className="border-b">
-          {video.data?.map((chapter) => (
-            <li className="normal-nums" key={chapter.start_time}>
-              <button
-                className="text-left border-t py-2 grow flex max-w-md w-full"
-                onClick={() => {
-                  invariant(videoRef.current, "videoRef.current is null");
-                  videoRef.current.currentTime = chapter.start_time;
-                  setSearchTerm(chapter.summary.replace("--", ""));
-                }}
-              >
-                <img
-                  src={
-                    "/api/screenshots" +
-                    chapter.meta.screenshot_path.replace(
-                      "/Users/lawrencechen/fun/autochapter/screenshots",
-                      ""
-                    )
-                  }
-                  className="aspect-video h-14 mr-2 border"
-                />
-                <div>
-                  <p className="line-clamp-2 text-sm">
-                    {chapter.summary.replace("--", "")}
-                  </p>
-                  <p className="bg-blue-200/50 font-semibold inline text-xs px-1 text-blue-700 py-0.5">
-                    {formatSeconds(chapter.start_time)}
-                  </p>
-                </div>
-              </button>
-            </li>
-          ))}
+          {video.data
+            ?.filter((chapter) => chapter.summary.replace("--", "").length > 0)
+            .map((chapter) => (
+              <li className="normal-nums" key={chapter.start_time}>
+                <button
+                  className="text-left border-t py-2 grow flex max-w-md w-full"
+                  onClick={() => {
+                    invariant(videoRef.current, "videoRef.current is null");
+                    videoRef.current.currentTime = chapter.start_time;
+                    setSearchTerm(chapter.summary.replace("--", ""));
+                  }}
+                >
+                  <img
+                    src={
+                      "/api/screenshots" +
+                      chapter.meta.screenshot_path.replace(
+                        "/Users/lawrencechen/fun/autochapter/screenshots",
+                        ""
+                      )
+                    }
+                    className="aspect-video h-14 mr-2 border"
+                  />
+                  <div>
+                    <p className="line-clamp-2 text-sm">
+                      {chapter.summary.replace("--", "")}
+                    </p>
+                    <p className="bg-blue-200/50 font-semibold inline text-xs px-1 text-blue-700 py-0.5">
+                      {formatSeconds(chapter.start_time)}
+                    </p>
+                  </div>
+                </button>
+              </li>
+            ))}
         </ol>
       </div>
 

@@ -20,7 +20,9 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-COHERE_API_KEY = "8rLIrm60Gf9mSmeIF2RHxv1TNcjXpHFDZ9XnqjD2"
+# COHERE_API_KEY = "8rLIrm60Gf9mSmeIF2RHxv1TNcjXpHFDZ9XnqjD2"
+# COHERE_API_KEY = "2eXv0jtdPHV3tpe6ak9w5NmHDd1cV1n4mwLu8pLL" # chris' key
+COHERE_API_KEY = "TvRrbHjuUPfaw44fYipL3zt5bYiKNLLJoajZRDnQ" # chris' key
 co = cohere.Client(COHERE_API_KEY)
 
 @app.get("/")

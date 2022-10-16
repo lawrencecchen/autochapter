@@ -34,7 +34,7 @@ if __name__ == "__main__":
   import asyncio
   import json
 
-  video_url = os.path.join(os.getcwd(), "videos/Lecture 16 ｜ Adversarial Examples and Adversarial Training [CIfsB_EYsVI].webm")
+  video_url = os.path.join(os.getcwd(), "videos/Lecture 16 Part 2 ： ADT Implementations [uhkjG75kJu8].webm")
   out_dir = "tsummaries"
   summarized_segments = asyncio.run(vid2summaries(video_url))
   out_path = os.path.join(out_dir, video_url.split("/")[-1] + ".json")
