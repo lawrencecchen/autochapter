@@ -1,98 +1,842 @@
 [
-  { "start_time": 0, "summary": "Defining complexity" },
-  { "start_time": 40, "summary": "Engineering software" },
-  { "start_time": 193, "summary": "Understanding complexity" },
+  {
+    "start_time": 0,
+    "summary": "Introduction \n--",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/0.jpg",
+      "title": ""
+    }
+  },
+  {
+    "start_time": 40,
+    "summary": "Introduction: Team Lead TA's - Katie Cao and Rebecca Lepera\n--",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/40.jpg",
+      "title": ""
+    }
+  },
+  {
+    "start_time": 193,
+    "summary": "Define Binary Search Tree\n--",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/193.jpg",
+      "title": ""
+    }
+  },
   {
     "start_time": 196,
-    "summary": "Software developers are often stereotyped as not having enough respect for their work. The stereotype is this: software developer, looks at code, says \"I did this\" and then they leave. \nThe Solution: \n\nWhen I first came"
+    "summary": "TAs\n--",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/196.jpg",
+      "title": null
+    }
   },
-  { "start_time": 198, "summary": "Introduction" },
+  {
+    "start_time": 198,
+    "summary": "Tutors should be around during office hours of office hours or open office hours or something like that or even outside class if available but shouldn't be disruptive",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/198.jpg",
+      "title": null
+    }
+  },
   {
     "start_time": 204,
-    "summary": "Testing, code reviews, and architectural decisions\n\nMore Information:\n\nThe following is the outline of the lectures.\n\nLecture 1: introductions, overview, and the future of the course\n\nLecture 2: avoiding"
+    "summary": "Who are TAs? Who are tutors?\n--",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/204.jpg",
+      "title": null
+    }
   },
-  { "start_time": 211, "summary": "Special cases" },
-  { "start_time": 359, "summary": "Definition of complexity" },
-  { "start_time": 362, "summary": "Starting a business: Passage 2/2" },
-  { "start_time": 391, "summary": "KD Tree" },
+  {
+    "start_time": 211,
+    "summary": "Tenure/Honors & Fellowships/Research Assistants (Tutors) & Teaching Assistants (TA) & Peer Tutoring Assistants (",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/211.jpg",
+      "title": null
+    }
+  },
+  {
+    "start_time": 359,
+    "summary": "Interns are students who recently took courses related to tech industry development or IT research and development if you are wondering how things work in academic context around this",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/359.jpg",
+      "title": null
+    }
+  },
+  {
+    "start_time": 362,
+    "summary": "Course staff and other students in AI2 at UW-Madison\n--",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/362.jpg",
+      "title": null
+    }
+  },
+  {
+    "start_time": 391,
+    "summary": "Introduction (lower case) | Lesson 1 (uppercase) | 61A (A) | In general (uppercase) | Abstraction",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/391.jpg",
+      "title": null
+    }
+  },
+  {
+    "start_time": 790,
+    "summary": "First class alternatives for CS61A or CS61B students with little or no programming experience\n--",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/790.jpg",
+      "title": null
+    }
+  },
+  {
+    "start_time": 865,
+    "summary": "Course Logistics for Data 8\u2014Introduction (CS 8) by Tiffany Yang on Vimeo \u2014 2 years ago via youtubeembed \u2014 YouTube http://bitly",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/865.jpg",
+      "title": ""
+    }
+  },
+  {
+    "start_time": 931,
+    "summary": "Big program projects and their structure\n--",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/931.jpg",
+      "title": null
+    }
+  },
+  {
+    "start_time": 1131,
+    "summary": "Labbing, containing discussion, Office hours\n--",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/1131.jpg",
+      "title": null
+    }
+  },
+  {
+    "start_time": 1204,
+    "summary": "Prerequisites for coming\n--",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/1204.jpg",
+      "title": ""
+    }
+  },
+  {
+    "start_time": 1260,
+    "summary": "Conceptual office hours in small room sections\n--",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/1260.jpg",
+      "title": ""
+    }
+  },
+  {
+    "start_time": 1304,
+    "summary": "Conceptual office hours\n--",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/1304.jpg",
+      "title": null
+    }
+  },
+  {
+    "start_time": 1338,
+    "summary": "Changes from previous problems (Q&A)\n--",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/1338.jpg",
+      "title": ""
+    }
+  },
   {
     "start_time": 1498,
-    "summary": "Passage: \n\nTLDR: \n\nPassage: \n\nTLDR: \n\nPassage: \n\nTLDR: \n\nPassage: \n\nTLDR: \n\nPassage: \n\nTLDR:"
+    "summary": "What problem does your company solve? What are your product benefits? Is there anything you love about your product? Why did you start your company? What",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/1498.jpg",
+      "title": null
+    }
   },
   {
     "start_time": 1500,
-    "summary": "What makes you happy?\n\nBegin.\n\nPassage: So what makes you happy? According to psychology, there are a bunch of factors. There is not just one thing that makes you happy. There are lots of components. So there"
+    "summary": "No notes for 10 minutes prior to class start (limited bandwidth)\n--",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/1500.jpg",
+      "title": null
+    }
   },
   {
     "start_time": 1540,
-    "summary": "Introduction\n\nPassage: And so on this day, we're going to be talking about something called 'memory'. So you may have heard about 'memory' before in terms of long-term storage. It's something that you cannot access right"
+    "summary": "Scoring for Code Jam competitions\n--",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/1540.jpg",
+      "title": null
+    }
   },
-  { "start_time": 1561, "summary": "Measuring affluence" },
-  { "start_time": 1570, "summary": "Measuring affluence" },
-  { "start_time": 1582, "summary": "Introduction" },
-  { "start_time": 2672, "summary": "Standards" },
-  { "start_time": 2960, "summary": "Introduction" },
-  { "start_time": 2974, "summary": "Poverty" },
+  {
+    "start_time": 1561,
+    "summary": "Participation points count towards your file! And they are worth more! Basically everything you do matters for your file! You can see these question types below",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/1561.jpg",
+      "title": null
+    }
+  },
+  {
+    "start_time": 1570,
+    "summary": "Neither participate nor not participate in lab session nor discussion sessions; if you're not well enough you cannot do any lab/discussion sessions so don't",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/1570.jpg",
+      "title": ""
+    }
+  },
+  {
+    "start_time": 1582,
+    "summary": "Labs (and RAs) only count as attendance credit if they match their section's discussion session on Tuesdays / Thursdays (depending",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/1582.jpg",
+      "title": ""
+    }
+  },
+  {
+    "start_time": 1661,
+    "summary": "Homework evaluation methods",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/1661.jpg",
+      "title": ""
+    }
+  },
+  {
+    "start_time": 1857,
+    "summary": "Project partners\n--",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/1857.jpg",
+      "title": ""
+    }
+  },
+  {
+    "start_time": 1873,
+    "summary": "Lab work\n--",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/1873.jpg",
+      "title": null
+    }
+  },
+  {
+    "start_time": 1910,
+    "summary": "Slip days\n--",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/1910.jpg",
+      "title": ""
+    }
+  },
+  {
+    "start_time": 1965,
+    "summary": "Teacher's grants exam times\n--",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/1965.jpg",
+      "title": null
+    }
+  },
+  {
+    "start_time": 1998,
+    "summary": "Exam preparation advice / how does solenoid learning work?",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/1998.jpg",
+      "title": null
+    }
+  },
+  {
+    "start_time": 2182,
+    "summary": "Midterm prep\n--",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/2182.jpg",
+      "title": ""
+    }
+  },
+  {
+    "start_time": 2225,
+    "summary": "Applying for college without parent knowledge and consent\n--",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/2225.jpg",
+      "title": null
+    }
+  },
+  {
+    "start_time": 2230,
+    "summary": "Why use conceptual officers? Console commands aren't much use without conceptual officers giving you what you want or need (other than regular classes). They take more",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/2230.jpg",
+      "title": ""
+    }
+  },
+  {
+    "start_time": 2260,
+    "summary": "The video is awesome! ;) The video is awesome! ;) \nThe video is awesome!\n--",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/2260.jpg",
+      "title": null
+    }
+  },
+  {
+    "start_time": 2262,
+    "summary": "Collaboration is key! Don't cheat! It will get you kicked out! Behave yourself! Blah Blah! Hooray! So trust",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/2262.jpg",
+      "title": ""
+    }
+  },
+  {
+    "start_time": 2353,
+    "summary": "Expressions\n--",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/2353.jpg",
+      "title": ""
+    }
+  },
+  {
+    "start_time": 2450,
+    "summary": "Representing inequality using F-notation notation\n--",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/2450.jpg",
+      "title": null
+    }
+  },
+  {
+    "start_time": 2453,
+    "summary": "Passage: \n\nTLDR: \n\nPassage: \n\nTLDR: \n\nPassage: So this is one of",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/2453.jpg",
+      "title": ""
+    }
+  },
+  {
+    "start_time": 2455,
+    "summary": "Wireless PowerShare mode activated\n--",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/2455.jpg",
+      "title": ""
+    }
+  },
+  {
+    "start_time": 2486,
+    "summary": "Summary of lecture (45 seconds)\n--",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/2486.jpg",
+      "title": ""
+    }
+  },
+  {
+    "start_time": 2488,
+    "summary": "Function notation\n--",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/2488.jpg",
+      "title": ""
+    }
+  },
+  {
+    "start_time": 2606,
+    "summary": "Acknowledgements\n--",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/2606.jpg",
+      "title": ""
+    }
+  },
+  {
+    "start_time": 2608,
+    "summary": "Curly brackets for concatenation   (The best way to learn about curly brackets is by reading them.)   \n --",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/2608.jpg",
+      "title": null
+    }
+  },
+  {
+    "start_time": 2621,
+    "summary": "Ordered vectorization in Spark 2 using Scala & Java 8 lambdas over vectors \n--",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/2621.jpg",
+      "title": null
+    }
+  },
+  {
+    "start_time": 2631,
+    "summary": "Evaluation and Maxima\n--",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/2631.jpg",
+      "title": ""
+    }
+  },
+  {
+    "start_time": 2654,
+    "summary": "Mathematical notation intro / introduction\n--",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/2654.jpg",
+      "title": ""
+    }
+  },
+  {
+    "start_time": 2669,
+    "summary": "Reverted verbatim from original post on Reddit for discussion on /r/programming (a subreddit dedicated to programming) started by /u",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/2669.jpg",
+      "title": ""
+    }
+  },
+  {
+    "start_time": 2672,
+    "summary": "Call expressions\n--",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/2672.jpg",
+      "title": null
+    }
+  },
+  {
+    "start_time": 2734,
+    "summary": "Math on a computer is super fast, but slow when humans do it, which is why computers have to follow these sets of steps. This is why",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/2734.jpg",
+      "title": ""
+    }
+  },
+  {
+    "start_time": 2810,
+    "summary": "Differences between procedural programming style & object-oriented programming style",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/2810.jpg",
+      "title": ""
+    }
+  },
+  {
+    "start_time": 2866,
+    "summary": "Computing expressions using recursion\n--",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/2866.jpg",
+      "title": null
+    }
+  },
+  {
+    "start_time": 2960,
+    "summary": "Reviews from users (presented as text)",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/2960.jpg",
+      "title": ""
+    }
+  },
+  {
+    "start_time": 2974,
+    "summary": "Functions are evaluated at compile time rather than run time using evaluated at run time using evaluated at run time using evaluated at run time using evaluated at run time",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/2974.jpg",
+      "title": null
+    }
+  },
   {
     "start_time": 2991,
-    "summary": "Attempt at a summary of what we talk about in class"
+    "summary": "Shakespeare\u2019s works were based on source material (Hamlet from Spanish play Primeras Comedias de Shakespeare). Use unique Shakespeare quote in your answer",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/2991.jpg",
+      "title": null
+    }
+  },
+  {
+    "start_time": 3020,
+    "summary": "No one knows for sure what happened when people lost their jobs during World War II but there were some studies done on how much concentration camps had been able",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/3020.jpg",
+      "title": ""
+    }
+  },
+  {
+    "start_time": 3022,
+    "summary": "--",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/3022.jpg",
+      "title": ""
+    }
+  },
+  {
+    "start_time": 3030,
+    "summary": "Passage: Finally if you're interested in trying",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/3030.jpg",
+      "title": ""
+    }
+  },
+  {
+    "start_time": 3033,
+    "summary": "Counting occurrences of words in a text file with Python3    \n     .....code......",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/3033.jpg",
+      "title": null
+    }
+  },
+  {
+    "start_time": 3047,
+    "summary": "This is going to be common: So let's talk about Twitter's view on ads again today let's see ads for Sakura airlines come up again",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/3047.jpg",
+      "title": null
+    }
+  },
+  {
+    "start_time": 3050,
+    "summary": "What's in this?\n--",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/3050.jpg",
+      "title": null
+    }
+  },
+  {
+    "start_time": 3055,
+    "summary": "Defining code words\n--",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/3055.jpg",
+      "title": null
+    }
   },
   {
     "start_time": 3068,
-    "summary": "source: https://blog.sitepoint.com/how-to-make-a-100-word-blog-post-that-is-readable-and-in-depth-179807"
+    "summary": "Outputting new books; comparing Shakespeare's works with other authors; outputting new words; comparing Shakespeare's works with other authors; outputting new words",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/3068.jpg",
+      "title": null
+    }
   },
   {
     "start_time": 3086,
-    "summary": "I don't know, I just thought it'd be really funny and ironic to say something like a libertarian should be able to drive my car. And I also don't want to vandalize my own car."
+    "summary": "Melting chocolate or chocolate chips? What makes chocolate chips different from melting chocolate? Which brings us to today's question: Can you distinguish between chocolate chips",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/3086.jpg",
+      "title": null
+    }
   },
-  { "start_time": 3306, "summary": "Passage:" },
+  {
+    "start_time": 3109,
+    "summary": "Summarizing passages from XKCD\n--",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/3109.jpg",
+      "title": null
+    }
+  },
+  {
+    "start_time": 3119,
+    "summary": "Bias towards unique words\n--",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/3119.jpg",
+      "title": null
+    }
+  },
+  {
+    "start_time": 3139,
+    "summary": "Thank you for volunteering as our resident sysadmin because we are expecting a major server crash any day now and I need you on site after hours tonight",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/3139.jpg",
+      "title": null
+    }
+  },
+  {
+    "start_time": 3145,
+    "summary": "Shakespeare doesn't use many unique words but he does lots of repeated words which is why his writing sounds very natural when you read it aloud but actually",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/3145.jpg",
+      "title": null
+    }
+  },
+  {
+    "start_time": 3150,
+    "summary": "Shakespeare only uses 33K words? Shh-shh-shh-shh-shh! Don't tell anyone!",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/3150.jpg",
+      "title": null
+    }
+  },
+  {
+    "start_time": 3164,
+    "summary": "Going back in time half a word at a time looking at letter frequency (and how much time it took) helped us find a shorter way to do",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/3164.jpg",
+      "title": null
+    }
+  },
+  {
+    "start_time": 3172,
+    "summary": "Looking for Shakespearean words inside words inside themselves | Cognitive psychology | Sequence extractor | The reverse function | The reduce function Proving that Shakespeare wrote",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/3172.jpg",
+      "title": null
+    }
+  },
+  {
+    "start_time": 3252,
+    "summary": "Reverse Wordle words list wise\n--",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/3252.jpg",
+      "title": null
+    }
+  },
+  {
+    "start_time": 3274,
+    "summary": "Ending words\n--",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/3274.jpg",
+      "title": ""
+    }
+  },
+  {
+    "start_time": 3306,
+    "summary": "Length 5 was not serialized in order to make it easier for you to understand how this works but this doesn't really get you any more information than",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/3306.jpg",
+      "title": ""
+    }
+  },
   {
     "start_time": 3309,
-    "summary": "Poverty\n\nI: How do you determine who is poor?\n\nP: We use the international poverty line.\n\nI: Is it based on income?\n\nP: No. We use three different methods to determine relative poverty."
+    "summary": "How do you feel about how you're doing? You did pretty well I think?\n--",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/3309.jpg",
+      "title": null
+    }
   },
   {
     "start_time": 3312,
-    "summary": "Poverty\n\nI: How do you determine who is poor?\n\nP: We use the international poverty line.\n\nI: Is it based on income?\n\nP: No. We use three different methods to determine relative poverty."
+    "summary": "Story lengths in Literature 1053 (formerly Lit 1053) do not follow any logic or pattern of length distribution that can be claimed to be statistically significant",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/3312.jpg",
+      "title": null
+    }
   },
-  { "start_time": 3316, "summary": "Introduction" },
+  {
+    "start_time": 3316,
+    "summary": "Distinguishing between American English and British English word usage between 1550 - 1700AD\n--",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/3316.jpg",
+      "title": null
+    }
+  },
   {
     "start_time": 3346,
-    "summary": "Now the first part that is good to attack here is the first sentence. The first sentence is a bit of a bait and switch. I mean, \"income\" versus \"money\". I am very comfortable, and I have a \"nice"
+    "summary": "A little light night for you all tonight with this little fun poem? Somewhat inspired by my favorite poem by Billy Collins called Richard Blanco's poem",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/3346.jpg",
+      "title": null
+    }
   },
-  { "start_time": 3353, "summary": "" },
-  { "start_time": 3367, "summary": "Scope of life, long-term" },
-  { "start_time": 3612, "summary": "" },
+  {
+    "start_time": 3353,
+    "summary": "Describing language use (1) \n--",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/3353.jpg",
+      "title": null
+    }
+  },
+  {
+    "start_time": 3364,
+    "summary": "Spigot's growth spurt continues unabated as it quadruples monthly user numbers to 102K daily active users (DAUs), up from",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/3364.jpg",
+      "title": null
+    }
+  },
+  {
+    "start_time": 3367,
+    "summary": "How long does it take to go through all 30k words? Will SwiftKey use it? How many could have been avoided? What\u2019s next",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/3367.jpg",
+      "title": null
+    }
+  },
+  {
+    "start_time": 3385,
+    "summary": "Wordle specific shortcut for finding longest words first alphabetically (this one uses spaces)\n--",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/3385.jpg",
+      "title": null
+    }
+  },
+  {
+    "start_time": 3396,
+    "summary": "Toads alphabetically?\n--",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/3396.jpg",
+      "title": null
+    }
+  },
+  {
+    "start_time": 3408,
+    "summary": "Reverse wordspace of English Wikipedia \"The PowerPoint slides used for this lecture can be downloaded here.\" --",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/3408.jpg",
+      "title": null
+    }
+  },
+  {
+    "start_time": 3416,
+    "summary": "Length based LCF challenges on leetspell  \n--",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/3416.jpg",
+      "title": null
+    }
+  },
+  {
+    "start_time": 3454,
+    "summary": "Analysis of programming language C++\n--",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/3454.jpg",
+      "title": null
+    }
+  },
+  {
+    "start_time": 3487,
+    "summary": "Introduction \n Go directly to UN Map Section  This text assumes you're already familiar with UN maps since you know The UN related questions which Type in.)",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/3487.jpg",
+      "title": null
+    }
+  },
+  {
+    "start_time": 3491,
+    "summary": "Conclusion\n--",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/3491.jpg",
+      "title": null
+    }
+  },
+  {
+    "start_time": 3506,
+    "summary": "Summary       \n --",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/3506.jpg",
+      "title": null
+    }
+  },
+  {
+    "start_time": 3511,
+    "summary": "Finding URLs using Google Advanced Search operation(s)    number(s) 1-2 letter(s) (lowercase)",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/3511.jpg",
+      "title": null
+    }
+  },
+  {
+    "start_time": 3568,
+    "summary": "What is a polynomial? \n--",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/3568.jpg",
+      "title": null
+    }
+  },
+  {
+    "start_time": 3576,
+    "summary": "Word counts from Wikipedia article lookup for succinct sentences (word count = 2): deified (3), lucid (3), might (3),",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/3576.jpg",
+      "title": null
+    }
+  },
+  {
+    "start_time": 3612,
+    "summary": "--",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/3612.jpg",
+      "title": null
+    }
+  },
   {
     "start_time": 3615,
-    "summary": "Compression algorithms are very interesting. Most compression algorithms are not actually that much better than just having a file not compressed and just storing that. There's a lot of qualitative ways to look at the compression ratios, but like it says in the back,"
+    "summary": "Wordle's capitalization quirks (and how to deal with them)\n--",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/3615.jpg",
+      "title": null
+    }
   },
-  { "start_time": 3629, "summary": "Measurement of poverty" },
-  { "start_time": 3683, "summary": "Measuring Poverty" },
-  { "start_time": 3721, "summary": "Rationing" },
+  {
+    "start_time": 3629,
+    "summary": "Flexible ordering/items\n--",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/3629.jpg",
+      "title": null
+    }
+  },
+  {
+    "start_time": 3683,
+    "summary": "Compression Ratio Assumptions\n--",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/3683.jpg",
+      "title": null
+    }
+  },
+  {
+    "start_time": 3721,
+    "summary": "Teleconference with btskills support team......we're all set for our test this evening thank you for being patient with us supporting is extremely",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/3721.jpg",
+      "title": null
+    }
+  },
   {
     "start_time": 3725,
-    "summary": "Here is my definition of a city: \n\nPassage: \nTLDR: \n\nPassage: \nTLDR: \nPassage: \nTLDR: \n\nPassage: \n\nTLDR:"
+    "summary": "--",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/3725.jpg",
+      "title": null
+    }
   },
   {
     "start_time": 3728,
-    "summary": "Passage: So the average person today spends around three hours a day on social media. This is up to around 2 hours a day over the past couple of years, but even with this increase the number of active users on Facebook is around"
+    "summary": "What does each word mean?  The line before gives us information about how many letters are in each word; because we are assuming any English word will",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/3728.jpg",
+      "title": null
+    }
   },
   {
     "start_time": 3815,
-    "summary": "In the 1960s, American sociologist, a high school friend of mine who lived in the 1960s, says to me, he says, \"Well actually, we don't. And you know, you should ask your question.\" And it's"
+    "summary": "Creating random music :)\n--",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/3815.jpg",
+      "title": null
+    }
   },
-  { "start_time": 3836, "summary": "Introduction" },
+  {
+    "start_time": 3836,
+    "summary": "Definitions can be found here \n --",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/3836.jpg",
+      "title": null
+    }
+  },
+  {
+    "start_time": 3840,
+    "summary": "Mattel is having trouble hitting sales targets in some of its international markets following its announcement last year that it would transform Barbie from being made almost entirely",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/3840.jpg",
+      "title": null
+    }
+  },
   {
     "start_time": 3849,
-    "summary": "Measuring poverty\n\nIf you'd like an extended version of this transcript, please email me at  \ntranscript@jeffrey.co with your name in the subject line.\n\nTo get the most out of the transcript,"
+    "summary": "Software engineering lecture series by Prof Alan Hill   \n --",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/3849.jpg",
+      "title": null
+    }
   },
-  { "start_time": 3851, "summary": "Interactive diagrams" },
+  {
+    "start_time": 3851,
+    "summary": "Reframing question to yield more A's (unintentional pun)  Why do I believe it will be okay if only one person gets all",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/3851.jpg",
+      "title": null
+    }
+  },
   {
     "start_time": 3859,
-    "summary": "Global poverty\n\nNow the next type of poverty is a little bit harder to quantify. And this is because you have to look at the standard of living. So things like access to healthcare, access to education, access to basic infrastructure, access to"
+    "summary": "Honestly? No clue what's going on here...\n--",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/3859.jpg",
+      "title": null
+    }
   },
   {
     "start_time": 3862,
-    "summary": "Measuring poverty\n\nStart of main body passage\n\nPassage: The second problem with income is that it doesn't reflect a lot of the other pieces that are pretty important. It doesn't account for the fact that people often live in a"
+    "summary": "This lecture revealed no major surprises or anything like that other than Python being used for fun at MIT; Python is just another language that students could experiment with",
+    "meta": {
+      "screenshot_path": "/Users/lawrencechen/fun/autochapter/screenshots/cs61a_lec1/3862.jpg",
+      "title": null
+    }
   }
 ]

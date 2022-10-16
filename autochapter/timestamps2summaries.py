@@ -4,6 +4,7 @@
 # In[2]:
 
 
+from pathlib import Path
 from typing import List
 import whisper
 import os
@@ -11,13 +12,19 @@ import json
 import cohere
 import httpx
 import asyncio
+import cv2
+import pytesseract
+from PIL import Image
+
+pytesseract.tesseract_cmd = r'/opt/homebrew/bin/tesseract'
+
 
 
 # In[3]:
 
 
-COHERE_API_KEY = "Dbvh24GpdsMeb3Gs4K87iy0zh3ruYN8znXDXBSqE"
-# COHERE_API_KEY = "8rLIrm60Gf9mSmeIF2RHxv1TNcjXpHFDZ9XnqjD2"
+# COHERE_API_KEY = "Dbvh24GpdsMeb3Gs4K87iy0zh3ruYN8znXDXBSqE"
+COHERE_API_KEY = "8rLIrm60Gf9mSmeIF2RHxv1TNcjXpHFDZ9XnqjD2"
 cohere = cohere.Client(COHERE_API_KEY)
 
 
@@ -134,35 +141,95 @@ async def get_async(url):
 
 
 # all units should be in seconds
-def get_pre_summarized_segments(transcribed, timestamps: List[int], max_duration=300):
+def get_pre_summarized_segments(transcribed, timestamps: List[int], max_duration=300)->List[str]:
   pre_summarized_segments = []
   ts = 0
+  # ts = timestamps[0]
   max_ts = timestamps[-1] + max_duration
-  i_timestamp = 0
+  i_timestamp = 1
   i_segment = 0
   segments = transcribed["segments"]
+  # i_segment = 0
+  # start_segment = timestamps["start"]
+  # end_segment = timestamps["end"]
 
-  while ts < max_ts and i_segment < len(segments) and i_timestamp < len(timestamps):
-    segment = segments[i_segment]
-    next_segment = segments[i_segment + 1] if i_segment + 1 < len(segments) else None
-    segment_start = segment["start"]
-
-    if len(pre_summarized_segments) <= i_timestamp:
-      pre_summarized_segments.append("")
-    
-    if next_segment is None:
-      pre_summarized_segments[i_timestamp] += segment["text"]
+  for i in range(1, len(timestamps) + 1):
+    # curr_timestamp = timestamps[i - 1]
+    if i == len(timestamps):
+      next_timestamp = max_ts
     else:
-      if segment_start <= timestamps[i_timestamp] + max_duration and next_segment["start"] > timestamps[i_timestamp]:
-        pre_summarized_segments[i_timestamp] += segment["text"]
-      else:
-        i_timestamp += 1
-      ts = next_segment["start"]
-    i_segment += 1
+      next_timestamp = timestamps[i]
+    # print(next_timestamp)
+    prev_segment = ""
+    segment_text = ""
 
-  stripped_segments = [segment.strip() for segment in pre_summarized_segments]
+    while ts <= next_timestamp and i_segment < len(segments):
+      seg = segments[i_segment]
+      segment_text += seg["text"]
+      ts = seg["start"] 
+      i_segment += 1
+    
+    if segment_text == "":
+      segment_text = prev_segment
 
-  return stripped_segments
+    pre_summarized_segments.append(segment_text)
+    prev_segment = segment_text
+  return pre_summarized_segments
+  #   # progress to current time
+  #   while ts < curr_timestamp:
+  #     segment = segments[i_segment]
+  #     ts = segment["start"]
+  #     i_segment += 1
+    
+  #   # get all segments until next timestamp
+  #   while ts < next_timestamp:
+  #     segment = segments[i_segment]
+  #     segment_text += segment["text"]
+  #     ts += segment["start"]
+  #     i_segment += 1
+    
+  #   # add segment to pre_summarized_segments
+  #   pre_summarized_segments.append(segment_text)
+  
+  # # get last segment
+  # segment_text = ""
+  # while ts < max_ts:
+  #   segment = segments[i_segment]
+  #   segment_text += segment["text"]
+  #   ts += segment["start"]
+  #   i_segment += 1
+  # pre_summarized_segments.append(segment_text)
+
+def extract_meta(video_url: str, video_name:str, timestamps: List[int])->List[str]:
+  cap = cv2.VideoCapture(video_url)
+  i_timestamp = 0
+  screenshot_paths = []
+  video_screenshot_dir = os.path.join(os.getcwd(), "screenshots", video_name)
+  Path(video_screenshot_dir).mkdir(parents=True, exist_ok=True)
+
+  while True:
+    ret, frame = cap.read()
+    if not ret:
+      break
+    curr_timestamp = timestamps[i_timestamp]
+    screenshot_path = os.path.join(video_screenshot_dir, f"{curr_timestamp}.jpg")
+    image_write_success = cv2.imwrite(screenshot_path, frame)
+    if not image_write_success:
+      print(f"error writing screenshot {screenshot_path}")
+    img_rgb = Image.frombytes('RGB', frame.shape[:2], frame, 'raw', 'BGR', 0, 0)
+    try:
+      title = pytesseract.image_to_string(img_rgb, timeout=0.5)
+      screenshot_paths.append({"screenshot_path":screenshot_path, "title": title})
+    except RuntimeError as timeout_error:
+      screenshot_paths.append({"screenshot_path":screenshot_path, "title": None})
+    # print("extracting meta", i_timestamp, title)
+    cap.set(cv2.CAP_PROP_POS_MSEC, curr_timestamp * 1000)
+    i_timestamp += 1
+    if i_timestamp >= len(timestamps):
+      break
+  cap.release()
+  return screenshot_paths
+
 
 async def summarize_segments(segments: List[str]):
   summaries = await asyncio.gather(*map(async_summarize, segments))

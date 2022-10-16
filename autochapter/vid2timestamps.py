@@ -91,7 +91,7 @@ def get_timestamps(diffs, threshold=0.2e8, min_segment_length=20):
   # 1, 2, 3, 5, 8 -> 0, 1, 1, 2, 3
   diffs_2 = [float("inf")] # start with 0 because we always want to include 0
   for i in range(1, len(diffs)):
-    diffs_2.append(diffs[i] - diffs[i - 1])
+    diffs_2.append(int(diffs[i]) - int(diffs[i - 1]))
   
   for i, diff in enumerate(diffs_2):
     if diff >= threshold or i == 0 and i >= last_i + min_segment_length:
