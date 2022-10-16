@@ -4,22 +4,24 @@
 # In[9]:
 
 
+from functools import cache
 import cv2
 import matplotlib.pyplot as plt
 import os
 import json
 import numpy as np
+import pickle
 
 
 # In[29]:
 
-
-def get_diffs(video_url: str):
-  # diffs_path = os.path.join(os.getcwd(), "diffs", video_url.split("/")[-1].split(".")[0] + ".json")
-  diffs_path = video_url
-  if os.path.exists(diffs_path):
-    with open(diffs_path) as f:
-      return json.load(f)
+@cache
+def get_diffs(video_url: str, save_path: str):
+  # diffs_path = os.path.join(save_path, "diffs", video_url.split("/")[-1].split(".")[0] + ".json")
+  if os.path.exists(save_path):
+    with open(save_path, 'rb') as f:
+      return pickle.load(f)
+      # return json.load(f)
   cap = cv2.VideoCapture(video_url)
   prev_frame = None
   diffs = []
@@ -38,10 +40,12 @@ def get_diffs(video_url: str):
     if cv2.waitKey(1) == ord('q'):
         break
   cap.release()
-  diffs = diffs.tolist() if isinstance(diffs, np.ndarray) else diffs
-  with open(diffs_path, "w") as f:
-    json.dump(diffs, f)
-  return diff
+  if isinstance(diffs, np.ndarray):
+    diffs = diffs.tolist()
+  with open(save_path, "wb") as f:
+    # json.dump(diffs, f)
+    pickle.dump(diffs, f)
+  return diffs
 
 
 # In[30]:
