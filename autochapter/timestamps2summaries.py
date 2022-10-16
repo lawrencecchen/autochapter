@@ -50,7 +50,7 @@ def transcribe_video(video_url: str):
 # In[5]:
 
 
-transcribed = transcribe_video("videos/cs61a_lec1.mkv")
+# transcribed = transcribe_video("videos/cs61a_lec1.mkv")
 
 
 # In[40]:
@@ -90,13 +90,13 @@ def async_summarize(passage: str):
 # In[7]:
 
 
-summarize(transcribed["text"][0:2000])
+# summarize(transcribed["text"][0:2000])
 
 
 # In[8]:
 
 
-fake_timestamps = [0, 100, 200, 300, 400, 500]
+# fake_timestamps = [0, 100, 200, 300, 400, 500]
 
 
 # In[22]:
@@ -145,9 +145,9 @@ async def summarize_segments(segments: List[str]):
   summaries = await asyncio.gather(*map(async_summarize, segments))
   return summaries
 
-segments = get_pre_summarized_segments(transcribed, fake_timestamps)
-summaries = await summarize_segments(segments)
-summaries
+# segments = get_pre_summarized_segments(transcribed, fake_timestamps)
+# summaries = await summarize_segments(segments)
+# summaries
 # summaries = [summarize(segment) for segment in segments]
 # summaries
 
